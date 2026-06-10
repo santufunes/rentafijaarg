@@ -187,8 +187,23 @@ function positionValueAtHorizon(
   let exitValue = 0;
   if (remaining.length > 0) {
     const exitYield = Math.max(-0.99, p.priced.tir + shift);
-    // PV a la fecha horizonte (yearFraction desde horizon).
-    exitValue = presentValue(remaining, horizon, exitYield);
+    if (instr.kind === 'cer') {
+      // La TIR de un bono CER es REAL: el remanente se valúa en términos
+      // reales (flujos sin indexar descontados a la TIR real de salida) y se
+      // indexa al horizonte con el CER del escenario. Espejo exacto de la
+      // convención de priceInstrument; mezclar flujos nominales con tasa real
+      // sobreestimaría el valor en ~inflación^(años remanentes).
+      const aliveDates = new Set(remaining.map((cf) => cf.date));
+      const realRemaining = instr.realCashflows
+        .filter((cf) => aliveDates.has(cf.date))
+        .map((cf) => ({ date: cf.date, amount: cf.interest + cf.amortization }));
+      exitValue =
+        presentValue(realRemaining, horizon, exitYield) *
+        cerRatio(horizon, instr.cerBase, sctx);
+    } else {
+      // PV a la fecha horizonte (yearFraction desde horizon).
+      exitValue = presentValue(remaining, horizon, exitYield);
+    }
   }
 
   const totalPer100 = cashReceived + exitValue;

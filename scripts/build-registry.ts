@@ -107,6 +107,12 @@ function generateFixedCashflows(t: string, spec: any): Cf[] {
 
 const round6 = (x: number) => Math.round(x * 1e6) / 1e6;
 
+/** minDenomination puede venir como prosa ("USD 1.00 and multiples"): nunca emitir null/NaN. */
+function finiteLotOr1(v: unknown): number {
+  const n = Number(v);
+  return Number.isFinite(n) && n > 0 ? n : 1;
+}
+
 function validateFixed(t: string, flows: Cf[], maturity: string, opts?: { remaining?: boolean }) {
   const amortSum = flows.reduce((s, f) => s + f.amortization, 0);
   if (opts?.remaining) {
@@ -180,7 +186,7 @@ for (const [file, family] of [
       payCcy: 'USD',
       issueDate: spec.issueDate,
       maturity: spec.maturity,
-      minLot: Number(spec.minDenomination?.amount ?? spec.minDenomination ?? 1),
+      minLot: finiteLotOr1(spec.minDenomination?.amount ?? spec.minDenomination),
       tickers: spec.tickers?.ars
         ? spec.tickers
         : spec.tickerVariants?.ars_byma

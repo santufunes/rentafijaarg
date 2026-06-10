@@ -9,7 +9,17 @@
 import { NextResponse } from 'next/server';
 import snapshot from '@/lib/data/snapshot.json';
 
-export const revalidate = 300;
+// La ruta debe ejecutarse en cada request (con caché de 5 min en los fetches
+// upstream): prerenderizada estáticamente serviría precios congelados del
+// build como si fueran "en vivo".
+export const dynamic = 'force-dynamic';
+
+/** Fecha calendario en Buenos Aires (UTC-3): después de las 21:00 ART la fecha UTC ya es mañana. */
+function todayBuenosAires(): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Argentina/Buenos_Aires',
+  }).format(new Date());
+}
 
 interface D912Row {
   symbol: string;
@@ -30,7 +40,7 @@ async function fetchJson<T>(url: string, timeoutMs = 8000): Promise<T> {
 }
 
 export async function GET() {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = todayBuenosAires();
   try {
     // BCRA v4: los valores vienen anidados en results[0].detalle. El "hasta" se
     // extiende unos días: el BCRA publica el cronograma CER con anticipación.

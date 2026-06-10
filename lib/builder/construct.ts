@@ -66,11 +66,20 @@ function monthsToMaturity(p: PricedInstrument, asOf: string): number {
   return daysBetween(asOf, p.instrument.maturity) / 30.44;
 }
 
-function isLiquid(p: PricedInstrument): boolean {
+/**
+ * Liquidez medida sobre la línea en PESOS (el ticker que efectivamente se
+ * compra), no sobre la línea D: el volumen del panel USD está en USD y
+ * compararlo contra un umbral en ARS excluiría instrumentos perfectamente
+ * líquidos.
+ */
+function arsTurnover(p: PricedInstrument, quotes: Map<string, Quote>): number {
+  const q = quotes.get(p.instrument.tickers.ars);
+  return ((q?.volume ?? 0) * (q?.last ?? 0)) / 100;
+}
+
+function isLiquid(p: PricedInstrument, quotes: Map<string, Quote>): boolean {
   if (ALWAYS_LIQUID.has(p.instrument.ticker)) return true;
-  const vol = p.quote.volume ?? 0;
-  const pricePerVN = p.quote.last / 100;
-  return vol * pricePerVN >= MIN_VOLUME_ARS;
+  return arsTurnover(p, quotes) >= MIN_VOLUME_ARS;
 }
 
 /** Precio en ARS de 1 VN (para sizing siempre se compra el ticker en pesos). */
@@ -89,7 +98,6 @@ interface Pick {
 function pickTasaFija(universe: PricedInstrument[], horizon: number, asOf: string): Omit<Pick, 'targetArs'>[] {
   const candidates = universe
     .filter((p) => ['lecap', 'boncap', 'bonte'].includes(p.instrument.family))
-    .filter(isLiquid)
     .filter((p) => p.instrument.kind === 'zero')
     .sort((a, b) => a.instrument.maturity.localeCompare(b.instrument.maturity));
   if (candidates.length === 0) return [];
@@ -102,10 +110,15 @@ function pickTasaFija(universe: PricedInstrument[], horizon: number, asOf: strin
       ? p
       : best,
   );
+  // Si la curva no llega al horizonte, no prometer un calce que no existe.
+  const anchorMonths = monthsToMaturity(anchor, asOf);
+  const anchorMatchesHorizon = anchorMonths >= horizon - 3;
   const picks: Omit<Pick, 'targetArs'>[] = [
     {
       priced: anchor,
-      rationale: `Vence cerca de tu horizonte: cobrás el pago final fijo sin depender del precio de venta.`,
+      rationale: anchorMatchesHorizon
+        ? `Vence cerca de tu horizonte: cobrás el pago final fijo sin depender del precio de venta.`
+        : `La tasa fija más larga con liquidez vence a los ~${Math.round(anchorMonths)} meses: al cobrarla vas a tener que reinvertir hasta tu horizonte.`,
     },
   ];
 
@@ -135,7 +148,6 @@ function pickTasaFija(universe: PricedInstrument[], horizon: number, asOf: strin
 function pickCer(universe: PricedInstrument[], horizon: number, asOf: string): Omit<Pick, 'targetArs'>[] {
   const candidates = universe
     .filter((p) => p.instrument.family === 'boncer')
-    .filter(isLiquid)
     .sort((a, b) => a.instrument.maturity.localeCompare(b.instrument.maturity));
   if (candidates.length === 0) return [];
   // El BONCER con vencimiento más cercano al horizonte (tolerancia +6m: el CER
@@ -160,10 +172,8 @@ function pickDolar(
   horizon: number,
   asOf: string,
 ): Omit<Pick, 'targetArs'>[] {
-  const sovereigns = universe
-    .filter((p) => p.instrument.family === 'soberano_usd')
-    .filter(isLiquid);
-  const bopreal = universe.filter((p) => p.instrument.family === 'bopreal').filter(isLiquid);
+  const sovereigns = universe.filter((p) => p.instrument.family === 'soberano_usd');
+  const bopreal = universe.filter((p) => p.instrument.family === 'bopreal');
   const picks: Omit<Pick, 'targetArs'>[] = [];
 
   if (profile === 'conservador') {
@@ -233,11 +243,13 @@ export function buildProposal(
     }
   }
 
+  const liquid = priced.filter((p) => isLiquid(p, quotes));
+
   const weights = targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths);
   const picksBySegment: Record<SegmentKey, Omit<Pick, 'targetArs'>[]> = {
-    tasa_fija: pickTasaFija(priced, inputs.horizonMonths, ctx.asOf),
-    cer: pickCer(priced, inputs.horizonMonths, ctx.asOf),
-    dolar: pickDolar(priced, inputs.profile, inputs.horizonMonths, ctx.asOf),
+    tasa_fija: pickTasaFija(liquid, inputs.horizonMonths, ctx.asOf),
+    cer: pickCer(liquid, inputs.horizonMonths, ctx.asOf),
+    dolar: pickDolar(liquid, inputs.profile, inputs.horizonMonths, ctx.asOf),
   };
 
   // Redistribuir pesos de segmentos sin candidatos.
@@ -255,13 +267,18 @@ export function buildProposal(
     for (const s of alive) weights[s] += missing / alive.length;
   }
 
+  // Las comisiones se reservan ANTES de asignar: las órdenes propuestas tienen
+  // que poder fondearse con el depósito que indica la UI, costos incluidos.
+  const feeRate = (inputs.commissionPct / 100) * 1.21 + 0.0001;
+  const investable = inputs.amountArs / (1 + feeRate);
+
   // Ticket mínimo por línea: 5% del monto. Si una línea no llega, se concentra en la primera del segmento.
-  const minTicket = Math.max(inputs.amountArs * 0.05, 1);
+  const minTicket = Math.max(investable * 0.05, 1);
   const picks: Pick[] = [];
   for (const s of segs) {
     const segPicks = picksBySegment[s];
     if (segPicks.length === 0 || weights[s] === 0) continue;
-    const segArs = (weights[s] / 100) * inputs.amountArs;
+    const segArs = (weights[s] / 100) * investable;
     const perLine = segArs / segPicks.length;
     if (segPicks.length > 1 && perLine < minTicket) {
       picks.push({ ...segPicks[0], targetArs: segArs });
@@ -298,7 +315,7 @@ export function buildProposal(
   }
 
   // Remanente: intentar agregar nominales del instrumento más barato por VN.
-  let cashLeft = inputs.amountArs - spent;
+  let cashLeft = investable - spent;
   const byCheapest = [...lines].sort(
     (a, b) => arsPricePerVN(a.position.priced, quotes) - arsPricePerVN(b.position.priced, quotes),
   );
@@ -317,8 +334,32 @@ export function buildProposal(
   }
 
   // Costos estimados: comisión + IVA sobre comisión + derechos de mercado.
-  const commission = spent * (inputs.commissionPct / 100);
-  const fees = commission * 1.21 + spent * 0.0001;
+  const fees = spent * feeRate;
+
+  // Tamaño de orden vs volumen diario: avisar cuando la ejecución va a mover el precio.
+  for (const line of lines) {
+    const turnover = arsTurnover(line.position.priced, quotes);
+    if (turnover > 0 && line.position.investedArs > 0.2 * turnover) {
+      warnings.push(
+        `${line.position.priced.instrument.ticker}: la orden representa ~${Math.round(
+          (line.position.investedArs / turnover) * 100,
+        )}% del volumen diario; ejecutala en tramos o esperá desvíos de precio.`,
+      );
+    }
+  }
+
+  // Si la tasa fija no llega al horizonte, hay riesgo de reinversión real.
+  const tfLines = lines.filter((l) => l.position.segment === 'tasa_fija');
+  if (tfLines.length > 0) {
+    const maxMonths = Math.max(
+      ...tfLines.map((l) => daysBetween(ctx.asOf, l.position.priced.instrument.maturity) / 30.44),
+    );
+    if (maxMonths < inputs.horizonMonths - 3) {
+      warnings.push(
+        `La curva de tasa fija líquida llega hasta ~${Math.round(maxMonths)} meses: parte de la cartera va a requerir reinversión antes de tu horizonte de ${inputs.horizonMonths} meses.`,
+      );
+    }
+  }
 
   if (inputs.amountArs < 100_000)
     warnings.push('Con montos chicos la diversificación es limitada; considerá un FCI money market.');
@@ -328,7 +369,7 @@ export function buildProposal(
     settlement,
     lines,
     totalInvestedArs: spent,
-    cashLeftArs: cashLeft,
+    cashLeftArs: inputs.amountArs - spent - fees,
     estimatedFeesArs: fees,
     warnings,
   };

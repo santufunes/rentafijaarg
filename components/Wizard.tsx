@@ -29,17 +29,16 @@ export default function Wizard({
   marketSource: 'live' | 'snapshot' | null;
 }) {
   const [step, setStep] = useState(0);
-  const [amount, setAmount] = useState<number>(2_000_000);
   const [amountText, setAmountText] = useState('2.000.000');
   const [horizon, setHorizon] = useState<number | null>(null);
   const [goal, setGoal] = useState<CurrencyGoal | null>(null);
   const [profile, setProfile] = useState<ProfileKey | null>(null);
 
-  function handleAmountText(t: string) {
-    setAmountText(t);
-    const n = Number(t.replace(/\./g, '').replace(/,/g, '.'));
-    if (Number.isFinite(n) && n > 0) setAmount(Math.round(n));
-  }
+  // El texto es la única fuente de verdad: formato es-AR (punto = miles,
+  // coma = decimal). Si no parsea, el botón se deshabilita — nunca se sigue
+  // con un valor viejo en silencio.
+  const parsed = Number(amountText.trim().replace(/\./g, '').replace(/,/g, '.'));
+  const amount = Number.isFinite(parsed) && parsed > 0 ? Math.round(parsed) : null;
 
   const steps = ['Monto', 'Horizonte', 'Moneda', 'Perfil'];
 
@@ -72,31 +71,40 @@ export default function Wizard({
           <div>
             <h2 className="text-xl font-semibold">¿Cuánto querés invertir?</h2>
             <p className="mt-1 text-sm text-stone-500">En pesos. Después podés ajustarlo.</p>
-            <div className="mt-5 flex items-center gap-2 rounded-xl border border-stone-300 px-4 py-3 text-2xl font-semibold focus-within:border-emerald-500">
+            <div
+              className={`mt-5 flex items-center gap-2 rounded-xl border px-4 py-3 text-2xl font-semibold focus-within:border-emerald-500 ${
+                amount === null ? 'border-red-400' : 'border-stone-300'
+              }`}
+            >
               <span className="text-stone-400">$</span>
               <input
                 value={amountText}
-                onChange={(e) => handleAmountText(e.target.value)}
+                onChange={(e) => setAmountText(e.target.value)}
+                onBlur={() => {
+                  if (amount !== null) setAmountText(new Intl.NumberFormat('es-AR').format(amount));
+                }}
                 inputMode="numeric"
                 className="w-full outline-none"
                 aria-label="Monto a invertir en pesos"
               />
             </div>
+            {amount === null && (
+              <p className="mt-2 text-sm text-red-600">
+                No entiendo ese monto. Usá punto para miles y coma para decimales: 2.000.000
+              </p>
+            )}
             <div className="mt-3 flex flex-wrap gap-2">
               {AMOUNT_CHIPS.map((a) => (
                 <button
                   key={a}
-                  onClick={() => {
-                    setAmount(a);
-                    setAmountText(new Intl.NumberFormat('es-AR').format(a));
-                  }}
+                  onClick={() => setAmountText(new Intl.NumberFormat('es-AR').format(a))}
                   className="rounded-full border border-stone-200 px-3 py-1 text-sm text-stone-600 hover:border-emerald-500 hover:text-emerald-700"
                 >
                   {fmtArs(a)}
                 </button>
               ))}
             </div>
-            <NextButton disabled={amount <= 0} onClick={() => setStep(1)} />
+            <NextButton disabled={amount === null} onClick={() => setStep(1)} />
           </div>
         )}
 
@@ -153,10 +161,10 @@ export default function Wizard({
               ))}
             </div>
             <button
-              disabled={profile === null || !marketReady}
+              disabled={profile === null || amount === null || !marketReady}
               onClick={() =>
                 onSubmit({
-                  amountArs: amount,
+                  amountArs: amount!,
                   horizonMonths: horizon!,
                   goal: goal!,
                   profile: profile!,

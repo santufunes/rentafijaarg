@@ -128,29 +128,28 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
     }));
 
   // 3) BONCER: TIR real publicada por bonistas.com el 10-06 con su propio precio
-  //    de cierre (liquidación 24hs = 11-06).
+  //    de cierre (liquidación 24hs = 11-06). El snapshot trae filas duplicadas
+  //    por ticker (paneles CI y 24hs): primero se descartan prints ilíquidos
+  //    (<50 VN no es benchmark) y después se queda la fila de MAYOR volumen.
   const bonistas: any[] = readJson('research/bonistas_api_bonds_snapshot_2026-06-10.json');
-  const seen = new Set<string>();
-  const fromBonistasCer: Golden[] = bonistas
-    .filter((r: any) => {
-      const instr = byTicker(r.bond_name ?? r.ticker);
-      return (
-        instr?.kind === 'cer' &&
-        Number.isFinite(r.tir) &&
-        r.last_close > 0 &&
-        !seen.has(instr.ticker) &&
-        seen.add(instr.ticker) !== undefined
-      );
-    })
-    // un punto publicado sobre un print de 6 nominales no es benchmark
-    .filter((r: any) => (r.volume ?? 0) >= 50)
-    .map((r: any) => ({
-      ticker: r.bond_name ?? r.ticker,
-      tirPct: r.tir * 100,
-      price: r.last_close,
-      priceBasis: 'ARS dirty per 100 VN (bonistas 24hs)',
-      settlement: '2026-06-11',
-    }));
+  const bestCerRow = new Map<string, any>();
+  for (const r of bonistas) {
+    const instr = byTicker(r.bond_name ?? r.ticker);
+    if (instr?.kind !== 'cer' || !Number.isFinite(r.tir)) continue;
+    if (r.settlement !== '24hs') continue; // panel CI liquida hoy: otra base de días y de CER
+    if ((r.volume ?? 0) < 50) continue;
+    if (!((r.last_price ?? r.last_close) > 0)) continue;
+    const prev = bestCerRow.get(instr.ticker);
+    if (!prev || (r.volume ?? 0) > (prev.volume ?? 0)) bestCerRow.set(instr.ticker, r);
+  }
+  const fromBonistasCer: Golden[] = [...bestCerRow.values()].map((r: any) => ({
+    ticker: r.bond_name ?? r.ticker,
+    tirPct: r.tir * 100,
+    // bonistas calcula su TIR sobre el último precio operado, no el cierre
+    price: r.last_price ?? r.last_close,
+    priceBasis: 'ARS dirty per 100 VN (bonistas 24hs, last_price)',
+    settlement: '2026-06-11',
+  }));
 
   const goldens: Golden[] = [...fromIamc, ...fromBopreal, ...fromBonistasCer]
     // letras/bonos casi vencidos: la TIR es puro redondeo de precio

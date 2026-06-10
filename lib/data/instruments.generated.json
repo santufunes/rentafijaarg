@@ -1239,7 +1239,7 @@
    "payCcy": "USD",
    "issueDate": "2024-01-05",
    "maturity": "2027-10-31",
-   "minLot": null,
+   "minLot": 1,
    "tickers": {
     "ars": "BPOA7",
     "mep": "BPA7D",
@@ -1283,7 +1283,7 @@
    "payCcy": "USD",
    "issueDate": "2025-06-24",
    "maturity": "2028-10-31",
-   "minLot": null,
+   "minLot": 1,
    "tickers": {
     "ars": "BPOA8",
     "mep": "BPA8D",
@@ -1339,7 +1339,7 @@
    "payCcy": "USD",
    "issueDate": "2024-01-05",
    "maturity": "2027-10-31",
-   "minLot": null,
+   "minLot": 1,
    "tickers": {
     "ars": "BPOB7",
     "mep": "BPB7D",
@@ -1383,7 +1383,7 @@
    "payCcy": "USD",
    "issueDate": "2025-06-24",
    "maturity": "2028-10-31",
-   "minLot": null,
+   "minLot": 1,
    "tickers": {
     "ars": "BPOB8",
     "mep": "BPB8D",
@@ -1439,7 +1439,7 @@
    "payCcy": "USD",
    "issueDate": "2024-01-05",
    "maturity": "2027-10-31",
-   "minLot": null,
+   "minLot": 1,
    "tickers": {
     "ars": "BPOC7",
     "mep": "BPC7D",

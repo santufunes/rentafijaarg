@@ -220,6 +220,9 @@ export function buildProposal(
   const priced: PricedInstrument[] = [];
   for (const instr of universe) {
     if (segmentOf(instr) === null) continue;
+    // El sizing compra el ticker en pesos: sin precio ARS no hay línea posible.
+    const arsQuote = quotes.get(instr.tickers.ars);
+    if (!arsQuote || arsQuote.last <= 0) continue;
     try {
       priced.push(priceInstrument(instr, quotes, settlement, ctx));
     } catch {

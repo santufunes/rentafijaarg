@@ -1,19 +1,23 @@
 /**
  * Tests del motor:
  *  1. Primitivas (XIRR, fechas hábiles, CER) contra valores construidos a mano.
- *  2. GOLDEN: TIR calculada por el motor vs TIR publicada por el mercado
- *     (IAMC/brokers, relevada en research/market_context.json) usando los
- *     precios del snapshot. Tolerancias por familia: la diferencia admisible
- *     cubre demoras de precio y redondeos de la fuente.
+ *  2. GOLDEN: el motor debe reproducir la TIR publicada por IAMC/BYMA usando el
+ *     MISMO precio sucio y la MISMA fecha de liquidación del informe diario
+ *     (research/market_context.json). Al ser matemática contra matemática, la
+ *     tolerancia es estricta: 0,25 pp para flujos fijos, 0,60 pp para CER
+ *     (sensible al timing del coeficiente). Letras a <25 días del vencimiento
+ *     se excluyen (el redondeo del precio domina la TIR).
+ *  3. Todo el registro se valúa sin errores con el snapshot de precios.
  */
 
 import { describe, expect, it } from 'vitest';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
-import { settlementT1, subtractBusinessDays, daysBetween } from '@/lib/engine/dates';
-import { solveTir, durations } from '@/lib/engine/solver';
-import { priceInstrument } from '@/lib/engine/pricing';
+import { daysBetween, settlementT1, subtractBusinessDays } from '@/lib/engine/dates';
+import { cerRatio } from '@/lib/engine/cer';
+import { projectCashflows, priceInstrument } from '@/lib/engine/pricing';
+import { durations, solveTir } from '@/lib/engine/solver';
 import type { Instrument, MarketContext, Quote } from '@/lib/engine/types';
 
 const ROOT = path.resolve(__dirname, '..');
@@ -25,20 +29,17 @@ describe('primitivas', () => {
     expect(tir).toBeCloseTo(0.1, 8);
   });
 
-  it('XIRR: dos flujos conocidos', () => {
-    // 50 a 6 meses + 60 a 12 meses a precio 100: r tal que 50/(1+r)^0.5 + 60/(1+r) = 100
-    const tir = solveTir(
-      [
-        { date: '2026-12-10', amount: 50 },
-        { date: '2027-06-10', amount: 60 },
-      ],
-      '2026-06-10',
-      100,
+  it('XIRR: el PV a la TIR resuelta reproduce el precio', () => {
+    const flows = [
+      { date: '2026-12-10', amount: 50 },
+      { date: '2027-06-10', amount: 60 },
+    ];
+    const tir = solveTir(flows, '2026-06-10', 100);
+    const pv = flows.reduce(
+      (s, f) => s + f.amount / Math.pow(1 + tir, daysBetween('2026-06-10', f.date) / 365),
+      0,
     );
-    const pv = 50 / Math.pow(1 + tir, daysBetween('2026-06-10', '2026-12-10') / 365) +
-      60 / Math.pow(1 + tir, daysBetween('2026-06-10', '2027-06-10') / 365);
     expect(pv).toBeCloseTo(100, 8);
-    expect(tir).toBeGreaterThan(0.09);
   });
 
   it('duración Macaulay de un cupón cero = plazo en años', () => {
@@ -52,39 +53,23 @@ describe('primitivas', () => {
   });
 
   it('liquidación T+1 salta fines de semana y feriados', () => {
-    // 2026-06-12 es viernes; 15-jun-2026 feriado (Güemes) → lunes salta a martes 16
+    // viernes 12-jun-2026; lunes 15-jun feriado → liquida martes 16
     expect(settlementT1('2026-06-12')).toBe('2026-06-16');
-    // miércoles 10-jun-2026 → jueves 11
     expect(settlementT1('2026-06-10')).toBe('2026-06-11');
   });
 
-  it('t-10 hábiles retrocede correctamente', () => {
+  it('t-10 hábiles retrocede al menos 14 días corridos', () => {
     const d = subtractBusinessDays('2026-06-10', 10);
-    expect(daysBetween(d, '2026-06-10')).toBeGreaterThanOrEqual(14); // 10 hábiles ≥ 14 corridos
+    expect(daysBetween(d, '2026-06-10')).toBeGreaterThanOrEqual(14);
   });
 });
 
-describe('golden: motor vs mercado', () => {
+describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
   const generated = readJson('lib/data/instruments.generated.json');
   const snapshot = readJson('lib/data/snapshot.json');
   const mctx = readJson('research/market_context.json');
 
-  const TOLERANCE_PP: Record<string, number> = {
-    soberano_usd: 0.75,
-    bopreal: 1.0,
-    lecap: 1.5,
-    boncap: 1.5,
-    bonte: 1.5,
-    boncer: 1.5,
-  };
-
   const instruments: Instrument[] = generated.instruments;
-  const quotes = new Map<string, Quote>(
-    snapshot.quotes.map((q: any) => [
-      q.ticker,
-      { ...q, currency: q.ticker.endsWith('D') || q.ticker.endsWith('C') ? 'USD' : 'ARS' },
-    ]),
-  );
   const ctx: MarketContext = {
     asOf: snapshot.asOf,
     cerHistory: snapshot.cerHistory,
@@ -92,38 +77,85 @@ describe('golden: motor vs mercado', () => {
     a3500: snapshot.market.a3500,
     mep: snapshot.market.mep,
   };
-  const settlement = settlementT1(snapshot.asOf);
 
-  const goldens: any[] = (mctx.goldenYields ?? []).filter(
-    (g: any) =>
-      Number.isFinite(g.publishedTIRPct) && instruments.some((i) => i.ticker === g.ticker),
-  );
+  interface Golden {
+    ticker: string;
+    tirPct: number;
+    price: number;
+    priceBasis: string;
+    settlement: string;
+  }
 
-  it('hay al menos 8 puntos golden utilizables', () => {
-    expect(goldens.length).toBeGreaterThanOrEqual(8);
+  const goldens: Golden[] = (mctx.goldenYields ?? [])
+    .map((g: any) => {
+      const ps = g.primarySource ?? g;
+      const settleMatch = String(ps.asOf ?? '').match(/settlement (\d{4}-\d{2}-\d{2})/);
+      return {
+        ticker: g.ticker,
+        tirPct: ps.publishedTIRPct,
+        price: ps.priceUsed,
+        priceBasis: String(ps.priceBasis ?? ''),
+        settlement: settleMatch ? settleMatch[1] : '2026-06-10',
+      };
+    })
+    .filter(
+      (g: Golden) =>
+        Number.isFinite(g.tirPct) &&
+        Number.isFinite(g.price) &&
+        instruments.some((i) => i.ticker === g.ticker),
+    )
+    // letras casi vencidas: la TIR es puro redondeo de precio
+    .filter((g: Golden) => {
+      const instr = instruments.find((i) => i.ticker === g.ticker)!;
+      return daysBetween(g.settlement, instr.maturity) >= 25;
+    });
+
+  it('hay al menos 10 puntos golden utilizables', () => {
+    expect(goldens.length).toBeGreaterThanOrEqual(10);
   });
 
   for (const g of goldens) {
-    it(`${g.ticker}: TIR del motor ≈ TIR publicada (${g.publishedTIRPct}%)`, () => {
+    it(`${g.ticker}: TIR motor ≈ ${g.tirPct}% publicada (precio ${g.price})`, () => {
       const instr = instruments.find((i) => i.ticker === g.ticker)!;
-      const priced = priceInstrument(instr, quotes, settlement, ctx);
-      const tol = TOLERANCE_PP[instr.family] ?? 1.5;
-      expect(Math.abs(priced.tir * 100 - g.publishedTIRPct)).toBeLessThanOrEqual(tol);
+      let computed: number;
+      if (instr.kind === 'cer') {
+        // TIR real: precio deflactado por el coeficiente CER aplicable a la liquidación.
+        const ratio = cerRatio(g.settlement, instr.cerBase, ctx);
+        const realFlows = instr.realCashflows
+          .filter((cf) => daysBetween(g.settlement, cf.date) > 0)
+          .map((cf) => ({ date: cf.date, amount: cf.interest + cf.amortization }));
+        computed = solveTir(realFlows, g.settlement, g.price / ratio);
+      } else {
+        const flows = projectCashflows(instr, g.settlement, ctx);
+        computed = solveTir(flows, g.settlement, g.price);
+      }
+      const tol = instr.kind === 'cer' ? 0.6 : 0.25;
+      expect(
+        Math.abs(computed * 100 - g.tirPct),
+        `computada ${(computed * 100).toFixed(2)}% vs publicada ${g.tirPct}%`,
+      ).toBeLessThanOrEqual(tol);
     });
   }
 
-  it('todos los instrumentos del registro se pueden valuar sin error', () => {
+  it('todo el registro se valúa sin error con el snapshot', () => {
+    const quotes = new Map<string, Quote>(
+      snapshot.quotes.map((q: any) => [
+        q.ticker,
+        { ...q, currency: q.ticker.endsWith('D') || q.ticker.endsWith('C') ? 'USD' : 'ARS' },
+      ]),
+    );
+    const settlement = settlementT1(snapshot.asOf);
     const failures: string[] = [];
     for (const instr of instruments) {
       try {
         const p = priceInstrument(instr, quotes, settlement, ctx);
         if (!Number.isFinite(p.tir) || !Number.isFinite(p.modifiedDuration))
           failures.push(`${instr.ticker}: TIR/MD no finita`);
-        if (p.tir < -0.9 || p.tir > 5)
-          failures.push(`${instr.ticker}: TIR fuera de rango plausible: ${(p.tir * 100).toFixed(1)}%`);
+        else if (p.tir < -0.9 || p.tir > 5)
+          failures.push(`${instr.ticker}: TIR implausible ${(p.tir * 100).toFixed(1)}%`);
       } catch (e) {
-        // sin precio en el snapshot es aceptable; otros errores no
-        if (!String(e).includes('Sin precio')) failures.push(`${instr.ticker}: ${e}`);
+        if (!String(e).includes('Sin precio') && !String(e).includes('sin flujos futuros'))
+          failures.push(`${instr.ticker}: ${e}`);
       }
     }
     expect(failures, failures.join('; ')).toEqual([]);

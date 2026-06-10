@@ -1,0 +1,954 @@
+{
+  "asOf": "2026-06-10",
+  "generatedAt": "2026-06-10T18:50:00-03:00",
+  "goldenYields": [
+    {
+      "ticker": "AL30",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 7.58,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.81,
+        "mdUnit": "years",
+        "priceUsed": 64.04,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 93470.0,
+        "convexity": 6.4,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 92700,
+        "publishedTIRPct": 7.7588,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.8785
+      }
+    },
+    {
+      "ticker": "GD30",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 6.53,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.85,
+        "mdUnit": "years",
+        "priceUsed": 65.3,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 95300.0,
+        "convexity": 6.6,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 94760,
+        "publishedTIRPct": 6.5895,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.9065
+      }
+    },
+    {
+      "ticker": "AL35",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 9.66,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 5.07,
+        "mdUnit": "years",
+        "priceUsed": 78.86,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 115100.0,
+        "convexity": 34.87,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 114500,
+        "publishedTIRPct": 9.6676,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 5.307
+      }
+    },
+    {
+      "ticker": "GD35",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 9.06,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 5.13,
+        "mdUnit": "years",
+        "priceUsed": 81.33,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 118700.0,
+        "convexity": 35.52,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 118400,
+        "publishedTIRPct": 9.0227,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 5.3539
+      }
+    },
+    {
+      "ticker": "AE38",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 9.98,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 4.32,
+        "mdUnit": "years",
+        "priceUsed": 81.28,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 118630.0,
+        "convexity": 30.63,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 117670,
+        "publishedTIRPct": 10.0551,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 4.5201
+      }
+    },
+    {
+      "ticker": "GD41",
+      "family": "hard-dollar sovereign (Decreto 391/2020 / Globales 2020)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 9.09,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 5.64,
+        "mdUnit": "years",
+        "priceUsed": 76.01,
+        "priceBasis": "dirty (sucio), USD per 100 VN original face value; ARS-ticker close also given",
+        "note": "IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026; settlement date used: 2026-06-10 (T+1). Price = dirty (sucio) USD per 100 VN original face (paridad x valor tecnico); TIR = effective annual IRR on dirty price (BYMA glossary); MD in years.",
+        "cierreARSper100VN": 110940.0,
+        "convexity": 49.8,
+        "couponPaymentCurrency": "USD (IAMC column 'Moneda Pago': USD)"
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 109300,
+        "publishedTIRPct": 9.2791,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 5.8592
+      }
+    },
+    {
+      "ticker": "BPOA7",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 3.64,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.1,
+        "mdUnit": "years",
+        "priceUsed": 149000.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 101.5,
+        "valorTecnicoUSD": 100.6
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 148310,
+        "publishedTIRPct": 3.6136,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.0954
+      }
+    },
+    {
+      "ticker": "BPOB7",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 3.79,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.1,
+        "mdUnit": "years",
+        "priceUsed": 148750.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 101.4,
+        "valorTecnicoUSD": 100.6
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 148300,
+        "publishedTIRPct": 3.6199,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.0954
+      }
+    },
+    {
+      "ticker": "BPOC7",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 3.7,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.1,
+        "mdUnit": "years",
+        "priceUsed": 148900.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 101.5,
+        "valorTecnicoUSD": 100.6
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 148690,
+        "publishedTIRPct": 3.3761,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.0969
+      }
+    },
+    {
+      "ticker": "BPOD7",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 3.57,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.1,
+        "mdUnit": "years",
+        "priceUsed": 149100.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 101.6,
+        "valorTecnicoUSD": 100.6
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 148600,
+        "publishedTIRPct": 3.4323,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.0965
+      }
+    },
+    {
+      "ticker": "BPOA8",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 7.04,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 2.2,
+        "mdUnit": "years",
+        "priceUsed": 133990.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 91.5,
+        "valorTecnicoUSD": 100.3
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 133000,
+        "publishedTIRPct": 7.1652,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 2.2326
+      }
+    },
+    {
+      "ticker": "BPOB8",
+      "family": "BOPREAL (BCRA bond, USD, ley ARG)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 7.42,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 2.2,
+        "mdUnit": "years",
+        "priceUsed": 132900.0,
+        "priceBasis": "cierre ARS per 100 VN (ARS ticker); dirty USD price = paridad% x VT",
+        "note": "Same report, BOPREAL table; Cierre in ARS per 100 VN; USD dirty price = paridad% x VT; TIR effective annual in USD; MD years.",
+        "paridadPct": 90.8,
+        "valorTecnicoUSD": 100.3
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 133200,
+        "publishedTIRPct": 7.0956,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 2.2334
+      }
+    },
+    {
+      "ticker": "S12J6",
+      "family": "LECAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 22.56,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.63,
+        "mdUnit": "days",
+        "priceUsed": 102.84,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 20.36,
+        "publishedTEMPct": 1.71
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 102.904,
+        "publishedTIRPct": 18.6808,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.0023
+      }
+    },
+    {
+      "ticker": "S31G6",
+      "family": "LECAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 23.37,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 65.66,
+        "mdUnit": "days",
+        "priceUsed": 121.2,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 21.5,
+        "publishedTEMPct": 1.77
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 121.4,
+        "publishedTIRPct": 22.8103,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.1807
+      }
+    },
+    {
+      "ticker": "S30S6",
+      "family": "LECAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 25.14,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 87.9,
+        "mdUnit": "days",
+        "priceUsed": 109.75,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 23.22,
+        "publishedTEMPct": 1.89
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 109.85,
+        "publishedTIRPct": 24.9037,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.2435
+      }
+    },
+    {
+      "ticker": "S30N6",
+      "family": "LECAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 24.21,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 136.87,
+        "mdUnit": "days",
+        "priceUsed": 117.25,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 22.83,
+        "publishedTEMPct": 1.82
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 117.13,
+        "publishedTIRPct": 24.5333,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.3784
+      }
+    },
+    {
+      "ticker": "T15E7",
+      "family": "BONCAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 25.98,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 170.67,
+        "mdUnit": "days",
+        "priceUsed": 140.35,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 24.76,
+        "publishedTEMPct": 1.94
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 140.95,
+        "publishedTIRPct": 25.0772,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.4775
+      }
+    },
+    {
+      "ticker": "T31Y7",
+      "family": "BONCAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 26.68,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 277.07,
+        "mdUnit": "days",
+        "priceUsed": 120.35,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 26.6,
+        "publishedTEMPct": 1.99
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 120.649,
+        "publishedTIRPct": 26.5165,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.7666
+      }
+    },
+    {
+      "ticker": "T30J7",
+      "family": "BONCAP (ARS fixed, capitalizable)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 24.42,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 305.42,
+        "mdUnit": "days",
+        "priceUsed": 123.9,
+        "priceBasis": "ARS per VN 100, dirty=clean (zero-coupon capitalizable)",
+        "note": "Same report, LECAP/BONCAP table; price ARS per VN 100 (cierre); report publishes TNA, TEA, TEM; TIR golden value = TEA (effective annual); MD published in DAYS.",
+        "publishedTNAPct": 24.57,
+        "publishedTEMPct": 1.84
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 124.75,
+        "publishedTIRPct": 23.7027,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.8505
+      }
+    },
+    {
+      "ticker": "TZX26",
+      "family": "CER-linked zero coupon (BONCER)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": -9.06,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 21.99,
+        "mdUnit": "days",
+        "priceUsed": 390.6,
+        "priceBasis": "ARS per VN 100 (price embeds CER accretion); YTM is REAL (over CER)",
+        "note": "Same report, CER cupon cero table; price ARS per VN 100; YTM = REAL yield over CER (effective annual); MD published in DAYS."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 390.85,
+        "publishedTIRPct": -9.2957,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.0574
+      }
+    },
+    {
+      "ticker": "TZXD6",
+      "family": "CER-linked zero coupon (BONCER)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 0.76,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 183.61,
+        "mdUnit": "days",
+        "priceUsed": 288.0,
+        "priceBasis": "ARS per VN 100 (price embeds CER accretion); YTM is REAL (over CER)",
+        "note": "Same report, CER cupon cero table; price ARS per VN 100; YTM = REAL yield over CER (effective annual); MD published in DAYS."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 288.2,
+        "publishedTIRPct": -0.4803,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.5148
+      }
+    },
+    {
+      "ticker": "TZXM7",
+      "family": "CER-linked zero coupon (BONCER)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 2.82,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 283.01,
+        "mdUnit": "days",
+        "priceUsed": 212.9,
+        "priceBasis": "ARS per VN 100 (price embeds CER accretion); YTM is REAL (over CER)",
+        "note": "Same report, CER cupon cero table; price ARS per VN 100; YTM = REAL yield over CER (effective annual); MD published in DAYS."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 213.4,
+        "publishedTIRPct": 1.3269,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 0.7922
+      }
+    },
+    {
+      "ticker": "TZX28",
+      "family": "CER-linked zero coupon (BONCER)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 7.25,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 690.0,
+        "mdUnit": "days",
+        "priceUsed": 336.5,
+        "priceBasis": "ARS per VN 100 (price embeds CER accretion); YTM is REAL (over CER)",
+        "note": "Same report, CER cupon cero table; price ARS per VN 100; YTM = REAL yield over CER (effective annual); MD published in DAYS."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 338.1,
+        "publishedTIRPct": 7.0506,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.9182
+      }
+    },
+    {
+      "ticker": "TZXM9",
+      "family": "CER-linked zero coupon (BONCER)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 7.41,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 938.47,
+        "mdUnit": "days",
+        "priceUsed": 88.15,
+        "priceBasis": "ARS per VN 100 (price embeds CER accretion); YTM is REAL (over CER)",
+        "note": "Same report, CER cupon cero table; price ARS per VN 100; YTM = REAL yield over CER (effective annual); MD published in DAYS."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 88,
+        "publishedTIRPct": 7.5216,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 2.599
+      }
+    },
+    {
+      "ticker": "TX28",
+      "family": "CER-linked fixed coupon (BONCER 2.25%)",
+      "primarySource": {
+        "name": "IAMC/BYMA Informe Diario de Titulos Publicos",
+        "sourceUrl": "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "pdfUrl": "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+        "localCopy": "research/iamc_titulos_publicos_2026-06-09.pdf",
+        "asOf": "2026-06-09 close (settlement 2026-06-10)",
+        "publishedTIRPct": 4.91,
+        "tirIsEffectiveAnnual": true,
+        "publishedMD": 1.31,
+        "mdUnit": "years",
+        "priceUsed": 1670.0,
+        "priceBasis": "ARS dirty per 100 VN; YTM is REAL (over CER)",
+        "note": "Same report, CER tasa fija table + sensitivity table; MD in years."
+      },
+      "crossCheck": {
+        "source": "bonistas.com /api/bonds",
+        "sourceUrl": "https://bonistas.com/api/bonds",
+        "asOf": "2026-06-10 (intraday/close snapshot fetched 18:35 ART)",
+        "settlement": "24hs",
+        "lastPriceARSper100VN": 1675,
+        "publishedTIRPct": 4.7475,
+        "tirConvention": "effective annual (TEA), decimal field 'tir' x100; ARS instruments in ARS, hard-dollar/BOPREAL in USD via implicit MEP",
+        "publishedMDYears": 1.347
+      }
+    }
+  ],
+  "macro": {
+    "riesgoPaisEMBI": {
+      "value": 503,
+      "unit": "bps",
+      "asOf": "2026-06-10",
+      "source": "https://mercados.ambito.com/riesgopais/variacion",
+      "note": "Ambito latest 503 (+1.00% d/d). IAMC/BYMA 09-Jun report chart shows ~487 for early-Jun close; small vintage/index-family discrepancy flagged."
+    },
+    "dolarMEP": {
+      "value": 1452.3,
+      "unit": "ARS/USD",
+      "asOf": "2026-06-10 18:30 ART",
+      "source": "https://mercados.ambito.com/dolarrava/mep/variacion",
+      "crossCheck": "bonistas.com implicit MEP (AL30) 1452.2952 same day"
+    },
+    "dolarCCL": {
+      "value": 1508.42,
+      "unit": "ARS/USD",
+      "asOf": "2026-06-10 18:30 ART",
+      "source": "https://mercados.ambito.com/dolarrava/cl/variacion"
+    },
+    "a3500MayoristaReferencia": {
+      "value": 1436.585,
+      "unit": "ARS/USD",
+      "asOf": "2026-06-10",
+      "source": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias (idVariable 5)"
+    },
+    "minoristaPromedioVendedor": {
+      "value": 1460.67,
+      "unit": "ARS/USD",
+      "asOf": "2026-06-10",
+      "source": "BCRA API idVariable 4"
+    },
+    "policyRate": {
+      "value": null,
+      "note": "BCRA's explicit policy-rate series (idVariable 160/161) was DISCONTINUED on 2025-07-10 (last value 29.0% TNA / 33.63% TEA). As of 2026-06-10 there is no single posted policy rate; monetary policy operates via aggregates with rates set in market operations.",
+      "lastPublished": {
+        "valueTNAPct": 29.0,
+        "valueTEAPct": 33.63,
+        "date": "2025-07-10"
+      },
+      "overnightRepoTerceros1d": {
+        "valueTNAPct": 20.13,
+        "asOf": "2026-06-09",
+        "source": "BCRA API idVariable 150"
+      }
+    },
+    "tamar": {
+      "bancosPrivadosTNAPct": 21.5,
+      "bancosPrivadosTEAPct": 23.74,
+      "asOf": "2026-06-09",
+      "source": "BCRA API idVariable 44 (TNA) / 45 (TEA)"
+    },
+    "badlarPrivados": {
+      "tnaPct": 20.375,
+      "teaPct": 22.38,
+      "asOf": "2026-06-09",
+      "source": "BCRA API idVariable 7 / 35"
+    },
+    "rem": {
+      "survey": "REM May-2026 (window closed 2026-05-29, published 2026-06-04)",
+      "source": "https://www.bcra.gob.ar/relevamiento-expectativas-mercado-rem/",
+      "tablesXlsx": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/informes/tablas-relevamiento-expectativas-mercado-may-2026.xlsx",
+      "ipcMonthlyMedianPct": [
+        {
+          "month": "2026-05",
+          "expectedPct": 2.3
+        },
+        {
+          "month": "2026-06",
+          "expectedPct": 2.1
+        },
+        {
+          "month": "2026-07",
+          "expectedPct": 2.0
+        },
+        {
+          "month": "2026-08",
+          "expectedPct": 1.8
+        },
+        {
+          "month": "2026-09",
+          "expectedPct": 1.8854
+        },
+        {
+          "month": "2026-10",
+          "expectedPct": 1.775
+        },
+        {
+          "month": "2026-11",
+          "expectedPct": 1.71
+        }
+      ],
+      "ipcNext12MonthsMedianPct": 23.3174,
+      "ipcNext12MonthsRef": "i.a. to May-2027",
+      "ipcDec2026YoYMedianPct": 30.5,
+      "ipcDec2027YoYMedianPct": 19.92,
+      "tamarJun2026MedianTNAPct": 22.75,
+      "tamarDec2026MedianTNAPct": 22.1,
+      "note": "REM publishes monthly medians only ~7 months ahead; months Dec-2026..May-2027 NOT interpolated (rule: no invented numbers). Use 12m/annual medians for longer horizons."
+    },
+    "fxRegime": {
+      "description": "Crawling FX band (bandas cambiarias) still in force as of 2026-06-10. BCRA publishes official daily band limits: limite inferior 783.97, limite superior 1776.27 (2026-06-10). A3500 spot 1436.585 trades well inside the band.",
+      "bandFloor": 783.97,
+      "bandCeiling": 1776.27,
+      "asOf": "2026-06-10",
+      "observedCrawl": "DERIVED from official series (ids 1187/1188): ceiling rises ~+1.51/1.52 ARS per calendar day (~+0.086%/day); floor falls ~-0.69 ARS per day (~-0.088%/day).",
+      "source": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias (idVariable 1187 inferior / 1188 superior)",
+      "secondary": "IAMC 09-Jun report plots LECAP breakeven A3500 vs bandas: techo ~1,800 mid-2026, REM-extrapolated ~2,030 by Jan-2027"
+    }
+  },
+  "conventions": {
+    "settlement": {
+      "standard": "Contado 24hs (T+1) is the standard settlement for bonds/letters on BYMA; Contado Inmediato (CI) also trades (bonistas quotes both CI and 24hs rows).",
+      "evidence": [
+        "BYMA Comunicado 18782 hours table lists 'Contado 24 hs.' as regular spot plus 'Contado Inmediato'",
+        "IAMC informe of 09-Jun-2026 prices everything to 'Fecha de Liquidacion: 10/06/2026'"
+      ]
+    },
+    "tradingHours": {
+      "pptRegular": "10:30-17:00 ART (opening auction 10:25-10:30; closing auction 16:57-17:00; negociacion a precio de cierre 17:05-17:15)",
+      "senebi": "10:30-17:00 ART",
+      "extendedIntraday": "09:30-19:00 under Comunicado 18776 particulars",
+      "source": "BYMA Comunicado N 18782 (effective 2025-07-28), https://cdn.prod.website-files.com/6697a441a50c6b926e1972e0/68878cdd37aee2ce2cedef85_BYMA-COM18782-Horarios-desde-Julio-2025.pdf"
+    },
+    "yieldConvention": {
+      "tir": "IAMC/BYMA YTM = IRR equating DIRTY price (cierre) to PV of cashflows with compound discounting (1+y)^tau -> EFFECTIVE ANNUAL rate. Year fraction tau per instrument contract day count: 30/360, ACT/365 or ACT/ACT.",
+      "tnaTeaTem": "TNA = period yield x 360/days (linear); TEA = (1+period yield)^(1/tau)-1; TEM=(1+TEA)^(1/12)-1. LECAP table publishes all three.",
+      "duration": "MD = Macaulay/(1+YTM); 'DM (Dias)' = MD_years x base (360 or 365). CER instruments: YTM published is the REAL yield over CER-adjusted flows.",
+      "source": "https://www.iamc.com.ar/Informe/GlosarioMetodologicodeRentaFija/ (PDF saved as research/iamc_glosario_metodologico.pdf)"
+    },
+    "usdSovereignPayments": {
+      "couponsCurrency": "USD - IAMC table column 'Moneda Pago' = USD for AO27/AL29/AL30/GD30/AE38/AL35/GD35/AL41/GD41/GD46 and all BOPREAL.",
+      "tickerVariants": "Same bond trades as ARS ticker (AL30, settles pesos), D ticker (AL30D, settles USD local/MEP) and C ticker (AL30C, settles USD cable/CCL); coupons are paid in USD regardless.",
+      "minimumLots": null,
+      "minimumLotsFlag": "Lamina minima / minimum VN for ARS vs D tickers NOT confirmed from a fetchable primary source today - set to null. Decreto 391/2020 annex text could not be retrieved (InfoLeg API 403/token; argentina.gob.ar ID mismatch)."
+    },
+    "quoteBasis": "BYMA bond prices quoted per 100 VN (ARS tickers in pesos per 100 VN; D/C tickers in USD per 100 VN). LECAP/BONCAP/CER quoted ARS per VN 100. IAMC analytics use dirty price; for restructured globales the USD analytic price is paridad% x valor tecnico on original 100 face (AL30 VR=72.0 after amortizations)."
+  },
+  "fees": {
+    "bymaDerechosDeMercado": {
+      "contadoTitulosPublicosYONsPct": 0.01,
+      "contadoLetrasPct": 0.001,
+      "contadoAccionesCedearsPct": 0.05,
+      "ivaNote": "IVA NOT added on operations in Valores Negociables Publicos and Obligaciones Negociables (exempt); others +IVA.",
+      "asOf": "Junio 2026 schedule",
+      "source": "https://cdn.prod.website-files.com/6697a441a50c6b926e1972e0/6a2875749a418f0439d7de8f_BYMA-Derechos-Mercado-sobre-Operaciones_2026-06-09.pdf"
+    },
+    "brokers": {
+      "IOL": {
+        "bonosSecundarioPct": {
+          "gold": 0.5,
+          "platinum": 0.3,
+          "black": 0.1
+        },
+        "letrasSecundarioPct": {
+          "gold": 0.2,
+          "platinum": 0.15,
+          "black": 0.1
+        },
+        "tierRule": "tier by prior-month traded volume: gold <= ARS 7.5M, platinum to 50M, black above",
+        "rentaCobroPct": 0.1,
+        "amortizacion": "sin cargo",
+        "iva": "Titulos publicos, Letras del Tesoro y ONs exentos de IVA",
+        "asOf": "2026-06-10",
+        "source": "https://www.invertironline.com/Tarifas"
+      },
+      "Cocos": {
+        "bonosPct": null,
+        "flag": "cocos.capital fee page returns 403 (Cloudflare) to non-browser fetch; not verifiable today"
+      },
+      "Balanz": {
+        "bonosPct": null,
+        "flag": "balanz.com aranceles table is JS-rendered; values not present in fetched HTML; not verifiable today"
+      }
+    },
+    "typicalRetailRange": "Verified anchor: IOL 0.1%-0.5% per side on bonds (volume-tiered) + BYMA derecho 0.01% (titulos publicos, IVA-exempt). Range for Cocos/Balanz not confirmed - see flags."
+  },
+  "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf",
+    "https://www.iamc.com.ar/Informe/GlosarioMetodologicodeRentaFija/",
+    "https://bonistas.com/api/bonds",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+    "https://www.bcra.gob.ar/relevamiento-expectativas-mercado-rem/",
+    "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/informes/tablas-relevamiento-expectativas-mercado-may-2026.xlsx",
+    "https://mercados.ambito.com/riesgopais/variacion",
+    "https://mercados.ambito.com/dolarrava/mep/variacion",
+    "https://mercados.ambito.com/dolarrava/cl/variacion",
+    "https://cdn.prod.website-files.com/6697a441a50c6b926e1972e0/68878cdd37aee2ce2cedef85_BYMA-COM18782-Horarios-desde-Julio-2025.pdf",
+    "https://cdn.prod.website-files.com/6697a441a50c6b926e1972e0/6a2875749a418f0439d7de8f_BYMA-Derechos-Mercado-sobre-Operaciones_2026-06-09.pdf",
+    "https://www.invertironline.com/Tarifas"
+  ],
+  "flags": [
+    "IAMC golden values are 2026-06-09 close (priced to settlement 2026-06-10); today's (06-10) IAMC informe was not yet published at fetch time (~18:35 ART). bonistas.com cross-checks are same-day 2026-06-10.",
+    "Riesgo pais: Ambito shows 503 bps (2026-06-10) while the IAMC 09-Jun chart shows ~487 for early June; vintage/index-family mismatch - validate against JP Morgan EMBI directly if precision needed.",
+    "CER short-end TIR diverges across sources (TZXM7: IAMC 2.82% vs bonistas 1.33%) - CER coefficient projection convention differs; calibrate engine to the IAMC convention (real IRR vs CER-adjusted technical value).",
+    "BCRA policy-rate series discontinued 2025-07-10 (last 29% TNA); no single policy rate exists as of 2026-06-10 - TAMAR 21.5% TNA and o/n repo terceros 20.13% TNA recorded instead.",
+    "REM monthly inflation medians available only May-2026..Nov-2026; remaining months of the next-12m window NOT interpolated; 12-month median 23.32% i.a. (to May-2027).",
+    "Minimum lots / lamina minima for ARS vs D tickers: null - no fetchable primary source confirmed today (InfoLeg blocked, BYMA especies list not located).",
+    "Cocos and Balanz fee schedules unfetchable (Cloudflare 403 / JS-rendered) - only IOL tariffs verified.",
+    "bonistas.com 'description' metadata contains errors (e.g., labels AL30 bullet although it amortizes, VR 72.0 per IAMC) - use its numeric analytics fields only, not descriptions.",
+    "FX band crawl rates are DERIVED from the official BCRA daily band series, not from a fetched comunicado; parameterization (e.g., monthly %) should be re-derived from series ids 1187/1188 as needed."
+  ]
+}

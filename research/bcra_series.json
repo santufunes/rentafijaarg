@@ -1,0 +1,496 @@
+{
+  "fetchedAt": "2026-06-10",
+  "apiBaseUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+  "series": {
+    "cer": {
+      "id": 30,
+      "descripcion": "Coeficiente de estabilización de referencia (base 2.2.02=1)",
+      "categoria": "Principales Variables",
+      "tipoSerie": "Índice",
+      "periodicidad": "D",
+      "unidadExpresion": "Índice base 2.2.02=1",
+      "primerFechaInformada": "2002-02-02",
+      "latest": {
+        "fecha": "2026-06-15",
+        "valor": 790.9415888555
+      },
+      "latestNote": "Latest PUBLISHED value. CER is published forward by BCRA: queried on 2026-06-10 with no date filter, the newest observation returned was fecha 2026-06-15. The value for the query date itself (2026-06-10) was 787.67389171873. This forward publication is what makes the t-10 habiles settlement convention operable.",
+      "valueAsOfFetchDate": {
+        "fecha": "2026-06-10",
+        "valor": 787.67389171873
+      },
+      "history45d": [
+        {
+          "fecha": "2026-04-26",
+          "valor": 754.74580875976
+        },
+        {
+          "fecha": "2026-04-27",
+          "valor": 755.58743623701
+        },
+        {
+          "fecha": "2026-04-28",
+          "valor": 756.43000222469
+        },
+        {
+          "fecha": "2026-04-29",
+          "valor": 757.27350776934
+        },
+        {
+          "fecha": "2026-04-30",
+          "valor": 758.11795391868
+        },
+        {
+          "fecha": "2026-05-01",
+          "valor": 758.96334172158
+        },
+        {
+          "fecha": "2026-05-02",
+          "valor": 759.8096722281
+        },
+        {
+          "fecha": "2026-05-03",
+          "valor": 760.65694648945
+        },
+        {
+          "fecha": "2026-05-04",
+          "valor": 761.50516555804
+        },
+        {
+          "fecha": "2026-05-05",
+          "valor": 762.35433048744
+        },
+        {
+          "fecha": "2026-05-06",
+          "valor": 763.20444233237
+        },
+        {
+          "fecha": "2026-05-07",
+          "valor": 764.05550214876
+        },
+        {
+          "fecha": "2026-05-08",
+          "valor": 764.90751099372
+        },
+        {
+          "fecha": "2026-05-09",
+          "valor": 765.7604699255
+        },
+        {
+          "fecha": "2026-05-10",
+          "valor": 766.61438000358
+        },
+        {
+          "fecha": "2026-05-11",
+          "valor": 767.46924228857
+        },
+        {
+          "fecha": "2026-05-12",
+          "valor": 768.32505784231
+        },
+        {
+          "fecha": "2026-05-13",
+          "valor": 769.1818277278
+        },
+        {
+          "fecha": "2026-05-14",
+          "valor": 770.03955300922
+        },
+        {
+          "fecha": "2026-05-15",
+          "valor": 770.89823475195
+        },
+        {
+          "fecha": "2026-05-16",
+          "valor": 771.53679651803
+        },
+        {
+          "fecha": "2026-05-17",
+          "valor": 772.17588722698
+        },
+        {
+          "fecha": "2026-05-18",
+          "valor": 772.81550731696
+        },
+        {
+          "fecha": "2026-05-19",
+          "valor": 773.45565722645
+        },
+        {
+          "fecha": "2026-05-20",
+          "valor": 774.09633739433
+        },
+        {
+          "fecha": "2026-05-21",
+          "valor": 774.73754825984
+        },
+        {
+          "fecha": "2026-05-22",
+          "valor": 775.37929026256
+        },
+        {
+          "fecha": "2026-05-23",
+          "valor": 776.02156384246
+        },
+        {
+          "fecha": "2026-05-24",
+          "valor": 776.66436943986
+        },
+        {
+          "fecha": "2026-05-25",
+          "valor": 777.30770749544
+        },
+        {
+          "fecha": "2026-05-26",
+          "valor": 777.95157845027
+        },
+        {
+          "fecha": "2026-05-27",
+          "valor": 778.59598274576
+        },
+        {
+          "fecha": "2026-05-28",
+          "valor": 779.2409208237
+        },
+        {
+          "fecha": "2026-05-29",
+          "valor": 779.88639312623
+        },
+        {
+          "fecha": "2026-05-30",
+          "valor": 780.53240009587
+        },
+        {
+          "fecha": "2026-05-31",
+          "valor": 781.17894217551
+        },
+        {
+          "fecha": "2026-06-01",
+          "valor": 781.8260198084
+        },
+        {
+          "fecha": "2026-06-02",
+          "valor": 782.47363343815
+        },
+        {
+          "fecha": "2026-06-03",
+          "valor": 783.12178350875
+        },
+        {
+          "fecha": "2026-06-04",
+          "valor": 783.77047046455
+        },
+        {
+          "fecha": "2026-06-05",
+          "valor": 784.41969475027
+        },
+        {
+          "fecha": "2026-06-06",
+          "valor": 785.069456811
+        },
+        {
+          "fecha": "2026-06-07",
+          "valor": 785.7197570922
+        },
+        {
+          "fecha": "2026-06-08",
+          "valor": 786.3705960397
+        },
+        {
+          "fecha": "2026-06-09",
+          "valor": 787.02197409968
+        },
+        {
+          "fecha": "2026-06-10",
+          "valor": 787.67389171873
+        }
+      ],
+      "historyNote": "Daily series, includes weekends/holidays (46 obs for 2026-04-26..2026-06-10), ascending by fecha.",
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30?desde=2026-04-26&hasta=2026-06-10",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
+      ]
+    },
+    "a3500": {
+      "id": 5,
+      "descripcion": "Tipo de cambio mayorista de referencia",
+      "categoria": "Principales Variables",
+      "tipoSerie": "Tipo de cambio",
+      "periodicidad": "D",
+      "unidadExpresion": "Pesos argentinos por dólar estadounidense",
+      "primerFechaInformada": "2002-03-04",
+      "comunicacion": "A3500",
+      "identificationNote": "API descripcion is \"Tipo de cambio mayorista de referencia\" (does not literally say A3500). Linkage to Comunicacion A 3500 confirmed: BCRA publishes this exact series as \"Tipo de Cambio de Referencia Comunicacion A 3500\" (bcra.gob.ar, com3500.xls) and the same API idVariable 5 was labeled \"Tipo de Cambio Mayorista ($ por USD) Comunicacion A 3500 - Referencia\" in API v3 (mirrored at lamacro.ar/variables/5). NOTE: BCRA approved a new A3500 calculation methodology (volume-weighted actual transactions instead of quote survey) effective 2026-01-01.",
+      "latest": {
+        "fecha": "2026-06-10",
+        "valor": 1436.585
+      },
+      "history45d": [
+        {
+          "fecha": "2026-04-27",
+          "valor": 1412.9865
+        },
+        {
+          "fecha": "2026-04-28",
+          "valor": 1408.1491
+        },
+        {
+          "fecha": "2026-04-29",
+          "valor": 1395.2866
+        },
+        {
+          "fecha": "2026-04-30",
+          "valor": 1381.0954
+        },
+        {
+          "fecha": "2026-05-04",
+          "valor": 1398.3143
+        },
+        {
+          "fecha": "2026-05-05",
+          "valor": 1395.1909
+        },
+        {
+          "fecha": "2026-05-06",
+          "valor": 1386.2923
+        },
+        {
+          "fecha": "2026-05-07",
+          "valor": 1390.637
+        },
+        {
+          "fecha": "2026-05-08",
+          "valor": 1394.1232
+        },
+        {
+          "fecha": "2026-05-11",
+          "valor": 1399.4749
+        },
+        {
+          "fecha": "2026-05-12",
+          "valor": 1386.5259
+        },
+        {
+          "fecha": "2026-05-13",
+          "valor": 1389.2073
+        },
+        {
+          "fecha": "2026-05-14",
+          "valor": 1393.2322
+        },
+        {
+          "fecha": "2026-05-15",
+          "valor": 1395.3478
+        },
+        {
+          "fecha": "2026-05-18",
+          "valor": 1394.974
+        },
+        {
+          "fecha": "2026-05-19",
+          "valor": 1398.916
+        },
+        {
+          "fecha": "2026-05-20",
+          "valor": 1398.8346
+        },
+        {
+          "fecha": "2026-05-21",
+          "valor": 1392.1705
+        },
+        {
+          "fecha": "2026-05-22",
+          "valor": 1393.5019
+        },
+        {
+          "fecha": "2026-05-26",
+          "valor": 1407.8893
+        },
+        {
+          "fecha": "2026-05-27",
+          "valor": 1411.1796
+        },
+        {
+          "fecha": "2026-05-28",
+          "valor": 1411.4054
+        },
+        {
+          "fecha": "2026-05-29",
+          "valor": 1410.2904
+        },
+        {
+          "fecha": "2026-06-01",
+          "valor": 1421.4672
+        },
+        {
+          "fecha": "2026-06-02",
+          "valor": 1426.9788
+        },
+        {
+          "fecha": "2026-06-03",
+          "valor": 1435.3812
+        },
+        {
+          "fecha": "2026-06-04",
+          "valor": 1438.8159
+        },
+        {
+          "fecha": "2026-06-05",
+          "valor": 1442.4148
+        },
+        {
+          "fecha": "2026-06-08",
+          "valor": 1445.3978
+        },
+        {
+          "fecha": "2026-06-09",
+          "valor": 1446.1668
+        },
+        {
+          "fecha": "2026-06-10",
+          "valor": 1436.585
+        }
+      ],
+      "historyNote": "Business days only (31 obs for 2026-04-26..2026-06-10), ascending by fecha. Pesos per USD.",
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5?desde=2026-04-26&hasta=2026-06-10",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A3500.pdf",
+        "https://www2.bcra.gob.ar/Pdfs/PublicacionesEstadisticas/com3500.xls",
+        "https://www.lamacro.ar/variables/5"
+      ]
+    },
+    "tamar": {
+      "tna": {
+        "id": 44,
+        "descripcion": "Tasa de interes TAMAR de bancos privados",
+        "categoria": "Principales Variables",
+        "tipoSerie": "Tasa de interés",
+        "periodicidad": "D",
+        "unidadExpresion": "En porcentaje nominal anual",
+        "primerFechaInformada": "2024-10-01",
+        "latest": {
+          "fecha": "2026-06-09",
+          "valor": 21.5
+        }
+      },
+      "tea": {
+        "id": 45,
+        "descripcion": "Tasa de interés TAMAR de bancos privados",
+        "categoria": "Principales Variables",
+        "tipoSerie": "Tasa de interés",
+        "periodicidad": "D",
+        "unidadExpresion": "En porcentaje efectivo anual",
+        "primerFechaInformada": "2024-10-01",
+        "latest": {
+          "fecha": "2026-06-09",
+          "valor": 23.74
+        }
+      },
+      "tem": null,
+      "relatedIds": {
+        "135": "Tasa de interes TAMAR de bancos publicos y privados, TNA (categoria Series.xlsm)",
+        "136": "Tasa de interes TAMAR de bancos privados, TNA (duplicate of 44, categoria Series.xlsm, more decimals)",
+        "137": "Tasa de interes TAMAR de bancos privados, TEA (duplicate of 45, categoria Series.xlsm, more decimals)"
+      },
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/44",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/45",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
+      ]
+    },
+    "badlar": {
+      "tna": {
+        "id": 7,
+        "descripcion": "Tasa de interés BADLAR de bancos privados",
+        "categoria": "Principales Variables",
+        "tipoSerie": "Tasa de interés",
+        "periodicidad": "D",
+        "unidadExpresion": "En porcentaje nominal anual",
+        "primerFechaInformada": "1999-01-04",
+        "latest": {
+          "fecha": "2026-06-09",
+          "valor": 20.375
+        }
+      },
+      "tea": {
+        "id": 35,
+        "descripcion": "Tasa de interés BADLAR de bancos privados",
+        "categoria": "Principales Variables",
+        "tipoSerie": "Tasa de interés",
+        "periodicidad": "D",
+        "unidadExpresion": "En porcentaje efectivo anual",
+        "primerFechaInformada": "2020-01-23",
+        "latest": {
+          "fecha": "2026-06-09",
+          "valor": 22.38
+        }
+      },
+      "relatedIds": {
+        "138": "Tasa de interes BADLAR de bancos publicos y privados, TNA (categoria Series.xlsm)",
+        "139": "Tasa de interes BADLAR de bancos privados, TNA (duplicate of 7, categoria Series.xlsm)",
+        "140": "Tasa de interes BADLAR de bancos privados, TEA (duplicate of 35, categoria Series.xlsm)"
+      },
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/7",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/35",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
+      ]
+    },
+    "ipcMensual": {
+      "id": 27,
+      "descripcion": "Variación mensual del índice de precios al consumidor",
+      "categoria": "Principales Variables",
+      "tipoSerie": "Variación",
+      "periodicidad": "M",
+      "unidadExpresion": "En porcentaje",
+      "primerFechaInformada": "1943-03-31",
+      "latest": {
+        "fecha": "2026-04-30",
+        "valor": 2.6
+      },
+      "note": "INDEC national CPI monthly pct change as republished by BCRA. Monthly series dated to month-end (e.g. 2026-04-30 = April 2026 m/m inflation, 2.6%). May 2026 not yet loaded as of 2026-06-10. Related: id 28 = y/y variation (32.4% at 2026-04-30).",
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/27",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
+      ]
+    },
+    "remInflacion12m": {
+      "id": 29,
+      "descripcion": "Mediana de la variación interanual próximos 12 meses del índice de precios al consumidor del relevamiento de expectativas de mercado",
+      "categoria": "Principales Variables",
+      "tipoSerie": "Variación",
+      "periodicidad": "M",
+      "unidadExpresion": "En porcentaje",
+      "primerFechaInformada": "2004-01-31",
+      "latest": {
+        "fecha": "2026-05-31",
+        "valor": 23.3
+      },
+      "note": "Only REM series present in the monetarias v4 catalog: median expected y/y CPI inflation over next 12 months from the Relevamiento de Expectativas de Mercado (REM). 23.3% as of survey month 2026-05. Full REM dataset (monthly path, policy rate, FX expectations) is NOT in this API; it is published separately by BCRA (www.bcra.gob.ar REM page).",
+      "sources": [
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/29",
+        "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
+      ]
+    }
+  },
+  "cerLagRule": {
+    "description": "CER-linked sovereign bonds (BONCER/LECER) adjust principal using CER with a 10-business-day lag (\"t-10 habiles\"). Verbatim clause from the issuance resolutions: \"el saldo de capital de los bonos sera ajustado conforme al COEFICIENTE DE ESTABILIZACION DE REFERENCIA (CER) referido en el articulo 4 del Decreto N 214/02, informado por el BANCO CENTRAL DE LA REPUBLICA ARGENTINA, correspondiente al periodo transcurrido entre los DIEZ (10) dias habiles anteriores a la fecha de emision y los DIEZ (10) dias habiles anteriores a la fecha de vencimiento del servicio de interes o amortizacion de capital correspondiente.\" (Resolucion Conjunta 36/2016, BONCER 2021; identical wording in Resolucion Conjunta 9/2022 for LECER X16D2 / BONCER T2X4, TX26, TX28). Operationally: adjusted capital for a payment date P = VN x CER(P - 10 habiles) / CER(E - 10 habiles), where E is the emission date. By extension, the standard market convention for valor tecnico at settlement date t uses CER(t - 10 habiles) in the numerator; because BCRA publishes CER forward approximately 10 business days after each monthly CPI release (observed: on 2026-06-10 the API already returned CER through 2026-06-15), the CER applicable to any T+1 settlement is always already published. The lag clause lives in each instrument's issuance terms (resoluciones conjuntas of Secretaria de Finanzas y Secretaria de Hacienda), so per-instrument prospectus governs; all current BONCER/LECER checked use the identical 10-habiles wording. The CER index itself is defined by Decreto 214/2002 art. 4 (daily index from INDEC CPI, methodology in BCRA Com. A 3467).",
+    "sourceUrl": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/260000-264999/263616/norma.htm",
+    "additionalSources": [
+      "https://www.boletinoficial.gob.ar/detalleAviso/primera/258942/20220314"
+    ],
+    "verification": "Both sources fetched 2026-06-10; clause quoted verbatim from fetched text."
+  },
+  "apiNotes": {
+    "baseUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+    "auth": "None required (GET, no API key).",
+    "tls": "Verified OK without -k from macOS curl on 2026-06-10 (HTTP 200 with certificate verification). -k may still be needed on systems missing the BCRA chain.",
+    "envelopeCatalog": "{status:200, metadata:{resultset:{count,offset,limit}}, results:[{idVariable, descripcion, categoria, tipoSerie, periodicidad, unidadExpresion, moneda, primerFechaInformada, ultFechaInformada, ultValorInformado}]}",
+    "envelopeDetail": "{status:200, metadata:{resultset:{count,offset,limit}}, results:[{idVariable, detalle:[{fecha:\"YYYY-MM-DD\", valor:number}]}]} -- NOTE v4 nests observations under results[0].detalle (v3 had flat results:[{fecha,valor}]). detalle is sorted DESCENDING by fecha (newest first).",
+    "envelopeError": "{status:400, errorMessages:[\"...\"]} with matching HTTP status (e.g. invalid id -> 400 \"Parametro erroneo: Validar formato del id de la variable ingresada.\").",
+    "pagination": "Catalog has 1581 variables; default limit=1000, use ?limit=&offset=. Detail endpoint: default limit 1000 obs, hard max limit=3000 (limit=4000 returns 400 \"El limite no puede superar los 3000 registros.\"). Date filters ?desde=YYYY-MM-DD&hasta=YYYY-MM-DD work; desde alone works and returns through latest published.",
+    "rateLimits": "No rate-limit headers observed (no X-RateLimit-*, no Retry-After on 200s); no documented quota found. Responses carry an x-jws-signature header (JWS-signed payload). Content-Language: es-AR.",
+    "forwardPublication": "CER (id 30) is published ahead of the calendar: on 2026-06-10 the newest observation was fecha 2026-06-15. Catalog field ultFechaInformada for id 30 said 2026-06-10 while the detail endpoint returned through 2026-06-15 -- do not rely on catalog ult* fields for CER freshness.",
+    "gaps": "TAMAR/BADLAR exist as TNA (\"porcentaje nominal anual\") and TEA (\"porcentaje efectivo anual\") only; no TEM series exists in the catalog. Daily rate series (TAMAR/BADLAR) lag one business day (latest 2026-06-09 on 2026-06-10). A3500 has business days only; CER has all calendar days."
+  }
+}

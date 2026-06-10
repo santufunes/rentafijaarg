@@ -1,0 +1,1093 @@
+{
+ "family": "peso_fija",
+ "asOf": "2026-06-10",
+ "instruments": [
+  {
+   "ticker": "S12J6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-06-12",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0675961715",
+   "issueDate": "2026-04-30",
+   "maturityDate": "2026-06-12",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.1,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 102.952,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 102.95",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 102.952"
+   ],
+   "finalPaymentRecomputedSanityCheck": 102.952,
+   "cashflows": [
+    {
+     "date": "2026-06-12",
+     "amountPer100VN": 102.952,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 4937002440704,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1 (Resultado 28-Abr-2026: 'S12J6 - nueva ... 2,10% 28,32% $4.937.002' M; TEM, TIREA=(1.021)^12-1 and VNO all match)",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "S14G6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-08-14",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0077601562",
+   "issueDate": "2026-04-17",
+   "maturityDate": "2026-08-14",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.0,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 108.029,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 108.03",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 108.029"
+   ],
+   "finalPaymentRecomputedSanityCheck": 108.029,
+   "cashflows": [
+    {
+     "date": "2026-08-14",
+     "amountPer100VN": 108.029,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 4447233893478,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Issue date: BYMA ficha tecnica and IAMC both say 2026-04-17; bonistas.com snapshot says 2026-04-15. Resolved: the official result comunicado (Secretaria de Finanzas, 15-Abr-2026) is dated on the auction day, so 2026-04-15 is the auction date and 2026-04-17 the settlement/emision. 2026-04-17 adopted.",
+    "TEM 2.00% triple-confirmed: official comunicado 15-Abr-2026 (2,00%, TIREA 26,82%), IAMC 'Tasa licitacion', bonistas. BYMA ficha states monthly capitalization but omits the printed rate."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://files.allaria.com.ar/attach/Comunicado_resultados_20260415.pdf (official Secretaria de Finanzas comunicado, auction 15-Abr-2026: 'VENCIMIENTO 14 DE AGOSTO DE 2026 (nueva) ... 2,00% 26,82% $4.447.234' M - TEM, TIREA and VNO match exactly)",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "Issue-date discrepancy resolved with primary evidence: the official comunicado is dated 15-Abr-2026 (auction date); BYMA/IAMC emision 17-Abr-2026 is the settlement date. bonistas' 2026-04-15 is the auction date mislabeled as issue. Adopted 2026-04-17 stands."
+    ]
+   }
+  },
+  {
+   "ticker": "S15S6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-09-15",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0614758420",
+   "issueDate": "2026-05-29",
+   "maturityDate": "2026-09-15",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 1.99,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 107.21,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 107.21",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 107.210"
+   ],
+   "finalPaymentRecomputedSanityCheck": 107.21,
+   "cashflows": [
+    {
+     "date": "2026-09-15",
+     "amountPer100VN": 107.21,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 5156401468382,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "TEM 1.99% now primary-confirmed: Secretaria de Finanzas resultado 27-May-2026 shows S15S6 nueva at 1,99% TEM capitalizable / TIREA 26,68%, VNO 5.156.402M (was previously sourced from IAMC 'Tasa licitacion' only). finalPayment 107.210 double-sourced and exactly consistent with TEM 1.99% under 30/360."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-3 (Resultado 27-May-2026: 'S15S6 - nueva ... 1,99% (**) 26,68% ... $5.156.402' M; '(**) Representa la tasa efectiva mensual capitalizable desde la fecha de emision hasta el vencimiento')",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "TEM 1.99% was single-sourced (IAMC only); now confirmed from the primary auction result, which also matches BYMA montoNominal 5,156,401,468,382 (page shows 5,156,402M)."
+    ]
+   }
+  },
+  {
+   "ticker": "S17L6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-07-17",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0184448337",
+   "issueDate": "2026-03-31",
+   "maturityDate": "2026-07-17",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.16,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 107.92,
+   "finalPaymentOfficialSources": [
+    "not in IAMC 09-Jun table",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 107.920"
+   ],
+   "finalPaymentRecomputedSanityCheck": 107.92,
+   "cashflows": [
+    {
+     "date": "2026-07-17",
+     "amountPer100VN": 107.92,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 2751778636690,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0 (Secretaria de Finanzas, llamado 27-Mar-2026: S17L6 terms, TEM capitalizable 30/360, issue at par 31-Mar-2026)",
+    "https://cbonds.es/bonds/2117679/ (Argentina, LECAP 2.16% 17jul2026, ARS (S17L6))",
+    "https://www.cohen.com.ar/Bursatil/Especie/S17L6/MERVAL/24hs. (ISIN, maturity, renta fija nacional)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Not present in the IAMC 09-Jun-2026 capitalizables table; finalPayment taken from sinelefantesblancos calculator table and exactly reproduced by the official formula (TEM 2.16%, 30/360, 107 days -> 107.920). TEM 2.16% confirmed by BYMA ficha tecnica and cbonds title."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (re-fetched independently 2026-06-10: ISIN/fechaEmision/fechaVencimiento/montoNominal/interes all re-checked) - S17L6 ficha prints 'Tasa efectiva mensual: 2,16 %'",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "S30N6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-11-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0451031345",
+   "issueDate": "2025-12-15",
+   "maturityDate": "2026-11-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.3,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 129.888,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 129.89",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 129.888"
+   ],
+   "finalPaymentRecomputedSanityCheck": 129.888,
+   "cashflows": [
+    {
+     "date": "2026-11-30",
+     "amountPer100VN": 129.888,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 1784664685189,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Outstanding: BYMA ficha 1,784,665M ARS vs IAMC table 1,698,037M (IAMC likely pre-reopening); BYMA value recorded."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-0 (Resultado 11-Dic-2025: 'S30N6 - nueva ... 2,30% (**) 31,37%')",
+     "https://files.allaria.com.ar/attach/Comunicado_resultados_20260114.pdf (14-Ene-2026 reapertura footnote: 'TEM de corte 2,51%. LA LECAP S30N6 capitaliza a una TEM de 2,30% desde la fecha de emision hasta su vencimiento')",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "S30O6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-10-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0475783251",
+   "issueDate": "2025-10-31",
+   "maturityDate": "2026-10-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.55,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 135.278,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 135.28",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 135.278"
+   ],
+   "finalPaymentRecomputedSanityCheck": 135.278,
+   "cashflows": [
+    {
+     "date": "2026-10-30",
+     "amountPer100VN": 135.278,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 7970786028328,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Outstanding: BYMA ficha 7,970,786M ARS vs IAMC table 1,492,802M; instrument was reopened repeatedly - BYMA value recorded."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-dolares (Resultado 29-Oct-2025: 'S30O6 - nueva ... 2,55% (**) 35,28%')",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "S30S6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-09-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0379015875",
+   "issueDate": "2026-03-16",
+   "maturityDate": "2026-09-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.53,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 117.536,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 117.54",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 117.536"
+   ],
+   "finalPaymentRecomputedSanityCheck": 117.536,
+   "cashflows": [
+    {
+     "date": "2026-09-30",
+     "amountPer100VN": 117.536,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 4779220927749,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Outstanding: BYMA ficha 4,779,221M ARS vs IAMC 407,370M; BYMA value recorded."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-2 (Resultado 13-May-2026 reapertura footnote: 'TEM de corte 2,09%. LA LECAP S30S6 capitaliza a una TEM de 2,53% desde la fecha de emision hasta su vencimiento')",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "S31G6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-08-31",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0960697990",
+   "issueDate": "2025-11-10",
+   "maturityDate": "2026-08-31",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.5,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 127.064,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 127.06",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 127.064"
+   ],
+   "finalPaymentRecomputedSanityCheck": 127.064,
+   "cashflows": [
+    {
+     "date": "2026-08-31",
+     "amountPer100VN": 127.064,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": null,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "BYMA ficha returns no montoNominal. Initial issuance VNO 1,916,494M ARS (Secretaria de Finanzas resultado 05-Nov-2025); IAMC 09-Jun-2026 shows 2,080,531M ARS (post-reopening) - use as approximate fallback only, may be stale."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-lecap-boncap-boncer-letamar-bono-tamar-y-lelink (Resultado 05-Nov-2025: 'S31G6 - nueva ... 2,5% 34,49% $1.916.494' M)",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "Flag referenced a nonexistent 'outstandingNote' field - reworded. Initial VNO at issuance was 1,916,494M (primary); the IAMC 2,080,531M reflects a later reopening and may itself be stale, so outstandingVNoARS stays null."
+    ]
+   }
+  },
+  {
+   "ticker": "S31L6",
+   "classification": "lecap",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-07-31",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0377625857",
+   "issueDate": "2026-01-30",
+   "maturityDate": "2026-07-31",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.75,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 117.677,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 117.68",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 117.677"
+   ],
+   "finalPaymentRecomputedSanityCheck": 117.677,
+   "cashflows": [
+    {
+     "date": "2026-07-31",
+     "amountPer100VN": 117.677,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 2917921649331,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Official final 117.677 (IAMC rounds to 117.68) is reproduced exactly by 100*(1.0275)^(180/30) under 30/360 (day2 31->30 when day1>=30; 180 days from 2026-01-30 to 2026-07-31). An earlier flag claiming a +0.006 recompute residual was wrong and has been removed."
+   ],
+   "verification": {
+    "status": "corrected",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-0 (Resultado 28-Ene-2026: S31L6 nueva, TEM 2,75% / TIREA 38,48%, ~$1.84bn - matches IAMC initial outstanding 1,844,892M)",
+     "Resultado 11-Feb-2026 (https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-1) reapertura footnote: 'TEM de corte 2,74%. La LECAP S31L6 capitaliza a una TEM de 2,75%'",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "Removed incorrect flag claim that a plain 30/360 recompute gives 117.683 (+0.006): under 30/360 US (d1=30 so d2 31->30; 180 days) 100*1.0275^6 = 117.677 exactly reproduces the official value. No residual."
+    ]
+   }
+  },
+  {
+   "ticker": "T15E7",
+   "classification": "boncap",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-01-15",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0350916307",
+   "issueDate": "2025-01-31",
+   "maturityDate": "2027-01-15",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.05,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 161.104,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 161.1",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 161.104"
+   ],
+   "finalPaymentRecomputedSanityCheck": 161.104,
+   "cashflows": [
+    {
+     "date": "2027-01-15",
+     "amountPer100VN": 161.104,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 10552639537896,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-lecap-y-boncap (Resultado 25-Jun-2025, footnote (7): 'EL BONCAP T17E7 [sic, row reads T15E7 - reapertura] capitaliza a una TEM de 2,05% desde la fecha de emision hasta su vencimiento')",
+     "Resultado 11-Feb-2026 reapertura footnote: 'TEM de corte 2,74%. El BONCAP T15E7 capitaliza a una TEM de 2,05%'",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "T30A7",
+   "classification": "boncap",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-04-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0224546884",
+   "issueDate": "2025-10-31",
+   "maturityDate": "2027-04-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.55,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 157.341,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 157.34",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 157.341"
+   ],
+   "finalPaymentRecomputedSanityCheck": 157.341,
+   "cashflows": [
+    {
+     "date": "2027-04-30",
+     "amountPer100VN": 157.341,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": null,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "BYMA ficha returns no montoNominal. CAUTION: IAMC 09-Jun-2026 shows 346,145M ARS, which equals only the initial 31-Oct-2025 issuance; the official 05-Nov-2025 reopening already raised circulation to 1,635,058M ARS (Secretaria de Finanzas resultado). The IAMC figure is stale - do not use it as outstanding."
+   ],
+   "verification": {
+    "status": "corrected",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-dolares (Resultado 29-Oct-2025: 'T30A7 - nuevo ... 2,55% (**) 35,28% $346.145' M)",
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-lecap-boncap-boncer-letamar-bono-tamar-y-lelink (Resultado 05-Nov-2025: T30A7 reapertura at precio $1.020,00 -> VNO en circulacion $1.635.058 M; footnote: capitaliza a una TEM de 2,55%)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "IAMC fallback outstanding 346,145M ARS is provably stale: it equals the initial 31-Oct-2025 issuance, but the official 05-Nov-2025 reopening already lifted circulation to 1,635,058M ARS. Flag reworded (also removed reference to nonexistent 'outstandingNote' field); outstandingVNoARS stays null pending a current official figure."
+    ]
+   }
+  },
+  {
+   "ticker": "T30J6",
+   "classification": "boncap",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-06-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0071678673",
+   "issueDate": "2025-01-17",
+   "maturityDate": "2026-06-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.15,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 144.896,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 144.9",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 144.896"
+   ],
+   "finalPaymentRecomputedSanityCheck": 144.896,
+   "cashflows": [
+    {
+     "date": "2026-06-30",
+     "amountPer100VN": 144.896,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 1959514430016,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Outstanding: BYMA ficha 1,959,514M ARS vs IAMC 1,843,760M; BYMA value recorded."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/llamado-licitacion-de-lecap-boncap-y-boncer-0 / resultado pages of the 13/14-Ene-2025 auction: 'T30J6 - nuevo ... 2,15% (3) 30,90% $1.509.151' M",
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-lecap-y-boncap (25-Jun-2025 footnote (6): 'EL BONCAP T30J6 capitaliza a una TEM de 2,15% desde la fecha de emision hasta su vencimiento')",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "T30J7",
+   "classification": "boncap",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-06-30",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0987861058",
+   "issueDate": "2026-01-16",
+   "maturityDate": "2027-06-30",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.58,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 156.037,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 156.04",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 156.037"
+   ],
+   "finalPaymentRecomputedSanityCheck": 156.037,
+   "cashflows": [
+    {
+     "date": "2027-06-30",
+     "amountPer100VN": 156.037,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": null,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "BYMA ficha returns no montoNominal. IAMC 09-Jun-2026 shows 384,242M ARS, which equals the initial 16-Ene-2026 issuance (official comunicado 14-Ene-2026) - use as approximate fallback only, may be stale if the bond was reopened."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://files.allaria.com.ar/attach/Comunicado_resultados_20260114.pdf (official Secretaria de Finanzas comunicado, auction 14-Ene-2026: 'T30J7 - nuevo ... 2,58% (**) 35,75% $384.242' M; '(**) Representa la tasa efectiva mensual capitalizable desde la fecha de emision hasta el vencimiento')",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "Flag reworded (referenced nonexistent 'outstandingNote' field). The 384,242M figure equals the initial 16-Ene-2026 issuance per the official comunicado - may be stale if reopened since; outstandingVNoARS stays null."
+    ]
+   }
+  },
+  {
+   "ticker": "T31Y7",
+   "classification": "boncap",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-05-31",
+   "issuer": "Tesoro Nacional (Republica Argentina, Secretaria de Finanzas)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0571277315",
+   "issueDate": "2025-12-15",
+   "maturityDate": "2027-05-31",
+   "structure": "zero-coupon capitalizing, bullet",
+   "temAtIssuancePct": 2.4,
+   "capitalization": "Zero-coupon capitalizing: interest accrues at the auction TEM, capitalized monthly, day count 30/360 from issue date to maturity; single bullet payment at maturity. finalPaymentPer100VN is fixed at issuance. Recompute formula: 100*(1+TEM)^(days30360/30).",
+   "finalPaymentPer100VN": 151.563,
+   "finalPaymentOfficialSources": [
+    "IAMC informe diario 09-Jun-2026 'Monto al Vencimiento' = 151.56",
+    "sinelefantesblancos LECAP/BONCAP calculator 'VALOR FINAL C/100 VN' = 151.563"
+   ],
+   "finalPaymentRecomputedSanityCheck": 151.563,
+   "cashflows": [
+    {
+     "date": "2027-05-31",
+     "amountPer100VN": 151.563,
+     "type": "capital+capitalized interest (single bullet)"
+    }
+   ],
+   "outstandingVNoARS": 6942355179059,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Ticker-reuse caution: the 05-Nov-2025 auction offered a TASA TAMAR bond under the same ticker T31Y7 and declared it desierta (never issued). Nov-2025 announcements describing T31Y7 as a TAMAR floater do not apply to this fixed-rate capitalizable BONCAP issued 2025-12-15 at TEM 2,40% (TIREA 32,92%)."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.argentina.gob.ar/noticias/resultado-de-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-0 (Resultado 11-Dic-2025: 'BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 31 DE MAYO DE 2027 (T31Y7 - nuevo) ... 2,40% (**) 32,92% $1.352.881' M)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)"
+    ],
+    "corrections": [
+     "Added ticker-reuse caution flag: a 'BONO DEL TESORO NACIONAL EN PESOS A TASA TAMAR CON VENCIMIENTO 31 DE MAYO DE 2027 (T31Y7)' was offered on 05-Nov-2025 and declared desierta; the instrument actually issued 15-Dic-2025 under this ticker is the fixed-rate capitalizable BONCAP."
+    ]
+   }
+  },
+  {
+   "ticker": "TO26",
+   "classification": "bonte_fixed_coupon",
+   "name": "BONOS DEL TESORO NACIONAL EN PESOS A TASA FIJA VENCIMIENTO 17 DE OCTUBRE DE 2026 (BONTE 2026)",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "ARARGE4502K0",
+   "issueDate": "2016-10-17",
+   "maturityDate": "2026-10-17",
+   "structure": "fixed-rate coupon bond, bullet amortization at maturity",
+   "couponRateAnnualPct": 15.5,
+   "couponFrequency": "semiannual (17-Apr and 17-Oct each year), 30/360 day count per BYMA ficha tecnica",
+   "couponPer100VNPerPeriod": 7.75,
+   "temAtIssuancePct": null,
+   "finalPaymentPer100VN": 107.75,
+   "remainingCashflowsAsOf2026-06-10": [
+    {
+     "date": "2026-10-17",
+     "amountPer100VN": 107.75,
+     "type": "final coupon 7.75 + principal 100.00"
+    }
+   ],
+   "outstandingVNoARS": 96569713740,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Only one cashflow remains as of 2026-06-10 (the 2026-04-17 coupon already paid; IAMC shows proximo cupon 17-Oct-26).",
+    "Currency lines TO26D (USD MEP) / TO26C (USD cable) trade in arg_bonds; same instrument, different settlement currency."
+   ],
+   "verification": {
+    "status": "confirmed",
+    "checkedSources": [
+     "https://www.rava.com/perfil/TO26 (independent broker ficha: tasa fija 15,50% anual, semestral 17-Abr/17-Oct, amortizacion integra 17/10/2026, base 360 dias/12 meses de 30, outstanding 96,569,713,740 - all match)",
+     "research/iamc_titulos_publicos_2026-06-09.pdf (re-parsed independently with pdftotext: all Monto al Vencimiento / Tasa licitacion / fecha values re-read and matched) - TO26 row: cierre 99.4 = paridad 97.2% x valor tecnico 102.3, proving the BYMA screen price is dirty (sucio)"
+    ],
+    "corrections": []
+   }
+  },
+  {
+   "ticker": "TY30P",
+   "classification": "bonte_fixed_coupon",
+   "name": "BONO DEL TESORO NACIONAL EN PESOS A TASA FIJA CON VENCIMIENTO 30 DE MAYO DE 2030 (BONTE 2030)",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "isin": "AR0193433734",
+   "issueDate": "2025-06-04",
+   "maturityDate": "2030-05-30",
+   "structure": "fixed-rate coupon bond, bullet amortization at maturity; USD-subscribed at the May-2025 international placement (~USD 1.0bn), pays in ARS",
+   "couponRateAnnualPct": 29.5,
+   "couponFrequency": "semiannual, payable 30-May and 30-Nov each year, first coupon 2025-11-30 (per BYMA ficha tecnica)",
+   "couponPer100VNPerPeriod": 14.75,
+   "temAtIssuancePct": null,
+   "finalPaymentPer100VN": 114.75,
+   "remainingCashflowsAsOf2026-06-10": [
+    {
+     "date": "2026-11-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2027-05-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2027-11-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2028-05-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2028-11-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2029-05-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2029-11-30",
+     "amountPer100VN": 14.75,
+     "type": "coupon"
+    },
+    {
+     "date": "2030-05-30",
+     "amountPer100VN": 114.75,
+     "type": "final coupon 14.75 + principal 100.00"
+    }
+   ],
+   "embeddedOption": {
+    "type": "holder put",
+    "exerciseDate": "2027-05-27",
+    "transferDate": "2027-05-28",
+    "settlementDate": "2027-05-30",
+    "terms": "Per Resolucion Conjunta 24/2025 (Secretaria de Finanzas y Secretaria de Hacienda, Boletin Oficial 29-May-2025): the holder may exercise, one time only, early redemption of all or part of the capital; exercise (notice) date 2027-05-27, transfer date 2027-05-28, payment on the date of the fourth coupon (2027-05-30) at capital value (par 100) alongside that coupon - economically the valor tecnico on a coupon payment date.",
+    "confidence": "high"
+   },
+   "outstandingVNoARS": 1691807339451,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/326136/20250529 (Resolucion Conjunta 24/2025: emision 04-Jun-2025, vencimiento 30-May-2030, cupon semestral 30-May/30-Nov desde 30-Nov-2025, amortizacion integra, opcion de venta anticipada ejercitable una sola vez el 27-May-2027)",
+    "https://www.salvadordistefano.com.ar/novedades/991/bonte-2030-ty30p-argentina-vuelve-al-mercado",
+    "https://www.bloomberglinea.com/latinoamerica/argentina/argentina-confirma-apetito-por-bonte-2030-y-suma-us1000-millones-a-las-arcas-del-bcra/",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Put option now confirmed from the primary document: Resolucion Conjunta 24/2025 (Boletin Oficial 29-May-2025) - one-time holder put, exercise 27-May-2027, transfer 28-May-2027, paid at par with the fourth coupon on 30-May-2027. Previous flag (secondary-source-only) resolved.",
+    "Coupon dates 30-May/30-Nov confirmed by BYMA ficha ('pagaderos por semestre vencido los dias 30.05 y 30.11... comenzando el 30.11.2025') and IAMC (proximo cupon 30-Nov-26).",
+    "Currency lines TY30D (USD MEP) / TY30C (USD cable) trade in arg_bonds; same instrument."
+   ],
+   "verification": {
+    "status": "corrected",
+    "checkedSources": [
+     "https://www.boletinoficial.gob.ar/detalleAviso/primera/326136/20250529 (Resolucion Conjunta 24/2025 - primary issuance document)",
+     "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-lecap-boncap-y-bonte-2030 (12-Jun-2025 reapertura: USD 500M at $1.090,00 per $1.000 VNO, TIREA 28,46% - confirms maturity 30-May-2030 and reopening history)",
+     "research/iamc_titulos_publicos_2026-06-09.pdf (re-parsed independently with pdftotext: all Monto al Vencimiento / Tasa licitacion / fecha values re-read and matched) - TY30P row: cierre 109.2 = paridad 108.3% x valor tecnico 100.8 (dirty quote confirmed); proximo cupon 30-Nov-26 at 29,5%/2"
+    ],
+    "corrections": [
+     "embeddedOption upgraded from secondary to primary source: Resolucion Conjunta 24/2025 confirms a one-time holder put - exercise 2027-05-27, transfer 2027-05-28, settlement with the 4th coupon on 2027-05-30 at par capital value. Added transferDate/settlementDate, confidence raised medium->high, BO source added."
+    ]
+   }
+  },
+  {
+   "ticker": "LBJ26",
+   "classification": "provincial_discount_letter",
+   "name": "LETRAS DEL TESORO DE LA PROVINCIA DE BUENOS AIRES EN PESOS A DESCUENTO CON VENCIMIENTO EL 2026-06-25",
+   "issuer": "Provincia de Buenos Aires",
+   "law": "Argentina (Nacional per BYMA ficha)",
+   "guarantee": "Coparticipacion Federal de Impuestos",
+   "currency": "ARS",
+   "isin": "AR0505694445",
+   "issueDate": "2026-04-23",
+   "maturityDate": "2026-06-25",
+   "structure": "zero-coupon discount letter ('a descuento'), bullet; pays par at maturity",
+   "temAtIssuancePct": null,
+   "finalPaymentPer100VN": 100.0,
+   "cashflows": [
+    {
+     "date": "2026-06-25",
+     "amountPer100VN": 100.0,
+     "type": "principal at par (sold at discount)"
+    }
+   ],
+   "outstandingVNoARS": 542748132969,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (fetched 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Peso fixed-rate by structure (discount to par) but PROVINCIAL credit (PBA), not Tesoro Nacional - separate credit curve.",
+    "Primary confirmation (PBA Direccion Provincial de Deuda y Credito Publico via Banco Provincia, resultado 19-May-2026): reapertura of LBJ26 (ISIN AR0505694445) settled 21-May-2026 added VN 338,448,738,801 at precio de corte 0.977275 = tasa implicita 24.25% TNA; together with the original 23-Abr-2026 tranche (~VN 204,299M) this reproduces BYMA montoNominal 542,748,132,969. Cut rate of the original April auction not retrieved; temAtIssuancePct remains null (discount letter quotes TNA, not TEM).",
+    "Quote caution: 2026-06-10 close 100.0 (BYMA/data912) implies ~0% yield to 2026-06-25 - stale/odd-lot print; bid side 99.076 is the economic quote (~22% TNA)."
+   ],
+   "verification": {
+    "status": "corrected",
+    "checkedSources": [
+     "https://www.bancoprovincia.com.ar/CDN/Get/resultado_letras_pba (PBA resultado licitacion 19-May-2026: ISIN AR0505694445, CVSA 43044, BCBA/A3 LBJ26, a descuento, vencimiento 25-Jun-2026, reapertura liquidada 21-May-2026)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)"
+    ],
+    "corrections": [
+     "Structure (a descuento, par 100 at maturity), ISIN and maturity confirmed from the PBA primary result document (was previously sourced from BYMA endpoints only). Flags enriched with the 19-May-2026 reapertura terms (precio de corte 0.977275, 24.25% TNA implicita) and a stale-print caution on the 2026-06-10 close of 100.0."
+    ]
+   }
+  },
+  {
+   "ticker": "LBL26",
+   "classification": "provincial_discount_letter",
+   "name": "LETRAS DEL TESORO DE LA PROVINCIA DE BUENOS AIRES EN PESOS A DESCUENTO CON VENCIMIENTO EL 2026-07-23",
+   "issuer": "Provincia de Buenos Aires",
+   "law": "Argentina (Nacional per BYMA ficha)",
+   "guarantee": "Coparticipacion Federal de Impuestos",
+   "currency": "ARS",
+   "isin": "AR0847813174",
+   "issueDate": "2026-05-21",
+   "maturityDate": "2026-07-23",
+   "structure": "zero-coupon discount letter ('a descuento'), bullet; pays par at maturity",
+   "temAtIssuancePct": null,
+   "finalPaymentPer100VN": 100.0,
+   "cashflows": [
+    {
+     "date": "2026-07-23",
+     "amountPer100VN": 100.0,
+     "type": "principal at par (sold at discount)"
+    }
+   ],
+   "outstandingVNoARS": 81783731392,
+   "quoteBasis": "ARS per 100 VN nominal face, dirty (BYMA standard; for capitalizing letras/bonos the screen price embeds all capitalized interest, no separate accrued)",
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (fetched 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Peso fixed-rate by structure (discount to par) but PROVINCIAL credit (PBA), not Tesoro Nacional - separate credit curve.",
+    "Issuance cut now primary-confirmed (PBA resultado 19-May-2026, liquidacion 21-May-2026): nueva, precio de corte 0.959428, tasa de interes implicita 24.50% TNA, adjudicado VN 81,783,731,392 - exactly the recorded outstanding. temAtIssuancePct remains null (discount letter quotes TNA, not TEM).",
+    "Earlier stale-quote flag resolved: BYMA close 97.458 on 2026-06-10 implies ~22% TNA / ~24.6% TEA to 2026-07-23, consistent with the issuance cut; the prior 98.5 print of 2026-06-09 was stale/illiquid."
+   ],
+   "verification": {
+    "status": "corrected",
+    "checkedSources": [
+     "https://www.bancoprovincia.com.ar/CDN/Get/resultado_letras_pba (PBA resultado licitacion 19-May-2026: LBL26 nueva, a descuento, vencimiento 23-Jul-2026, emision/liquidacion 21-May-2026, precio de corte 0.959428, tasa implicita 24.5000% TNA, adjudicado VN 81,783,731,392)",
+     "https://data912.com/live/arg_notes (fetched 2026-06-10: close prices consistent with specs)",
+     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/lebacs (POST T1 panel, fetched 2026-06-10: maturityDate per symbol)"
+    ],
+    "corrections": [
+     "Auction cut-off confirmed from the PBA primary result document (flag previously said 'not confirmed'): precio de corte 0.959428 / 24.50% TNA implicita; adjudicated VN exactly equals the recorded outstandingVNoARS 81,783,731,392. Stale-price flag updated with the 2026-06-10 close of 97.458 (sane yield)."
+    ]
+   }
+  }
+ ],
+ "excluded": [
+  {
+   "ticker": "D30S6",
+   "classification": "dollar_linked",
+   "reason": "Letra del Tesoro vinculada al dolar (cero cupon); belongs to the dollar-linked family",
+   "maturityDate": "2026-09-30",
+   "detail": "Issue 2026-03-16 per bonistas; no BYMA ficha returned; bonistas confirms dollar-linked zero"
+  },
+  {
+   "ticker": "D31L6",
+   "classification": "dollar_linked",
+   "reason": "Letra del Tesoro vinculada al dolar cero cupon",
+   "maturityDate": "2026-07-31",
+   "isin": "AR0769584159",
+   "detail": "Issue 2026-05-29 per BYMA ficha"
+  },
+  {
+   "ticker": "D31M7",
+   "classification": "dollar_linked",
+   "reason": "Letra del Tesoro vinculada al dolar cero cupon",
+   "maturityDate": "2027-03-31",
+   "isin": "AR0637963668",
+   "detail": "Issue 2026-05-29 per BYMA ficha"
+  },
+  {
+   "ticker": "X30S6",
+   "classification": "cer_linked",
+   "reason": "LECER - Letra del Tesoro ajustada por CER a descuento; CER family",
+   "maturityDate": "2026-09-30",
+   "isin": "AR0362438175",
+   "detail": "Issue 2026-03-16"
+  },
+  {
+   "ticker": "X30N6",
+   "classification": "cer_linked",
+   "reason": "LECER ajustada por CER a descuento; CER family",
+   "maturityDate": "2026-11-30",
+   "isin": "AR0933792183",
+   "detail": "Issue 2025-12-15"
+  },
+  {
+   "ticker": "X31L6",
+   "classification": "cer_linked",
+   "reason": "LECER ajustada por CER a descuento; CER family",
+   "maturityDate": "2026-07-31",
+   "isin": "AR0189940411",
+   "detail": "Issue 2026-01-30"
+  },
+  {
+   "ticker": "M31G6",
+   "classification": "tamar_floater",
+   "reason": "Letra del Tesoro a tasa TAMAR (TEM TAMAR capitalizable mensualmente + margen 5%, 30/360); floating-rate family",
+   "maturityDate": "2026-08-31",
+   "isin": "AR0593866319",
+   "detail": "Issue 2025-11-06 per BYMA ficha (IAMC agrees 06-Nov-25; bonistas says 10-Nov-25)"
+  },
+  {
+   "ticker": "BU3S6",
+   "classification": "provincial_hybrid_fixed_tamar_max",
+   "reason": "Letras del Tesoro de la Provincia del Chubut Serie CXVIII Clase 2, 124 dias: pays at maturity the GREATER of 27% TNA fixed and TAMAR Privada + 5.50% TNA - embedded floater optionality, not pure fixed",
+   "maturityDate": "2026-09-21",
+   "isin": "AR0360789090",
+   "detail": "Issue 2026-05-20; guarantee Coparticipacion Federal; outstanding VNo ARS 45,500,000,000"
+  },
+  {
+   "ticker": "BU4J6",
+   "classification": "provincial_tamar_floater",
+   "reason": "Letras del Tesoro de la Provincia del Chubut Serie CXIII: TAMAR Bancos Privados + 5.5% TNA, quarterly interest (21-Sep-25, 20-Dec-25, 20-Mar-26, 18-Jun-26), principal at maturity",
+   "maturityDate": "2026-06-18",
+   "isin": "AR0109035797",
+   "detail": "Issue 2025-06-23; outstanding VNo ARS 50,007,926,429; matures 8 days after asOf"
+  },
+  {
+   "ticker": "SJ6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S12J6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-06-12",
+   "baseTicker": "S12J6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "S2L6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S17L6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-07-17",
+   "baseTicker": "S17L6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "SL6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S31L6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-07-31",
+   "baseTicker": "S31L6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "S2G6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S14G6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-08-14",
+   "baseTicker": "S14G6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "S2S6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S15S6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-09-15",
+   "baseTicker": "S15S6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "SS6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of S30S6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-09-30",
+   "baseTicker": "S30S6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "XL6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of X31L6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-07-31",
+   "baseTicker": "X31L6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "XN6D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP settlement line of X30N6; same instrument, USD local settlement - not a separate security",
+   "maturityDate": "2026-11-30",
+   "baseTicker": "X30N6",
+   "detail": "Base-ticker mapping confirmed via BYMA /lebacs maturityDate per symbol: when two letras share month+year the mid-month one carries the '2' infix (S2L6D=S17L6, SL6D=S31L6; S2G6D=S14G6; S2S6D=S15S6, SS6D=S30S6)"
+  },
+  {
+   "ticker": "TO26D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP line of TO26",
+   "baseTicker": "TO26"
+  },
+  {
+   "ticker": "TO26C",
+   "classification": "usd_cable_currency_line",
+   "reason": "USD-cable (CCL) line of TO26",
+   "baseTicker": "TO26"
+  },
+  {
+   "ticker": "TY30D",
+   "classification": "usd_mep_currency_line",
+   "reason": "USD-MEP line of TY30P",
+   "baseTicker": "TY30P"
+  },
+  {
+   "ticker": "TY30C",
+   "classification": "usd_cable_currency_line",
+   "reason": "USD-cable (CCL) line of TY30P",
+   "baseTicker": "TY30P"
+  }
+ ],
+ "notes": [
+  "Universe: all 28 symbols of data912 /live/arg_notes classified, plus the fixed-rate peso BONTE/BONCAP cluster of /live/arg_bonds (T15E7, T30A7, T30J6, T30J7, T31Y7, TO26, TY30P and their currency lines). Every arg_notes symbol is either specced in instruments[] or listed in excluded[] with a classification.",
+  "Month-letter code in S/T tickers: E=Ene, F=Feb, M=Mar, A=Abr, Y=May, J=Jun, L=Jul, G=Ago, S=Sep, O=Oct, N=Nov, D=Dic; trailing digit = year (6=2026, 7=2027). Verified against BYMA maturityDate for every symbol.",
+  "Final payments for all LECAP/BONCAP are double-sourced: IAMC Informe Diario de Titulos Publicos 09-Jun-2026 column 'Monto al Vencimiento' (2 decimals) and the sinelefantesblancos.com.ar LECAP/BONCAP calculator 'VALOR FINAL C/ 100 VN' (3 decimals); the two agree on every overlapping ticker. S17L6 is absent from the IAMC table; its 107.920 comes from the calculator and is reproduced exactly by the official formula with the auction TEM 2.16%.",
+  "Official capitalization convention (confirmed via the 27-Mar-2026 llamado a licitacion and by reproducing the official finals): TEM capitalizes monthly on a 30/360 day-count (US variant: day2 31->30 only when day1>=30) from issue date to maturity; finalPayment = 100*(1+TEM)^(days30360/30). Verification 2026-06-10: this recompute reproduces the official value EXACTLY (3 decimals) on all 14 LECAP/BONCAP - an earlier claim of a 0.006-0.007 residual on S31L6 was wrong.",
+  "Issuer note: the bonistas.com API 'description' field labels several LECAP/BONCAP as 'Bono de BCRA' - this is wrong; BYMA fichas tecnicas and IAMC confirm issuer Tesoro Nacional (Gobierno Nacional). Since 2024 the BCRA issues no letters of its own in this segment.",
+  "Quote basis: every instrument here is quoted on BYMA in ARS per 100 VN nominal face, dirty. Confirmed by BYMA /lebacs prices matching data912 and IAMC closes, and Cohen's 'Unidad de Negociacion: $100,00'. The tiny prices of D-suffix lines (e.g. SS6D 0.076) are USD per 100 ARS-face VN.",
+  "LBJ26/LBL26 (PBA discount letters) are included as peso-fixed instruments because their payoff (par 100 at maturity) is fully fixed, but they carry Provincia de Buenos Aires credit, not sovereign - price them off a provincial curve.",
+  "BU3S6/BU4J6 (Chubut) and M31G6 (Tesoro TAMAR) sit in arg_notes but are floaters (or max-of-fixed-and-TAMAR hybrids) - excluded from the peso fixed curve.",
+  "asOf prices for reference (data912 2026-06-10 close field c): S12J6 102.849-102.904, S30S6 109.85, T30J6 143.35-143.425, T15E7 140.8-140.95, TO26 99.49-99.65, TY30P 109.5-110.5 - all consistent with the recorded specs discounting at TEArs in the 20-27% area.",
+  "TY30P was the May-2025 USD-subscribed international placement (~USD 1bn at issue; outstanding now ARS 1.69tn after reopenings). It carries a one-time holder put: exercise 2027-05-27, transfer 2027-05-28, paid at par with the 4th coupon on 2027-05-30 - now confirmed from the primary document, Resolucion Conjunta 24/2025 (Boletin Oficial 29-May-2025).",
+  "Adversarial verification pass 2026-06-10: every instrument re-derived from at least one source not previously listed. All 14 LECAP/BONCAP capitalization TEMs confirmed against Secretaria de Finanzas auction results (argentina.gob.ar pages and official comunicado PDFs: S12J6 2,10/28-Abr-26; S14G6 2,00/15-Abr-26; S15S6 1,99/27-May-26; S17L6 ficha 2,16; S30N6 2,30/11-Dic-25; S30O6 2,55 & T30A7 2,55/29-Oct-25; S30S6 2,53 footnote 13-May-26; S31G6 2,50/05-Nov-25; S31L6 2,75/28-Ene-26; T15E7 2,05 & T30J6 2,15/2025 results; T30J7 2,58/14-Ene-26; T31Y7 2,40/11-Dic-25); printed TIREAs all equal (1+TEM)^12-1. Maturities cross-checked against the BYMA /lebacs T+1 panel; ticker month-letter map re-verified. TO26 confirmed via Rava; TY30P put via Boletin Oficial RC 24/2025; LBJ26/LBL26 via the PBA/Banco Provincia result document. CER-base checks not applicable (no CER instruments in this family - they sit in excluded[]). No maturity, ISIN, coupon or final-payment value required correction; corrections were confined to flags/notes (S31L6 phantom residual, T30A7 stale IAMC outstanding, phantom 'outstandingNote' references) and to upgrading TY30P/LBJ26/LBL26 terms to primary sources."
+ ]
+}

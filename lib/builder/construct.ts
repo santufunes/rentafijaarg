@@ -168,7 +168,10 @@ function pickDolar(
 
   if (profile === 'conservador') {
     // Lo más corto posible en USD: BOPREAL corto si existe, si no el soberano de menor MD.
-    const shortBopreal = bopreal.sort((a, b) => a.modifiedDuration - b.modifiedDuration)[0];
+    // strips BOPREAL con igual duración: el de mayor TIR es el que no paga prima por el put
+    const shortBopreal = bopreal.sort(
+      (a, b) => a.modifiedDuration - b.modifiedDuration || b.tir - a.tir,
+    )[0];
     const shortSov = sovereigns.sort((a, b) => a.modifiedDuration - b.modifiedDuration)[0];
     const pick = shortBopreal ?? shortSov;
     if (pick)

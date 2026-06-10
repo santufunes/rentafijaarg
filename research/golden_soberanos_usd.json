@@ -1,0 +1,522 @@
+{
+ "family": "soberanos_usd",
+ "asOf": "2026-06-10",
+ "settlementUsed": {
+  "liveComputation": "2026-06-11",
+  "iamcControl": "2026-06-10",
+  "note": "2026-06-11 = next Argentine business day after 2026-06-10 (Thursday, no holiday)"
+ },
+ "method": {
+  "irr": "effective annual, actual/365 exponent, bisection on sum(cf/(1+r)^(days/365)) = dirty price",
+  "cashflows": "per 100 VN original face from spec step-up + amortization schedules; semiannual 30/360 => coupon = residual_at_period_start * rate/2",
+  "priceBasis": "data912 D-ticker = dirty USD per 100 VN original face (paridad x valor tecnico); cross-checked = bonistas 24hs ARS price / implicit MEP",
+  "tolerancePp": 0.75
+ },
+ "sources": [
+  "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+  "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (golden, via market_context.json)",
+  "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+  "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (spec terms)"
+ ],
+ "results": [
+  {
+   "ticker": "AL29",
+   "publishedTIRPct": 7.1017,
+   "computedTIRPct": 7.2139,
+   "deltaPp": 0.1122,
+   "pass": true,
+   "note": "published TIR source: bonistas; computed 7.2139% from live D-ticker USD dirty price 64.16 vs bonistas 24hs published 7.1017% (same price snapshot)"
+  },
+  {
+   "ticker": "AL30",
+   "publishedTIRPct": 7.58,
+   "computedTIRPct": 7.7711,
+   "deltaPp": 0.1911,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 7.7711% from live D-ticker USD dirty price 63.83 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 7.58% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.00pp"
+  },
+  {
+   "ticker": "AL35",
+   "publishedTIRPct": 9.66,
+   "computedTIRPct": 9.8119,
+   "deltaPp": 0.1519,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 9.8119% from live D-ticker USD dirty price 78.26 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 9.66% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.00pp"
+  },
+  {
+   "ticker": "AE38",
+   "publishedTIRPct": 9.98,
+   "computedTIRPct": 10.1102,
+   "deltaPp": 0.1302,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 10.1102% from live D-ticker USD dirty price 80.83 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 9.98% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.00pp"
+  },
+  {
+   "ticker": "AL41",
+   "publishedTIRPct": 9.5075,
+   "computedTIRPct": 9.6638,
+   "deltaPp": 0.1563,
+   "pass": true,
+   "note": "published TIR source: bonistas; computed 9.6638% from live D-ticker USD dirty price 73.61 vs bonistas 24hs published 9.5075% (same price snapshot)"
+  },
+  {
+   "ticker": "GD29",
+   "publishedTIRPct": 5.4402,
+   "computedTIRPct": 5.4983,
+   "deltaPp": 0.0581,
+   "pass": true,
+   "note": "published TIR source: bonistas; computed 5.4983% from live D-ticker USD dirty price 65.74 vs bonistas 24hs published 5.4402% (same price snapshot)"
+  },
+  {
+   "ticker": "GD30",
+   "publishedTIRPct": 6.53,
+   "computedTIRPct": 6.5995,
+   "deltaPp": 0.0695,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 6.5995% from live D-ticker USD dirty price 65.21 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 6.53% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.01pp"
+  },
+  {
+   "ticker": "GD35",
+   "publishedTIRPct": 9.06,
+   "computedTIRPct": 9.1529,
+   "deltaPp": 0.0929,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 9.1529% from live D-ticker USD dirty price 80.93 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 9.06% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.01pp"
+  },
+  {
+   "ticker": "GD38",
+   "publishedTIRPct": 9.0411,
+   "computedTIRPct": 9.0322,
+   "deltaPp": -0.0089,
+   "pass": true,
+   "note": "published TIR source: bonistas; computed 9.0322% from live D-ticker USD dirty price 84.73 vs bonistas 24hs published 9.0411% (same price snapshot)"
+  },
+  {
+   "ticker": "GD41",
+   "publishedTIRPct": 9.09,
+   "computedTIRPct": 9.2687,
+   "deltaPp": 0.1787,
+   "pass": true,
+   "note": "published TIR source: IAMC; computed 9.2687% from live D-ticker USD dirty price 75.25 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 9.09% (06-09 close, settle 06-10); part of delta is the one-day market move; control on IAMC's own price/settlement reproduces published TIR within -0.00pp"
+  },
+  {
+   "ticker": "GD46",
+   "publishedTIRPct": 8.9091,
+   "computedTIRPct": 8.9171,
+   "deltaPp": 0.008,
+   "pass": true,
+   "note": "published TIR source: bonistas; computed 8.9171% from live D-ticker USD dirty price 72.78 vs bonistas 24hs published 8.9091% (same price snapshot)"
+  }
+ ],
+ "details": [
+  {
+   "ticker": "AL29",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses al 1% 2029 - Ley Argentina (BONO USD 2029 1% L.A.)",
+   "maturity": "2029-07-09",
+   "impliedResidual_2026-06-10": 70.0,
+   "specResidual": 70.0,
+   "remainingCashflowCount": 7,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 10.35
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 10.3
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 10.25
+    }
+   ],
+   "totalRemainingUSDper100VN": 71.4,
+   "livePriceUSD_data912_D": 64.16,
+   "livePriceARS_data912": 93300.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 7.2139,
+   "computedModifiedDurationYears_live": 1.3992,
+   "goldenSource": "bonistas.com /api/bonds snapshot 2026-06-10, settlement 24hs (secondary; no IAMC golden in market_context)",
+   "goldenPublishedTIRPct": 7.1017,
+   "goldenPublishedMDYears": 1.4538,
+   "bonistas24hsTIRPct": 7.1017,
+   "bonistas24hsPriceARS": 93300,
+   "deltaPp_live_vs_bonistas": 0.1121,
+   "pass": true,
+   "deltaPp": 0.1122
+  },
+  {
+   "ticker": "AL30",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2030 - Ley Argentina (BONO USD 2030 L.A.)",
+   "maturity": "2030-07-09",
+   "impliedResidual_2026-06-10": 72.0,
+   "specResidual": 72.0,
+   "remainingCashflowCount": 9,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 8.27
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 8.24
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 8.21
+    }
+   ],
+   "totalRemainingUSDper100VN": 74.19,
+   "livePriceUSD_data912_D": 63.83,
+   "livePriceARS_data912": 92700.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 7.7711,
+   "computedModifiedDurationYears_live": 1.8074,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 64.04,
+   "goldenPublishedTIRPct": 7.58,
+   "goldenPublishedMDYears": 1.81,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 7.5786,
+   "controlDeltaPp_vsIAMC": -0.0014,
+   "controlModifiedDurationYears": 1.8159,
+   "bonistas24hsTIRPct": 7.7588,
+   "bonistas24hsPriceARS": 92700,
+   "deltaPp_live_vs_bonistas": 0.0122,
+   "pass": true,
+   "deltaPp": 0.1911
+  },
+  {
+   "ticker": "AL35",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2035 (BONO USD 2035 L.A.)",
+   "maturity": "2035-07-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 19,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 2.0625
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 2.0625
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 2.0625
+    }
+   ],
+   "totalRemainingUSDper100VN": 134.6875,
+   "livePriceUSD_data912_D": 78.26,
+   "livePriceARS_data912": 114500.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 9.8119,
+   "computedModifiedDurationYears_live": 5.0603,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 78.86,
+   "goldenPublishedTIRPct": 9.66,
+   "goldenPublishedMDYears": 5.07,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 9.6562,
+   "controlDeltaPp_vsIAMC": -0.0038,
+   "controlModifiedDurationYears": 5.077,
+   "bonistas24hsTIRPct": 9.6676,
+   "bonistas24hsPriceARS": 114500,
+   "deltaPp_live_vs_bonistas": 0.1443,
+   "pass": true,
+   "deltaPp": 0.1519
+  },
+  {
+   "ticker": "AE38",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2038 (BONO USD 2038 L.A.)",
+   "maturity": "2038-01-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 24,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 2.5
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 2.5
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 7.045455
+    }
+   ],
+   "totalRemainingUSDper100VN": 133.749997,
+   "livePriceUSD_data912_D": 80.83,
+   "livePriceARS_data912": 117670.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 10.1102,
+   "computedModifiedDurationYears_live": 4.3064,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 81.28,
+   "goldenPublishedTIRPct": 9.98,
+   "goldenPublishedMDYears": 4.32,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 9.9755,
+   "controlDeltaPp_vsIAMC": -0.0045,
+   "controlModifiedDurationYears": 4.325,
+   "bonistas24hsTIRPct": 10.0551,
+   "bonistas24hsPriceARS": 117670,
+   "deltaPp_live_vs_bonistas": 0.0551,
+   "pass": true,
+   "deltaPp": 0.1302
+  },
+  {
+   "ticker": "AL41",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2041 (BONO USD 2041 L.A.)",
+   "maturity": "2041-07-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 31,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 1.75
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 1.75
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 1.75
+    }
+   ],
+   "totalRemainingUSDper100VN": 137.991067,
+   "livePriceUSD_data912_D": 73.61,
+   "livePriceARS_data912": 107850.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 9.6638,
+   "computedModifiedDurationYears_live": 5.5427,
+   "goldenSource": "bonistas.com /api/bonds snapshot 2026-06-10, settlement 24hs (secondary; no IAMC golden in market_context)",
+   "goldenPublishedTIRPct": 9.5075,
+   "goldenPublishedMDYears": 5.8227,
+   "bonistas24hsTIRPct": 9.5075,
+   "bonistas24hsPriceARS": 107850,
+   "deltaPp_live_vs_bonistas": 0.1563,
+   "pass": true,
+   "deltaPp": 0.1563
+  },
+  {
+   "ticker": "GD29",
+   "name": "U.S. Dollar Amortizing 1.000% Bonds due 2029 (New USD 2029 Bonds; Global 2029)",
+   "maturity": "2029-07-09",
+   "impliedResidual_2026-06-10": 70.0,
+   "specResidual": 70.0,
+   "remainingCashflowCount": 7,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 10.35
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 10.3
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 10.25
+    }
+   ],
+   "totalRemainingUSDper100VN": 71.4,
+   "livePriceUSD_data912_D": 65.74,
+   "livePriceARS_data912": 95590.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 5.4983,
+   "computedModifiedDurationYears_live": 1.4372,
+   "goldenSource": "bonistas.com /api/bonds snapshot 2026-06-10, settlement 24hs (secondary; no IAMC golden in market_context)",
+   "goldenPublishedTIRPct": 5.4402,
+   "goldenPublishedMDYears": 1.4807,
+   "bonistas24hsTIRPct": 5.4402,
+   "bonistas24hsPriceARS": 95590,
+   "deltaPp_live_vs_bonistas": 0.0581,
+   "pass": true,
+   "deltaPp": 0.0581
+  },
+  {
+   "ticker": "GD30",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2030 (New USD 2030 Bonds; Global 2030)",
+   "maturity": "2030-07-09",
+   "impliedResidual_2026-06-10": 72.0,
+   "specResidual": 72.0,
+   "remainingCashflowCount": 9,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 8.27
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 8.24
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 8.21
+    }
+   ],
+   "totalRemainingUSDper100VN": 74.19,
+   "livePriceUSD_data912_D": 65.21,
+   "livePriceARS_data912": 94760.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 6.5995,
+   "computedModifiedDurationYears_live": 1.8442,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 65.3,
+   "goldenPublishedTIRPct": 6.53,
+   "goldenPublishedMDYears": 1.85,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 6.5154,
+   "controlDeltaPp_vsIAMC": -0.0146,
+   "controlModifiedDurationYears": 1.8494,
+   "bonistas24hsTIRPct": 6.5895,
+   "bonistas24hsPriceARS": 94760,
+   "deltaPp_live_vs_bonistas": 0.0101,
+   "pass": true,
+   "deltaPp": 0.0695
+  },
+  {
+   "ticker": "GD35",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2035 (New USD 2035 Bonds; Global 2035)",
+   "maturity": "2035-07-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 19,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 2.0625
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 2.0625
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 2.0625
+    }
+   ],
+   "totalRemainingUSDper100VN": 134.6875,
+   "livePriceUSD_data912_D": 80.93,
+   "livePriceARS_data912": 118400.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 9.1529,
+   "computedModifiedDurationYears_live": 5.1207,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 81.33,
+   "goldenPublishedTIRPct": 9.06,
+   "goldenPublishedMDYears": 5.13,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 9.052,
+   "controlDeltaPp_vsIAMC": -0.008,
+   "controlModifiedDurationYears": 5.1325,
+   "bonistas24hsTIRPct": 9.0227,
+   "bonistas24hsPriceARS": 118400,
+   "deltaPp_live_vs_bonistas": 0.1301,
+   "pass": true,
+   "deltaPp": 0.0929
+  },
+  {
+   "ticker": "GD38",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2038 (New USD 2038 Bonds; Global 2038)",
+   "maturity": "2038-01-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 24,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 2.5
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 2.5
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 7.045455
+    }
+   ],
+   "totalRemainingUSDper100VN": 133.749997,
+   "livePriceUSD_data912_D": 84.73,
+   "livePriceARS_data912": 123080.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 9.0322,
+   "computedModifiedDurationYears_live": 4.4372,
+   "goldenSource": "bonistas.com /api/bonds snapshot 2026-06-10, settlement 24hs (secondary; no IAMC golden in market_context)",
+   "goldenPublishedTIRPct": 9.0411,
+   "goldenPublishedMDYears": 4.6286,
+   "bonistas24hsTIRPct": 9.0411,
+   "bonistas24hsPriceARS": 123080,
+   "deltaPp_live_vs_bonistas": -0.0089,
+   "pass": true,
+   "deltaPp": -0.0089
+  },
+  {
+   "ticker": "GD41",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2041 (New USD 2041 Bonds; Global 2041)",
+   "maturity": "2041-07-09",
+   "impliedResidual_2026-06-10": 100.0,
+   "specResidual": 100.0,
+   "remainingCashflowCount": 31,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 1.75
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 1.75
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 1.75
+    }
+   ],
+   "totalRemainingUSDper100VN": 137.991067,
+   "livePriceUSD_data912_D": 75.25,
+   "livePriceARS_data912": 109300.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 9.2687,
+   "computedModifiedDurationYears_live": 5.6127,
+   "goldenSource": "IAMC/BYMA Informe Diario Titulos Publicos 2026-06-09 (settlement 2026-06-10)",
+   "goldenPriceUSDdirty": 76.01,
+   "goldenPublishedTIRPct": 9.09,
+   "goldenPublishedMDYears": 5.64,
+   "controlTIRPct_iamcPrice_settle_2026-06-10": 9.086,
+   "controlDeltaPp_vsIAMC": -0.004,
+   "controlModifiedDurationYears": 5.648,
+   "bonistas24hsTIRPct": 9.2791,
+   "bonistas24hsPriceARS": 109300,
+   "deltaPp_live_vs_bonistas": -0.0104,
+   "pass": true,
+   "deltaPp": 0.1787
+  },
+  {
+   "ticker": "GD46",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2046 (New USD 2046 Bonds; Global 2046)",
+   "maturity": "2046-07-09",
+   "impliedResidual_2026-06-10": 93.181819,
+   "specResidual": 93.1818,
+   "remainingCashflowCount": 41,
+   "next3Cashflows": [
+    {
+     "date": "2026-07-09",
+     "amountUSDper100VN": 4.194602
+    },
+    {
+     "date": "2027-01-09",
+     "amountUSDper100VN": 4.147727
+    },
+    {
+     "date": "2027-07-09",
+     "amountUSDper100VN": 4.100852
+    }
+   ],
+   "totalRemainingUSDper100VN": 140.376428,
+   "livePriceUSD_data912_D": 72.78,
+   "livePriceARS_data912": 105820.0,
+   "computedTIRPct_liveD_settle_2026-06-11": 8.9171,
+   "computedModifiedDurationYears_live": 5.9188,
+   "goldenSource": "bonistas.com /api/bonds snapshot 2026-06-10, settlement 24hs (secondary; no IAMC golden in market_context)",
+   "goldenPublishedTIRPct": 8.9091,
+   "goldenPublishedMDYears": 6.1744,
+   "bonistas24hsTIRPct": 8.9091,
+   "bonistas24hsPriceARS": 105820,
+   "deltaPp_live_vs_bonistas": 0.008,
+   "pass": true,
+   "deltaPp": 0.008
+  }
+ ]
+}

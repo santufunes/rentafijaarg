@@ -1,0 +1,1476 @@
+{
+ "family": "cer_dl",
+ "asOf": "2026-06-10",
+ "instruments": [
+  {
+   "ticker": "TZX26",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-06-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-02-01",
+   "maturity": "2026-06-30",
+   "cerBase": 200.38801458912,
+   "cerBaseReferenceDate": "2024-01-18",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-01-18 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 388.5 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/200.38801458912",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 1855451,
+   "iamcValorTecnico_2026_06_09": 388.5,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TZX6D",
+    "TZX6C"
+   ],
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Emitido en la conversion de enero 2024 (RESFC-2024-8); IAMC y bonistas concuerdan con cerBase=CER(2024-01-18)."
+   ]
+  },
+  {
+   "ticker": "TZX27",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-06-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-02-01",
+   "maturity": "2027-06-30",
+   "cerBase": 200.38801458912,
+   "cerBaseReferenceDate": "2024-01-18",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-01-18 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 388.5 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/200.38801458912",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 2522245,
+   "iamcValorTecnico_2026_06_09": 388.5,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TZX7D"
+   ],
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Emitido en la conversion de enero 2024 (RESFC-2024-8); IAMC y bonistas concuerdan con cerBase=CER(2024-01-18)."
+   ]
+  },
+  {
+   "ticker": "TZX28",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-06-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-02-01",
+   "maturity": "2028-06-30",
+   "cerBase": 200.38801458912,
+   "cerBaseReferenceDate": "2024-01-18",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-01-18 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 388.5 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/200.38801458912",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 6613094,
+   "iamcValorTecnico_2026_06_09": 388.5,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Emitido en la conversion de enero 2024 (RESFC-2024-8); IAMC y bonistas concuerdan con cerBase=CER(2024-01-18)."
+   ]
+  },
+  {
+   "ticker": "TZXD6",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-12-15",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-03-15",
+   "maturity": "2026-12-15",
+   "cerBase": 271.04755550913,
+   "cerBaseReferenceDate": "2024-03-01",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-03-01 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 289.1 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/271.04755550913",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 10080991,
+   "iamcValorTecnico_2026_06_09": 289.1,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 16/2024 (conversion marzo 2024, TZXD5/TZXD6/TZXD7): https://servicios.infoleg.gob.ar/infolegInternet/anexos/395000-399999/397316/norma.htm",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "CER BASE AMBIGUA POR UN DIA HABIL: la regla t-10 desde la emision oficial 2024-03-15 (Res. Conjunta 16/2024, sin CER inicial explicito) da CER(2024-03-01)=271.04755550913, valor que reproduce la paridad de bonistas.com. SIN EMBARGO el valor tecnico IAMC (289.1) implica CER(2024-02-29)=269.30251872788 (t-11). Se adopta el valor regla-estricta 271.04755550913; verificar contra el anexo de la conversion (servicios.infoleg.gob.ar .../397316/resconj16.pdf) antes de uso en produccion. Diferencia de payoff: 0.65%.",
+    "TZXD6 fue parcialmente convertido a TZXM8 el 14/28-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TZXD7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-12-15",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-03-15",
+   "maturity": "2027-12-15",
+   "cerBase": 271.04755550913,
+   "cerBaseReferenceDate": "2024-03-01",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-03-01 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 289.1 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/271.04755550913",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 10392457,
+   "iamcValorTecnico_2026_06_09": 289.1,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 16/2024 (conversion marzo 2024, TZXD5/TZXD6/TZXD7): https://servicios.infoleg.gob.ar/infolegInternet/anexos/395000-399999/397316/norma.htm",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "CER BASE AMBIGUA POR UN DIA HABIL: la regla t-10 desde la emision oficial 2024-03-15 (Res. Conjunta 16/2024, sin CER inicial explicito) da CER(2024-03-01)=271.04755550913, valor que reproduce la paridad de bonistas.com. SIN EMBARGO el valor tecnico IAMC (289.1) implica CER(2024-02-29)=269.30251872788 (t-11). Se adopta el valor regla-estricta 271.04755550913; verificar contra el anexo de la conversion (servicios.infoleg.gob.ar .../397316/resconj16.pdf) antes de uso en produccion. Diferencia de payoff: 0.65%.",
+    "TZXD6 fue parcialmente convertido a TZXM8 el 14/28-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TZXM7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-03-31",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-05-20",
+   "maturity": "2027-03-31",
+   "cerBase": 361.31760345721,
+   "cerBaseReferenceDate": "2024-05-06",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-05-06 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 217.7 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/361.31760345721",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 1998424,
+   "iamcValorTecnico_2026_06_09": 217.7,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 27/2024 (BO 17-05-2024, art.6 crea TZXM7 emision 20-05-2024): https://www.boletinoficial.gob.ar/detalleAviso/primera/307639/20240517",
+    "Llamado licitacion 16-05-2024 (TZXM7 nuevo, liquidacion 20-05-2024 T+2; clausula dolar-linked: TC referencia Com. A3500 del tercer dia habil previo a la fecha de pago): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-lecap-boncer-cero-cupon-y-bono-dolar-linked-cero-cupon-y-anuncio-del",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Fecha de emision oficial 2024-05-20 (Res. Conjunta 27/2024 art.6; licitacion 16-05-2024 liquidada T+2). OJO: IAMC muestra emision 17-05-2024 y un VT consistente con CER(2024-05-03)=357.56649970049; ese dato IAMC se considera erroneo frente al BO. bonistas concuerda con la base adoptada CER(2024-05-06).",
+    "Parcialmente convertido a TZXM8 el 14-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TZXO6",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-10-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2024-10-31",
+   "maturity": "2026-10-30",
+   "cerBase": 480.15257831965,
+   "cerBaseReferenceDate": "2024-10-17",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2024-10-17 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 162.2 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/480.15257831965",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 3571218,
+   "iamcValorTecnico_2026_06_09": 162.2,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "IAMC y bonistas concuerdan con cerBase=CER(2024-10-17). Resolucion conjunta de origen (oct-2024) no fetched; regla t-10 estandar."
+   ]
+  },
+  {
+   "ticker": "TZXA7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-04-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2025-11-28",
+   "maturity": "2027-04-30",
+   "cerBase": 651.89806244294,
+   "cerBaseReferenceDate": "2025-11-12",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2025-11-12 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 119.4 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/651.89806244294",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 370752,
+   "iamcValorTecnico_2026_06_09": 119.4,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TXA7D"
+   ],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 habiles desde 2025-11-28 salta el feriado trasladado 24-11-2025 y el puente 21-11-2025; IAMC y bonistas concuerdan."
+   ]
+  },
+  {
+   "ticker": "TZXY7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-05-31",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2025-12-15",
+   "maturity": "2027-05-31",
+   "cerBase": 659.67889566652,
+   "cerBaseReferenceDate": "2025-11-28",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2025-11-28 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 118.0 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/659.67889566652",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 3154722,
+   "iamcValorTecnico_2026_06_09": 118.0,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 63/2025 (BO 15-12-2025, instrumentos liquidados 15-12-2025 incl. TZXY7/X30N6): https://www.boletinoficial.gob.ar/detalleAviso/primera/336185/20251215",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 desde 2025-12-15 salta el feriado 08-12-2025; IAMC y bonistas concuerdan."
+   ]
+  },
+  {
+   "ticker": "X30N6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-11-30",
+   "instrumentType": "LECER (letra CER cupon cero)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2025-12-15",
+   "maturity": "2026-11-30",
+   "cerBase": 659.67889566652,
+   "cerBaseReferenceDate": "2025-11-28",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2025-11-28 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 118.0 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/659.67889566652",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 4557709,
+   "iamcValorTecnico_2026_06_09": 118.0,
+   "panel": "arg_notes",
+   "usdSettlementLines": [
+    "XN6D"
+   ],
+   "sources": [
+    "Resolucion Conjunta 63/2025 (BO 15-12-2025, instrumentos liquidados 15-12-2025 incl. TZXY7/X30N6): https://www.boletinoficial.gob.ar/detalleAviso/primera/336185/20251215",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Misma fecha de emision y cerBase que TZXY7 (cohorte 15-12-2025)."
+   ]
+  },
+  {
+   "ticker": "X31L6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-07-31",
+   "instrumentType": "LECER (letra CER cupon cero)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-01-30",
+   "maturity": "2026-07-31",
+   "cerBase": 685.55061207521,
+   "cerBaseReferenceDate": "2026-01-16",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-01-16 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 113.6 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/685.55061207521",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 457889,
+   "iamcValorTecnico_2026_06_09": 113.6,
+   "panel": "arg_notes",
+   "usdSettlementLines": [
+    "XL6D"
+   ],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "IAMC y bonistas concuerdan con cerBase=CER(2026-01-16)."
+   ]
+  },
+  {
+   "ticker": "X30S6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-09-30",
+   "instrumentType": "LECER (letra CER cupon cero)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-03-16",
+   "maturity": "2026-09-30",
+   "cerBase": 714.9848780192,
+   "cerBaseReferenceDate": "2026-03-02",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-03-02 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 108.9 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/714.9848780192",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 1117884,
+   "iamcValorTecnico_2026_06_09": 108.9,
+   "panel": "arg_notes",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 13/2026 (BO 13-03-2026, instrumentos liquidados 16-03-2026 incl. X30S6/D30S6): https://www.boletinoficial.gob.ar/detalleAviso/primera/339439/20260313",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "IAMC y bonistas concuerdan con cerBase=CER(2026-03-02)."
+   ]
+  },
+  {
+   "ticker": "TZXS7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-09-30",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-03-31",
+   "maturity": "2027-09-30",
+   "cerBase": 723.05998062192,
+   "cerBaseReferenceDate": "2026-03-13",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-03-13 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 107.7 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/723.05998062192",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 1218541,
+   "iamcValorTecnico_2026_06_09": 107.7,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 habiles desde 2026-03-31 salta el puente turistico 23-03-2026 (Resolucion 164/2025) y el feriado 24-03-2026, cayendo en 2026-03-13; IAMC (VT 107.7) y bonistas concuerdan."
+   ]
+  },
+  {
+   "ticker": "TZXM8",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-03-31",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-03-31",
+   "cerBase": 723.05998062192,
+   "cerBaseReferenceDate": "2026-03-13",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-03-13 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 107.7 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/723.05998062192",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 16062573,
+   "iamcValorTecnico_2026_06_09": 107.7,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 habiles desde 2026-03-31 salta el puente turistico 23-03-2026 (Resolucion 164/2025) y el feriado 24-03-2026, cayendo en 2026-03-13; IAMC (VT 107.7) y bonistas concuerdan.",
+    "Ampliado el 20-04-2026 (Res 21/2026) y por conversiones de TZXD6/TZXM7/TTD26-era (14-04 y 28-04-2026); las reaperturas mantienen la cerBase original."
+   ]
+  },
+  {
+   "ticker": "TZXM9",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2029-03-28",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-03-31",
+   "maturity": "2029-03-28",
+   "cerBase": 723.05998062192,
+   "cerBaseReferenceDate": "2026-03-13",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-03-13 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 (VT 107.7 por VN 100, ref CER 27-05-2026=778.59598274576) y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/723.05998062192",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": 254828,
+   "iamcValorTecnico_2026_06_09": 107.7,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 habiles desde 2026-03-31 salta el puente turistico 23-03-2026 (Resolucion 164/2025) y el feriado 24-03-2026, cayendo en 2026-03-13; IAMC (VT 107.7) y bonistas concuerdan.",
+    "Ampliado el 14-04-2026 (reapertura a precio $810.00/1000, TIREA 7.95%)."
+   ]
+  },
+  {
+   "ticker": "TZXS8",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-09-29",
+   "instrumentType": "BONCER cero cupon (zero capitalizing)",
+   "family": "cer",
+   "structure": "zero_coupon_cer_indexed_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (denominado y pagadero en pesos, capital ajustado por CER)",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-09-29",
+   "cerBase": 723.05998062192,
+   "cerBaseReferenceDate": "2026-03-13",
+   "cerBaseDerivation": "CER oficial BCRA (serie id 30) del dia 2026-03-13 = 10 dias habiles antes de la fecha de emision, segun la clausula t-10 del prospecto/resolucion. Validado contra valor tecnico IAMC 09-06-2026 y contra la paridad de bonistas.com (ambos calculadores reproducen el VT con esta base salvo flag).",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 0.0,
+   "couponPaymentSchedule": null,
+   "amortization": "bullet (100% al vencimiento, capital ajustado por CER)",
+   "payoffRule": "Pago unico al vencimiento por 100 VN = 100 x CER(vencimiento-10 habiles)/723.05998062192",
+   "quoteBasisBYMA": "ARS por VN 100 (precio sucio); confirmado por columna 'Cierre ARS' IAMC y panel data912",
+   "montoEmitidoMillonesARS": null,
+   "iamcValorTecnico_2026_06_09": null,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "t-10 habiles desde 2026-03-31 salta el puente turistico 23-03-2026 (Resolucion 164/2025) y el feriado 24-03-2026, cayendo en 2026-03-13; IAMC (VT 107.7) y bonistas concuerdan.",
+    "NO aparece en el informe IAMC 09-06-2026 (omision aparente); cerBase confirmada via paridad bonistas (VT implicito 107.77 al 24hs) y por cohorte de emision identica (31-03-2026). Reaperturas 14-04 y 28-04-2026 (precio 850.60/849.50 por 1000, TIREA 7.60%/8.41%)."
+   ]
+  },
+  {
+   "ticker": "TX26",
+   "name": "BONCER 2% vto 2026-11-09 (Bono del Tesoro ajustado por CER 2,00%)",
+   "instrumentType": "BONCER con cupon (coupon-bearing CER bond)",
+   "family": "cer",
+   "structure": "cer_indexed_coupon_bond",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (capital e intereses ajustados por CER)",
+   "issueDate": "2020-09-04",
+   "maturity": "2026-11-09",
+   "cerBase": 22.54395108959,
+   "cerBaseReferenceDate": "2020-08-21",
+   "cerBaseDerivation": "CER oficial BCRA del dia 2020-08-21 (10 habiles antes de la emision); validado contra VT IAMC 09-06-2026 = 690.8 con residual 20%.",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 2.0,
+   "couponPaymentSchedule": "Semestral, 9 de mayo y 9 de noviembre; proximo y ultimo cupon 2026-11-09",
+   "amortization": "5 cuotas semestrales iguales de 20% desde 2024-11-09; residual actual 20% (ultima cuota 2026-11-09)",
+   "payoffRule": "Cupones semestrales de (realCouponPct/2)% sobre capital residual indexado por CER; amortizacion en cuotas indexadas segun calendario; indexacion CER con regla t-10 en cada fecha de servicio.",
+   "quoteBasisBYMA": "ARS por VN 100 ORIGINAL (precio sucio); paridad IAMC calculada sobre valor tecnico del residual indexado",
+   "montoEmitidoMillonesARS": 222131,
+   "iamcValorTecnico_2026_06_09": 690.8,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TX26D"
+   ],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "cerBase validada doblemente: TX26 y TX28 comparten emision 2020-09-04 y la misma base reproduce ambos VT IAMC (690.8 y 1726.9).",
+    "Calendario de amortizacion inferido de IAMC (cuotas=5, proximo pago capital 09-11-2026, residual consistente con VT); confirmar contra prospecto Res. conjunta sept-2020."
+   ]
+  },
+  {
+   "ticker": "TX28",
+   "name": "BONCER 2,25% vto 2028-11-09",
+   "instrumentType": "BONCER con cupon (coupon-bearing CER bond)",
+   "family": "cer",
+   "structure": "cer_indexed_coupon_bond",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (capital e intereses ajustados por CER)",
+   "issueDate": "2020-09-04",
+   "maturity": "2028-11-09",
+   "cerBase": 22.54395108959,
+   "cerBaseReferenceDate": "2020-08-21",
+   "cerBaseDerivation": "CER oficial BCRA del dia 2020-08-21 (10 habiles antes de la emision); validado contra VT IAMC 09-06-2026 = 1726.9 con residual 50%.",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 2.25,
+   "couponPaymentSchedule": "Semestral, 9 de mayo y 9 de noviembre; proximo cupon 2026-11-09",
+   "amortization": "10 cuotas semestrales iguales de 10% desde 2024-05-09; residual actual 50%",
+   "payoffRule": "Cupones semestrales de (realCouponPct/2)% sobre capital residual indexado por CER; amortizacion en cuotas indexadas segun calendario; indexacion CER con regla t-10 en cada fecha de servicio.",
+   "quoteBasisBYMA": "ARS por VN 100 ORIGINAL (precio sucio); paridad IAMC calculada sobre valor tecnico del residual indexado",
+   "montoEmitidoMillonesARS": 75905,
+   "iamcValorTecnico_2026_06_09": 1726.9,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TX28D"
+   ],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Misma validacion doble que TX26.",
+    "Calendario de amortizacion inferido de IAMC (cuotas=10, proximo pago capital 09-11-2026, residual 50% consistente con VT); confirmar contra prospecto."
+   ]
+  },
+  {
+   "ticker": "TX31",
+   "name": "BONCER 2,5% vto 2031-11-30",
+   "instrumentType": "BONCER con cupon (coupon-bearing CER bond)",
+   "family": "cer",
+   "structure": "cer_indexed_coupon_bond",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS (capital e intereses ajustados por CER)",
+   "issueDate": "2022-05-31",
+   "maturity": "2031-11-30",
+   "cerBase": 47.20490923711,
+   "cerBaseReferenceDate": "2022-05-16",
+   "cerBaseDerivation": "CER oficial BCRA del dia 2022-05-16 (10 habiles antes de la emision); validado contra VT IAMC 09-06-2026 = 1649.5 con residual 100%.",
+   "indexationRule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase.",
+   "realCouponPct": 2.5,
+   "couponPaymentSchedule": "Semestral, 30 de mayo y 30 de noviembre; proximo cupon 2026-11-30",
+   "amortization": "10 cuotas semestrales iguales de 10% desde 2027-05-30 hasta 2031-11-30; residual actual 100%",
+   "payoffRule": "Cupones semestrales de (realCouponPct/2)% sobre capital residual indexado por CER; amortizacion en cuotas indexadas segun calendario; indexacion CER con regla t-10 en cada fecha de servicio.",
+   "quoteBasisBYMA": "ARS por VN 100 ORIGINAL (precio sucio); paridad IAMC calculada sobre valor tecnico del residual indexado",
+   "montoEmitidoMillonesARS": 45562,
+   "iamcValorTecnico_2026_06_09": 1649.5,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "cerBase=CER(2022-05-16) reproduce el VT IAMC 1649.5; el conteo t-10 implicado trata el 18-05-2022 (feriado censo) como habil. Conteo estricto saltando el censo daria CER(2022-05-13)=46.9130015738 (VT 1659.7, no coincide con IAMC). Verificar contra prospecto de emision (mayo 2022).",
+    "Amortizacion segun IAMC (10 cuotas, proximo pago capital 30-05-2027); confirmar contra prospecto."
+   ]
+  },
+  {
+   "ticker": "TTJ26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-06-30",
+   "instrumentType": "Bono dual TAMAR (max tasa fija capitalizada vs TAMAR capitalizada)",
+   "family": "dual_tamar",
+   "structure": "dual_max_fixed_vs_tamar_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-06-30",
+   "fixedLeg": {
+    "temPct": 2.19,
+    "rule": "Tasa fija 2.19% efectiva mensual capitalizable mensualmente desde 2025-01-29 hasta 2026-06-30",
+    "finalPaymentPer100VN": 144.63,
+    "finalPaymentSource": "IAMC informe diario 09-06-2026, columna 'Monto Vto Tasa Fija'; cross-check propio (1+TEM)^(meses+dias/30) coincide a <0.05"
+   },
+   "floatingLeg": {
+    "index": "TAMAR (BCRA: promedio aritmetico simple de tasas de depositos a plazo fijo > $1.000 millones)",
+    "marginPct": 0.0,
+    "rule": "Al vencimiento paga el MAXIMO entre: (a) VN x (1+TEM_fija)^(meses, capitalizacion mensual) y (b) VN x capitalizacion mensual de la tasa TAMAR TEM, donde TAMAR = promedio aritmetico simple de la tasa de interes para depositos a plazo fijo de mas de mil millones de pesos publicada por el BCRA, computada desde los 10 dias habiles anteriores a la emision hasta los 10 dias habiles anteriores al vencimiento (Res. Conjunta 4/2025)."
+   },
+   "payoffRule": "Pago unico al vencimiento = VN x max[ 144.63/100 (leg fija) ; capitalizacion mensual TAMAR TEM (ventana t-10/t-10) ]. Al 09-06-2026 la leg TAMAR domina (IAMC 'Tasa Ganadora Vigente: TAMAR').",
+   "cerBase": null,
+   "realCouponPct": null,
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "iamcProjectedTamarLegPer100VN_2026_06_09": 161.61,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TTJ6D"
+   ],
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "TEM fija 2,19% oficial (Res. Conjunta 4/2025 y resultado conversion 29-01-2025)."
+   ]
+  },
+  {
+   "ticker": "TTS26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-09-15",
+   "instrumentType": "Bono dual TAMAR (max tasa fija capitalizada vs TAMAR capitalizada)",
+   "family": "dual_tamar",
+   "structure": "dual_max_fixed_vs_tamar_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-09-15",
+   "fixedLeg": {
+    "temPct": 2.17,
+    "rule": "Tasa fija 2.17% efectiva mensual capitalizable mensualmente desde 2025-01-29 hasta 2026-09-15",
+    "finalPaymentPer100VN": 152.1,
+    "finalPaymentSource": "IAMC informe diario 09-06-2026, columna 'Monto Vto Tasa Fija'; cross-check propio (1+TEM)^(meses+dias/30) coincide a <0.05"
+   },
+   "floatingLeg": {
+    "index": "TAMAR (BCRA: promedio aritmetico simple de tasas de depositos a plazo fijo > $1.000 millones)",
+    "marginPct": 0.0,
+    "rule": "Al vencimiento paga el MAXIMO entre: (a) VN x (1+TEM_fija)^(meses, capitalizacion mensual) y (b) VN x capitalizacion mensual de la tasa TAMAR TEM, donde TAMAR = promedio aritmetico simple de la tasa de interes para depositos a plazo fijo de mas de mil millones de pesos publicada por el BCRA, computada desde los 10 dias habiles anteriores a la emision hasta los 10 dias habiles anteriores al vencimiento (Res. Conjunta 4/2025)."
+   },
+   "payoffRule": "Pago unico al vencimiento = VN x max[ 152.1/100 (leg fija) ; capitalizacion mensual TAMAR TEM (ventana t-10/t-10) ]. Al 09-06-2026 la leg TAMAR domina (IAMC 'Tasa Ganadora Vigente: TAMAR').",
+   "cerBase": null,
+   "realCouponPct": null,
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "iamcProjectedTamarLegPer100VN_2026_06_09": 169.04,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "TEM fija 2,17% oficial (Res. Conjunta 4/2025).",
+    "Parcialmente convertido a TMF28 el 14-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TTD26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-12-15",
+   "instrumentType": "Bono dual TAMAR (max tasa fija capitalizada vs TAMAR capitalizada)",
+   "family": "dual_tamar",
+   "structure": "dual_max_fixed_vs_tamar_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-12-15",
+   "fixedLeg": {
+    "temPct": 2.14,
+    "rule": "Tasa fija 2.14% efectiva mensual capitalizable mensualmente desde 2025-01-29 hasta 2026-12-15",
+    "finalPaymentPer100VN": 161.14,
+    "finalPaymentSource": "IAMC informe diario 09-06-2026, columna 'Monto Vto Tasa Fija'; cross-check propio (1+TEM)^(meses+dias/30) coincide a <0.05"
+   },
+   "floatingLeg": {
+    "index": "TAMAR (BCRA: promedio aritmetico simple de tasas de depositos a plazo fijo > $1.000 millones)",
+    "marginPct": 0.0,
+    "rule": "Al vencimiento paga el MAXIMO entre: (a) VN x (1+TEM_fija)^(meses, capitalizacion mensual) y (b) VN x capitalizacion mensual de la tasa TAMAR TEM, donde TAMAR = promedio aritmetico simple de la tasa de interes para depositos a plazo fijo de mas de mil millones de pesos publicada por el BCRA, computada desde los 10 dias habiles anteriores a la emision hasta los 10 dias habiles anteriores al vencimiento (Res. Conjunta 4/2025)."
+   },
+   "payoffRule": "Pago unico al vencimiento = VN x max[ 161.14/100 (leg fija) ; capitalizacion mensual TAMAR TEM (ventana t-10/t-10) ]. Al 09-06-2026 la leg TAMAR domina (IAMC 'Tasa Ganadora Vigente: TAMAR').",
+   "cerBase": null,
+   "realCouponPct": null,
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "iamcProjectedTamarLegPer100VN_2026_06_09": 178.54,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TTD6D",
+    "TTD6C"
+   ],
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "TEM fija 2,14% oficial (Res. Conjunta 4/2025).",
+    "Parcialmente convertido a TMF28 el 28-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TXMJ9",
+   "name": "Bono del Tesoro Nacional en pesos dual CER/TAMAR+3% vto 2029-06-29",
+   "instrumentType": "Bono dual CER vs TAMAR+margen",
+   "family": "dual_cer_tamar",
+   "structure": "dual_max_cer_vs_tamar_plus_margin_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-04-30",
+   "maturity": "2029-06-29",
+   "cerLeg": {
+    "cerBase": 746.38092265237,
+    "cerBaseReferenceDate": "2026-04-16",
+    "cerBaseDerivation": "CER oficial BCRA de 2026-04-16 (10 dias habiles antes de la emision 2026-04-30). Validacion exacta: IAMC 09-06-2026 'Monto Vto CER' = 105.97 = 100 x CER(2026-06-15=790.9415888555)/746.38092265237.",
+    "rule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase."
+   },
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 3.0,
+    "rule": "TAMAR TEM + margen 3,00% nominal anual, capitalizacion mensual 30/360, ventana t-10/t-10 (Res. Conjunta 23/2026; llamado 13-05-2026; IAMC 'Margen Aplicable/TAMAR 3,00%')."
+   },
+   "fixedLeg": null,
+   "payoffRule": "Al vencimiento paga el MAXIMO entre: (a) capital original ajustado por CER (regla t-10 habiles en ambos extremos) y (b) capital mas devengamiento a la tasa efectiva mensual equivalente a TAMAR + margen 3,00% nominal anual, capitalizacion mensual 30/360, ventana TAMAR desde 10 habiles antes de emision hasta 10 habiles antes de vencimiento (Res. Conjunta 23/2026 y llamado 13-05-2026). cerLeg payoff por 100 VN = 100 x CER(vto-10hab)/746.38092265237.",
+   "realCouponPct": null,
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 23/2026 (BO 29-04-2026; crea TXMJ9 dual CER/TAMAR+3% em 30-04-2026 y TMG28 TAMAR em 30-04-2026; amplia TZXS8/TZV28/TMF28/TZXM8; conversiones TZV26->TZV28, TTD26->TMF28, M31G6->TMF28, TZXD6->TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/341303/20260429",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Llamado licitacion 13-05-2026 (TXMJ8 NUEVO, emision y liquidacion 15-05-2026, dual max[CER ; TAMAR TEM + 3.00%]; TXMJ9 reapertura; D30S6 reapertura): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-3",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "NUEVO en la licitacion 28-04-2026 (TIREA CER de corte 7,31%, precio $800/1000); emision 30-04-2026 (Res. Conjunta 23/2026 art.3). Reabierto en la licitacion del 13-05-2026 (liq 15-05-2026).",
+    "cerBase validada EXACTAMENTE contra IAMC: 'Monto Vto CER' 105.97 = 100 x CER(2026-06-15 = 790.9415888555) / 746.38092265237."
+   ]
+  },
+  {
+   "ticker": "TXMJ8",
+   "name": "Bono del Tesoro Nacional en pesos dual CER/TAMAR+3% vto 2028-06-30",
+   "instrumentType": "Bono dual CER vs TAMAR+margen",
+   "family": "dual_cer_tamar",
+   "structure": "dual_max_cer_vs_tamar_plus_margin_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-05-15",
+   "maturity": "2028-06-30",
+   "cerLeg": {
+    "cerBase": 758.11795391868,
+    "cerBaseReferenceDate": "2026-04-30",
+    "cerBaseDerivation": "CER oficial BCRA de 2026-04-30 (10 dias habiles antes de la emision 2026-05-15; el 01-05-2026 feriado se saltea). Validacion exacta: IAMC 09-06-2026 'Monto Vto CER' = 104.33 = 100 x CER(2026-06-15=790.9415888555)/758.11795391868.",
+    "rule": "Ajuste de capital por CER: 'el saldo de capital sera ajustado conforme al CER ... correspondiente al periodo transcurrido entre los diez (10) dias habiles anteriores a la fecha de emision y los diez (10) dias habiles anteriores a la fecha de vencimiento' (texto Res. Conjunta 16/2024 y analogas). Payoff por 100 VN = 100 x CER(vencimiento - 10 habiles) / cerBase."
+   },
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 3.0,
+    "rule": "TAMAR TEM + margen 3,00% nominal anual, capitalizacion mensual 30/360, ventana t-10/t-10 (Res. Conjunta 23/2026; llamado 13-05-2026; IAMC 'Margen Aplicable/TAMAR 3,00%')."
+   },
+   "fixedLeg": null,
+   "payoffRule": "Al vencimiento paga el MAXIMO entre: (a) capital original ajustado por CER (regla t-10 habiles en ambos extremos) y (b) capital mas devengamiento a la tasa efectiva mensual equivalente a TAMAR + margen 3,00% nominal anual, capitalizacion mensual 30/360, ventana TAMAR desde 10 habiles antes de emision hasta 10 habiles antes de vencimiento (Res. Conjunta 23/2026 y llamado 13-05-2026). cerLeg payoff por 100 VN = 100 x CER(vto-10hab)/758.11795391868.",
+   "realCouponPct": null,
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Llamado licitacion 13-05-2026 (TXMJ8 NUEVO, emision y liquidacion 15-05-2026, dual max[CER ; TAMAR TEM + 3.00%]; TXMJ9 reapertura; D30S6 reapertura): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-3",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "NUEVO en la licitacion 13-05-2026 (TIREA CER de corte 4,00%); fecha de emision y liquidacion 15-05-2026 (llamado oficial; IAMC concuerda 15-May-26). ISIN AR0603123321 (Cohen).",
+    "cerBase validada EXACTAMENTE contra IAMC: 'Monto Vto CER' 104.33 = 100 x CER(2026-06-15 = 790.9415888555) / 758.11795391868."
+   ]
+  },
+  {
+   "ticker": "TZV26",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2026-06-30",
+   "instrumentType": "Bono del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2024-02-28",
+   "maturity": "2026-06-30",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 1928,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Llamado licitacion 16-05-2024 (TZXM7 nuevo, liquidacion 20-05-2024 T+2; clausula dolar-linked: TC referencia Com. A3500 del tercer dia habil previo a la fecha de pago): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-lecap-boncer-cero-cupon-y-bono-dolar-linked-cero-cupon-y-anuncio-del",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Emision 28-02-2024 (IAMC y bonistas concuerdan).",
+    "Parcialmente convertido a TZV28 el 28-04-2026 (sigue vivo)."
+   ]
+  },
+  {
+   "ticker": "TZV27",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2027-06-30",
+   "instrumentType": "Bono del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2024-07-12",
+   "maturity": "2027-06-30",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 731,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "TZV7D"
+   ],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "Fecha de emision 12-07-2024 segun IAMC; bonistas muestra 27-02-2026 (probable fecha de reapertura). Discrepancia sin resolver con doc primario - NO afecta el payoff (cero cupon bullet, fixing solo al vencimiento)."
+   ]
+  },
+  {
+   "ticker": "TZV28",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2028-06-30",
+   "instrumentType": "Bono del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2026-02-27",
+   "maturity": "2028-06-30",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 1024,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resolucion Conjunta 23/2026 (BO 29-04-2026; crea TXMJ9 dual CER/TAMAR+3% em 30-04-2026 y TMG28 TAMAR em 30-04-2026; amplia TZXS8/TZV28/TMF28/TZXM8; conversiones TZV26->TZV28, TTD26->TMF28, M31G6->TMF28, TZXD6->TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/341303/20260429",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "Primera emision 27-02-2026 (bonistas); IAMC muestra 31-03-2026 (probable tranche posterior). Ampliado por Res 21/2026 y 23/2026; recibio la conversion de TZV26 (28-04-2026, precio USD 850/1000, TIREA 7.83%). Discrepancia de fecha no afecta payoff."
+   ]
+  },
+  {
+   "ticker": "D30S6",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2026-09-30",
+   "instrumentType": "Letra del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2026-03-16",
+   "maturity": "2026-09-30",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 120,
+   "panel": "arg_notes",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 13/2026 (BO 13-03-2026, instrumentos liquidados 16-03-2026 incl. X30S6/D30S6): https://www.boletinoficial.gob.ar/detalleAviso/primera/339439/20260313",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Llamado licitacion 13-05-2026 (TXMJ8 NUEVO, emision y liquidacion 15-05-2026, dual max[CER ; TAMAR TEM + 3.00%]; TXMJ9 reapertura; D30S6 reapertura): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-3",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Emision 16-03-2026 (Res. Conjunta 13/2026; IAMC y bonistas concuerdan). Reabierta 28-04-2026 (USD 989.70/1000, TIREA 2.52%) y 13-05-2026.",
+    "Regla de fixing A3500 t-3 tomada de la clausula estandar de la familia (confirmada textualmente para TZV25); confirmar texto identico en Res 13/2026."
+   ]
+  },
+  {
+   "ticker": "D31L6",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2026-07-31",
+   "instrumentType": "Letra del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2026-05-29",
+   "maturity": "2026-07-31",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 538,
+   "panel": "arg_notes",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "Emision 29-05-2026 (IAMC; licitacion del 27-05-2026). Resolucion conjunta de origen no fetched; regla A3500 t-3 estandar de la familia - confirmar.",
+    "No esta en el snapshot bonistas (muy nueva)."
+   ]
+  },
+  {
+   "ticker": "D31M7",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2027-03-31",
+   "instrumentType": "Letra del Tesoro dolar linked cero cupon",
+   "family": "dollar_linked",
+   "structure": "zero_coupon_dollar_linked_bullet",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "Denominado en USD, suscripto y PAGADERO EN ARS al tipo de cambio A3500",
+   "issueDate": "2026-05-29",
+   "maturity": "2027-03-31",
+   "fixingRule": "Pago en ARS al tipo de cambio de referencia Comunicacion 'A' 3500 del BCRA correspondiente al TERCER (3er) dia habil previo a la fecha de pago (clausula estandar de los bonos/letras del Tesoro vinculados al dolar, citada en el llamado del 16-05-2024 para TZV25; misma familia contractual). Payoff por USD 100 VN = 100 x A3500(vencimiento - 3 habiles), en pesos.",
+   "payoffRule": "Pago unico al vencimiento por USD 100 VN = 100 x A3500(vencimiento - 3 dias habiles), liquidado en pesos.",
+   "cerBase": null,
+   "realCouponPct": 0.0,
+   "amortization": "bullet (100% al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN USD 100 (precio ~= 100 x FX; cierres 125.000-143.500 ARS confirman); panel data912/arg_notes o arg_bonds",
+   "montoEmitidoMillonesUSD": 787,
+   "panel": "arg_notes",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "Emision 29-05-2026 (IAMC; licitacion del 27-05-2026). Resolucion conjunta de origen no fetched; regla A3500 t-3 estandar de la familia - confirmar.",
+    "No esta en el snapshot bonistas (muy nueva)."
+   ]
+  },
+  {
+   "ticker": "M31G6",
+   "name": "Letra del Tesoro en pesos a tasa TAMAR (LETAM) vto 2026-08-31",
+   "instrumentType": "Letra del Tesoro a tasa TAMAR capitalizable (floater, NO dual)",
+   "family": "tamar_floater",
+   "structure": "tamar_capitalizing_floater_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2025-11-10",
+   "maturity": "2026-08-31",
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": null,
+    "rule": "Capitaliza mensualmente la TAMAR TEM mas margen fijado en la licitacion de corte: formula de la Res. Conjunta 21/2026: 'TAMAR TEM = [(1+TAMAR)^(1/12) - 1] + MARGEN' sobre el promedio aritmetico simple de la TAMAR publicada por el BCRA, ventana 10 habiles antes de emision hasta 10 habiles antes de vencimiento. Margen licitado se publica como % nominal anual con dos decimales; la conversion exacta margen->TEM debe confirmarse contra el texto integro del prospecto (flag)."
+   },
+   "fixedLeg": null,
+   "cerBase": null,
+   "realCouponPct": null,
+   "payoffRule": "Pago unico al vencimiento = VN x capitalizacion mensual de (TAMAR TEM + margen), ventana TAMAR t-10/t-10.",
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "montoEmitidoMillonesARS": null,
+   "panel": "arg_notes",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resultado licitacion 11-02-2026 (TMF27 NUEVO margen de corte 6.50%; M31G6 reapertura a precio): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-1",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "low",
+   "flags": [
+    "MARGEN NO CONFIRMADO: IAMC muestra 'Margen Fijo 5,00%'; una resena del resultado de la licitacion 05-11-2025 (liquidacion 10-11-2025) sugiere margen de corte 6,24%. Fuentes en conflicto -> margen=null; resolver con el resultado oficial de la licitacion 05-11-2025 antes de produccion.",
+    "IAMC muestra emision 06-11-2025; llamado/resultado oficial indica liquidacion 10-11-2025 (se adopta 2025-11-10).",
+    "Parcialmente convertida a TMF28 el 28-04-2026 (sigue viva)."
+   ]
+  },
+  {
+   "ticker": "TMF27",
+   "name": "Bono del Tesoro en pesos a tasa TAMAR vto 2027-02-26",
+   "instrumentType": "Bono del Tesoro a tasa TAMAR capitalizable (floater, NO dual)",
+   "family": "tamar_floater",
+   "structure": "tamar_capitalizing_floater_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-02-13",
+   "maturity": "2027-02-26",
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 6.5,
+    "rule": "Capitaliza mensualmente la TAMAR TEM mas margen fijado en la licitacion de corte: formula de la Res. Conjunta 21/2026: 'TAMAR TEM = [(1+TAMAR)^(1/12) - 1] + MARGEN' sobre el promedio aritmetico simple de la TAMAR publicada por el BCRA, ventana 10 habiles antes de emision hasta 10 habiles antes de vencimiento. Margen licitado se publica como % nominal anual con dos decimales; la conversion exacta margen->TEM debe confirmarse contra el texto integro del prospecto (flag)."
+   },
+   "fixedLeg": null,
+   "cerBase": null,
+   "realCouponPct": null,
+   "payoffRule": "Pago unico al vencimiento = VN x capitalizacion mensual de (TAMAR TEM + margen), ventana TAMAR t-10/t-10.",
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "montoEmitidoMillonesARS": 181927,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resultado licitacion 11-02-2026 (TMF27 NUEVO margen de corte 6.50%; M31G6 reapertura a precio): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-1",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "NUEVO en la licitacion 11-02-2026 con margen de corte 6,50% (resultado oficial); emision/liquidacion 13-02-2026 (IAMC concuerda).",
+    "Reabierto 14-04-2026 a precio $1.080/1000."
+   ]
+  },
+  {
+   "ticker": "TMG27",
+   "name": "Bono del Tesoro en pesos a tasa TAMAR vto 2027-08-31",
+   "instrumentType": "Bono del Tesoro a tasa TAMAR capitalizable (floater, NO dual)",
+   "family": "tamar_floater",
+   "structure": "tamar_capitalizing_floater_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2027-08-31",
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 6.0,
+    "rule": "Capitaliza mensualmente la TAMAR TEM mas margen fijado en la licitacion de corte: formula de la Res. Conjunta 21/2026: 'TAMAR TEM = [(1+TAMAR)^(1/12) - 1] + MARGEN' sobre el promedio aritmetico simple de la TAMAR publicada por el BCRA, ventana 10 habiles antes de emision hasta 10 habiles antes de vencimiento. Margen licitado se publica como % nominal anual con dos decimales; la conversion exacta margen->TEM debe confirmarse contra el texto integro del prospecto (flag)."
+   },
+   "fixedLeg": null,
+   "cerBase": null,
+   "realCouponPct": null,
+   "payoffRule": "Pago unico al vencimiento = VN x capitalizacion mensual de (TAMAR TEM + margen), ventana TAMAR t-10/t-10.",
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "montoEmitidoMillonesARS": 1950739,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "medium",
+   "flags": [
+    "Margen 6,00% segun IAMC; resultado oficial de la licitacion de origen (26/27-03-2026) no fetched - confirmar.",
+    "Reabierto 14-04-2026 a precio $1.030/1000."
+   ]
+  },
+  {
+   "ticker": "TMF28",
+   "name": "Bono del Tesoro en pesos a tasa TAMAR vto 2028-02-25",
+   "instrumentType": "Bono del Tesoro a tasa TAMAR capitalizable (floater, NO dual)",
+   "family": "tamar_floater",
+   "structure": "tamar_capitalizing_floater_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-04-20",
+   "maturity": "2028-02-25",
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 6.5,
+    "rule": "Capitaliza mensualmente la TAMAR TEM mas margen fijado en la licitacion de corte: formula de la Res. Conjunta 21/2026: 'TAMAR TEM = [(1+TAMAR)^(1/12) - 1] + MARGEN' sobre el promedio aritmetico simple de la TAMAR publicada por el BCRA, ventana 10 habiles antes de emision hasta 10 habiles antes de vencimiento. Margen licitado se publica como % nominal anual con dos decimales; la conversion exacta margen->TEM debe confirmarse contra el texto integro del prospecto (flag)."
+   },
+   "fixedLeg": null,
+   "cerBase": null,
+   "realCouponPct": null,
+   "payoffRule": "Pago unico al vencimiento = VN x capitalizacion mensual de (TAMAR TEM + margen), ventana TAMAR t-10/t-10.",
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "montoEmitidoMillonesARS": 9984904,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Creado por Res. Conjunta 21/2026 (emision 20-04-2026); margen de corte 6,50% fijado en la licitacion del 14/15-04-2026 (resultado oficial: conversion TTS26->TMF28, TIREA 35.27%).",
+    "OJO: IAMC imprime 'Margen Fijo 0,00%' para TMF28 (dato faltante/erroneo); bonistas imprime emision 15-04-2026 (erronea, es 20-04). Se adoptan los datos del BO y del resultado oficial.",
+    "Recibio ademas las conversiones de TTD26 y M31G6 (28-04-2026)."
+   ]
+  },
+  {
+   "ticker": "TMG28",
+   "name": "Bono del Tesoro en pesos a tasa TAMAR vto 2028-08-31",
+   "instrumentType": "Bono del Tesoro a tasa TAMAR capitalizable (floater, NO dual)",
+   "family": "tamar_floater",
+   "structure": "tamar_capitalizing_floater_bullet_zero",
+   "issuer": "Tesoro Nacional (Republica Argentina)",
+   "law": "Argentina",
+   "currency": "ARS",
+   "issueDate": "2026-04-30",
+   "maturity": "2028-08-31",
+   "floatingLeg": {
+    "index": "TAMAR (BCRA)",
+    "marginPct": 6.9,
+    "rule": "Capitaliza mensualmente la TAMAR TEM mas margen fijado en la licitacion de corte: formula de la Res. Conjunta 21/2026: 'TAMAR TEM = [(1+TAMAR)^(1/12) - 1] + MARGEN' sobre el promedio aritmetico simple de la TAMAR publicada por el BCRA, ventana 10 habiles antes de emision hasta 10 habiles antes de vencimiento. Margen licitado se publica como % nominal anual con dos decimales; la conversion exacta margen->TEM debe confirmarse contra el texto integro del prospecto (flag)."
+   },
+   "fixedLeg": null,
+   "cerBase": null,
+   "realCouponPct": null,
+   "payoffRule": "Pago unico al vencimiento = VN x capitalizacion mensual de (TAMAR TEM + margen), ventana TAMAR t-10/t-10.",
+   "amortization": "bullet (pago unico al vencimiento)",
+   "quoteBasisBYMA": "ARS por VN 100",
+   "montoEmitidoMillonesARS": 1026517,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "Resolucion Conjunta 23/2026 (BO 29-04-2026; crea TXMJ9 dual CER/TAMAR+3% em 30-04-2026 y TMG28 TAMAR em 30-04-2026; amplia TZXS8/TZV28/TMF28/TZXM8; conversiones TZV26->TZV28, TTD26->TMF28, M31G6->TMF28, TZXD6->TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/341303/20260429",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "NUEVO en la licitacion 28-04-2026 con margen de corte 6,90% (resultado oficial); emision 30-04-2026 (Res. Conjunta 23/2026 art.2)."
+   ]
+  },
+  {
+   "ticker": "DICP",
+   "name": "Bonos Discount en pesos ajustados por CER 5,83% (canje 2005, ley argentina)",
+   "instrumentType": "Bono CER legado (reestructuracion 2005/2010)",
+   "family": "cer_legacy",
+   "structure": "cer_indexed_coupon_bond_legacy",
+   "issuer": "Republica Argentina",
+   "law": "Argentina",
+   "currency": "ARS (ajustado por CER)",
+   "issueDate": "2003-12-31",
+   "maturity": "2033-12-31",
+   "cerBase": null,
+   "cerBaseReferenceDate": null,
+   "cerBaseDerivation": "NO CONFIRMADA: la indexacion corre desde la fecha de emision 31-12-2003 (Decreto 1735/2004), pero el coeficiente base exacto y el factor de capitalizacion de intereses 2004-2013 no fueron verificados contra el prospecto en esta pasada; el VT IAMC no se deja reproducir con CER(31-12-2003)=1.45679881491 sin el factor de capitalizacion. Familia marcada 'full specs optional'.",
+   "indexationRule": "Capital ajustado por CER desde 31-12-2003 (Decreto 1735/2004 y docs del canje 2005/2010).",
+   "realCouponPct": 5.83,
+   "couponPaymentSchedule": "Semestral, 30 de junio y 31 de diciembre (IAMC muestra tasa vigente 5,8%, proximo cupon 30-06-2026)",
+   "amortization": "20 cuotas semestrales desde 2024-06-30 (IAMC: cuotas=20, proximo pago capital 30-06-2026); intereses parcialmente capitalizados 2004-2013",
+   "payoffRule": "Cupones y amortizacion sobre capital indexado por CER; ver prospecto Decreto 1735/2004.",
+   "quoteBasisBYMA": "ARS por VN 100 original (cierres IAMC 35.000-52.730 ARS por VN 100)",
+   "montoEmitidoMillonesARS": 10472,
+   "iamcValorTecnico_2026_06_09": 54361.2,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [
+    "DICPD",
+    "DICPC"
+   ],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)",
+    "Decreto 1735/2004 (prospecto canje 2005) - no fetched en esta pasada"
+   ],
+   "confidence": "low",
+   "flags": [
+    "Liquido en BYMA (incluido en /live/mep panel bonds). Specs completas (capitalizacion, base CER) requieren el prospecto del canje 2005 - opcional segun alcance de familia.",
+    "realCouponPct 5.83 = tasa contractual Discount pesos; IAMC redondea 5,8%."
+   ]
+  },
+  {
+   "ticker": "PARP",
+   "name": "Bonos Par en pesos ajustados por CER step-up (canje 2005, ley argentina)",
+   "instrumentType": "Bono CER legado (reestructuracion 2005/2010)",
+   "family": "cer_legacy",
+   "structure": "cer_indexed_coupon_bond_legacy",
+   "issuer": "Republica Argentina",
+   "law": "Argentina",
+   "currency": "ARS (ajustado por CER)",
+   "issueDate": "2003-12-31",
+   "maturity": "2038-12-31",
+   "cerBase": null,
+   "cerBaseReferenceDate": null,
+   "cerBaseDerivation": "NO CONFIRMADA: la indexacion corre desde la fecha de emision 31-12-2003 (Decreto 1735/2004), pero el coeficiente base exacto y el factor de capitalizacion de intereses 2004-2013 no fueron verificados contra el prospecto en esta pasada; el VT IAMC no se deja reproducir con CER(31-12-2003)=1.45679881491 sin el factor de capitalizacion. Familia marcada 'full specs optional'.",
+   "indexationRule": "Capital ajustado por CER desde 31-12-2003 (Decreto 1735/2004 y docs del canje 2005/2010).",
+   "realCouponPct": 1.77,
+   "couponPaymentSchedule": "Semestral step-up (tasa vigente IAMC 1,8%), 31 de marzo / 30 de septiembre s/IAMC proximo cupon 30-09-2026",
+   "amortization": "20 cuotas semestrales desde 2029-09-30 (IAMC: proximo pago capital 30-09-2029); residual 100%",
+   "payoffRule": "Cupones y amortizacion sobre capital indexado por CER; ver prospecto Decreto 1735/2004.",
+   "quoteBasisBYMA": "ARS por VN 100 original (cierres IAMC 35.000-52.730 ARS por VN 100)",
+   "montoEmitidoMillonesARS": 2858,
+   "iamcValorTecnico_2026_06_09": 53505.5,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)",
+    "Decreto 1735/2004 (prospecto canje 2005) - no fetched en esta pasada"
+   ],
+   "confidence": "low",
+   "flags": [
+    "Cupon step-up: la tasa contractual escala por tramos (valor vigente 1,77% anual aprox segun IAMC 1,8%); cronograma exacto requiere prospecto. Menos liquido que DICP."
+   ]
+  },
+  {
+   "ticker": "CUAP",
+   "name": "Bonos Cuasipar en pesos ajustados por CER 3,31% (canje 2005)",
+   "instrumentType": "Bono CER legado (reestructuracion 2005/2010)",
+   "family": "cer_legacy",
+   "structure": "cer_indexed_coupon_bond_legacy",
+   "issuer": "Republica Argentina",
+   "law": "Argentina",
+   "currency": "ARS (ajustado por CER)",
+   "issueDate": "2003-12-31",
+   "maturity": "2045-12-31",
+   "cerBase": null,
+   "cerBaseReferenceDate": null,
+   "cerBaseDerivation": "NO CONFIRMADA: la indexacion corre desde la fecha de emision 31-12-2003 (Decreto 1735/2004), pero el coeficiente base exacto y el factor de capitalizacion de intereses 2004-2013 no fueron verificados contra el prospecto en esta pasada; el VT IAMC no se deja reproducir con CER(31-12-2003)=1.45679881491 sin el factor de capitalizacion. Familia marcada 'full specs optional'.",
+   "indexationRule": "Capital ajustado por CER desde 31-12-2003 (Decreto 1735/2004 y docs del canje 2005/2010).",
+   "realCouponPct": 3.31,
+   "couponPaymentSchedule": "Semestral (IAMC tasa vigente 3,3%), proximo cupon 30-06-2026",
+   "amortization": "20 cuotas semestrales desde 2036-06-30 (IAMC: proximo pago capital 30-06-2036); intereses capitalizados hasta 2013",
+   "payoffRule": "Cupones y amortizacion sobre capital indexado por CER; ver prospecto Decreto 1735/2004.",
+   "quoteBasisBYMA": "ARS por VN 100 original (cierres IAMC 35.000-52.730 ARS por VN 100)",
+   "montoEmitidoMillonesARS": 23434,
+   "iamcValorTecnico_2026_06_09": 73089.3,
+   "panel": "arg_bonds",
+   "usdSettlementLines": [],
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)",
+    "Decreto 1735/2004 (prospecto canje 2005) - no fetched en esta pasada"
+   ],
+   "confidence": "low",
+   "flags": [
+    "Baja liquidez; specs completas opcionales segun alcance de familia."
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "ticker": "TTM26",
+   "reason": "Bono dual TAMAR vto 16-03-2026: VENCIDO antes del asOf (no esta en paneles vivos)."
+  },
+  {
+   "ticker": "TZXD5",
+   "reason": "BONCER cero cupon vto 15-12-2025: vencido."
+  },
+  {
+   "ticker": "TZXM5/TZXM6/TZXO5/TZX25/TZV25",
+   "reason": "BONCER/dolar-linked 2025-2026 ya vencidos (TZXM6 vencio 31-03-2026; TZV25 30-06-2025)."
+  },
+  {
+   "ticker": "TZX6D,TZX6C,TZX7D,TXD6D,TXD7D,TXM7D,TXA7D,TXS7D,TXS8D,TZV7D,TTJ6D,TTD6D,TTD6C,XL6D,XN6D,TX26D,TX28D,DICPD,DICPC",
+   "reason": "Lineas de liquidacion en USD (sufijo D=MEP, C=cable) de los mismos instrumentos; no son especies economicas distintas. Mapeadas en usdSettlementLines de cada instrumento."
+  },
+  {
+   "ticker": "DIP0,PAP0,PAY0",
+   "reason": "Lineas/series ley Nueva York (2005/2010) de Discount y Par en pesos CER (DIP0 par de DICP; PAP0/PAY0 de PARP). Illiquidas; cubiertas conceptualmente por DICP/PARP. PAY0 ni siquiera figura en el snapshot bonistas."
+  },
+  {
+   "ticker": "PMM27,COY27,CO3D7",
+   "reason": "Titulos CER PROVINCIALES (Mendoza, Cordoba) presentes en IAMC; la familia cer_dl es soberana nacional. Corresponden a la familia provinciales."
+  },
+  {
+   "ticker": "TB27",
+   "reason": "Bono del Tesoro tasa variable BADLAR (no CER, no DL, no TAMAR-dual); sin precio vivo en el panel (IAMC cierre 0.0)."
+  },
+  {
+   "ticker": "BU3S6,BU4J6,LBJ26,LBL26",
+   "reason": "arg_notes no-CER/no-DL: BU* = letras del Tesoro hard-dollar (Res 23/2026 art.5 'Letra USD cero cupon 30-09-2026' es candidata a BU3S6 - sin confirmar), LB* sin identificar. Fuera de alcance cer_dl; flag para la familia de letras USD."
+  },
+  {
+   "ticker": "M31G6 (clasificacion)",
+   "reason": "Incluida como instrumento tamar_floater pese a no ser dual - ver notes."
+  }
+ ],
+ "notes": [
+  "asOf 2026-06-10. Universo enumerado desde research/data912_map.json (paneles /live/arg_bonds y /live/arg_notes del 2026-06-10).",
+  "QUOTE BASIS: todos los instrumentos en ARS cotizan en BYMA en ARS por VN 100 (precio sucio). Los dolar-linked cotizan en ARS por VN USD 100 (cierres ~125.000-143.500 = ~100 x A3500); las lineas D/C cotizan en USD por VN 100.",
+  "CER BASES: ninguna resolucion conjunta fetched imprime un 'CER inicial' numerico; el numero oficial queda definido por la regla contractual t-10 habiles sobre la serie CER del BCRA (api.bcra.gob.ar, serie 30). Las bases reportadas son valores BCRA oficiales en la fecha em-10habiles y fueron validadas contra DOS calculadores independientes: valor tecnico IAMC del 09-06-2026 (ref CER 27-05-2026=778.59598274576 para zeros; 'Monto Vto CER' con ref 2026-06-15=790.9415888555 para duales CER/TAMAR) y paridad bonistas.com (ref CER 28-05-2026 para 24hs). Donde los calculadores difieren se documento el conflicto en flags y se bajo la confianza.",
+  "CER actual de referencia (BCRA, fetched 2026-06-10): CER(2026-06-10)=787.67389171873; ultimo publicado CER(2026-06-15)=790.9415888555.",
+  "CONFLICTOS DETECTADOS Y DOCUMENTADOS: (1) TZXD6/TZXD7: IAMC implica base CER(2024-02-29)=269.30251872788, regla estricta + bonistas dan CER(2024-03-01)=271.04755550913 - adoptada la estricta, diferencia 0.65%. (2) TZXM7: IAMC usa emision 17-05-2024, el BO (Res 27/2024) dice 20-05-2024 - adoptado BO (base CER 2024-05-06=361.31760345721; bonistas concuerda). (3) TMF28: IAMC margen 0,00% vs resultado oficial 6,50%. (4) M31G6: margen IAMC 5,00% vs resena de licitacion 6,24% -> null. Los duales TXMJ8/TXMJ9 quedaron SIN conflicto: el 'Monto Vto CER' de IAMC reproduce exactamente ambas bases con ref CER(2026-06-15).",
+  "DUALES TAMAR: no existe TTM27; la serie post-TTM26 de bonos TAMAR 2027/2028 (TMF27/TMG27/TMF28/TMG28) son FLOATERS TAMAR+margen capitalizables, no duales. Se incluyeron tipados como tamar_floater junto con la LETAM M31G6 porque no estan cubiertos por las definiciones CER/DL y comparten mecanica TAMAR con los duales; pueden excluirse si otra familia los toma.",
+  "TXMJ8/TXMJ9 son los nuevos duales CER vs TAMAR+3% (abril/mayo 2026): payoff = max(CER-indexado, TAMAR+300bp capitalizado).",
+  "DOLAR LINKED: fixing A3500 t-3 habiles confirmado textualmente para la familia TZV (llamado 16-05-2024: 'tipo de cambio de referencia ... correspondiente al tercer dia habil previo a la fecha de pago'); para D31L6/D31M7 (emision 29-05-2026) la resolucion especifica no fue consultada - mismo estandar asumido y flaggeado.",
+  "Dias no habiles usados en los conteos t-10 (verificados): 24-11-2025 (feriado trasladado) y 21-11-2025 (puente), 08-12-2025, 23-03-2026 (puente Res 164/2025) y 24-03-2026, 01-05-2026, 02/03-04-2026 (Semana Santa+Malvinas), 25-05-2026.",
+  "Legacy CER (DICP/PARP/CUAP) incluidos con specs parciales y confidence low segun el alcance 'flag but full specs optional'; sus variantes ley-NY (DIP0/PAP0/PAY0) excluidas.",
+  "Montos emitidos en millones (ARS o USD segun campo), tomados del informe IAMC 09-06-2026; para reaperturas posteriores el outstanding puede diferir por conversiones (TZXM8 y TMF28 crecieron; TZV26/TTD26/TTS26/M31G6/TZXD6/TZXM7 se redujeron)."
+ ]
+}

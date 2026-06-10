@@ -1,0 +1,271 @@
+{
+ "family": "bopreal",
+ "asOf": "2026-06-10",
+ "settlementUsed": {
+  "liveComputation": "2026-06-11",
+  "iamcControl": "2026-06-10",
+  "note": "2026-06-11 = next Argentine business day after 2026-06-10 (Thursday, no holiday)"
+ },
+ "method": {
+  "irr": "effective annual, actual/365 exponent, bisection on sum(cf/(1+r)^(days/365)) = dirty price",
+  "cashflows": "per 100 VN from specs_bopreal.json remainingCashflows (USD; 30/360 coupons, Serie 1 2x50% amortization 2027, Serie 4 bullet 2028); discounted to expectedPayDate (business-day rolled); scheduled-date variant computed as sensitivity (<0.01pp difference)",
+  "priceBasis": "data912 D-ticker = dirty USD MEP price per 100 VN (BYMA standard); BOPREAL D-tickers compress the 5-char base (BPOA7 -> BPA7D); verified dirty via IAMC control (paridad% x valor tecnico USD reproduces published TIR within rounding) and via implied MEP coherence (1442-1460 across all six lines)",
+  "valuation": "plain USD contractual cashflows; embedded holder puts (1A/1B/1C/4A) and poder cancelatorio NOT modeled, matching IAMC/bonistas TIR convention",
+  "tolerancePp": 0.75
+ },
+ "sources": [
+  "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+  "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (golden published TIR/MD, via market_context.json; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+  "https://bonistas.com/api/bonds (cross-check, snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+  "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf (Serie 1 terms)",
+  "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf (Serie 4 terms)"
+ ],
+ "results": [
+  {
+   "ticker": "BPOA7",
+   "dTicker": "BPA7D",
+   "publishedTIRPct": 3.64,
+   "computedTIRPct": 3.7695,
+   "deltaPp": 0.1295,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 101.95,
+   "priceARSPer100VN": 148310.0,
+   "impliedMEP": 1454.7,
+   "computedTIRPctOnScheduledDates": 3.7745,
+   "computedMDyears": 1.075,
+   "publishedMDyears": 1.1,
+   "bonistasTIRPct": 3.6136,
+   "deltaPpVsBonistas": 0.1559,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 102.109,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 3.6156,
+    "controlDeltaPp": -0.0244
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 2.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 52.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 51.25
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 3.7695% from live D-ticker BPA7D USD dirty price 101.95 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 3.64%; part of delta is the one-day price move (IAMC dirty 102.109 vs live 101.95); control on IAMC's own price/settlement reproduces published TIR within -0.02pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 3.6136% (delta +0.16pp); computed MD 1.075y vs IAMC 1.1y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  },
+  {
+   "ticker": "BPOB7",
+   "dTicker": "BPB7D",
+   "publishedTIRPct": 3.79,
+   "computedTIRPct": 3.6784,
+   "deltaPp": -0.1116,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 102.05,
+   "priceARSPer100VN": 148300.0,
+   "impliedMEP": 1453.2,
+   "computedTIRPctOnScheduledDates": 3.6832,
+   "computedMDyears": 1.076,
+   "publishedMDyears": 1.1,
+   "bonistasTIRPct": 3.6199,
+   "deltaPpVsBonistas": 0.0585,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 102.008,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 3.707,
+    "controlDeltaPp": -0.083
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 2.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 52.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 51.25
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 3.6784% from live D-ticker BPB7D USD dirty price 102.05 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 3.79%; part of delta is the one-day price move (IAMC dirty 102.008 vs live 102.05); control on IAMC's own price/settlement reproduces published TIR within -0.08pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 3.6199% (delta +0.06pp); computed MD 1.076y vs IAMC 1.1y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  },
+  {
+   "ticker": "BPOC7",
+   "dTicker": "BPC7D",
+   "publishedTIRPct": 3.7,
+   "computedTIRPct": 3.6784,
+   "deltaPp": -0.0216,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 102.05,
+   "priceARSPer100VN": 148690.0,
+   "impliedMEP": 1457.0,
+   "computedTIRPctOnScheduledDates": 3.6832,
+   "computedMDyears": 1.076,
+   "publishedMDyears": 1.1,
+   "bonistasTIRPct": 3.3761,
+   "deltaPpVsBonistas": 0.3023,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 102.109,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 3.6156,
+    "controlDeltaPp": -0.0844
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 2.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 52.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 51.25
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 3.6784% from live D-ticker BPC7D USD dirty price 102.05 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 3.7%; part of delta is the one-day price move (IAMC dirty 102.109 vs live 102.05); control on IAMC's own price/settlement reproduces published TIR within -0.08pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 3.3761% (delta +0.30pp); computed MD 1.076y vs IAMC 1.1y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  },
+  {
+   "ticker": "BPOD7",
+   "dTicker": "BPD7D",
+   "publishedTIRPct": 3.57,
+   "computedTIRPct": 3.5873,
+   "deltaPp": 0.0173,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 102.15,
+   "priceARSPer100VN": 148600.0,
+   "impliedMEP": 1454.7,
+   "computedTIRPctOnScheduledDates": 3.5921,
+   "computedMDyears": 1.077,
+   "publishedMDyears": 1.1,
+   "bonistasTIRPct": 3.4323,
+   "deltaPpVsBonistas": 0.155,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 102.21,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 3.5244,
+    "controlDeltaPp": -0.0456
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 2.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 52.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 51.25
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 3.5873% from live D-ticker BPD7D USD dirty price 102.15 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 3.57%; part of delta is the one-day price move (IAMC dirty 102.21 vs live 102.15); control on IAMC's own price/settlement reproduces published TIR within -0.05pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 3.4323% (delta +0.15pp); computed MD 1.077y vs IAMC 1.1y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  },
+  {
+   "ticker": "BPOA8",
+   "dTicker": "BPA8D",
+   "publishedTIRPct": 7.04,
+   "computedTIRPct": 6.821,
+   "deltaPp": -0.219,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 92.25,
+   "priceARSPer100VN": 133000.0,
+   "impliedMEP": 1441.7,
+   "computedTIRPctOnScheduledDates": 6.8216,
+   "computedMDyears": 2.167,
+   "publishedMDyears": 2.2,
+   "bonistasTIRPct": 7.1652,
+   "deltaPpVsBonistas": -0.3442,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 91.775,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 7.0511,
+    "controlDeltaPp": 0.0111
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2028-05-02",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2028-10-31",
+     "totalPer100VN": 101.5
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 6.821% from live D-ticker BPA8D USD dirty price 92.25 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 7.04%; part of delta is the one-day price move (IAMC dirty 91.775 vs live 92.25); control on IAMC's own price/settlement reproduces published TIR within +0.01pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 7.1652% (delta -0.34pp); computed MD 2.167y vs IAMC 2.2y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  },
+  {
+   "ticker": "BPOB8",
+   "dTicker": "BPB8D",
+   "publishedTIRPct": 7.42,
+   "computedTIRPct": 7.3455,
+   "deltaPp": -0.0745,
+   "pass": true,
+   "priceUSDDirtyPer100VN": 91.21,
+   "priceARSPer100VN": 133200.0,
+   "impliedMEP": 1460.4,
+   "computedTIRPctOnScheduledDates": 7.3462,
+   "computedMDyears": 2.156,
+   "publishedMDyears": 2.2,
+   "bonistasTIRPct": 7.0956,
+   "deltaPpVsBonistas": 0.2499,
+   "iamcControl": {
+    "dirtyUSD_paridadXVT": 91.072,
+    "settlement": "2026-06-10",
+    "controlTIRPct": 7.4064,
+    "controlDeltaPp": -0.0136
+   },
+   "cashflowsUsed": [
+    {
+     "payDate": "2026-11-02",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2027-04-30",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2027-11-01",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2028-05-02",
+     "totalPer100VN": 1.5
+    },
+    {
+     "payDate": "2028-10-31",
+     "totalPer100VN": 101.5
+    }
+   ],
+   "note": "published TIR source: IAMC informe 2026-06-09 (close, settle 06-10); computed 7.3455% from live D-ticker BPB8D USD dirty price 91.21 (data912 2026-06-10 close, settle 2026-06-11) vs IAMC published 7.42%; part of delta is the one-day price move (IAMC dirty 91.072 vs live 91.21); control on IAMC's own price/settlement reproduces published TIR within -0.01pp (residual = IAMC 1-decimal rounding of paridad/VT); bonistas 24hs cross-check TIR 7.0956% (delta +0.25pp); computed MD 2.156y vs IAMC 2.2y. Plain-USD-cashflow valuation per instruction (holder put / poder cancelatorio not modeled)."
+  }
+ ],
+ "notes": [
+  "All 6 golden BOPREAL instruments PASS within +/-0.75pp of the IAMC published TIR; max |delta| = 0.22pp (BPOA8).",
+  "Deltas vs golden are dominated by the one-day gap: golden = IAMC 2026-06-09 close / settle 06-10; computed = data912 2026-06-10 close / settle 06-11. Control runs on IAMC's own dirty price (paridad x VT) and settlement reproduce every published TIR within +/-0.09pp, i.e. within IAMC's 1-decimal rounding of paridad and valor tecnico.",
+  "Computed modified durations (1.07-1.08y Serie 1; 2.16-2.17y Serie 4) match IAMC published MD (1.1 / 2.2) and bonistas (1.095-1.097 / 2.233).",
+  "Price basis confirmed dirty per 100 VN: live D price ~101.95-102.15 vs valor tecnico 100.6 (Serie 1, accrued ~0.56 since 2026-04-30) and 92.25/91.21 vs VT 100.3 (Serie 4); implied MEP from ARS/D pairs is coherent at 1442-1460.",
+  "No spec errors found; specs_bopreal.json unchanged. Discounting to expectedPayDate vs scheduledDate moves TIR by <0.01pp.",
+  "TIRs computed on plain contractual USD cashflows. The low Serie 1 yields (~3.6%) vs sovereigns (~7.5%) reflect put/tax-cancelation value embedded in market prices, not modeled here (consistent with IAMC/bonistas convention)."
+ ]
+}

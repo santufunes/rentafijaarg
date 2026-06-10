@@ -1,4 +1,3728 @@
 {
-  "asOf": "pendiente",
-  "instruments": []
+ "asOf": "2026-06-10",
+ "instruments": [
+  {
+   "kind": "fixed",
+   "ticker": "AE38",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2038 (BONO USD 2038 L.A.)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2038-01-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AE38",
+    "mep": "AE38D",
+    "cable": "AE38C"
+   },
+   "law": "AR",
+   "sources": [
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 1,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 1,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 1.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 1.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 2.125,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 2.125,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.5,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.386364,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.272727,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.159091,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.045454,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.931818,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.818182,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.704545,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.590909,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.477273,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.363636,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.25,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.136363,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.022727,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.909091,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.795454,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.681818,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 0.568182,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.454545,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.340909,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.227272,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.113636,
+     "amortization": 4.545445
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AL29",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses al 1% 2029 - Ley Argentina (BONO USD 2029 1% L.A.)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2029-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AL29",
+    "mep": "AL29D",
+    "cable": "AL29C"
+   },
+   "law": "AR",
+   "sources": [
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 0.5,
+     "amortization": 10
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 0.45,
+     "amortization": 10
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 0.4,
+     "amortization": 10
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 0.35,
+     "amortization": 10
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 0.3,
+     "amortization": 10
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.25,
+     "amortization": 10
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.2,
+     "amortization": 10
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.15,
+     "amortization": 10
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.1,
+     "amortization": 10
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.05,
+     "amortization": 10
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AL30",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2030 - Ley Argentina (BONO USD 2030 L.A.)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2030-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AL30",
+    "mep": "AL30D",
+    "cable": "AL30C"
+   },
+   "law": "AR",
+   "sources": [
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)",
+    "https://www.rava.com/perfil/AL30 (ficha tecnica reproduces Decreto 676/2020 terms verbatim; fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 0.375,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 0.375,
+     "amortization": 4
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 0.36,
+     "amortization": 8
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 0.33,
+     "amortization": 8
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 0.3,
+     "amortization": 8
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 0.27,
+     "amortization": 8
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 0.24,
+     "amortization": 8
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.21,
+     "amortization": 8
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.42,
+     "amortization": 8
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.35,
+     "amortization": 8
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.28,
+     "amortization": 8
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.21,
+     "amortization": 8
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 0.14,
+     "amortization": 8
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 0.07,
+     "amortization": 8
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AL35",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2035 (BONO USD 2035 L.A.)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2035-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AL35",
+    "mep": "AL35D",
+    "cable": "AL35C"
+   },
+   "law": "AR",
+   "sources": [
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.375,
+     "amortization": 0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.375,
+     "amortization": 0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 2.5,
+     "amortization": 10
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 2.25,
+     "amortization": 10
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 2,
+     "amortization": 10
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.75,
+     "amortization": 10
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.5,
+     "amortization": 10
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.25,
+     "amortization": 10
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1,
+     "amortization": 10
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.75,
+     "amortization": 10
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.5,
+     "amortization": 10
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.25,
+     "amortization": 10
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AL41",
+   "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2041 (BONO USD 2041 L.A.)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2041-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AL41",
+    "mep": "AL41D",
+    "cable": "AL41C"
+   },
+   "law": "AR",
+   "sources": [
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 1.25,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 1.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.75,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.6875,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 1.625,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.5625,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.089286,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.002232,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.915179,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.828125,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.741071,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.654018,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.566964,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.479911,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.392857,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.305803,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.21875,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.131696,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.044643,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.957589,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.870536,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.783482,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.696428,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.609375,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.522321,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.435268,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.348214,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.26116,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.174107,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.087053,
+     "amortization": 3.571417
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AN29",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6,50% con vencimiento 30 de noviembre de 2029 (BONAR 2029N)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2025-12-12",
+   "maturity": "2029-11-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AN29",
+    "mep": "AN29D",
+    "cable": "AN29C"
+   },
+   "law": "AR",
+   "sources": [
+    "Llamado a licitacion del Bono del Tesoro Nacional en USD 6,50% vto 30-Nov-2029, https://www.argentina.gob.ar/noticias/llamado-licitacion-del-bono-del-tesoro-nacional-en-dolares-estadounidenses-650-con (emision/liquidacion 12-Dic-2025, intereses 30-May y 30-Nov de cada ano, primer pago 30-May-2026, base 30/360, bullet, VNO USD 1, ley argentina)",
+    "Resultado de licitacion, https://www.argentina.gob.ar/noticias/resultado-de-licitacion-del-bono-del-tesoro-nacional-en-dolares-estadounidenses-650-con (ofertado USD 1.420M, adjudicado VNO USD 1.000M, precio de corte USD 910,00 por VNO 1.000, yield TNA 9,26%, prorrateo 40,95%)",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AN29/AN29D/AN29C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AN29D tir 9.0536% s/ last 93.27; start_date 2025-12-12)",
+    "Prensa colocacion dic-2025 (El Cronista, MDZ, Cohen): USD 1.000M colocados, TNA de corte 9,26%"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-05-30",
+     "interest": 3.033333,
+     "amortization": 0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 3.25,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AO27",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6% con vencimiento 29 de octubre de 2027 (BONAR octubre 2027)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2026-02-27",
+   "maturity": "2027-10-29",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AO27",
+    "mep": "AO27D",
+    "cable": "AO27C"
+   },
+   "law": "AR",
+   "sources": [
+    "Resolucion Conjunta 11/2026 Secretaria de Finanzas y Secretaria de Hacienda (RESFC-2026-11-APN-SH#MEC, 25-Feb-2026), art. 4 - texto completo leido en mirror https://www.revistarap.com.ar/app/assets/data/documentos/R_C__11-2026.pdf (lista verbatim de las 20 fechas de pago de intereses, base 30/360, clausula de dia habil)",
+    "Resolucion Conjunta 16/2026, Boletin Oficial 31-Mar-2026, https://www.boletinoficial.gob.ar/detalleAviso/primera/340193/20260331 (reapertura, refiere emision original RESFC-2026-11)",
+    "Llamado a licitacion 31-Mar-2026, https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://rava.com/perfil/AO27 (nombre 'Bonar 2027 U$S', cierre ARS 148.300 10-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AO27/AO27D/AO27C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AO27D tir 4.5988% s/ last 102.20)",
+    "Infobae 26-Feb-2026: primera licitacion 25-Feb-2026, USD 150M a TNA 5,89% precio 100,45; https://www.infobae.com/economia/2026/02/26/como-invertir-en-el-nuevo-bono-del-gobierno-y-que-tan-conveniente-es-para-ahorristas-minoristas/"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-03-31",
+     "interest": 0.55,
+     "amortization": 0
+    },
+    {
+     "date": "2026-04-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-05-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2026-06-30",
+     "interest": 0.516667,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-08-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-09-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-10-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2027-02-26",
+     "interest": 0.45,
+     "amortization": 0
+    },
+    {
+     "date": "2027-03-31",
+     "interest": 0.566667,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-05-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-08-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-10-29",
+     "interest": 0.483333,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "AO28",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6% con vencimiento 31 de octubre de 2028 (BONAR octubre 2028)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-10-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "AO28",
+    "mep": "AO28D",
+    "cable": "AO28C"
+   },
+   "law": "AR",
+   "sources": [
+    "Resolucion Conjunta 16/2026 Secretaria de Finanzas y Secretaria de Hacienda, Boletin Oficial 31-Mar-2026, https://www.boletinoficial.gob.ar/detalleAviso/primera/340193/20260331 (emision original; lista verbatim de las 31 fechas de pago de intereses 2026-2028, base 30/360, VNO USD 1, ley argentina, bullet)",
+    "Llamado a licitacion 31-Mar-2026 (AO28 nuevo), https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AO28/AO28D/AO28C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AO28D tir 8.5338% s/ last 95.40; start_date 2026-03-31)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-04-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-05-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2026-06-30",
+     "interest": 0.516667,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-08-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-09-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-10-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2027-02-26",
+     "interest": 0.45,
+     "amortization": 0
+    },
+    {
+     "date": "2027-03-31",
+     "interest": 0.566667,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-05-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-08-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-10-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 0.516667,
+     "amortization": 0
+    },
+    {
+     "date": "2027-12-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-02-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 0.516667,
+     "amortization": 0
+    },
+    {
+     "date": "2028-04-28",
+     "interest": 0.466667,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-31",
+     "interest": 0.533333,
+     "amortization": 0
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-07-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-08-31",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-09-29",
+     "interest": 0.483333,
+     "amortization": 0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 0.516667,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOA7",
+   "name": "BPOA7",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2024-01-05",
+   "maturity": "2027-10-31",
+   "minLot": null,
+   "tickers": {
+    "ars": "BPOA7",
+    "mep": "BPA7D",
+    "cable": "BPA7C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+    "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.25,
+     "amortization": 50
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOA8",
+   "name": "BPOA8",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2025-06-24",
+   "maturity": "2028-10-31",
+   "minLot": null,
+   "tickers": {
+    "ars": "BPOA8",
+    "mep": "BPA8D",
+    "cable": "BPA8C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A8233.pdf",
+    "https://bcra.gob.ar/Noticias/serie-cuatro-bopreal.asp",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/bopreal-el-bcra-coloco-us810-millones-la-primera-licitacion-la-serie-4-n6157949",
+    "https://www.ambito.com/economia/bopreal-el-bcra-solo-pudo-colocar-us26-millones-la-segunda-licitacion-la-serie-4-n6163057",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025)",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025)",
+    "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-02",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 1.5,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOB7",
+   "name": "BPOB7",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2024-01-05",
+   "maturity": "2027-10-31",
+   "minLot": null,
+   "tickers": {
+    "ars": "BPOB7",
+    "mep": "BPB7D",
+    "cable": "BPB7C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+    "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.25,
+     "amortization": 50
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOB8",
+   "name": "BPOB8",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2025-06-24",
+   "maturity": "2028-10-31",
+   "minLot": null,
+   "tickers": {
+    "ars": "BPOB8",
+    "mep": "BPB8D",
+    "cable": "BPB8C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A8233.pdf",
+    "https://bcra.gob.ar/Noticias/serie-cuatro-bopreal.asp",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/bopreal-el-bcra-coloco-us810-millones-la-primera-licitacion-la-serie-4-n6157949",
+    "https://www.ambito.com/economia/bopreal-el-bcra-solo-pudo-colocar-us26-millones-la-segunda-licitacion-la-serie-4-n6163057",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025)",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025)",
+    "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-02",
+     "interest": 1.5,
+     "amortization": 0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 1.5,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOC7",
+   "name": "BPOC7",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2024-01-05",
+   "maturity": "2027-10-31",
+   "minLot": null,
+   "tickers": {
+    "ars": "BPOC7",
+    "mep": "BPC7D",
+    "cable": "BPC7C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+    "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.25,
+     "amortization": 50
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "BPOD7",
+   "name": "BPOD7",
+   "family": "bopreal",
+   "payCcy": "USD",
+   "issueDate": "2024-01-05",
+   "maturity": "2027-10-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "BPOD7",
+    "mep": "BPD7D",
+    "cable": "BPD7C"
+   },
+   "law": "Argentina",
+   "sources": [
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+    "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+    "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+    "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+    "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+    "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+    "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-02",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50
+    },
+    {
+     "date": "2027-11-01",
+     "interest": 1.25,
+     "amortization": 50
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "D30S6",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2026-09-30",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-16",
+   "maturity": "2026-09-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "D30S6"
+   },
+   "sources": [
+    "Resolucion Conjunta 13/2026 (BO 13-03-2026, instrumentos liquidados 16-03-2026 incl. X30S6/D30S6): https://www.boletinoficial.gob.ar/detalleAviso/primera/339439/20260313",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Llamado licitacion 13-05-2026 (TXMJ8 NUEVO, emision y liquidacion 15-05-2026, dual max[CER ; TAMAR TEM + 3.00%]; TXMJ9 reapertura; D30S6 reapertura): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-3",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2026-09-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "D31L6",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2026-07-31",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2026-05-29",
+   "maturity": "2026-07-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "D31L6"
+   },
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2026-07-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "D31M7",
+   "name": "Letra del Tesoro dolar linked cero cupon vto 2027-03-31",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2026-05-29",
+   "maturity": "2027-03-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "D31M7"
+   },
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2027-03-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD29",
+   "name": "U.S. Dollar Amortizing 1.000% Bonds due 2029 (New USD 2029 Bonds; Global 2029)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2029-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD29",
+    "mep": "GD29D",
+    "cable": "GD29C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 0.5,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 0.5,
+     "amortization": 10
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 0.45,
+     "amortization": 10
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 0.4,
+     "amortization": 10
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 0.35,
+     "amortization": 10
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 0.3,
+     "amortization": 10
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.25,
+     "amortization": 10
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.2,
+     "amortization": 10
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.15,
+     "amortization": 10
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.1,
+     "amortization": 10
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.05,
+     "amortization": 10
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD30",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2030 (New USD 2030 Bonds; Global 2030)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2030-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD30",
+    "mep": "GD30D",
+    "cable": "GD30C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.25,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 0.375,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 0.375,
+     "amortization": 4
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 0.36,
+     "amortization": 8
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 0.33,
+     "amortization": 8
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 0.3,
+     "amortization": 8
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 0.27,
+     "amortization": 8
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 0.24,
+     "amortization": 8
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.21,
+     "amortization": 8
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.42,
+     "amortization": 8
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.35,
+     "amortization": 8
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.28,
+     "amortization": 8
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.21,
+     "amortization": 8
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 0.14,
+     "amortization": 8
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 0.07,
+     "amortization": 8
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD35",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2035 (New USD 2035 Bonds; Global 2035)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2035-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD35",
+    "mep": "GD35D",
+    "cable": "GD35C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.375,
+     "amortization": 0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.375,
+     "amortization": 0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 2.5,
+     "amortization": 10
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 2.25,
+     "amortization": 10
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 2,
+     "amortization": 10
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.75,
+     "amortization": 10
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.5,
+     "amortization": 10
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.25,
+     "amortization": 10
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1,
+     "amortization": 10
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.75,
+     "amortization": 10
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.5,
+     "amortization": 10
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.25,
+     "amortization": 10
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD38",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2038 (New USD 2038 Bonds; Global 2038)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2038-01-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD38",
+    "mep": "GD38D",
+    "cable": "GD38C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 1,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 1,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 1.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 1.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 2.125,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 2.125,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.5,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.386364,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.272727,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.159091,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.045454,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.931818,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.818182,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.704545,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.590909,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.477273,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.363636,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.25,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.136363,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.022727,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.909091,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.795454,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.681818,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 0.568182,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.454545,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.340909,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.227272,
+     "amortization": 4.545455
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.113636,
+     "amortization": 4.545445
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD41",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2041 (New USD 2041 Bonds; Global 2041)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2041-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD41",
+    "mep": "GD41D",
+    "cable": "GD41C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 1.25,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 1.25,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.75,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.6875,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 1.625,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.5625,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.089286,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.002232,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.915179,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.828125,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.741071,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.654018,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.566964,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.479911,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.392857,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.305803,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.21875,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.131696,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.044643,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.957589,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.870536,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.783482,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.696428,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.609375,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.522321,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.435268,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.348214,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.26116,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.174107,
+     "amortization": 3.571429
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.087053,
+     "amortization": 3.571417
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "GD46",
+   "name": "U.S. Dollar Amortizing Step-Up Bonds due 2046 (New USD 2046 Bonds; Global 2046)",
+   "family": "soberano_usd",
+   "payCcy": "USD",
+   "issueDate": "2020-09-04",
+   "maturity": "2046-07-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "GD46",
+    "mep": "GD46D",
+    "cable": "GD46C"
+   },
+   "law": "NY",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+    "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+   ],
+   "cashflows": [
+    {
+     "date": "2021-01-09",
+     "interest": 0,
+     "amortization": 0
+    },
+    {
+     "date": "2021-07-09",
+     "interest": 0.0625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-01-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2022-07-09",
+     "interest": 0.5625,
+     "amortization": 0
+    },
+    {
+     "date": "2023-01-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2023-07-09",
+     "interest": 0.75,
+     "amortization": 0
+    },
+    {
+     "date": "2024-01-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2024-07-09",
+     "interest": 1.8125,
+     "amortization": 0
+    },
+    {
+     "date": "2025-01-09",
+     "interest": 2.0625,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2025-07-09",
+     "interest": 2.015625,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2026-01-09",
+     "interest": 1.96875,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2026-07-09",
+     "interest": 1.921875,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2027-01-09",
+     "interest": 1.875,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.828125,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.889205,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.839489,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.045455,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.988636,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.931818,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.875,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.818182,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.761364,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.704546,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.647727,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.590909,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.534091,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.477273,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.420455,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.363636,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.306818,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.25,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 1.193182,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 1.136364,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 1.079546,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 1.022727,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.965909,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.909091,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.852273,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.795455,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.738637,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.681818,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.625,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2042-01-09",
+     "interest": 0.568182,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2042-07-09",
+     "interest": 0.511364,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2043-01-09",
+     "interest": 0.454546,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2043-07-09",
+     "interest": 0.397728,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2044-01-09",
+     "interest": 0.340909,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2044-07-09",
+     "interest": 0.284091,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2045-01-09",
+     "interest": 0.227273,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2045-07-09",
+     "interest": 0.170455,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2046-01-09",
+     "interest": 0.113637,
+     "amortization": 2.272727
+    },
+    {
+     "date": "2046-07-09",
+     "interest": 0.056818,
+     "amortization": 2.272739
+    }
+   ]
+  },
+  {
+   "kind": "zero",
+   "ticker": "S12J6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-06-12",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-04-30",
+   "maturity": "2026-06-12",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S12J6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 102.952,
+   "temIssuePct": 2.1
+  },
+  {
+   "kind": "zero",
+   "ticker": "S14G6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-08-14",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-04-17",
+   "maturity": "2026-08-14",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S14G6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 108.029,
+   "temIssuePct": 2
+  },
+  {
+   "kind": "zero",
+   "ticker": "S15S6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-09-15",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-05-29",
+   "maturity": "2026-09-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S15S6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 107.21,
+   "temIssuePct": 1.99
+  },
+  {
+   "kind": "zero",
+   "ticker": "S17L6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-07-17",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2026-07-17",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S17L6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0 (Secretaria de Finanzas, llamado 27-Mar-2026: S17L6 terms, TEM capitalizable 30/360, issue at par 31-Mar-2026)",
+    "https://cbonds.es/bonds/2117679/ (Argentina, LECAP 2.16% 17jul2026, ARS (S17L6))",
+    "https://www.cohen.com.ar/Bursatil/Especie/S17L6/MERVAL/24hs. (ISIN, maturity, renta fija nacional)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 107.92,
+   "temIssuePct": 2.16
+  },
+  {
+   "kind": "zero",
+   "ticker": "S30N6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-11-30",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2025-12-15",
+   "maturity": "2026-11-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S30N6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 129.888,
+   "temIssuePct": 2.3
+  },
+  {
+   "kind": "zero",
+   "ticker": "S30O6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-10-30",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2025-10-31",
+   "maturity": "2026-10-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S30O6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 135.278,
+   "temIssuePct": 2.55
+  },
+  {
+   "kind": "zero",
+   "ticker": "S30S6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-09-30",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-16",
+   "maturity": "2026-09-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S30S6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 117.536,
+   "temIssuePct": 2.53
+  },
+  {
+   "kind": "zero",
+   "ticker": "S31G6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-08-31",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2025-11-10",
+   "maturity": "2026-08-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S31G6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 127.064,
+   "temIssuePct": 2.5
+  },
+  {
+   "kind": "zero",
+   "ticker": "S31L6",
+   "name": "LETRA DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-07-31",
+   "family": "lecap",
+   "payCcy": "ARS",
+   "issueDate": "2026-01-30",
+   "maturity": "2026-07-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "S31L6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 117.677,
+   "temIssuePct": 2.75
+  },
+  {
+   "kind": "zero",
+   "ticker": "T15E7",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-01-15",
+   "family": "boncap",
+   "payCcy": "ARS",
+   "issueDate": "2025-01-31",
+   "maturity": "2027-01-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "T15E7"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 161.104,
+   "temIssuePct": 2.05
+  },
+  {
+   "kind": "zero",
+   "ticker": "T30A7",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-04-30",
+   "family": "boncap",
+   "payCcy": "ARS",
+   "issueDate": "2025-10-31",
+   "maturity": "2027-04-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "T30A7"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 157.341,
+   "temIssuePct": 2.55
+  },
+  {
+   "kind": "zero",
+   "ticker": "T30J6",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2026-06-30",
+   "family": "boncap",
+   "payCcy": "ARS",
+   "issueDate": "2025-01-17",
+   "maturity": "2026-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "T30J6"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 144.896,
+   "temIssuePct": 2.15
+  },
+  {
+   "kind": "zero",
+   "ticker": "T30J7",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-06-30",
+   "family": "boncap",
+   "payCcy": "ARS",
+   "issueDate": "2026-01-16",
+   "maturity": "2027-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "T30J7"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 156.037,
+   "temIssuePct": 2.58
+  },
+  {
+   "kind": "zero",
+   "ticker": "T31Y7",
+   "name": "BONO DEL TESORO NACIONAL CAPITALIZABLE EN PESOS CON VENCIMIENTO 2027-05-31",
+   "family": "boncap",
+   "payCcy": "ARS",
+   "issueDate": "2025-12-15",
+   "maturity": "2027-05-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "T31Y7"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.sinelefantesblancos.com.ar/inversiones/calculador-de-lecap (Calculador de LECAP y BONCAP, valor-final table, settlement 11/06/2026, fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "finalPaymentPer100": 151.563,
+   "temIssuePct": 2.4
+  },
+  {
+   "kind": "fixed",
+   "ticker": "TO26",
+   "name": "BONOS DEL TESORO NACIONAL EN PESOS A TASA FIJA VENCIMIENTO 17 DE OCTUBRE DE 2026 (BONTE 2026)",
+   "family": "bonte",
+   "payCcy": "ARS",
+   "issueDate": "2016-10-17",
+   "maturity": "2026-10-17",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TO26",
+    "mep": "TO26D",
+    "cable": "TO26C"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-10-17",
+     "interest": 7.75,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dual_tamar",
+   "ticker": "TTD26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-12-15",
+   "family": "dual_tamar",
+   "payCcy": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-12-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TTD26"
+   },
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "fixedFinalPaymentPer100": 161.14
+  },
+  {
+   "kind": "dual_tamar",
+   "ticker": "TTJ26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-06-30",
+   "family": "dual_tamar",
+   "payCcy": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TTJ26"
+   },
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "fixedFinalPaymentPer100": 144.63
+  },
+  {
+   "kind": "dual_tamar",
+   "ticker": "TTS26",
+   "name": "Bono del Tesoro Nacional en pesos a tasa dual (fija vs TAMAR) vto 2026-09-15",
+   "family": "dual_tamar",
+   "payCcy": "ARS",
+   "issueDate": "2025-01-29",
+   "maturity": "2026-09-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TTS26"
+   },
+   "sources": [
+    "Resolucion Conjunta 4/2025 (BO 27-01-2025, bonos duales TAMAR TTM26/TTJ26/TTS26/TTD26): https://www.boletinoficial.gob.ar/detalleAviso/primera/320147/20250127",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "fixedFinalPaymentPer100": 152.1
+  },
+  {
+   "kind": "fixed",
+   "ticker": "TY30P",
+   "name": "BONO DEL TESORO NACIONAL EN PESOS A TASA FIJA CON VENCIMIENTO 30 DE MAYO DE 2030 (BONTE 2030)",
+   "family": "bonte",
+   "payCcy": "ARS",
+   "issueDate": "2025-06-04",
+   "maturity": "2030-05-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TY30P"
+   },
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (POST {\"symbol\":...}, fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (local copy research/iamc_titulos_publicos_2026-06-09.pdf, table 'BONOS Y LETRAS DEL TESORO CAPITALIZABLES EN PESOS' 09-Jun-26)",
+    "https://www.boletinoficial.gob.ar/detalleAviso/primera/326136/20250529 (Resolucion Conjunta 24/2025: emision 04-Jun-2025, vencimiento 30-May-2030, cupon semestral 30-May/30-Nov desde 30-Nov-2025, amortizacion integra, opcion de venta anticipada ejercitable una sola vez el 27-May-2027)",
+    "https://www.salvadordistefano.com.ar/novedades/991/bonte-2030-ty30p-argentina-vuelve-al-mercado",
+    "https://www.bloomberglinea.com/latinoamerica/argentina/argentina-confirma-apetito-por-bonte-2030-y-suma-us1000-millones-a-las-arcas-del-bcra/",
+    "https://bonistas.com/api/bonds (local snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 14.75,
+     "amortization": 0
+    },
+    {
+     "date": "2030-05-30",
+     "interest": 14.75,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "TZV26",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2026-06-30",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2024-02-28",
+   "maturity": "2026-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZV26"
+   },
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Llamado licitacion 16-05-2024 (TZXM7 nuevo, liquidacion 20-05-2024 T+2; clausula dolar-linked: TC referencia Com. A3500 del tercer dia habil previo a la fecha de pago): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-lecap-boncer-cero-cupon-y-bono-dolar-linked-cero-cupon-y-anuncio-del",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2026-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "TZV27",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2027-06-30",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2024-07-12",
+   "maturity": "2027-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZV27"
+   },
+   "sources": [
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2027-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "dollar_linked",
+   "ticker": "TZV28",
+   "name": "Bono del Tesoro vinculado al dolar cero cupon vto 2028-06-30",
+   "family": "dollar_linked",
+   "payCcy": "ARS",
+   "issueDate": "2026-02-27",
+   "maturity": "2028-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZV28"
+   },
+   "sources": [
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resolucion Conjunta 23/2026 (BO 29-04-2026; crea TXMJ9 dual CER/TAMAR+3% em 30-04-2026 y TMG28 TAMAR em 30-04-2026; amplia TZXS8/TZV28/TMF28/TZXM8; conversiones TZV26->TZV28, TTD26->TMF28, M31G6->TMF28, TZXD6->TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/341303/20260429",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "usdCashflows": [
+    {
+     "date": "2028-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZX26",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-06-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-02-01",
+   "maturity": "2026-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZX26"
+   },
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 200.38801458912,
+   "realCashflows": [
+    {
+     "date": "2026-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZX27",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-06-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-02-01",
+   "maturity": "2027-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZX27"
+   },
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 200.38801458912,
+   "realCashflows": [
+    {
+     "date": "2027-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZX28",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-06-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-02-01",
+   "maturity": "2028-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZX28"
+   },
+   "sources": [
+    "RESFC-2024-8-APN-SH#MEC (Resolucion Conjunta 8/2024, emision TZX26/TZX27/TZX28, referenced in Res. Conjunta 26/2024 BO 16-05-2024: https://www.boletinoficial.gob.ar/detalleAviso/primera/307567/20240516)",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 200.38801458912,
+   "realCashflows": [
+    {
+     "date": "2028-06-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXA7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-04-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2025-11-28",
+   "maturity": "2027-04-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXA7"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 651.89806244294,
+   "realCashflows": [
+    {
+     "date": "2027-04-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXD6",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-12-15",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-03-15",
+   "maturity": "2026-12-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXD6"
+   },
+   "sources": [
+    "Resolucion Conjunta 16/2024 (conversion marzo 2024, TZXD5/TZXD6/TZXD7): https://servicios.infoleg.gob.ar/infolegInternet/anexos/395000-399999/397316/norma.htm",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 271.04755550913,
+   "realCashflows": [
+    {
+     "date": "2026-12-15",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXD7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-12-15",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-03-15",
+   "maturity": "2027-12-15",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXD7"
+   },
+   "sources": [
+    "Resolucion Conjunta 16/2024 (conversion marzo 2024, TZXD5/TZXD6/TZXD7): https://servicios.infoleg.gob.ar/infolegInternet/anexos/395000-399999/397316/norma.htm",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 271.04755550913,
+   "realCashflows": [
+    {
+     "date": "2027-12-15",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXM7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-03-31",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-05-20",
+   "maturity": "2027-03-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXM7"
+   },
+   "sources": [
+    "Resolucion Conjunta 27/2024 (BO 17-05-2024, art.6 crea TZXM7 emision 20-05-2024): https://www.boletinoficial.gob.ar/detalleAviso/primera/307639/20240517",
+    "Llamado licitacion 16-05-2024 (TZXM7 nuevo, liquidacion 20-05-2024 T+2; clausula dolar-linked: TC referencia Com. A3500 del tercer dia habil previo a la fecha de pago): https://www.argentina.gob.ar/noticias/llamado-licitacion-de-lecap-boncer-cero-cupon-y-bono-dolar-linked-cero-cupon-y-anuncio-del",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 361.31760345721,
+   "realCashflows": [
+    {
+     "date": "2027-03-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXM8",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-03-31",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-03-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXM8"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 723.05998062192,
+   "realCashflows": [
+    {
+     "date": "2028-03-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXM9",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2029-03-28",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2029-03-28",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXM9"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 723.05998062192,
+   "realCashflows": [
+    {
+     "date": "2029-03-28",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXO6",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2026-10-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2024-10-31",
+   "maturity": "2026-10-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXO6"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 480.15257831965,
+   "realCashflows": [
+    {
+     "date": "2026-10-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXS7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-09-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2027-09-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXS7"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 723.05998062192,
+   "realCashflows": [
+    {
+     "date": "2027-09-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXS8",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2028-09-29",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-09-29",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXS8"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "Resolucion Conjunta 21/2026 (BO 16-04-2026; crea TMF28 em 20-04-2026 margen licitado 15-04-2026; amplia TZXS8/TZXM9/TMF27/TMG27/TZV28/TZXM8): https://www.boletinoficial.gob.ar/detalleAviso/primera/340830/20260416",
+    "Resultado licitacion 14-04-2026 (TMF28 nuevo margen 6.50% via conversion TTS26; TZXS8/TZXM9/TMF27/TMG27/TZV28 reaperturas; conversiones TZXD6/TZXM7/TTS26; liquidacion 17/20-04-2026): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-0",
+    "Resultado licitacion 28-04-2026 (TXMJ9 nuevo TIREA 7.31%; TMG28 nuevo margen 6.90%; TZXS8/D30S6 reaperturas; conversiones): https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-1",
+    "Puente turistico 23-03-2026 (Resolucion 164/2025; feriado 24-03-2026): https://prensalibreonline.com.ar/politica/confirmados-los-feriados-de-marzo-2026-puente-turistico-el-2-2026-03-06/",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 723.05998062192,
+   "realCashflows": [
+    {
+     "date": "2028-09-29",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "TZXY7",
+   "name": "Bono del Tesoro Nacional en pesos cero cupon con ajuste por CER vto 2027-05-31",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2025-12-15",
+   "maturity": "2027-05-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "TZXY7"
+   },
+   "sources": [
+    "Resolucion Conjunta 63/2025 (BO 15-12-2025, instrumentos liquidados 15-12-2025 incl. TZXY7/X30N6): https://www.boletinoficial.gob.ar/detalleAviso/primera/336185/20251215",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 659.67889566652,
+   "realCashflows": [
+    {
+     "date": "2027-05-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "X30N6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-11-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2025-12-15",
+   "maturity": "2026-11-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "X30N6"
+   },
+   "sources": [
+    "Resolucion Conjunta 63/2025 (BO 15-12-2025, instrumentos liquidados 15-12-2025 incl. TZXY7/X30N6): https://www.boletinoficial.gob.ar/detalleAviso/primera/336185/20251215",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 659.67889566652,
+   "realCashflows": [
+    {
+     "date": "2026-11-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "X30S6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-09-30",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-03-16",
+   "maturity": "2026-09-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "X30S6"
+   },
+   "sources": [
+    "Resolucion Conjunta 13/2026 (BO 13-03-2026, instrumentos liquidados 16-03-2026 incl. X30S6/D30S6): https://www.boletinoficial.gob.ar/detalleAviso/primera/339439/20260313",
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 714.9848780192,
+   "realCashflows": [
+    {
+     "date": "2026-09-30",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "cer",
+   "ticker": "X31L6",
+   "name": "Letra del Tesoro Nacional en pesos ajustada por CER cupon cero vto 2026-07-31",
+   "family": "boncer",
+   "payCcy": "ARS",
+   "issueDate": "2026-01-30",
+   "maturity": "2026-07-31",
+   "minLot": 1,
+   "tickers": {
+    "ars": "X31L6"
+   },
+   "sources": [
+    "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30 (CER, base 2.2.2002=1; values fetched 2026-06-10)",
+    "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/ (PDF: https://iamcweb.prod.ingecloud.com/TempFiles/074dbb11-2f0d-4cee-8518-476b1321bf29.pdf; local copy research/iamc_titulos_publicos_2026-06-09.pdf)",
+    "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+    "https://data912.com/live/arg_bonds and /live/arg_notes (live panel enumeration 2026-06-10)"
+   ],
+   "cerBase": 685.55061207521,
+   "realCashflows": [
+    {
+     "date": "2026-07-31",
+     "interest": 0,
+     "amortization": 100
+    }
+   ]
+  }
+ ]
 }

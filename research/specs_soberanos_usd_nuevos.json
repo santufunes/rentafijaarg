@@ -1,0 +1,499 @@
+{
+ "family": "soberano_usd",
+ "asOf": "2026-06-10",
+ "instruments": [
+  {
+   "ticker": "AO27",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6% con vencimiento 29 de octubre de 2027 (BONAR octubre 2027)",
+   "law": "AR",
+   "currencyOfPayment": "USD",
+   "issueDate": "2026-02-27",
+   "maturity": "2027-10-29",
+   "couponStepUpSchedule": [
+    {
+     "from": "2026-02-27",
+     "annualRatePct": 6.0
+    }
+   ],
+   "paymentFrequencyMonths": 1,
+   "amortizationSchedule": [
+    {
+     "date": "2027-10-29",
+     "pctOfOriginalFace": 100.0
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-03-31",
+     "interest": 0.55,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-04-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-05-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-06-30",
+     "interest": 0.516667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-07-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-08-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-09-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-10-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-02-26",
+     "interest": 0.45,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-03-31",
+     "interest": 0.566667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-08-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-29",
+     "interest": 0.483333,
+     "amortization": 100.0
+    }
+   ],
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "VNO USD 1 (Resolucion Conjunta 11/2026 art. 4)"
+   },
+   "tickers": {
+    "ars": "AO27",
+    "mep": "AO27D",
+    "cable": "AO27C"
+   },
+   "sources": [
+    "Resolucion Conjunta 11/2026 Secretaria de Finanzas y Secretaria de Hacienda (RESFC-2026-11-APN-SH#MEC, 25-Feb-2026), art. 4 - texto completo leido en mirror https://www.revistarap.com.ar/app/assets/data/documentos/R_C__11-2026.pdf (lista verbatim de las 20 fechas de pago de intereses, base 30/360, clausula de dia habil)",
+    "Resolucion Conjunta 16/2026, Boletin Oficial 31-Mar-2026, https://www.boletinoficial.gob.ar/detalleAviso/primera/340193/20260331 (reapertura, refiere emision original RESFC-2026-11)",
+    "Llamado a licitacion 31-Mar-2026, https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://rava.com/perfil/AO27 (nombre 'Bonar 2027 U$S', cierre ARS 148.300 10-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AO27/AO27D/AO27C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AO27D tir 4.5988% s/ last 102.20)",
+    "Infobae 26-Feb-2026: primera licitacion 25-Feb-2026, USD 150M a TNA 5,89% precio 100,45; https://www.infobae.com/economia/2026/02/26/como-invertir-en-el-nuevo-bono-del-gobierno-y-que-tan-conveniente-es-para-ahorristas-minoristas/"
+   ],
+   "confidence": "high",
+   "verification": {
+    "status": "verified",
+    "checkedSources": [
+     "Resolucion Conjunta 11/2026 (texto completo)",
+     "Boletin Oficial RC 16/2026",
+     "IAMC informe diario 09-Jun-2026 (emision 27-Feb-26, vto 29-Oct-27, 6,0% mensual, bullet, prox. cupon 30-Jun-26)",
+     "bonistas.com api",
+     "data912.com",
+     "rava.com",
+     "Infobae"
+    ],
+    "corrections": [
+     "Intel preliminar decia 'monthly coupons' sin fechas: las fechas oficiales NO son un dia fijo del mes; son el ultimo dia habil de cada mes listado explicitamente en la RC 11/2026, y el interes 30/360 se devenga hasta la fecha original listada (cupones variables 0,45-0,566667 por 100 VN, no 0,50 uniforme).",
+     "Maturity 29-Oct-2027 confirmada (29-Oct es el ultimo dia habil de octubre 2027; figura asi en el nombre oficial del bono)."
+    ],
+    "goldenCheck": {
+     "price": 102.2,
+     "computedTIRPct": 4.6,
+     "publishedTIRPct": 4.51,
+     "deltaPp": 0.09
+    }
+   }
+  },
+  {
+   "ticker": "AO28",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6% con vencimiento 31 de octubre de 2028 (BONAR octubre 2028)",
+   "law": "AR",
+   "currencyOfPayment": "USD",
+   "issueDate": "2026-03-31",
+   "maturity": "2028-10-31",
+   "couponStepUpSchedule": [
+    {
+     "from": "2026-03-31",
+     "annualRatePct": 6.0
+    }
+   ],
+   "paymentFrequencyMonths": 1,
+   "amortizationSchedule": [
+    {
+     "date": "2028-10-31",
+     "pctOfOriginalFace": 100.0
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-04-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-05-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-06-30",
+     "interest": 0.516667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-07-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-08-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-09-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-10-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-02-26",
+     "interest": 0.45,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-03-31",
+     "interest": 0.566667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-08-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 0.516667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-02-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 0.516667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-28",
+     "interest": 0.466667,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-31",
+     "interest": 0.533333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-08-31",
+     "interest": 0.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-29",
+     "interest": 0.483333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 0.516667,
+     "amortization": 100.0
+    }
+   ],
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "VNO USD 1 (Resolucion Conjunta 16/2026)"
+   },
+   "tickers": {
+    "ars": "AO28",
+    "mep": "AO28D",
+    "cable": "AO28C"
+   },
+   "sources": [
+    "Resolucion Conjunta 16/2026 Secretaria de Finanzas y Secretaria de Hacienda, Boletin Oficial 31-Mar-2026, https://www.boletinoficial.gob.ar/detalleAviso/primera/340193/20260331 (emision original; lista verbatim de las 31 fechas de pago de intereses 2026-2028, base 30/360, VNO USD 1, ley argentina, bullet)",
+    "Llamado a licitacion 31-Mar-2026 (AO28 nuevo), https://www.argentina.gob.ar/noticias/llamado-licitacion-de-instrumentos-del-tesoro-nacional-denominados-en-pesos-y-en-dolares-0",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AO28/AO28D/AO28C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AO28D tir 8.5338% s/ last 95.40; start_date 2026-03-31)"
+   ],
+   "confidence": "high",
+   "verification": {
+    "status": "verified",
+    "checkedSources": [
+     "Boletin Oficial RC 16/2026 (lista completa de fechas)",
+     "IAMC informe diario 09-Jun-2026 (emision 31-Mar-26, vto 31-Oct-28, 6,0% mensual, bullet, prox. cupon 30-Jun-26)",
+     "bonistas.com api",
+     "data912.com"
+    ],
+    "corrections": [
+     "Igual que AO27: cupones mensuales sobre fechas explicitas (ultimo dia habil del mes segun la RC), montos 30/360 variables (0,45-0,566667), no 0,50 plano."
+    ],
+    "goldenCheck": {
+     "price": 95.4,
+     "computedTIRPct": 8.52,
+     "publishedTIRPct": 8.41,
+     "deltaPp": 0.11
+    }
+   }
+  },
+  {
+   "ticker": "AN29",
+   "name": "Bono del Tesoro Nacional en dolares estadounidenses 6,50% con vencimiento 30 de noviembre de 2029 (BONAR 2029N)",
+   "law": "AR",
+   "currencyOfPayment": "USD",
+   "issueDate": "2025-12-12",
+   "maturity": "2029-11-30",
+   "couponStepUpSchedule": [
+    {
+     "from": "2025-12-12",
+     "annualRatePct": 6.5
+    }
+   ],
+   "paymentFrequencyMonths": 6,
+   "amortizationSchedule": [
+    {
+     "date": "2029-11-30",
+     "pctOfOriginalFace": 100.0
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-05-30",
+     "interest": 3.033333,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-11-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 3.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 3.25,
+     "amortization": 100.0
+    }
+   ],
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "VNO USD 1 (llamado a licitacion Secretaria de Finanzas, dic-2025)"
+   },
+   "tickers": {
+    "ars": "AN29",
+    "mep": "AN29D",
+    "cable": "AN29C"
+   },
+   "sources": [
+    "Llamado a licitacion del Bono del Tesoro Nacional en USD 6,50% vto 30-Nov-2029, https://www.argentina.gob.ar/noticias/llamado-licitacion-del-bono-del-tesoro-nacional-en-dolares-estadounidenses-650-con (emision/liquidacion 12-Dic-2025, intereses 30-May y 30-Nov de cada ano, primer pago 30-May-2026, base 30/360, bullet, VNO USD 1, ley argentina)",
+    "Resultado de licitacion, https://www.argentina.gob.ar/noticias/resultado-de-licitacion-del-bono-del-tesoro-nacional-en-dolares-estadounidenses-650-con (ofertado USD 1.420M, adjudicado VNO USD 1.000M, precio de corte USD 910,00 por VNO 1.000, yield TNA 9,26%, prorrateo 40,95%)",
+    "research/iamc_titulos_publicos_2026-06-09.pdf (IAMC/BYMA Informe Diario Titulos Publicos 09-Jun-2026)",
+    "https://data912.com/live/arg_bonds (AN29/AN29D/AN29C live 2026-06-10)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (bonistas.com /api/bonds: AN29D tir 9.0536% s/ last 93.27; start_date 2025-12-12)",
+    "Prensa colocacion dic-2025 (El Cronista, MDZ, Cohen): USD 1.000M colocados, TNA de corte 9,26%"
+   ],
+   "confidence": "high",
+   "verification": {
+    "status": "verified",
+    "checkedSources": [
+     "argentina.gob.ar llamado + resultado de licitacion",
+     "IAMC informe diario 09-Jun-2026 (TESORO, vto 30-Nov-29, 6,5% semestral, bullet, prox. cupon 30-Nov-26)",
+     "bonistas.com api",
+     "data912.com",
+     "prensa dic-2025"
+    ],
+    "corrections": [
+     "Intel preliminar (y columna Fecha Emision del informe IAMC) decia emision 2025-12-16; las condiciones oficiales de la Secretaria de Finanzas fijan emision y liquidacion el 12-Dic-2025 (subasta 10-Dic-2025, T+2) y bonistas.com usa start_date 2025-12-12. Se adopta 2025-12-12; el 16-Dic-2025 parece ser la fecha de inicio de negociacion secundaria en BYMA ('El 2029N debuta hoy en el mercado secundario', El Cronista 16-Dic-2025).",
+     "Emisor formal: Tesoro Nacional (IAMC lo lista como TESORO NACIONAL vs ESTADO NACIONAL para AO27/AO28); sin impacto en terminos.",
+     "Primer cupon corto 30-May-2026 = 3,033333 por 100 VN (168 dias 30/360 desde 12-Dic-2025), ya pagado; los 7 restantes son 3,25."
+    ],
+    "goldenCheck": {
+     "price": 93.27,
+     "computedTIRPct": 9.05,
+     "publishedTIRPct": 9.08,
+     "deltaPp": -0.03
+    }
+   }
+  }
+ ],
+ "notes": [
+  "Subfamilia: BONAR hard-dollar 'nuevos' (emisiones Tesoro 2025/2026, ley argentina, no provenientes del canje 2020). Bullet, VR 100, pagos en USD.",
+  "Day count: 'meses de 30 dias y anos de 360 dias (30/360)' segun condiciones oficiales. Implementado como 30E/360 simple (dia 31 -> 30) entre fechas de devengamiento consecutivas; la suma de cupones telescopa al total emision->vencimiento (AO27 10,033333; AO28 15,50; AN29 25,783333 por 100 VN).",
+  "Fechas de cashflow = fechas de vencimiento original del cupon segun las resoluciones (para AO27/AO28 son el ultimo dia habil de cada mes, listadas explicitamente; para AN29 los dias 30-May/30-Nov). Clausula oficial: si la fecha no es dia habil se paga el dia habil siguiente SIN devengar interes adicional (RC 11/2026), por eso se modelan los montos sobre las fechas originales.",
+  "Los cupones mensuales de AO27/AO28 NO son 0,50 uniforme: varian entre 0,45 y 0,566667 por 100 VN por la base 30/360 sobre fechas habiles irregulares. Validado contra la TIR de bonistas.com calculada sobre el mismo precio (coincidencia 0,00-0,02pp).",
+  "cashflows incluyen tambien los cupones ya pagados desde la emision (historial completo por 100 VN); para valuacion a hoy usar solo date > settlement.",
+  "goldenCheck: price = cierre data912 /live/arg_bonds 2026-06-10 del ticker D (USD por 100 VN, sucio, t+1 => settlement 2026-06-11); computedTIRPct = TIR efectiva anual act/365 sobre cashflows futuros; publishedTIRPct = YTM del informe diario IAMC 09-Jun-2026 (cierre 09-Jun, settlement 10-Jun) - la diferencia residual (<=0,11pp) refleja el dia de cierre/settlement distinto. Cross-check bonistas.com 10-Jun (misma fuente de precio): AO27D 4,5988% / AO28D 8,5338% / AN29D 9,0536% vs computados 4,599/8,519/9,047 (delta <=0,02pp).",
+  "data912.com inaccesible via curl del sistema (LibreSSL handshake); se uso curl de Homebrew (OpenSSL). Precios data912 coinciden con bonistas last_price.",
+  "Montos en circulacion (IAMC 09-Jun-2026): AO27 USD 1.445M, AO28 USD 834M, AN29 USD 1.000M (informativo, sujeto a reaperturas quincenales: RC 21/23/25/28/31 de 2026 ampliaron AO27/AO28)."
+ ]
+}

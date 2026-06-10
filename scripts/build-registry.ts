@@ -45,6 +45,14 @@ function addMonths(iso: string, n: number): string {
 
 /** Genera flujos explícitos de un bono step-up amortizable (canje 2020 / BOPREAL). */
 function generateFixedCashflows(t: string, spec: any): Cf[] {
+  if (Array.isArray(spec.remainingCashflows) && spec.remainingCashflows.length > 0) {
+    // BOPREAL: flujos remanentes explícitos con roll a día hábil ya aplicado.
+    return spec.remainingCashflows.map((c: any) => ({
+      date: c.expectedPayDate ?? c.scheduledDate ?? c.date,
+      interest: Number(c.interestPer100VN ?? c.interest ?? 0),
+      amortization: Number(c.capitalPer100VN ?? c.amortization ?? 0),
+    }));
+  }
   if (Array.isArray(spec.cashflows) && spec.cashflows.length > 0) {
     // flujos ya explícitos
     return spec.cashflows.map((c: any) => ({
@@ -53,7 +61,7 @@ function generateFixedCashflows(t: string, spec: any): Cf[] {
       amortization: Number(c.amortization ?? c.amortizationPct ?? c.amort ?? 0),
     }));
   }
-  const coupons: { from: string; annualRatePct: number }[] = (spec.couponSchedule ?? [])
+  const coupons: { from: string; annualRatePct: number }[] = (spec.couponStepUpSchedule ?? spec.couponSchedule ?? [])
     .map((c: any) => ({ from: c.from, annualRatePct: Number(c.annualRatePct ?? c.ratePct ?? c.rate) }))
     .sort((a: any, b: any) => a.from.localeCompare(b.from));
   const amorts: { date: string; pct: number }[] = (spec.amortizationSchedule ?? [])
@@ -99,16 +107,27 @@ function generateFixedCashflows(t: string, spec: any): Cf[] {
 
 const round6 = (x: number) => Math.round(x * 1e6) / 1e6;
 
-function validateFixed(t: string, flows: Cf[], maturity: string) {
+function validateFixed(t: string, flows: Cf[], maturity: string, opts?: { remaining?: boolean }) {
   const amortSum = flows.reduce((s, f) => s + f.amortization, 0);
-  if (Math.abs(amortSum - 100) > 0.02) errors.push(`${t}: amortizaciones suman ${amortSum.toFixed(4)} ≠ 100`);
+  if (opts?.remaining) {
+    // flujos remanentes: puede haber amortizaciones ya pagadas
+    if (amortSum <= 0 || amortSum > 100.02)
+      errors.push(`${t}: amortizaciones remanentes suman ${amortSum.toFixed(4)} (esperado (0,100])`);
+  } else if (Math.abs(amortSum - 100) > 0.02) {
+    errors.push(`${t}: amortizaciones suman ${amortSum.toFixed(4)} ≠ 100`);
+  }
   for (const f of flows) {
     if (!ISO.test(f.date)) errors.push(`${t}: fecha de flujo inválida ${f.date}`);
     if (f.interest < 0 || f.amortization < 0) errors.push(`${t}: flujo negativo en ${f.date}`);
   }
   const last = flows[flows.length - 1];
-  if (last && last.date !== maturity)
-    errors.push(`${t}: último flujo ${last.date} ≠ maturity ${maturity}`);
+  if (last) {
+    const drift = Math.abs(
+      (Date.parse(last.date) - Date.parse(maturity)) / 86_400_000,
+    );
+    // el último pago puede rolar hasta 5 días hábiles después del vencimiento
+    if (drift > 5) errors.push(`${t}: último flujo ${last.date} lejos de maturity ${maturity}`);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -133,6 +152,7 @@ function isUncertain(spec: any): boolean {
 // --- soberanos USD + bopreal ----------------------------------------------
 for (const [file, family] of [
   ['specs_soberanos_usd.json', 'soberano_usd'],
+  ['specs_soberanos_usd_nuevos.json', 'soberano_usd'],
   ['specs_bopreal.json', 'bopreal'],
 ] as const) {
   const data = readJson(R(file));
@@ -149,7 +169,9 @@ for (const [file, family] of [
     if (!assertIso(t, 'maturity', spec.maturity)) continue;
     const flows = generateFixedCashflows(t, spec);
     if (flows.length === 0) continue;
-    validateFixed(t, flows, spec.maturity);
+    validateFixed(t, flows, spec.maturity, {
+      remaining: Array.isArray(spec.remainingCashflows) && spec.remainingCashflows.length > 0,
+    });
     instruments.push({
       kind: 'fixed',
       ticker: t,
@@ -158,8 +180,16 @@ for (const [file, family] of [
       payCcy: 'USD',
       issueDate: spec.issueDate,
       maturity: spec.maturity,
-      minLot: Number(spec.minDenomination ?? 1),
-      tickers: tickersFor(t),
+      minLot: Number(spec.minDenomination?.amount ?? spec.minDenomination ?? 1),
+      tickers: spec.tickers?.ars
+        ? spec.tickers
+        : spec.tickerVariants?.ars_byma
+          ? {
+              ars: spec.tickerVariants.ars_byma,
+              mep: spec.tickerVariants.usd_mep_byma ?? undefined,
+              cable: spec.tickerVariants.usd_cable_byma ?? undefined,
+            }
+          : tickersFor(t),
       law: spec.law,
       sources: spec.sources ?? [],
       cashflows: flows,
@@ -174,22 +204,41 @@ for (const [file, family] of [
   for (const spec of data?.instruments ?? []) {
     const t = spec.ticker;
     const type = (spec.type ?? spec.classification ?? '').toLowerCase();
+    const maturity = spec.maturity ?? spec.maturityDate;
     if (isUncertain(spec)) {
       skipped.push(`${t} (peso_fija): verificación incierta`);
       continue;
     }
-    if (!assertIso(t, 'maturity', spec.maturity)) continue;
-    const final = Number(spec.finalPaymentPer100VN ?? spec.finalPaymentPer100 ?? spec.finalPayment);
-    if (type === 'bonte' && Array.isArray(spec.cashflows) && spec.cashflows.length > 1) {
-      const flows = generateFixedCashflows(t, spec);
-      validateFixed(t, flows, spec.maturity);
+    if (type.includes('provincial')) {
+      skipped.push(`${t} (peso_fija): crédito provincial, fuera del universo Tesoro`);
+      continue;
+    }
+    if (!assertIso(t, 'maturity', maturity)) continue;
+
+    // BONTE con cupones: flujos remanentes explícitos {date, amountPer100VN}.
+    const remKey = Object.keys(spec).find((k) => k.startsWith('remainingCashflows'));
+    const rem: any[] = remKey ? spec[remKey] : [];
+    if (type.includes('bonte') && Array.isArray(rem) && rem.length > 0) {
+      const flows: Cf[] = rem.map((c: any, idx: number) => {
+        const amount = Number(c.amountPer100VN ?? c.amount);
+        const isLast = idx === rem.length - 1;
+        return {
+          date: c.date,
+          interest: isLast ? round6(amount - 100) : amount,
+          amortization: isLast ? 100 : 0,
+        };
+      });
+      validateFixed(t, flows, maturity, { remaining: true });
       instruments.push({
         kind: 'fixed', ticker: t, name: spec.name ?? t, family: 'bonte', payCcy: 'ARS',
-        issueDate: spec.issueDate, maturity: spec.maturity, minLot: 1,
-        tickers: tickersFor(t), sources: spec.sources ?? [], cashflows: flows,
+        issueDate: spec.issueDate, maturity, minLot: 1,
+        tickers: spec.tickers?.ars ? spec.tickers : tickersFor(t),
+        sources: spec.sources ?? [], cashflows: flows,
       });
       continue;
     }
+
+    const final = Number(spec.finalPaymentPer100VN ?? spec.finalPaymentPer100 ?? spec.finalPayment);
     if (!Number.isFinite(final) || final < 100) {
       skipped.push(`${t} (peso_fija): sin valor final confirmado`);
       continue;
@@ -198,15 +247,15 @@ for (const [file, family] of [
       kind: 'zero',
       ticker: t,
       name: spec.name ?? t,
-      family: type === 'boncap' ? 'boncap' : type === 'bonte' ? 'bonte' : 'lecap',
+      family: type === 'boncap' ? 'boncap' : type.includes('bonte') ? 'bonte' : 'lecap',
       payCcy: 'ARS',
       issueDate: spec.issueDate,
-      maturity: spec.maturity,
+      maturity,
       minLot: 1,
-      tickers: tickersFor(t),
+      tickers: spec.tickers?.ars ? spec.tickers : tickersFor(t),
       sources: spec.sources ?? [],
       finalPaymentPer100: final,
-      temIssuePct: spec.temIssuePct ?? spec.tem ?? null,
+      temIssuePct: spec.temIssuePct ?? spec.temAtIssuancePct ?? spec.tem ?? null,
     });
   }
 }
@@ -217,7 +266,8 @@ for (const [file, family] of [
   if (!data) errors.push('falta specs_cer_dl.json');
   for (const spec of data?.instruments ?? []) {
     const t = spec.ticker;
-    const type = (spec.type ?? spec.structure ?? '').toLowerCase();
+    spec.maturity = spec.maturity ?? spec.maturityDate;
+    const type = (spec.type ?? spec.classification ?? spec.structure ?? '').toLowerCase();
     if (isUncertain(spec)) {
       skipped.push(`${t} (cer_dl): verificación incierta`);
       continue;
@@ -225,7 +275,11 @@ for (const [file, family] of [
     if (!assertIso(t, 'maturity', spec.maturity)) continue;
 
     if (type.includes('dual')) {
-      const fixedFinal = Number(spec.fixedFinalPaymentPer100 ?? spec.fixedLeg?.finalPaymentPer100);
+      const fixedFinal = Number(
+        spec.fixedFinalPaymentPer100 ??
+          spec.fixedLeg?.finalPaymentPer100 ??
+          spec.fixedLeg?.finalPaymentPer100VN,
+      );
       if (!Number.isFinite(fixedFinal)) { skipped.push(`${t}: dual sin leg fijo confirmado`); continue; }
       instruments.push({
         kind: 'dual_tamar', ticker: t, name: spec.name ?? t, family: 'dual_tamar', payCcy: 'ARS',
@@ -257,13 +311,14 @@ for (const [file, family] of [
     } else if (type.includes('zero') || !spec.realCouponPct) {
       realFlows = [{ date: spec.maturity, interest: 0, amortization: 100 }];
     } else {
-      realFlows = generateFixedCashflows(t, {
-        ...spec,
-        couponSchedule: [{ from: spec.issueDate, annualRatePct: Number(spec.realCouponPct) }],
-        amortizationSchedule: spec.amortizationSchedule ?? [{ date: spec.maturity, pct: 100 }],
-      });
+      // BONCER con cupón y amortización sin estructura verificable: no se genera
+      // desde prosa — mejor afuera del registro que mal valuado.
+      skipped.push(`${t} (cer): cupón+amortización sin flujos estructurados`);
+      continue;
     }
-    validateFixed(t, realFlows, spec.maturity);
+    validateFixed(t, realFlows, spec.maturity, {
+      remaining: Array.isArray(spec.realCashflows) && spec.realCashflows.length > 0,
+    });
     instruments.push({
       kind: 'cer', ticker: t, name: spec.name ?? t, family: 'boncer', payCcy: 'ARS',
       issueDate: spec.issueDate, maturity: spec.maturity, minLot: 1, tickers: tickersFor(t),
@@ -278,17 +333,33 @@ async function buildSnapshot() {
   const mctx = readJson(R('market_context.json'));
   if (!bcra) errors.push('falta bcra_series.json');
 
+  async function fetchRetry(url: string, tries = 3): Promise<any> {
+    for (let i = 0; i < tries; i++) {
+      try {
+        const r = await fetch(url, { signal: AbortSignal.timeout(10_000) });
+        if (r.ok) return await r.json();
+      } catch {
+        await new Promise((res) => setTimeout(res, 1500));
+      }
+    }
+    return null;
+  }
+
   let quotes: any[] = [];
-  try {
-    const [bonds, notes] = await Promise.all([
-      fetch('https://data912.com/live/arg_bonds').then((r) => r.json()),
-      fetch('https://data912.com/live/arg_notes').then((r) => r.json()),
-    ]);
+  const bonds = await fetchRetry('https://data912.com/live/arg_bonds');
+  const notes = await fetchRetry('https://data912.com/live/arg_notes');
+  if (bonds && notes) {
     quotes = [...bonds, ...notes]
       .filter((r: any) => r.c > 0)
       .map((r: any) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
-  } catch (e) {
-    errors.push(`no se pudieron bajar precios para el snapshot: ${e}`);
+  } else {
+    const prev = readJson(path.join(ROOT, 'lib/data/snapshot.json'));
+    if (Array.isArray(prev?.quotes) && prev.quotes.length > 50) {
+      quotes = prev.quotes;
+      console.warn('AVISO: data912 no respondió; se reusan los precios del snapshot anterior.');
+    } else {
+      errors.push('no se pudieron bajar precios para el snapshot y no hay snapshot previo');
+    }
   }
 
   const cerHistory = (bcra?.series?.cer?.history45d ?? [])
@@ -301,7 +372,11 @@ async function buildSnapshot() {
   const al30d = quotes.find((q) => q.ticker === 'AL30D')?.last;
   const mep = al30 && al30d ? al30 / al30d : Number(mctx?.macro?.mep);
 
-  let rem: { month: string; pct: number }[] = (mctx?.macro?.remMonthlyPct ?? mctx?.macro?.rem ?? [])
+  const remRaw =
+    mctx?.macro?.remMonthlyPct ??
+    mctx?.macro?.rem?.ipcMonthlyMedianPct ??
+    (Array.isArray(mctx?.macro?.rem) ? mctx.macro.rem : []);
+  let rem: { month: string; pct: number }[] = (remRaw ?? [])
     .map((r: any) => ({ month: String(r.month).slice(0, 7), pct: Number(r.expectedPct ?? r.pct) }))
     .filter((r: any) => /^\d{4}-\d{2}$/.test(r.month) && Number.isFinite(r.pct));
   if (rem.length === 0) {

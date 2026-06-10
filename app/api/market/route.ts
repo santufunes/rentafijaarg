@@ -32,13 +32,16 @@ async function fetchJson<T>(url: string, timeoutMs = 8000): Promise<T> {
 export async function GET() {
   const today = new Date().toISOString().slice(0, 10);
   try {
+    // BCRA v4: los valores vienen anidados en results[0].detalle. El "hasta" se
+    // extiende unos días: el BCRA publica el cronograma CER con anticipación.
+    type BcraSeries = { results: { detalle: { fecha: string; valor: number }[] }[] };
     const [bonds, notes, cer, a3500] = await Promise.all([
       fetchJson<D912Row[]>('https://data912.com/live/arg_bonds'),
       fetchJson<D912Row[]>('https://data912.com/live/arg_notes'),
-      fetchJson<{ results: { fecha: string; valor: number }[] }>(
-        `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${snapshot.bcraIds.cer}?desde=${addDaysIso(today, -60)}&hasta=${today}`,
+      fetchJson<BcraSeries>(
+        `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${snapshot.bcraIds.cer}?desde=${addDaysIso(today, -60)}&hasta=${addDaysIso(today, 20)}`,
       ),
-      fetchJson<{ results: { fecha: string; valor: number }[] }>(
+      fetchJson<BcraSeries>(
         `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${snapshot.bcraIds.a3500}?desde=${addDaysIso(today, -10)}&hasta=${today}`,
       ),
     ]);
@@ -47,10 +50,12 @@ export async function GET() {
       .filter((r) => r.c > 0)
       .map((r) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
 
-    const cerHistory = cer.results
+    const cerHistory = (cer.results[0]?.detalle ?? [])
       .map((r) => ({ date: r.fecha, value: r.valor }))
       .sort((a, b) => a.date.localeCompare(b.date));
-    const a3500Sorted = a3500.results.sort((a, b) => a.fecha.localeCompare(b.fecha));
+    const a3500Sorted = (a3500.results[0]?.detalle ?? []).sort((a, b) =>
+      a.fecha.localeCompare(b.fecha),
+    );
     const a3500Last = a3500Sorted[a3500Sorted.length - 1]?.valor;
 
     const al30 = quotes.find((q) => q.ticker === 'AL30')?.last;

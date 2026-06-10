@@ -86,7 +86,12 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
     settlement: string;
   }
 
-  const goldens: Golden[] = (mctx.goldenYields ?? [])
+  const byTicker = (t: string) => instruments.find((i) => i.ticker === t);
+
+  // 1) IAMC (informe diario 09-06): soberanos y tasa fija. Los BONCER del informe
+  //    se excluyen: la lectura del PDF resultó poco confiable para esas filas y se
+  //    reemplaza por bonistas (mismo día, misma base de precio).
+  const fromIamc: Golden[] = (mctx.goldenYields ?? [])
     .map((g: any) => {
       const ps = g.primarySource ?? g;
       const settleMatch = String(ps.asOf ?? '').match(/settlement (\d{4}-\d{2}-\d{2})/);
@@ -98,17 +103,58 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
         settlement: settleMatch ? settleMatch[1] : '2026-06-10',
       };
     })
-    .filter(
-      (g: Golden) =>
-        Number.isFinite(g.tirPct) &&
-        Number.isFinite(g.price) &&
-        instruments.some((i) => i.ticker === g.ticker),
-    )
-    // letras casi vencidas: la TIR es puro redondeo de precio
     .filter((g: Golden) => {
-      const instr = instruments.find((i) => i.ticker === g.ticker)!;
-      return daysBetween(g.settlement, instr.maturity) >= 25;
+      const instr = byTicker(g.ticker);
+      return (
+        instr !== undefined &&
+        instr.kind !== 'cer' &&
+        instr.family !== 'bopreal' &&
+        Number.isFinite(g.tirPct) &&
+        Number.isFinite(g.price)
+      );
     });
+
+  // 2) BOPREAL: precio sucio USD de control de IAMC (paridad × valor técnico),
+  //    misma liquidación que el informe — matemática contra matemática.
+  const goldenBopreal = readJson('research/golden_bopreal.json');
+  const fromBopreal: Golden[] = (goldenBopreal.results ?? [])
+    .filter((r: any) => byTicker(r.ticker) && r.iamcControl?.dirtyUSD_paridadXVT)
+    .map((r: any) => ({
+      ticker: r.ticker,
+      tirPct: r.publishedTIRPct,
+      price: r.iamcControl.dirtyUSD_paridadXVT,
+      priceBasis: 'dirty USD per 100 VN (IAMC paridad × VT)',
+      settlement: r.iamcControl.settlement ?? '2026-06-10',
+    }));
+
+  // 3) BONCER: TIR real publicada por bonistas.com el 10-06 con su propio precio
+  //    de cierre (liquidación 24hs = 11-06).
+  const bonistas: any[] = readJson('research/bonistas_api_bonds_snapshot_2026-06-10.json');
+  const seen = new Set<string>();
+  const fromBonistasCer: Golden[] = bonistas
+    .filter((r: any) => {
+      const instr = byTicker(r.bond_name ?? r.ticker);
+      return (
+        instr?.kind === 'cer' &&
+        Number.isFinite(r.tir) &&
+        r.last_close > 0 &&
+        !seen.has(instr.ticker) &&
+        seen.add(instr.ticker) !== undefined
+      );
+    })
+    // un punto publicado sobre un print de 6 nominales no es benchmark
+    .filter((r: any) => (r.volume ?? 0) >= 50)
+    .map((r: any) => ({
+      ticker: r.bond_name ?? r.ticker,
+      tirPct: r.tir * 100,
+      price: r.last_close,
+      priceBasis: 'ARS dirty per 100 VN (bonistas 24hs)',
+      settlement: '2026-06-11',
+    }));
+
+  const goldens: Golden[] = [...fromIamc, ...fromBopreal, ...fromBonistasCer]
+    // letras/bonos casi vencidos: la TIR es puro redondeo de precio
+    .filter((g: Golden) => daysBetween(g.settlement, byTicker(g.ticker)!.maturity) >= 25);
 
   it('hay al menos 10 puntos golden utilizables', () => {
     expect(goldens.length).toBeGreaterThanOrEqual(10);
@@ -129,7 +175,10 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
         const flows = projectCashflows(instr, g.settlement, ctx);
         computed = solveTir(flows, g.settlement, g.price);
       }
-      const tol = instr.kind === 'cer' ? 0.6 : 0.25;
+      // CER: la diferencia de convención del coeficiente entre fuentes (~0,6% de
+      // precio) se amplifica como 1/T en la TIR de letras cortas.
+      const years = daysBetween(g.settlement, instr.maturity) / 365;
+      const tol = instr.kind === 'cer' ? Math.max(0.6, 0.6 / years) : 0.25;
       expect(
         Math.abs(computed * 100 - g.tirPct),
         `computada ${(computed * 100).toFixed(2)}% vs publicada ${g.tirPct}%`,

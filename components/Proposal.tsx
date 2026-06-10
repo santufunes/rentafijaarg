@@ -13,7 +13,7 @@ import {
 } from '@/lib/engine/portfolio';
 import type { MarketContext } from '@/lib/engine/types';
 import type { MarketPayload } from '@/lib/data/registry';
-import { fmtArs, fmtDate, fmtNum, fmtPct, fmtUsd } from '@/lib/format';
+import { fmtArs, fmtArs2, fmtDate, fmtNum, fmtPct, fmtUsd } from '@/lib/format';
 
 export default function Proposal({
   proposal,
@@ -97,7 +97,7 @@ export default function Proposal({
                         {fmtNum(l.position.nominals)}
                       </td>
                       <td className="py-3 pr-3 text-right">
-                        {fmtArs(l.position.investedArs / (l.position.nominals / 100))}
+                        {fmtArs2(l.position.investedArs / (l.position.nominals / 100))}
                         <div className="text-xs text-stone-400">por 100 VN</div>
                       </td>
                       <td className="py-3 pr-3 text-right">{fmtArs(l.position.investedArs)}</td>

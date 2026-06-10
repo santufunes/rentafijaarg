@@ -1,0 +1,1688 @@
+{
+  "family": "soberanos_usd",
+  "asOf": "2026-06-10",
+  "instruments": [
+    {
+      "ticker": "AL29",
+      "name": "Bonos de la Republica Argentina en Dolares Estadounidenses al 1% 2029 - Ley Argentina (BONO USD 2029 1% L.A.)",
+      "law": "AR",
+      "lawDetail": "Ley de la Republica Argentina (Decreto 676/2020 / Ley 27.556)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominated in USD with min denomination U$S 1,00 (Decreto 676/2020 Anexo IV); IAMC informe diario column 'Moneda Pago' = USD",
+      "issueDate": "2020-09-04",
+      "maturity": "2029-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 1.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2025-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2025-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2026-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2026-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2027-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 10.0
+        }
+      ],
+      "amortizationInstallments": 10,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "AL29",
+        "mep": "AL29D",
+        "cable": "AL29C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 70.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 70.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [],
+      "sources": [
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (fetched 2026-06-10 and read: Anexo IV 'Terminos y Condiciones de los Nuevos Titulos' sections A-D, G; amortization clause, step-up rates and dates, 30/360, first coupon 2021-07-09, denominacion minima U$S 1,00 all verified verbatim)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo - independent primary source not previously cited; same-series NY-law Globales carry identical economics, independently confirming rates/dates/installments per series)",
+          "http://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/340826/norma.htm (Ley 27.556 resumen InfoLeg id 340826 - confirms local-law new-bond menu: USD Step Up 2030/2035/2038/2041 L.A. plus 1% 2029 L.A.; no local 2046 bond)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "AL30",
+      "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2030 - Ley Argentina (BONO USD 2030 L.A.)",
+      "law": "AR",
+      "lawDetail": "Ley de la Republica Argentina (Decreto 676/2020 / Ley 27.556)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominated in USD with min denomination U$S 1,00 (Decreto 676/2020 Anexo IV); IAMC informe diario column 'Moneda Pago' = USD",
+      "issueDate": "2020-09-04",
+      "maturity": "2030-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 0.5
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 0.75
+        },
+        {
+          "from": "2027-07-09",
+          "annualRatePct": 1.75
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2024-07-09",
+          "pctOfOriginalFace": 4.0
+        },
+        {
+          "date": "2025-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2025-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2026-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2026-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2027-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 8.0
+        }
+      ],
+      "amortizationInstallments": 13,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "AL30",
+        "mep": "AL30D",
+        "cable": "AL30C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 72.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 72.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Amortization is NOT equal: first installment (2024-07-09) = 4% of original face (outstanding/25 per prospectus footnote), remaining 12 installments = 8% each (Decreto 676/2020 Anexo IV; SEC 424B5 footnote 1)."
+      ],
+      "sources": [
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)",
+        "https://www.rava.com/perfil/AL30 (ficha tecnica reproduces Decreto 676/2020 terms verbatim; fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (fetched 2026-06-10 and read: Anexo IV 'Terminos y Condiciones de los Nuevos Titulos' sections A-D, G; amortization clause, step-up rates and dates, 30/360, first coupon 2021-07-09, denominacion minima U$S 1,00 all verified verbatim)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo - independent primary source not previously cited; same-series NY-law Globales carry identical economics, independently confirming rates/dates/installments per series)",
+          "http://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/340826/norma.htm (Ley 27.556 resumen InfoLeg id 340826 - confirms local-law new-bond menu: USD Step Up 2030/2035/2038/2041 L.A. plus 1% 2029 L.A.; no local 2046 bond)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "AL35",
+      "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2035 (BONO USD 2035 L.A.)",
+      "law": "AR",
+      "lawDetail": "Ley de la Republica Argentina (Decreto 676/2020 / Ley 27.556)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominated in USD with min denomination U$S 1,00 (Decreto 676/2020 Anexo IV); IAMC informe diario column 'Moneda Pago' = USD",
+      "issueDate": "2020-09-04",
+      "maturity": "2035-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 1.125
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 1.5
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 3.625
+        },
+        {
+          "from": "2024-07-09",
+          "annualRatePct": 4.125
+        },
+        {
+          "from": "2027-07-09",
+          "annualRatePct": 4.75
+        },
+        {
+          "from": "2028-07-09",
+          "annualRatePct": 5.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 10.0
+        }
+      ],
+      "amortizationInstallments": 10,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "AL35",
+        "mep": "AL35D",
+        "cable": "AL35C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [],
+      "sources": [
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (fetched 2026-06-10 and read: Anexo IV 'Terminos y Condiciones de los Nuevos Titulos' sections A-D, G; amortization clause, step-up rates and dates, 30/360, first coupon 2021-07-09, denominacion minima U$S 1,00 all verified verbatim)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo - independent primary source not previously cited; same-series NY-law Globales carry identical economics, independently confirming rates/dates/installments per series)",
+          "http://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/340826/norma.htm (Ley 27.556 resumen InfoLeg id 340826 - confirms local-law new-bond menu: USD Step Up 2030/2035/2038/2041 L.A. plus 1% 2029 L.A.; no local 2046 bond)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)",
+          "https://iol.invertironline.com/titulo/cotizacion/BCBA/AL35 (page title confirms 'Bono Rep. Argentina Usd Step Up 2035', BCBA listing)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "AE38",
+      "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2038 (BONO USD 2038 L.A.)",
+      "law": "AR",
+      "lawDetail": "Ley de la Republica Argentina (Decreto 676/2020 / Ley 27.556)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominated in USD with min denomination U$S 1,00 (Decreto 676/2020 Anexo IV); IAMC informe diario column 'Moneda Pago' = USD",
+      "issueDate": "2020-09-04",
+      "maturity": "2038-01-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04). Maturity/final payment falls on a January 9 (2038-01-09), unlike the other 2020-exchange bonds which mature on a July 9.",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 2.0
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 3.875
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 4.25
+        },
+        {
+          "from": "2024-07-09",
+          "annualRatePct": 5.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2036-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2036-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2037-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2037-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2038-01-09",
+          "pctOfOriginalFace": 4.545445
+        }
+      ],
+      "amortizationInstallments": 22,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "AE38",
+        "mep": "AE38D",
+        "cable": "AE38C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Equal installments = outstanding principal / remaining installments (= 100/N of original face). Per-installment pct rounded to 6 decimals; rounding remainder assigned to final installment, consistent with SEC 424B5 footnote 2 (differences paid at maturity).",
+        "Matures 2038-01-09 (January), amortization runs 2027-07-09 through 2038-01-09."
+      ],
+      "sources": [
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (fetched 2026-06-10 and read: Anexo IV 'Terminos y Condiciones de los Nuevos Titulos' sections A-D, G; amortization clause, step-up rates and dates, 30/360, first coupon 2021-07-09, denominacion minima U$S 1,00 all verified verbatim)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo - independent primary source not previously cited; same-series NY-law Globales carry identical economics, independently confirming rates/dates/installments per series)",
+          "http://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/340826/norma.htm (Ley 27.556 resumen InfoLeg id 340826 - confirms local-law new-bond menu: USD Step Up 2030/2035/2038/2041 L.A. plus 1% 2029 L.A.; no local 2046 bond)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "AL41",
+      "name": "Bonos de la Republica Argentina en Dolares Estadounidenses Step Up 2041 (BONO USD 2041 L.A.)",
+      "law": "AR",
+      "lawDetail": "Ley de la Republica Argentina (Decreto 676/2020 / Ley 27.556)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominated in USD with min denomination U$S 1,00 (Decreto 676/2020 Anexo IV); IAMC informe diario column 'Moneda Pago' = USD",
+      "issueDate": "2020-09-04",
+      "maturity": "2041-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 2.5
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 3.5
+        },
+        {
+          "from": "2029-07-09",
+          "annualRatePct": 4.875
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2036-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2036-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2037-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2037-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2038-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2038-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2039-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2039-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2040-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2040-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2041-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2041-07-09",
+          "pctOfOriginalFace": 3.571417
+        }
+      ],
+      "amortizationInstallments": 28,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "AL41",
+        "mep": "AL41D",
+        "cable": "AL41C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Equal installments = outstanding principal / remaining installments (= 100/N of original face). Per-installment pct rounded to 6 decimals; rounding remainder assigned to final installment, consistent with SEC 424B5 footnote 2 (differences paid at maturity)."
+      ],
+      "sources": [
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-4.pdf (fetched 2026-06-10 and read: Anexo IV 'Terminos y Condiciones de los Nuevos Titulos' sections A-D, G; amortization clause, step-up rates and dates, 30/360, first coupon 2021-07-09, denominacion minima U$S 1,00 all verified verbatim)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo - independent primary source not previously cited; same-series NY-law Globales carry identical economics, independently confirming rates/dates/installments per series)",
+          "http://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/340826/norma.htm (Ley 27.556 resumen InfoLeg id 340826 - confirms local-law new-bond menu: USD Step Up 2030/2035/2038/2041 L.A. plus 1% 2029 L.A.; no local 2046 bond)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD29",
+      "name": "U.S. Dollar Amortizing 1.000% Bonds due 2029 (New USD 2029 Bonds; Global 2029)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2029-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 1.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2025-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2025-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2026-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2026-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2027-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 10.0
+        }
+      ],
+      "amortizationInstallments": 10,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD29",
+        "mep": "GD29D",
+        "cable": "GD29C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 70.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 70.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD30",
+      "name": "U.S. Dollar Amortizing Step-Up Bonds due 2030 (New USD 2030 Bonds; Global 2030)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2030-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 0.5
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 0.75
+        },
+        {
+          "from": "2027-07-09",
+          "annualRatePct": 1.75
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2024-07-09",
+          "pctOfOriginalFace": 4.0
+        },
+        {
+          "date": "2025-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2025-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2026-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2026-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2027-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 8.0
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 8.0
+        }
+      ],
+      "amortizationInstallments": 13,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD30",
+        "mep": "GD30D",
+        "cable": "GD30C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 72.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 72.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Amortization is NOT equal: first installment (2024-07-09) = 4% of original face (outstanding/25 per prospectus footnote), remaining 12 installments = 8% each (Decreto 676/2020 Anexo IV; SEC 424B5 footnote 1)."
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD35",
+      "name": "U.S. Dollar Amortizing Step-Up Bonds due 2035 (New USD 2035 Bonds; Global 2035)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2035-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 1.125
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 1.5
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 3.625
+        },
+        {
+          "from": "2024-07-09",
+          "annualRatePct": 4.125
+        },
+        {
+          "from": "2027-07-09",
+          "annualRatePct": 4.75
+        },
+        {
+          "from": "2028-07-09",
+          "annualRatePct": 5.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 10.0
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 10.0
+        }
+      ],
+      "amortizationInstallments": 10,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD35",
+        "mep": "GD35D",
+        "cable": "GD35C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD38",
+      "name": "U.S. Dollar Amortizing Step-Up Bonds due 2038 (New USD 2038 Bonds; Global 2038)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2038-01-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04). Maturity/final payment falls on a January 9 (2038-01-09), unlike the other 2020-exchange bonds which mature on a July 9.",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 2.0
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 3.875
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 4.25
+        },
+        {
+          "from": "2024-07-09",
+          "annualRatePct": 5.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2036-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2036-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2037-01-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2037-07-09",
+          "pctOfOriginalFace": 4.545455
+        },
+        {
+          "date": "2038-01-09",
+          "pctOfOriginalFace": 4.545445
+        }
+      ],
+      "amortizationInstallments": 22,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD38",
+        "mep": "GD38D",
+        "cable": "GD38C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Equal installments = outstanding principal / remaining installments (= 100/N of original face). Per-installment pct rounded to 6 decimals; rounding remainder assigned to final installment, consistent with SEC 424B5 footnote 2 (differences paid at maturity).",
+        "Matures 2038-01-09 (January), amortization runs 2027-07-09 through 2038-01-09."
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD41",
+      "name": "U.S. Dollar Amortizing Step-Up Bonds due 2041 (New USD 2041 Bonds; Global 2041)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2041-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 2.5
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 3.5
+        },
+        {
+          "from": "2029-07-09",
+          "annualRatePct": 4.875
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2036-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2036-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2037-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2037-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2038-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2038-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2039-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2039-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2040-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2040-07-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2041-01-09",
+          "pctOfOriginalFace": 3.571429
+        },
+        {
+          "date": "2041-07-09",
+          "pctOfOriginalFace": 3.571417
+        }
+      ],
+      "amortizationInstallments": 28,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD41",
+        "mep": "GD41D",
+        "cable": "GD41C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 100.0,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 100.0,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Equal installments = outstanding principal / remaining installments (= 100/N of original face). Per-installment pct rounded to 6 decimals; rounding remainder assigned to final installment, consistent with SEC 424B5 footnote 2 (differences paid at maturity)."
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    },
+    {
+      "ticker": "GD46",
+      "name": "U.S. Dollar Amortizing Step-Up Bonds due 2046 (New USD 2046 Bonds; Global 2046)",
+      "law": "NY",
+      "lawDetail": "State of New York law (2016 indenture framework, SEC-registered Globales, 2020 exchange)",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "SEC 424B5: 'pay interest in U.S. dollars semi-annually in arrears' and 'pay principal in U.S. dollars'",
+      "issueDate": "2020-09-04",
+      "maturity": "2046-07-09",
+      "paymentDatesPattern": "Semiannual on day 9 of January and July (Jan 9 / Jul 9), interest and principal; first interest payment 2021-07-09 (long first coupon accruing from 2020-09-04).",
+      "couponFrequency": "semiannual",
+      "dayCount": "30/360 (360-day year of twelve 30-day months, per prospectus and Decreto 676/2020 Anexo IV)",
+      "couponStepUpSchedule": [
+        {
+          "from": "2020-09-04",
+          "annualRatePct": 0.125
+        },
+        {
+          "from": "2021-07-09",
+          "annualRatePct": 1.125
+        },
+        {
+          "from": "2022-07-09",
+          "annualRatePct": 1.5
+        },
+        {
+          "from": "2023-07-09",
+          "annualRatePct": 3.625
+        },
+        {
+          "from": "2024-07-09",
+          "annualRatePct": 4.125
+        },
+        {
+          "from": "2027-07-09",
+          "annualRatePct": 4.375
+        },
+        {
+          "from": "2028-07-09",
+          "annualRatePct": 5.0
+        }
+      ],
+      "amortizationSchedule": [
+        {
+          "date": "2025-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2025-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2026-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2026-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2027-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2027-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2028-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2028-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2029-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2029-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2030-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2030-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2031-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2031-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2032-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2032-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2033-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2033-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2034-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2034-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2035-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2035-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2036-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2036-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2037-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2037-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2038-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2038-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2039-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2039-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2040-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2040-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2041-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2041-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2042-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2042-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2043-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2043-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2044-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2044-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2045-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2045-07-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2046-01-09",
+          "pctOfOriginalFace": 2.272727
+        },
+        {
+          "date": "2046-07-09",
+          "pctOfOriginalFace": 2.272739
+        }
+      ],
+      "amortizationInstallments": 44,
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "USD 1.00 and integral multiples thereof"
+      },
+      "tickers": {
+        "ars": "GD46",
+        "mep": "GD46D",
+        "cable": "GD46C"
+      },
+      "quoteBasis": "BYMA quotes per 100 nominal original face value (VN); prices are dirty (include accrued interest and reflect amortized residual). ARS line = ticker, USD MEP = ticker+'D', USD cable = ticker+'C' (all three confirmed live on data912 /live/arg_bonds 2026-06-10).",
+      "residualValue": 93.1818,
+      "residualValueNote": "Per 100 original VN as of 2026-06-10, implied by amortization schedule (installments with date <= 2026-06-10 deducted).",
+      "publishedResidual": 93.2,
+      "publishedResidualSource": "IAMC/BYMA Informe Diario de Titulos Publicos 09-Jun-2026, column 'VR' (Valor Residual), table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020'",
+      "instrumentNotes": [
+        "Equal installments = outstanding principal / remaining installments (= 100/N of original face). Per-installment pct rounded to 6 decimals; rounding remainder assigned to final installment, consistent with SEC 424B5 footnote 2 (differences paid at maturity)."
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm",
+        "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341150/dec676-2.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/233685/20200816",
+        "https://www.iamc.com.ar/Informe/InformeDiarioTitulosPublicos09062026/",
+        "research/iamc_titulos_publicos_2026-06-09.pdf (local copy of IAMC Informe Diario Titulos Publicos 09-Jun-2026, table 'BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020')",
+        "https://bonistas.com/api/bonds (snapshot research/bonistas_api_bonds_snapshot_2026-06-10.json)",
+        "https://data912.com /live/arg_bonds symbol list (snapshot research/data912_map.json, fetched 2026-06-10)"
+      ],
+      "confidence": "high",
+      "verification": {
+        "status": "confirmed",
+        "checkedSources": [
+          "https://www.sec.gov/Archives/edgar/data/914021/000119312520221606/d68512d424b5.htm (fetched 2026-06-10 and read directly: New Bonds terms tables pp. S-32/S-34 incl. footnotes 1-2 on installment calculation and rounding; 'January 9 and July 9 of each year, beginning on July 9, 2021'; 360-day year of twelve 30-day months; minimum denominations of U.S.$1.00)",
+          "https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/341567/dec701.pdf (Decreto 701/2020 anexo 'Condiciones de Emision de los Titulos Nuevos' - independent primary source not previously cited; Spanish-language terms of all USD Globales match: installment counts, first/last amortization dates, 2030 4%+12x8% rule, step-up rates and dates, 30/360, first coupon 2021-07-09)",
+          "research/iamc_titulos_publicos_2026-06-09.pdf (page 1, table BONOS GLOBALES - CANJE REESTRUCTURACION DE DEUDA 2020, 09-Jun-26: law/issue/maturity/structure/frequency/tasa vigente/VR/cuotas/next payment re-read independently)"
+        ],
+        "corrections": [],
+        "notes": "Adversarial re-verification 2026-06-10: maturity, coupon step-up schedule (rates and effective dates), amortization schedule (count, dates, percentages incl. rounding-to-final-installment convention), issue date, first coupon 2021-07-09, day count 30/360, min denomination USD 1.00, law, residual value vs IAMC VR and current coupon vs IAMC 'Tasa Cupon Vigente' all independently confirmed. Internal checks: amortization sums to exactly 100.000000; all cash-flow dates are Jan-9/Jul-9 within (issue, maturity]; implied residual as of 2026-06-10 equals published VR. No corrections required."
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "ticker": "AO27",
+      "reason": "Bonar USD fixed-rate 6.0% bullet issued 2026-02-27, monthly coupons, not a 2020-restructuring step-up bond (appears in IAMC globales table and data912 but outside this family's scope)."
+    },
+    {
+      "ticker": "AO28",
+      "reason": "Bonar USD fixed-rate 6.0% bullet issued 2026-03-31, not a 2020-restructuring bond."
+    },
+    {
+      "ticker": "AN29",
+      "reason": "Bonar USD fixed-rate 6.5% bullet issued 2025-12-16 (Tesoro), not a 2020-restructuring bond."
+    },
+    {
+      "ticker": "AL46 (non-existent)",
+      "reason": "The local-law (ley argentina) 2020 exchange did not issue a 2046 bond; GD46 has no AL twin. Local menu: AL29, AL30, AL35, AE38, AL41 only (Decreto 676/2020 Anexo IV)."
+    },
+    {
+      "ticker": "GE29/GE30/GE35/GE38/GE41/GE46 (EUR Globales)",
+      "reason": "Euro-denominated 2020-exchange Globales excluded: family scope is hard-dollar (USD) bonds trading on BYMA."
+    }
+  ],
+  "notes": [
+    "All 11 instruments issued 2020-09-04 in the sovereign debt restructuring; interest accrues from 2020-09-04 with a long first coupon paid 2021-07-09; all coupon and principal dates are Jan 9 / Jul 9; day count 30/360.",
+    "Primary sources fetched and read: SEC 424B5 Amendment No. 2 to Prospectus Supplement (filed Aug 2020, EDGAR accession 0001193125-20-221606) for the NY-law Globales, and Decreto 676/2020 Anexo IV ('Terminos y Condiciones de los Nuevos Titulos', IF-2020-53843620-APN-SSF#MEC, InfoLeg id 341150) for the ley-argentina bonds. Both give identical economics per maturity series for USD bonds.",
+    "2030 series (AL30/GD30) amortization is non-uniform: 13 installments, first = 4% (2024-07-09, defined as outstanding/25), remaining 12 = 8% each. All other series amortize in equal semiannual installments of 100/N of original face.",
+    "For N=22 (38s), N=28 (41s) and N=44 (GD46) the per-installment pct is a repeating decimal; schedule stores 100/N rounded to 6 decimals with the rounding remainder added to the final installment, consistent with prospectus footnote 2 ('principal payments may be rounded down... difference paid at maturity'). Sum of each schedule = exactly 100.",
+    "Residual values computed as of 2026-06-10 match IAMC published VR (2026-06-09 informe) for every bond: 29s=70.0, 30s=72.0, 35s/38s/41s=100.0, GD46=93.1818 (IAMC publishes 93.2 rounded to 1 decimal).",
+    "Step-up coupon rates in effect on 2026-06-10: 29s=1.0, 30s=0.75, 35s=4.125, 38s=5.0, 41s=3.5, GD46=4.125 (cross-checked against IAMC 'Tasa Cupon Vigente' column: 1.0/0.8/4.1/5.0/3.5/4.1 rounded).",
+    "bonistas.com API descriptions (secondary source) confirm issue/maturity dates and step-up patterns but wrongly label these bonds 'Amortizacion: bullet' - that field was ignored in favor of the prospectus/decree.",
+    "Quote basis: BYMA per 100 nominal original VN, dirty prices (paridad x valor tecnico convention per IAMC); the per-bond field quoteBasis records this explicitly.",
+    "GD38/AE38 confirmed to share the same Jan 9 / Jul 9 payment months as the rest; their difference is maturity on 2038-01-09 (January) and 22-installment amortization starting 2027-07-09.",
+    "Minimum denomination USD 1.00 confirmed in both the SEC prospectus ('minimum denominations of U.S.$1.00 and integral multiples thereof') and Decreto 676/2020 Anexo IV ('Denominacion minima: un dolar estadounidense (U$S 1,00)')."
+  ]
+}

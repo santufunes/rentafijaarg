@@ -4,6 +4,9 @@ import type { ScenarioResult } from '@/lib/engine/portfolio';
 import { fmtArs, fmtPct, fmtUsd } from '@/lib/format';
 
 export default function ScenarioCards({ scenarios }: { scenarios: ScenarioResult[] }) {
+  const pesimista = scenarios.find((s) => s.scenario.key === 'pesimista');
+  const base = scenarios.find((s) => s.scenario.key === 'base');
+  const nominalTrap = pesimista && base && pesimista.valueArs > base.valueArs;
   return (
     <div className="mt-4 grid gap-3 sm:grid-cols-3">
       {scenarios.map((s) => (
@@ -32,6 +35,13 @@ export default function ScenarioCards({ scenarios }: { scenarios: ScenarioResult
           <p className="mt-3 text-xs leading-snug text-stone-500">{s.scenario.description}</p>
         </div>
       ))}
+      {nominalTrap && (
+        <p className="sm:col-span-3 rounded-lg bg-stone-100 p-3 text-xs leading-snug text-stone-600">
+          Ojo con los pesos nominales: en el escenario pesimista hay <em>más pesos</em> porque la
+          inflación y el dólar suben más — pero compran menos. Para comparar escenarios mirá la
+          línea en dólares (o pensá en términos reales).
+        </p>
+      )}
     </div>
   );
 }

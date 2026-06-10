@@ -1,0 +1,860 @@
+{
+  "family": "bopreal",
+  "asOf": "2026-06-10",
+  "instruments": [
+    {
+      "ticker": "BPOA7",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 1 - Strip A (Serie 1-A) - vencimiento 31-oct-2027",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 1A",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 1 (BPO27) on 2024-03-01",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12695",
+      "issueDate": "2024-01-05",
+      "stripSeparationDate": "2024-03-01",
+      "maturity": "2027-10-31",
+      "coupon": {
+        "ratePct": 5.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2024-10-31",
+          "2025-04-30",
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31"
+        ],
+        "firstCouponDate": "2024-10-31",
+        "firstCouponNote": "Long first coupon: interest accrued from issue date 2024-01-05 to 2024-10-31 (no 2024-04-30 coupon was scheduled), per Com. B 12695/B 12727.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "amortizing-2-installments",
+        "scheduleNote": "Two (2) consecutive installments of 50% of VNO each on 2027-04-30 and 2027-10-31, payable in USD (Com. B 12695 / B 12727 / B 12730). NOT bullet (bonistas' 'bullet' label is wrong).",
+        "schedule": [
+          {
+            "date": "2027-04-30",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          },
+          {
+            "date": "2027-10-31",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 2.5,
+          "note": "Scheduled date is a Saturday; pays next business day (Mon 2026-11-02). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 52.5,
+          "note": "First amortization installment (50% of VNO). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.25,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 51.25,
+          "note": "Scheduled date is a Sunday; pays Mon 2027-11-01. Final coupon accrues on residual 50% of VNO: 5% x 180/360 x 50 = 1.25 (corroborated by bonistas analytics showing 1.25 final-period coupon)."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "Holder put (opcion de rescate a favor del tenedor): from 2025-04-30 until maturity, the holder may demand early redemption at nominal value (par) payable in ARS at the BCRA Com. A3500 reference FX rate of the exercise day; exercised via a dedicated SIOPEL wheel, settlement T+2, bonds must be deposited at CRyL the prior day (Com. B 12695). | Tax cancelation power (Decreto 72/2023 + ARCA/AFIP RG 5469/2023): usable to cancel tax and customs obligations during 2025-04-30 to 2026-04-29 (window now closed as of 2026-06-10), capped at USD 1000 M for this strip; peso value computed at the HIGHER of (a) 5-business-day average A3500 rate and (b) implied FX from eligible bond ARS/USD price pairs (RG 5469/2023). | Issuer call: BCRA may redeem the instrument early, in whole or in part, on any interest payment date, paying USD (Com. B 12695/B 12727/B 12730).",
+      "valuationNote": "Valued as plain USD cashflows per instruction; puts/tax options documented in embeddedOptions only.",
+      "minDenomination": "VNO 1 USD (post-strip, per Com. B 12695/B 12727/B 12730)",
+      "stripPctOfSerie1VNO": 20.0,
+      "originalStripVN_USD_M": 1000.0,
+      "outstandingVN_USD_M": 830.0,
+      "outstandingSource": "IAMC informe diario 2026-06-09",
+      "tickerVariants": {
+        "ars_byma": "BPOA7",
+        "usd_mep_byma": "BPA7D",
+        "usd_cable_byma": "BPA7C",
+        "preStripParent": "BPO27 (Serie 1, ceased separate trading after 2024-03-01 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line quoted in pesos, D line in USD MEP, C line in USD cable. Cross-check 2026-06-10: BPOA7 148310 ARS vs BPA7D 101.95 USD-MEP vs BPA7C 98.25 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 148310.0,
+        "mep_d": 101.95,
+        "cable_c": 98.25
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+        "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Outstanding VN taken from IAMC informe diario 2026-06-09 'Monto Emitido' column; it is a secondary aggregate and reflects redemptions via put/tax usage. Original strip size derived from 20%%/20%%/30%%/30%% split (Com. B 12695) of the USD 5,000 M total Serie 1 placement."
+      ],
+      "verification": {
+        "status": "confirmed",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.rava.com/perfil/BPOA7  (independent broker ficha: issue/maturity/amortization 2x50% 2027-04-30 & 2027-10-31; close price matches)",
+          "https://hlf.com.ar/wp-content/uploads/2023/12/Res.Gral_.AFIP-5469-23.pdf (RG 5469/2023 full text: 1A/1B/1C poder cancelatorio, FX = max(5-bd avg A3500, implied bond FX))",
+          "https://www.cira.org.ar/es/servicios/normativas-servicios/resolucion-general/resolucion-general-5469-2023/ (RG 5469/2023 art.1: caps USD 1,000/1,000/1,500 M; windows 2025-04-30/2026-04-29, 2026-04-30/2027-04-29, 2027-04-30/2027-10-31)",
+          "https://web2.bcra.gob.ar/Noticias/se-completo-serie-1-BOPREAL.asp (BCRA: Serie 1 completed at USD 5,000 M across 6 auctions)",
+          "re-read verbatim 2026-06-10: B12695.pdf, B12727.pdf, B12730.pdf, A7918.pdf (terms, coupon dates, 2x50% amortization, strip 20/20/30/30, puts 1A 2025-04-30 / 1B 2026-04-30 / 1C 2027-04-30 / 1D none, t+2, issuer call, min denom 1 USD for 1A/1B/1C only, issue date 2024-01-05 in B12727/B12730)",
+          "re-read local IAMC informe 2026-06-09 (issue 05-Jan-24, maturity 31-Oct-27, 5.0% semestral, 2 cuotas, next coupon 31-Oct-26; Monto Emitido 830/996/1,494/6,922 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all 18 tickers and all ARS/D/C quotes match)"
+        ],
+        "corrections": []
+      }
+    },
+    {
+      "ticker": "BPOB7",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 1 - Strip B (Serie 1-B) - vencimiento 31-oct-2027",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 1B",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 1 (BPO27) on 2024-03-01",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12695",
+      "issueDate": "2024-01-05",
+      "stripSeparationDate": "2024-03-01",
+      "maturity": "2027-10-31",
+      "coupon": {
+        "ratePct": 5.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2024-10-31",
+          "2025-04-30",
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31"
+        ],
+        "firstCouponDate": "2024-10-31",
+        "firstCouponNote": "Long first coupon: interest accrued from issue date 2024-01-05 to 2024-10-31 (no 2024-04-30 coupon was scheduled), per Com. B 12695/B 12727.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "amortizing-2-installments",
+        "scheduleNote": "Two (2) consecutive installments of 50% of VNO each on 2027-04-30 and 2027-10-31, payable in USD (Com. B 12695 / B 12727 / B 12730). NOT bullet (bonistas' 'bullet' label is wrong).",
+        "schedule": [
+          {
+            "date": "2027-04-30",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          },
+          {
+            "date": "2027-10-31",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 2.5,
+          "note": "Scheduled date is a Saturday; pays next business day (Mon 2026-11-02). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 52.5,
+          "note": "First amortization installment (50% of VNO). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.25,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 51.25,
+          "note": "Scheduled date is a Sunday; pays Mon 2027-11-01. Final coupon accrues on residual 50% of VNO: 5% x 180/360 x 50 = 1.25 (corroborated by bonistas analytics showing 1.25 final-period coupon)."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "Holder put (opcion de rescate a favor del tenedor): from 2026-04-30 until maturity, the holder may demand early redemption at nominal value (par) payable in ARS at the BCRA Com. A3500 reference FX rate of the exercise day; exercised via a dedicated SIOPEL wheel, settlement T+2, bonds must be deposited at CRyL the prior day (Com. B 12695). | Tax cancelation power (Decreto 72/2023 + ARCA/AFIP RG 5469/2023): usable to cancel tax and customs obligations during 2026-04-30 to 2027-04-29 (window ACTIVE as of 2026-06-10), capped at USD 1000 M for this strip; peso value computed at the HIGHER of (a) 5-business-day average A3500 rate and (b) implied FX from eligible bond ARS/USD price pairs (RG 5469/2023). | Issuer call: BCRA may redeem the instrument early, in whole or in part, on any interest payment date, paying USD (Com. B 12695/B 12727/B 12730).",
+      "valuationNote": "Valued as plain USD cashflows per instruction; puts/tax options documented in embeddedOptions only.",
+      "minDenomination": "VNO 1 USD (post-strip, per Com. B 12695/B 12727/B 12730)",
+      "stripPctOfSerie1VNO": 20.0,
+      "originalStripVN_USD_M": 1000.0,
+      "outstandingVN_USD_M": 996.0,
+      "outstandingSource": "IAMC informe diario 2026-06-09",
+      "tickerVariants": {
+        "ars_byma": "BPOB7",
+        "usd_mep_byma": "BPB7D",
+        "usd_cable_byma": "BPB7C",
+        "preStripParent": "BPO27 (Serie 1, ceased separate trading after 2024-03-01 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line quoted in pesos, D line in USD MEP, C line in USD cable. Cross-check 2026-06-10: BPOB7 148300 ARS vs BPB7D 102.05 USD-MEP vs BPB7C 98.4 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 148300.0,
+        "mep_d": 102.05,
+        "cable_c": 98.4
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+        "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Outstanding VN taken from IAMC informe diario 2026-06-09 'Monto Emitido' column; it is a secondary aggregate and reflects redemptions via put/tax usage. Original strip size derived from 20%%/20%%/30%%/30%% split (Com. B 12695) of the USD 5,000 M total Serie 1 placement."
+      ],
+      "verification": {
+        "status": "confirmed",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.rava.com/perfil/BPOB7  (independent broker ficha: issue/maturity/amortization 2x50% 2027-04-30 & 2027-10-31; close price matches)",
+          "https://hlf.com.ar/wp-content/uploads/2023/12/Res.Gral_.AFIP-5469-23.pdf (RG 5469/2023 full text: 1A/1B/1C poder cancelatorio, FX = max(5-bd avg A3500, implied bond FX))",
+          "https://www.cira.org.ar/es/servicios/normativas-servicios/resolucion-general/resolucion-general-5469-2023/ (RG 5469/2023 art.1: caps USD 1,000/1,000/1,500 M; windows 2025-04-30/2026-04-29, 2026-04-30/2027-04-29, 2027-04-30/2027-10-31)",
+          "https://web2.bcra.gob.ar/Noticias/se-completo-serie-1-BOPREAL.asp (BCRA: Serie 1 completed at USD 5,000 M across 6 auctions)",
+          "re-read verbatim 2026-06-10: B12695.pdf, B12727.pdf, B12730.pdf, A7918.pdf (terms, coupon dates, 2x50% amortization, strip 20/20/30/30, puts 1A 2025-04-30 / 1B 2026-04-30 / 1C 2027-04-30 / 1D none, t+2, issuer call, min denom 1 USD for 1A/1B/1C only, issue date 2024-01-05 in B12727/B12730)",
+          "re-read local IAMC informe 2026-06-09 (issue 05-Jan-24, maturity 31-Oct-27, 5.0% semestral, 2 cuotas, next coupon 31-Oct-26; Monto Emitido 830/996/1,494/6,922 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all 18 tickers and all ARS/D/C quotes match)"
+        ],
+        "corrections": []
+      }
+    },
+    {
+      "ticker": "BPOC7",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 1 - Strip C (Serie 1-C) - vencimiento 31-oct-2027",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 1C",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 1 (BPO27) on 2024-03-01",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12695",
+      "issueDate": "2024-01-05",
+      "stripSeparationDate": "2024-03-01",
+      "maturity": "2027-10-31",
+      "coupon": {
+        "ratePct": 5.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2024-10-31",
+          "2025-04-30",
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31"
+        ],
+        "firstCouponDate": "2024-10-31",
+        "firstCouponNote": "Long first coupon: interest accrued from issue date 2024-01-05 to 2024-10-31 (no 2024-04-30 coupon was scheduled), per Com. B 12695/B 12727.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "amortizing-2-installments",
+        "scheduleNote": "Two (2) consecutive installments of 50% of VNO each on 2027-04-30 and 2027-10-31, payable in USD (Com. B 12695 / B 12727 / B 12730). NOT bullet (bonistas' 'bullet' label is wrong).",
+        "schedule": [
+          {
+            "date": "2027-04-30",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          },
+          {
+            "date": "2027-10-31",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 2.5,
+          "note": "Scheduled date is a Saturday; pays next business day (Mon 2026-11-02). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 52.5,
+          "note": "First amortization installment (50% of VNO). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.25,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 51.25,
+          "note": "Scheduled date is a Sunday; pays Mon 2027-11-01. Final coupon accrues on residual 50% of VNO: 5% x 180/360 x 50 = 1.25 (corroborated by bonistas analytics showing 1.25 final-period coupon)."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "Holder put (opcion de rescate a favor del tenedor): from 2027-04-30 until maturity, the holder may demand early redemption at nominal value (par) payable in ARS at the BCRA Com. A3500 reference FX rate of the exercise day; exercised via a dedicated SIOPEL wheel, settlement T+2, bonds must be deposited at CRyL the prior day (Com. B 12695). | Tax cancelation power (Decreto 72/2023 + ARCA/AFIP RG 5469/2023): usable to cancel tax and customs obligations during 2027-04-30 to 2027-10-31 (not yet open), capped at USD 1500 M for this strip; peso value computed at the HIGHER of (a) 5-business-day average A3500 rate and (b) implied FX from eligible bond ARS/USD price pairs (RG 5469/2023). | Issuer call: BCRA may redeem the instrument early, in whole or in part, on any interest payment date, paying USD (Com. B 12695/B 12727/B 12730).",
+      "valuationNote": "Valued as plain USD cashflows per instruction; puts/tax options documented in embeddedOptions only.",
+      "minDenomination": "VNO 1 USD (post-strip, per Com. B 12695/B 12727/B 12730)",
+      "stripPctOfSerie1VNO": 30.0,
+      "originalStripVN_USD_M": 1500.0,
+      "outstandingVN_USD_M": 1494.0,
+      "outstandingSource": "IAMC informe diario 2026-06-09",
+      "tickerVariants": {
+        "ars_byma": "BPOC7",
+        "usd_mep_byma": "BPC7D",
+        "usd_cable_byma": "BPC7C",
+        "preStripParent": "BPO27 (Serie 1, ceased separate trading after 2024-03-01 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line quoted in pesos, D line in USD MEP, C line in USD cable. Cross-check 2026-06-10: BPOC7 148690 ARS vs BPC7D 102.05 USD-MEP vs BPC7C 98.58 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 148690.0,
+        "mep_d": 102.05,
+        "cable_c": 98.58
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+        "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Outstanding VN taken from IAMC informe diario 2026-06-09 'Monto Emitido' column; it is a secondary aggregate and reflects redemptions via put/tax usage. Original strip size derived from 20%%/20%%/30%%/30%% split (Com. B 12695) of the USD 5,000 M total Serie 1 placement."
+      ],
+      "verification": {
+        "status": "confirmed",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.rava.com/perfil/BPOC7  (independent broker ficha: issue/maturity/amortization 2x50% 2027-04-30 & 2027-10-31; close price matches)",
+          "https://hlf.com.ar/wp-content/uploads/2023/12/Res.Gral_.AFIP-5469-23.pdf (RG 5469/2023 full text: 1A/1B/1C poder cancelatorio, FX = max(5-bd avg A3500, implied bond FX))",
+          "https://www.cira.org.ar/es/servicios/normativas-servicios/resolucion-general/resolucion-general-5469-2023/ (RG 5469/2023 art.1: caps USD 1,000/1,000/1,500 M; windows 2025-04-30/2026-04-29, 2026-04-30/2027-04-29, 2027-04-30/2027-10-31)",
+          "https://web2.bcra.gob.ar/Noticias/se-completo-serie-1-BOPREAL.asp (BCRA: Serie 1 completed at USD 5,000 M across 6 auctions)",
+          "re-read verbatim 2026-06-10: B12695.pdf, B12727.pdf, B12730.pdf, A7918.pdf (terms, coupon dates, 2x50% amortization, strip 20/20/30/30, puts 1A 2025-04-30 / 1B 2026-04-30 / 1C 2027-04-30 / 1D none, t+2, issuer call, min denom 1 USD for 1A/1B/1C only, issue date 2024-01-05 in B12727/B12730)",
+          "re-read local IAMC informe 2026-06-09 (issue 05-Jan-24, maturity 31-Oct-27, 5.0% semestral, 2 cuotas, next coupon 31-Oct-26; Monto Emitido 830/996/1,494/6,922 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all 18 tickers and all ARS/D/C quotes match)"
+        ],
+        "corrections": []
+      }
+    },
+    {
+      "ticker": "BPOD7",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 1 - Strip D (Serie 1-D) - vencimiento 31-oct-2027",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 1D",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 1 (BPO27) on 2024-03-01",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12695",
+      "issueDate": "2024-01-05",
+      "stripSeparationDate": "2024-03-01",
+      "maturity": "2027-10-31",
+      "coupon": {
+        "ratePct": 5.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2024-10-31",
+          "2025-04-30",
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31"
+        ],
+        "firstCouponDate": "2024-10-31",
+        "firstCouponNote": "Long first coupon: interest accrued from issue date 2024-01-05 to 2024-10-31 (no 2024-04-30 coupon was scheduled), per Com. B 12695/B 12727.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "amortizing-2-installments",
+        "scheduleNote": "Two (2) consecutive installments of 50% of VNO each on 2027-04-30 and 2027-10-31, payable in USD (Com. B 12695 / B 12727 / B 12730). NOT bullet (bonistas' 'bullet' label is wrong).",
+        "schedule": [
+          {
+            "date": "2027-04-30",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          },
+          {
+            "date": "2027-10-31",
+            "pctOfVNO": 50.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 2.5,
+          "note": "Scheduled date is a Saturday; pays next business day (Mon 2026-11-02). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 2.5,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 52.5,
+          "note": "First amortization installment (50% of VNO). Interest = 5% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.25,
+          "capitalPer100VN": 50.0,
+          "totalPer100VN": 51.25,
+          "note": "Scheduled date is a Sunday; pays Mon 2027-11-01. Final coupon accrues on residual 50% of VNO: 5% x 180/360 x 50 = 1.25 (corroborated by bonistas analytics showing 1.25 final-period coupon)."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "No holder put and no tax-cancelation power (Serie 1D is the only Serie 1 strip without the rescate option; Com. B 12695). | Issuer call: BCRA may redeem the instrument early, in whole or in part, on any interest payment date, paying USD (Com. B 12695/B 12727/B 12730).",
+      "valuationNote": "Valued as plain USD cashflows per instruction; puts/tax options documented in embeddedOptions only.",
+      "minDenomination": null,
+      "stripPctOfSerie1VNO": 30.0,
+      "originalStripVN_USD_M": 1500.0,
+      "outstandingVN_USD_M": null,
+      "outstandingSource": null,
+      "tickerVariants": {
+        "ars_byma": "BPOD7",
+        "usd_mep_byma": "BPD7D",
+        "usd_cable_byma": "BPD7C",
+        "preStripParent": "BPO27 (Serie 1, ceased separate trading after 2024-03-01 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line quoted in pesos, D line in USD MEP, C line in USD cable. Cross-check 2026-06-10: BPOD7 148600 ARS vs BPD7D 102.15 USD-MEP vs BPD7C 98.38 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 148600.0,
+        "mep_d": 102.15,
+        "cable_c": 98.38
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+        "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12727.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12730.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A7918.pdf",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/301306/20231226",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/economia/bopreal-bcra-completo-la-serie-1-y-prepara-la-primera-subasta-la-segunda-etapa-n5935050"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Outstanding VN taken from IAMC informe diario 2026-06-09 'Monto Emitido' column; it is a secondary aggregate and reflects redemptions via put/tax usage. Original strip size derived from 20%%/20%%/30%%/30%% split (Com. B 12695) of the USD 5,000 M total Serie 1 placement.",
+        "IAMC 2026-06-09 shows 'Monto Emitido' 6,922 M USD for BPOD7, which is structurally impossible for a 30% strip of a USD 5,000 M series (max 1,500 M). Unresolved data anomaly in the IAMC table -> outstanding set to null; originalStrip VN 1,500 M kept (derived from primary sources).",
+        "Minimum denomination: BCRA comunicaciones state post-strip minimum of VNO 1 USD only for series 1A/1B/1C; they are silent on 1D. Pre-strip Serie 1 minimum was VNO 100 USD in multiples of 10. 1D minimum set to null."
+      ],
+      "verification": {
+        "status": "confirmed",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.rava.com/perfil/BPOD7  (independent broker ficha: issue/maturity/amortization 2x50% 2027-04-30 & 2027-10-31; close price matches)",
+          "https://hlf.com.ar/wp-content/uploads/2023/12/Res.Gral_.AFIP-5469-23.pdf (RG 5469/2023 full text: 1A/1B/1C poder cancelatorio, FX = max(5-bd avg A3500, implied bond FX))",
+          "https://www.cira.org.ar/es/servicios/normativas-servicios/resolucion-general/resolucion-general-5469-2023/ (RG 5469/2023 art.1: caps USD 1,000/1,000/1,500 M; windows 2025-04-30/2026-04-29, 2026-04-30/2027-04-29, 2027-04-30/2027-10-31)",
+          "https://web2.bcra.gob.ar/Noticias/se-completo-serie-1-BOPREAL.asp (BCRA: Serie 1 completed at USD 5,000 M across 6 auctions)",
+          "re-read verbatim 2026-06-10: B12695.pdf, B12727.pdf, B12730.pdf, A7918.pdf (terms, coupon dates, 2x50% amortization, strip 20/20/30/30, puts 1A 2025-04-30 / 1B 2026-04-30 / 1C 2027-04-30 / 1D none, t+2, issuer call, min denom 1 USD for 1A/1B/1C only, issue date 2024-01-05 in B12727/B12730)",
+          "re-read local IAMC informe 2026-06-09 (issue 05-Jan-24, maturity 31-Oct-27, 5.0% semestral, 2 cuotas, next coupon 31-Oct-26; Monto Emitido 830/996/1,494/6,922 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all 18 tickers and all ARS/D/C quotes match)"
+        ],
+        "corrections": [
+          "No corrections. IAMC 'Monto Emitido' 6,922 M anomaly re-confirmed by direct re-read of the local IAMC PDF; outstanding null stands. B12695/B12727/B12730 confirmed silent on post-strip 1D minimum denomination (they name only 1A/1B/1C), so minDenomination null stands."
+        ]
+      }
+    },
+    {
+      "ticker": "BPOA8",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 4 - Strip A (Serie 4-A / IAMC 'Serie IV-A') - vencimiento 31-oct-2028",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 4A",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 4 (BPO28) on 2025-09-30",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise (4A only)",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12999",
+      "issueDate": "2025-06-24",
+      "stripSeparationDate": "2025-09-30",
+      "maturity": "2028-10-31",
+      "coupon": {
+        "ratePct": 3.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31",
+          "2028-04-30",
+          "2028-10-31"
+        ],
+        "firstCouponDate": "2025-10-31",
+        "firstCouponNote": "Short first coupon accrued from issue date 2025-06-24 to 2025-10-31 per Com. B 12999.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "bullet",
+        "scheduleNote": "Integral (100% of VNO) at maturity 2028-10-31, payable in USD (Com. B 12999).",
+        "schedule": [
+          {
+            "date": "2028-10-31",
+            "pctOfVNO": 100.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Saturday -> next business day Mon 2026-11-02. Interest = 3% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": null
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Sunday -> Mon 2027-11-01."
+        },
+        {
+          "scheduledDate": "2028-04-30",
+          "expectedPayDate": "2028-05-02",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Sunday; Mon 2028-05-01 is the Labour Day holiday in Argentina -> expected Tue 2028-05-02."
+        },
+        {
+          "scheduledDate": "2028-10-31",
+          "expectedPayDate": "2028-10-31",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 100.0,
+          "totalPer100VN": 101.5,
+          "note": "Bullet repayment of 100% of VNO at maturity plus final coupon."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "Holder put (opcion de rescate a favor del tenedor): from 2028-04-30 until maturity, the holder may demand early redemption at nominal value (par) payable in ARS at the BCRA Com. A3500 reference FX rate of the exercise day; via dedicated SIOPEL wheel, settlement T+1, bonds at CRyL the prior day (Com. B 12999). No issuer call clause appears in Com. B 12999. | Tax cancelation power (Decreto 384/2025, BO 2025-06-17 + ARCA RG 5713/2025, BO 2025-06-18): Serie 4 bonds issued between the decree's entry into force and 2025-09-30 can be given in payment (dacion en pago) of tax and customs obligations; per RG 5713/2025 the poder cancelatorio attaches to strip 4A. Usable from 2028-04-30 to 2028-10-31 (both inclusive), capped at USD 1,000 M total, computed at technical value using the RG 5469/2023 FX mechanism: the HIGHER of (a) the 5-business-day average A3500 rate and (b) the implied FX from eligible bond ARS/USD price pairs. Right lapses once BCRA begins repaying principal.",
+      "valuationNote": "Valued as plain USD cashflows per instruction; put documented in embeddedOptions only.",
+      "minDenomination": "VNO 1 USD (post-strip, per Com. B 12999; pre-strip Serie 4 was VNO 100 USD in multiples of 10)",
+      "stripFractionOfSerie4VNO": "1/3",
+      "originalStripVN_USD_M": null,
+      "outstandingVN_USD_M": 282.0,
+      "outstandingSource": "IAMC informe diario 2026-06-09",
+      "tickerVariants": {
+        "ars_byma": "BPOA8",
+        "usd_mep_byma": "BPA8D",
+        "usd_cable_byma": "BPA8C",
+        "preStripParent": "BPO28 (Serie 4, ceased separate trading after 2025-09-30 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line in pesos, D line USD MEP, C line USD cable. Cross-check 2026-06-10: BPOA8 133000 ARS vs BPA8D 92.25 USD-MEP vs BPA8C 88.45 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 133000.0,
+        "mep_d": 92.25,
+        "cable_c": 88.45
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A8233.pdf",
+        "https://bcra.gob.ar/Noticias/serie-cuatro-bopreal.asp",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/bopreal-el-bcra-coloco-us810-millones-la-primera-licitacion-la-serie-4-n6157949",
+        "https://www.ambito.com/economia/bopreal-el-bcra-solo-pudo-colocar-us26-millones-la-segunda-licitacion-la-serie-4-n6163057",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025)",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025)",
+        "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Original per-strip VNO not stated by a primary source as an absolute amount; strip fractions are primary-sourced (4A = 1/3 VNO, 4B = 2/3 VNO, Com. B 12999). Total Serie 4 placed: USD 845 M NV across THREE auctions (~810 M awarded 2025-06-18, ~26 M on 2025-07-02, ~9 M on 2025-07-16, the third and last), per BCRA news 'Results of the last auction of BOPREAL Series 4'. IAMC outstanding (282 M + 563 M = 845 M) matches that total and the 1/3-2/3 split exactly. Authorized maximum was USD 3,000 M."
+      ],
+      "verification": {
+        "status": "corrected",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025: Serie 4 dacion en pago of tax/customs obligations, cap USD 1,000 M, window 2028-04-30 to 2028-10-31, technical value at applicable FX)",
+          "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025: poder cancelatorio attaches to strip 4A; FX mechanism of RG 5469/2023)",
+          "https://bruchoufunes.com/en/bopreal-series-4-payment-of-tax-and-customs-obligations/ (secondary legal summary of Decreto 384/2025 + RG 5713/2025)",
+          "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/ (BCRA: third and last auction 2025-07-16 awarded USD 9 M; total Serie 4 placed USD 845 M NV)",
+          "https://www.rava.com/perfil/BPOA8 (close price matches)",
+          "re-read verbatim 2026-06-10: B12999.pdf, A8233.pdf (issue/settlement 2025-06-24, maturity 2028-10-31, bullet, 3% s.a. 30/360, coupon dates 2025-10-31..2028-10-31, strip 2025-09-30 4A=1/3 put from 2028-04-30 t+1 / 4B=2/3 no put, min denom VNO 1 USD post-strip for 4A and 4B, no issuer-call clause)",
+          "re-read local IAMC informe 2026-06-09 (issue 24-Jun-25, maturity 31-Oct-28, 3.0% semestral, 1 cuota at maturity; Monto Emitido 282/563 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all quotes match)"
+        ],
+        "corrections": [
+          "embeddedOptions: previous claim 'No tax-cancelation (poder cancelatorio) feature documented for Serie 4' was WRONG. Decreto 384/2025 + ARCA RG 5713/2025 grant Serie 4A poder cancelatorio (cap USD 1,000 M, window 2028-04-30 to 2028-10-31, RG 5469/2023 FX mechanism).",
+          "flags: auction history corrected from two auctions (~810 M + ~26 M = 836 M) to the BCRA-confirmed three auctions totalling USD 845 M (third and last on 2025-07-16 for USD 9 M), which reconciles exactly with IAMC outstanding 282 + 563 = 845 M."
+        ]
+      }
+    },
+    {
+      "ticker": "BPOB8",
+      "family": "bopreal",
+      "fullName": "BOPREAL Serie 4 - Strip B (Serie 4-B / IAMC 'Serie IV-B') - vencimiento 31-oct-2028",
+      "bcraSeriesName": "BONO PARA LA RECONSTRUCCION DE UNA ARGENTINA LIBRE - SERIE 4B",
+      "issuer": "Banco Central de la Republica Argentina (BCRA)",
+      "instrumentType": "BCRA USD note (BOPREAL), stripped from Serie 4 (BPO28) on 2025-09-30",
+      "currency": "USD",
+      "paymentCurrency": "USD (amortization and coupons); ARS at A3500 only upon holder-put exercise (4A only)",
+      "law": "Argentina",
+      "settlementAgent": "CRyL",
+      "listing": "BYMA/MAE; Euroclear-eligible (Caja de Valores / Euroclear) per Com. B 12999",
+      "issueDate": "2025-06-24",
+      "stripSeparationDate": "2025-09-30",
+      "maturity": "2028-10-31",
+      "coupon": {
+        "ratePct": 3.0,
+        "type": "fixed",
+        "frequency": "semiannual",
+        "dayCount": "30/360",
+        "paymentMonths": "April 30 / October 31",
+        "couponDatesAll": [
+          "2025-10-31",
+          "2026-04-30",
+          "2026-10-31",
+          "2027-04-30",
+          "2027-10-31",
+          "2028-04-30",
+          "2028-10-31"
+        ],
+        "firstCouponDate": "2025-10-31",
+        "firstCouponNote": "Short first coupon accrued from issue date 2025-06-24 to 2025-10-31 per Com. B 12999.",
+        "currency": "USD"
+      },
+      "amortization": {
+        "type": "bullet",
+        "scheduleNote": "Integral (100% of VNO) at maturity 2028-10-31, payable in USD (Com. B 12999).",
+        "schedule": [
+          {
+            "date": "2028-10-31",
+            "pctOfVNO": 100.0,
+            "currency": "USD"
+          }
+        ]
+      },
+      "remainingCashflows": [
+        {
+          "scheduledDate": "2026-10-31",
+          "expectedPayDate": "2026-11-02",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Saturday -> next business day Mon 2026-11-02. Interest = 3% x 180/360 x 100."
+        },
+        {
+          "scheduledDate": "2027-04-30",
+          "expectedPayDate": "2027-04-30",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": null
+        },
+        {
+          "scheduledDate": "2027-10-31",
+          "expectedPayDate": "2027-11-01",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Sunday -> Mon 2027-11-01."
+        },
+        {
+          "scheduledDate": "2028-04-30",
+          "expectedPayDate": "2028-05-02",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 0.0,
+          "totalPer100VN": 1.5,
+          "note": "Sunday; Mon 2028-05-01 is the Labour Day holiday in Argentina -> expected Tue 2028-05-02."
+        },
+        {
+          "scheduledDate": "2028-10-31",
+          "expectedPayDate": "2028-10-31",
+          "interestPer100VN": 1.5,
+          "capitalPer100VN": 100.0,
+          "totalPer100VN": 101.5,
+          "note": "Bullet repayment of 100% of VNO at maturity plus final coupon."
+        }
+      ],
+      "dayRollRule": "Per BCRA terms: if a payment date falls on a non-business day, payment is made on the next business day, with interest accruing only to the original (scheduled) date.",
+      "embeddedOptions": "No holder put (Serie 4B carries no rescate option; Com. B 12999). No issuer call clause appears in Com. B 12999. | Tax cancelation: a poder cancelatorio DOES exist for Serie 4 (Decreto 384/2025 + ARCA RG 5713/2025) but per RG 5713/2025 it attaches exclusively to strip 4A; Serie 4B has NO tax-cancelation power.",
+      "valuationNote": "Valued as plain USD cashflows per instruction; put documented in embeddedOptions only.",
+      "minDenomination": "VNO 1 USD (post-strip, per Com. B 12999; pre-strip Serie 4 was VNO 100 USD in multiples of 10)",
+      "stripFractionOfSerie4VNO": "2/3",
+      "originalStripVN_USD_M": null,
+      "outstandingVN_USD_M": 563.0,
+      "outstandingSource": "IAMC informe diario 2026-06-09",
+      "tickerVariants": {
+        "ars_byma": "BPOB8",
+        "usd_mep_byma": "BPB8D",
+        "usd_cable_byma": "BPB8C",
+        "preStripParent": "BPO28 (Serie 4, ceased separate trading after 2025-09-30 strip)"
+      },
+      "quoteBasis": "Per 100 VN nominal (BYMA standard), dirty price; ARS line in pesos, D line USD MEP, C line USD cable. Cross-check 2026-06-10: BPOB8 133200 ARS vs BPB8D 91.21 USD-MEP vs BPB8C 88.35 USD-cable (data912 close).",
+      "liveQuotes_2026-06-10_close": {
+        "ars": 133200.0,
+        "mep_d": 91.21,
+        "cable_c": 88.35
+      },
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf",
+        "https://www.bcra.gob.ar/Pdfs/comytexord/A8233.pdf",
+        "https://bcra.gob.ar/Noticias/serie-cuatro-bopreal.asp",
+        "local: /Users/s/RentaFijaArg/research/iamc_titulos_publicos_2026-06-09.pdf (IAMC informe diario titulos publicos, BOPREALES table, 2026-06-09)",
+        "https://data912.com/live/arg_bonds (fetched 2026-06-10)",
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json",
+        "https://www.ambito.com/bopreal-el-bcra-coloco-us810-millones-la-primera-licitacion-la-serie-4-n6157949",
+        "https://www.ambito.com/economia/bopreal-el-bcra-solo-pudo-colocar-us26-millones-la-segunda-licitacion-la-serie-4-n6163057",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025)",
+        "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025)",
+        "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/"
+      ],
+      "confidence": "high",
+      "flags": [
+        "Original per-strip VNO not stated by a primary source as an absolute amount; strip fractions are primary-sourced (4A = 1/3 VNO, 4B = 2/3 VNO, Com. B 12999). Total Serie 4 placed: USD 845 M NV across THREE auctions (~810 M awarded 2025-06-18, ~26 M on 2025-07-02, ~9 M on 2025-07-16, the third and last), per BCRA news 'Results of the last auction of BOPREAL Series 4'. IAMC outstanding (282 M + 563 M = 845 M) matches that total and the 1/3-2/3 split exactly. Authorized maximum was USD 3,000 M."
+      ],
+      "verification": {
+        "status": "corrected",
+        "checkedBy": "adversarial verifier, 2026-06-10",
+        "checkedSources": [
+          "https://www.boletinoficial.gob.ar/detalleAviso/primera/326992/20250617 (Decreto 384/2025: Serie 4 dacion en pago of tax/customs obligations, cap USD 1,000 M, window 2028-04-30 to 2028-10-31, technical value at applicable FX)",
+          "https://www.boletinoficial.gob.ar/detalleAviso/primera/327129/20250618 (ARCA RG 5713/2025: poder cancelatorio attaches to strip 4A; FX mechanism of RG 5469/2023)",
+          "https://bruchoufunes.com/en/bopreal-series-4-payment-of-tax-and-customs-obligations/ (secondary legal summary of Decreto 384/2025 + RG 5713/2025)",
+          "https://www.bcra.gob.ar/en/news/results-of-the-last-auction-of-bopreal-series-4-bonds/ (BCRA: third and last auction 2025-07-16 awarded USD 9 M; total Serie 4 placed USD 845 M NV)",
+          "https://www.rava.com/perfil/BPOB8 (close price matches)",
+          "re-read verbatim 2026-06-10: B12999.pdf, A8233.pdf (issue/settlement 2025-06-24, maturity 2028-10-31, bullet, 3% s.a. 30/360, coupon dates 2025-10-31..2028-10-31, strip 2025-09-30 4A=1/3 put from 2028-04-30 t+1 / 4B=2/3 no put, min denom VNO 1 USD post-strip for 4A and 4B, no issuer-call clause)",
+          "re-read local IAMC informe 2026-06-09 (issue 24-Jun-25, maturity 31-Oct-28, 3.0% semestral, 1 cuota at maturity; Monto Emitido 282/563 M)",
+          "https://data912.com/live/arg_bonds re-fetched 2026-06-10 (all quotes match)"
+        ],
+        "corrections": [
+          "embeddedOptions: previous blanket claim 'No tax-cancelation feature documented for Serie 4' was WRONG as stated; Decreto 384/2025 + RG 5713/2025 created one for Serie 4, attaching to strip 4A only. Net effect for 4B (no power) unchanged, wording corrected.",
+          "flags: auction history corrected to three auctions totalling USD 845 M (BCRA), matching IAMC outstanding exactly."
+        ]
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "ticker": "BPJ25",
+      "fullName": "BOPREAL Serie 2 - vencimiento 30-jun-2025 (MENSUAL - BPJ25)",
+      "reason": "Matured. Amortized in 12 monthly consecutive installments on the last calendar day of each month from 2024-07-31 to 2025-06-30 (first 11 of 8.33% of VNO, last of 8.37%), zero coupon, payable USD. VERIFIED from Com. B 12695: Serie 2 amortized MONTHLY (not quarterly). Additionally it was never listed for secondary trading on BYMA/MAE (transferable only), so it was never a BYMA instrument. Not in data912 arg_bonds panel.",
+      "maturity": "2025-06-30",
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf"
+      ]
+    },
+    {
+      "ticker": "BPY26",
+      "fullName": "BOPREAL Serie 3 - vencimiento 31-may-2026 (TRIMESTRAL - BPY26)",
+      "reason": "Matured shortly before asOf. Amortized in 3 QUARTERLY installments: 2025-11-30 (33% of VNO), 2026-02-28 (33%) and 2026-05-31 (34%); coupon 3% nominal annual paid quarterly (last day of Feb/May/Aug/Nov, first 2024-08-31), 30/360, USD; final scheduled payment date 2026-05-31 (Sunday; paid next business day 2026-06-01). VERIFIED from Com. B 12695: Serie 3 amortized QUARTERLY. Absent from the 2026-06-10 data912 live arg_bonds panel (present only in historical whitelist per data912_map.json).",
+      "maturity": "2026-05-31",
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf",
+        "local: /Users/s/RentaFijaArg/research/data912_map.json (bopreal_note)"
+      ]
+    },
+    {
+      "ticker": "BPO27",
+      "fullName": "BOPREAL Serie 1 (pre-strip parent)",
+      "reason": "Ceased to exist as a single line: mandatorily separated into Serie 1A/1B/1C/1D strips on 2024-03-01 (Com. B 12695). Not in live panel.",
+      "maturity": "2027-10-31",
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12695.pdf"
+      ]
+    },
+    {
+      "ticker": "BPO28",
+      "fullName": "BOPREAL Serie 4 (pre-strip parent)",
+      "reason": "Separated into Serie 4A/4B strips on 2025-09-30 (Com. B 12999). Not in live panel.",
+      "maturity": "2028-10-31",
+      "sources": [
+        "https://www.bcra.gob.ar/Pdfs/comytexord/B12999.pdf"
+      ]
+    },
+    {
+      "ticker": "BPOA7_PUT / BPOB7_PUT / BPOC7_PUT / BPOA8_PUT",
+      "fullName": "bonistas.com analytic 'PUT' variants",
+      "reason": "Not tradable BYMA tickers: analytic constructs in the bonistas API representing the bond valued under the assumption the ARS/A3500 put is exercised. Excluded from the instrument universe; real exchange tickers are only the 18 lines (6 series x ARS/D/C).",
+      "maturity": null,
+      "sources": [
+        "local: /Users/s/RentaFijaArg/research/bonistas_api_bonds_snapshot_2026-06-10.json"
+      ]
+    }
+  ],
+  "notes": [
+    "Live universe (data912 /live/arg_bonds, 2026-06-10): 6 BOPREAL series/strips trading on BYMA, each in 3 settlement lines (18 tickers total): BPOA7/BPOB7/BPOC7/BPOD7 (Serie 1 strips A-D, 2027) and BPOA8/BPOB8 (Serie 4 strips A-B, 2028). Suffix D = USD MEP (local), C = USD cable (CCL); 5-char base tickers compress to 4 chars before the suffix (BPOA7 -> BPA7D/BPA7C).",
+    "All BOPREAL are BCRA-issued (not Treasury), Argentine law, USD-denominated, CRyL settled, BYMA/MAE listed and Euroclear-eligible.",
+    "Serie 1 (issue 2024-01-05, total placed USD 5,000 M in 6 auctions Dec-2023/Jan-2024): coupon 5% s.a. 30/360 paid Apr-30/Oct-31 (first coupon 2024-10-31, long); amortization 50% on 2027-04-30 and 50% on 2027-10-31, in USD. Stripped 2024-03-01 into 1A 20% / 1B 20% / 1C 30% / 1D 30% of VNO -> 1,000/1,000/1,500/1,500 M.",
+    "Serie 4 (issue 2025-06-24, authorized up to USD 3,000 M, placed USD 845 M NV in 3 auctions: ~810 M on 2025-06-18, ~26 M on 2025-07-02, ~9 M on 2025-07-16, the third and last, per BCRA): coupon 3% s.a. 30/360 paid Apr-30/Oct-31 (first 2025-10-31); bullet 2028-10-31. Stripped 2025-09-30 into 4A = 1/3 VNO (holder put from 2028-04-30, T+1) and 4B = 2/3 VNO (no put).",
+    "Embedded options - holder puts: redemption at par in ARS at the A3500 official reference FX of the exercise day (Serie 1: T+2; Serie 4: T+1), via SIOPEL, bonds at CRyL. Activation: 1A 2025-04-30, 1B 2026-04-30, 1C 2027-04-30, 4A 2028-04-30; 1D and 4B have none. Issuer call (USD, any coupon date) exists for Serie 1 only. Tax-cancelation power: Serie 1 per Decreto 72/2023 + RG 5469/2023 applies to 1A/1B/1C, in annual windows aligned with put dates (1A 2025-04-30/2026-04-29; 1B 2026-04-30/2027-04-29; 1C 2027-04-30/2027-10-31), capped at USD 1,000/1,000/1,500 M respectively; Serie 4 per Decreto 384/2025 + RG 5713/2025 applies to strip 4A only, window 2028-04-30/2028-10-31, capped at USD 1,000 M. Peso value in all cases = max(5-business-day avg A3500, implied bond ARS/USD FX). Per instructions, instruments are modeled as plain USD cashflows; options are notes only.",
+    "VERIFICATION requested by task: Serie 2 amortized MONTHLY (12 cuotas, 2024-07-31 to 2025-06-30, 11x8.33% + 1x8.37%, zero coupon); Serie 3 amortized QUARTERLY (3 cuotas 33/33/34 on 2025-11-30, 2026-02-28, 2026-05-31, coupon 3% quarterly). Source: Com. B 12695. Both matured before asOf.",
+    "Quote basis: all lines quote per 100 VN nominal, dirty, in the currency of the line (verified: BPOD7 148,600 ARS vs BPD7D 102.15 USD => implied MEP ~1,455, consistent with the data912 /live/mep panel per data912_map.json).",
+    "DATA ANOMALY (flagged): IAMC informe 2026-06-09 'Monto Emitido' for BPOD7 reads 6,922 M USD, impossible for a 30% strip of a 5,000 M series; BPOD7 outstanding therefore set to null. A/B/C IAMC values (830/996/1,494 M) are consistent with 1,000/1,000/1,500 M originals less put/tax redemptions.",
+    "Payment-date rolls use the BCRA non-business-day rule (next business day, accrual to original date). Expected pay dates assume standard Argentine holidays; 2028-05-02 for the 2028-04-30 coupon accounts for Labour Day 2028-05-01.",
+    "ADVERSARIAL VERIFICATION 2026-06-10: all six instruments re-derived against primary texts (B12695/B12727/B12730/A7918/B12999/A8233 re-read verbatim; RG 5469/2023 full text; Decreto 384/2025 and RG 5713/2025 via Boletin Oficial) and independent secondary sources (rava.com fichas, BCRA news pages, IAMC informe re-read, data912 re-fetch). Serie 1 strips fully confirmed (incl. 2x50% 2027 amortization - NOT bullet -, 5% 30/360 coupon calendar, first coupon 2024-10-31, issue date 2024-01-05 stated in B12727/B12730, strip 20/20/30/30 of the 6-auction USD 5,000 M placement, put ladder, RG 5469/2023 caps/windows). Two corrections applied to Serie 4 strips: (1) Serie 4 DOES have a tax-cancelation power (Decreto 384/2025 + ARCA RG 5713/2025, strip 4A only, USD 1,000 M cap, window 2028-04-30/2028-10-31) - the earlier 'no poder cancelatorio for Serie 4' claim was wrong; (2) Serie 4 was placed in THREE auctions totalling USD 845 M (not two totalling ~836 M), per BCRA, exactly matching IAMC outstanding 282+563 M. Weekday/roll claims re-computed (2026-10-31 Sat, 2027-10-31 Sun, 2028-04-30 Sun + 2028-05-01 holiday); amortization schedules sum to 100.0 for all instruments; all 18 live tickers and quotes re-verified against data912."
+  ]
+}

@@ -30,22 +30,21 @@ export function yearFraction(a: string, b: string): number {
 }
 
 /**
- * Feriados nacionales argentinos (días no hábiles cambiarios/bursátiles).
- * 2026 confirmados por Decreto + turísticos; 2027 previstos (los fijos son exactos,
- * los trasladables se ajustan cuando se publique el decreto).
- * Solo afectan el cálculo de liquidación T+1 y el rezago CER t-10: un error de un
- * día hábil en 2027 tiene impacto despreciable en TIR.
+ * Feriados nacionales argentinos (días no hábiles cambiarios/bursátiles),
+ * incluidos los puentes turísticos. Fuente: api.argentinadatos.com/v1/feriados
+ * (verificado 2026-06-10). Solo afectan la liquidación T+1 y el rezago CER
+ * t-10: un error de un día hábil más allá de 2027 tiene impacto despreciable.
  */
 const HOLIDAYS = new Set<string>([
   // 2026
-  '2026-01-01', '2026-02-16', '2026-02-17', '2026-03-24', '2026-04-02',
-  '2026-04-03', '2026-05-01', '2026-05-25', '2026-06-15', '2026-06-20',
-  '2026-07-09', '2026-08-17', '2026-10-12', '2026-11-23', '2026-12-07',
-  '2026-12-08', '2026-12-25',
-  // 2027 (fijos + trasladables previstos)
-  '2027-01-01', '2027-02-08', '2027-02-09', '2027-03-24', '2027-03-25',
-  '2027-03-26', '2027-04-02', '2027-05-01', '2027-05-25', '2027-06-21',
-  '2027-07-09', '2027-08-16', '2027-10-11', '2027-11-22', '2027-12-08',
+  '2026-01-01', '2026-02-16', '2026-02-17', '2026-03-23', '2026-03-24',
+  '2026-04-02', '2026-04-03', '2026-05-01', '2026-05-25', '2026-06-15',
+  '2026-06-20', '2026-07-09', '2026-07-10', '2026-08-17', '2026-10-12',
+  '2026-11-23', '2026-12-07', '2026-12-08', '2026-12-25',
+  // 2027
+  '2027-01-01', '2027-02-08', '2027-02-09', '2027-03-24', '2027-03-26',
+  '2027-04-02', '2027-05-01', '2027-05-25', '2027-06-17', '2027-06-20',
+  '2027-07-09', '2027-08-17', '2027-10-12', '2027-11-20', '2027-12-08',
   '2027-12-25',
 ]);
 

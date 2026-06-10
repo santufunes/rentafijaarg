@@ -26,17 +26,22 @@ export default function Home() {
   const proposal = useMemo(() => {
     if (!market || !values) return null;
     try {
-      return {
-        proposal: buildProposal(INSTRUMENTS, toQuotesMap(market), toMarketContext(market), {
-          amountArs: values.amountArs,
-          horizonMonths: values.horizonMonths,
-          profile: values.profile,
-          goal: values.goal,
-          commissionPct: 0.5,
-        }),
-        ctx: toMarketContext(market),
-        error: null as string | null,
-      };
+      const built = buildProposal(INSTRUMENTS, toQuotesMap(market), toMarketContext(market), {
+        amountArs: values.amountArs,
+        horizonMonths: values.horizonMonths,
+        profile: values.profile,
+        goal: values.goal,
+        commissionPct: 0.5,
+      });
+      if (built.lines.length === 0) {
+        return {
+          proposal: null,
+          ctx: null,
+          error:
+            'No alcanzó para armar una cartera con este monto (ningún instrumento entra con nominales enteros). Probá con un monto mayor.',
+        };
+      }
+      return { proposal: built, ctx: toMarketContext(market), error: null as string | null };
     } catch (e) {
       return { proposal: null, ctx: null, error: String(e) };
     }

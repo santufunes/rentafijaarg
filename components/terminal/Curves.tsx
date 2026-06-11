@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import {
   CartesianGrid,
+  LabelList,
   ResponsiveContainer,
   Scatter,
   ScatterChart,
@@ -104,12 +105,18 @@ export default function Curves({ rows }: { rows: TerminalRow[] }) {
               }}
             />
             {series.map((s) => (
-              <Scatter
+              <Scatter isAnimationActive={false}
                 key={s.family}
                 name={FAMILY_META[s.family].label}
                 data={s.data}
                 fill={FAMILY_META[s.family].color}
-              />
+              >
+                <LabelList
+                  dataKey="ticker"
+                  position="top"
+                  style={{ fontSize: 9, fill: '#78716c', fontFamily: 'monospace' }}
+                />
+              </Scatter>
             ))}
           </ScatterChart>
         </ResponsiveContainer>

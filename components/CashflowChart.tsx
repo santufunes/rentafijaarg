@@ -33,8 +33,8 @@ export default function CashflowChart({ calendar }: { calendar: CalendarBucket[]
             width={42}
           />
           <Tooltip formatter={(v) => fmtArs(Number(v))} />
-          <Bar dataKey="Pesos" stackId="a" fill="#0ea5e9" radius={[0, 0, 0, 0]} />
-          <Bar dataKey="Dólares (en ARS al MEP)" stackId="a" fill="#10b981" radius={[3, 3, 0, 0]} />
+          <Bar isAnimationActive={false} dataKey="Pesos" stackId="a" fill="#0ea5e9" radius={[0, 0, 0, 0]} />
+          <Bar isAnimationActive={false} dataKey="Dólares (en ARS al MEP)" stackId="a" fill="#10b981" radius={[3, 3, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

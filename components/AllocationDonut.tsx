@@ -18,7 +18,7 @@ export default function AllocationDonut({ sleeves }: { sleeves: SleeveMetrics[] 
       <div className="h-48">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
-            <Pie
+            <Pie isAnimationActive={false}
               data={data}
               dataKey="value"
               nameKey="name"

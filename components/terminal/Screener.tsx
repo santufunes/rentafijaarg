@@ -21,10 +21,12 @@ export default function Screener({
   rows,
   selected,
   onToggle,
+  onSimulate,
 }: {
   rows: TerminalRow[];
   selected: string[];
   onToggle: (ticker: string) => void;
+  onSimulate: (ticker: string) => void;
 }) {
   const [families, setFamilies] = useState<Set<Family>>(new Set());
   const [search, setSearch] = useState('');
@@ -114,12 +116,18 @@ export default function Screener({
             />
             solo líquidos
           </label>
+          <button
+            onClick={() => exportCsv(filtered)}
+            className="rounded-md border border-stone-700 px-2 py-1 font-mono text-[11px] text-stone-400 hover:border-emerald-600 hover:text-emerald-300"
+          >
+            ⬇ CSV
+          </button>
         </div>
 
         {/* Tabla */}
-        <div className="mt-3 overflow-x-auto rounded-lg border border-stone-800">
+        <div className="mt-3 max-h-[70vh] overflow-auto rounded-lg border border-stone-800">
           <table className="w-full font-mono text-xs">
-            <thead className="bg-stone-900 text-[11px] uppercase text-stone-500">
+            <thead className="sticky top-0 z-10 bg-stone-900 text-[11px] uppercase text-stone-500">
               <tr>
                 <th className="px-2 py-2"></th>
                 {COLUMNS.map((c) => (
@@ -136,15 +144,16 @@ export default function Screener({
                 ))}
                 <th className="px-2 py-2 text-right">Px ARS</th>
                 <th className="px-2 py-2 text-right">Px USD</th>
+                <th className="px-2 py-2"></th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((r) => (
+              {filtered.map((r, idx) => (
                 <tr
                   key={r.ticker}
                   onClick={() => setDetail(r)}
-                  className={`cursor-pointer border-t border-stone-900 transition hover:bg-stone-900 ${
-                    detail?.ticker === r.ticker ? 'bg-stone-900' : ''
+                  className={`group cursor-pointer border-t border-stone-900 transition hover:bg-stone-900 ${
+                    detail?.ticker === r.ticker ? 'bg-stone-900' : idx % 2 === 1 ? 'bg-stone-900/30' : ''
                   } ${r.liquid ? '' : 'opacity-50'}`}
                 >
                   <td className="px-2 py-1.5">
@@ -203,6 +212,18 @@ export default function Screener({
                   <td className="px-2 py-1.5 text-right text-stone-300">
                     {r.pxUsd !== null ? r.pxUsd.toFixed(2) : '—'}
                   </td>
+                  <td className="px-2 py-1.5 text-right">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSimulate(r.ticker);
+                      }}
+                      className="invisible rounded border border-emerald-700 px-1.5 py-0.5 text-[10px] text-emerald-300 hover:bg-emerald-500/15 group-hover:visible"
+                      title={`Simular inversión en ${r.ticker}`}
+                    >
+                      SIM
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -219,6 +240,34 @@ export default function Screener({
       <DetailPanel row={detail} />
     </div>
   );
+}
+
+function exportCsv(rows: TerminalRow[]) {
+  const header = 'ticker,familia,emisor,vencimiento,meses,tir_pct,tipo_tir,tem_pct,md_anios,vol_ars_dia,px_ars,px_usd,liquido';
+  const lines = rows.map((r) =>
+    [
+      r.ticker,
+      r.family,
+      `"${(r.issuer ?? '').replace(/"/g, '')}"`,
+      r.maturity,
+      r.months.toFixed(1),
+      r.tirPct.toFixed(3),
+      r.tirKind,
+      r.temPct?.toFixed(3) ?? '',
+      r.mdYears.toFixed(3),
+      Math.round(r.turnoverArs),
+      r.pxArs ?? '',
+      r.pxUsd ?? '',
+      r.liquid ? 1 : 0,
+    ].join(','),
+  );
+  const blob = new Blob([[header, ...lines].join('\n')], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `rentafija_screener_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 function DetailPanel({ row }: { row: TerminalRow | null }) {

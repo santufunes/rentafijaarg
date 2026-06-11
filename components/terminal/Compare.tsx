@@ -1,16 +1,60 @@
 'use client';
 
+import { useMemo } from 'react';
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
+import { INSTRUMENTS } from '@/lib/data/registry';
+import type { MarketContext, Quote } from '@/lib/engine/types';
 import { FAMILY_META } from '@/lib/familyMeta';
-import type { TerminalRow } from '@/lib/terminal';
-import { fmtDate, fmtNum } from '@/lib/format';
+import { simulate, type TerminalRow } from '@/lib/terminal';
+import { fmtArs, fmtDate, fmtMonth, fmtNum } from '@/lib/format';
+
+const OVERLAY_AMOUNT = 1_000_000;
 
 export default function Compare({
   rows,
   onRemove,
+  quotes,
+  ctx,
 }: {
   rows: TerminalRow[];
   onRemove: (ticker: string) => void;
+  quotes: Map<string, Quote>;
+  ctx: MarketContext;
 }) {
+  // Mismo $1M invertido en cada uno: ¿quién paga cuánto y cuándo? (ARS al FX de hoy)
+  const overlay = useMemo(() => {
+    const byMonth = new Map<string, Record<string, number>>();
+    const okTickers: string[] = [];
+    for (const r of rows) {
+      const instr = INSTRUMENTS.find((i) => i.ticker === r.ticker);
+      if (!instr) continue;
+      try {
+        const sim = simulate(instr, quotes, ctx, OVERLAY_AMOUNT);
+        okTickers.push(r.ticker);
+        for (const p of sim.payouts) {
+          const m = p.date.slice(0, 7);
+          const b = byMonth.get(m) ?? {};
+          b[r.ticker] = (b[r.ticker] ?? 0) + p.totalArs;
+          byMonth.set(m, b);
+        }
+      } catch {
+        // lote mínimo no alcanzado con $1M u otro límite: queda fuera del overlay
+      }
+    }
+    const data = [...byMonth.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([m, v]) => ({ month: fmtMonth(m), ...v }));
+    return { data, okTickers };
+  }, [rows, quotes, ctx]);
   if (rows.length === 0)
     return (
       <p className="rounded-lg border border-stone-800 p-8 text-center font-mono text-sm text-stone-500">
@@ -46,7 +90,40 @@ export default function Compare({
   ];
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-stone-800">
+    <div className="space-y-4">
+      {overlay.data.length > 0 && (
+        <div className="rounded-lg border border-stone-800 p-3">
+          <h3 className="font-mono text-[11px] uppercase text-stone-500">
+            Mismos {fmtArs(OVERLAY_AMOUNT)} invertidos en cada uno: qué paga y cuándo (ARS al FX de
+            hoy{overlay.okTickers.length < rows.length ? ' · algunos quedan fuera por lote mínimo' : ''})
+          </h3>
+          <div className="mt-2 h-56">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={overlay.data} margin={{ top: 8, right: 8, left: 8, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#292524" />
+                <XAxis dataKey="month" tick={{ fontSize: 10, fill: '#78716c' }} tickLine={false} axisLine={false} />
+                <YAxis
+                  tickFormatter={(v) => (v >= 1_000_000 ? `${(v / 1_000_000).toFixed(1)}M` : `${Math.round(v / 1000)}k`)}
+                  tick={{ fontSize: 10, fill: '#78716c' }}
+                  tickLine={false}
+                  axisLine={false}
+                  width={44}
+                />
+                <Tooltip
+                  formatter={(v) => fmtArs(Number(v))}
+                  contentStyle={{ background: '#1c1917', border: '1px solid #44403c', fontFamily: 'monospace', fontSize: 12 }}
+                />
+                <Legend wrapperStyle={{ fontSize: 11, fontFamily: 'monospace' }} />
+                {overlay.okTickers.map((t) => {
+                  const fam = rows.find((r) => r.ticker === t)!.family;
+                  return <Bar isAnimationActive={false} key={t} dataKey={t} fill={FAMILY_META[fam].color} />;
+                })}
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
+      <div className="overflow-x-auto rounded-lg border border-stone-800">
       <table className="w-full font-mono text-xs">
         <thead>
           <tr className="bg-stone-900">
@@ -89,6 +166,7 @@ export default function Compare({
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

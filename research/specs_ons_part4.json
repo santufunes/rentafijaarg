@@ -1,0 +1,470 @@
+{
+  "family": "on",
+  "asOf": "2026-06-11",
+  "settlementForYieldChecks": "2026-06-11",
+  "method": "Ranks #16-30 batch (MCC3, DNC7, RUCD, DNCA, PQCS; MTCG dropped - matures 2026-06-30). Skeleton terms from BYMA open-data ficha tecnica (open.bymadata.com.ar vanoms-be-core free endpoint, fetched 2026-06-11), verified against primary documents where retrievable (Edenor Clase 7 Final Offering Memorandum Feb-2026, Edenor SEC 6-Ks Apr/May-2026 incl. 1Q26 presentation, MSU Energy unaudited interim financial statements 30-09-2025 Note 10) and against two independent pricing models (argen.bond cashflow tables, Docta Capital SSR-embedded metrics). Remaining cashflows per 100 VN original face for payments strictly after 2026-06-10, scheduled dates, each bond's day count. Golden TIR: D-line dirty close (data912 /live/arg_corp 2026-06-10), settlement 2026-06-11, effective-annual act/365 IRR via bisection vs Docta Capital published 'tea'/'tir' at the identical dirty price.",
+  "generalCaveats": [
+    "Payment dates are scheduled dates; weekend/holiday dates roll to the next business day without additional interest (30/360 classes unadjusted by construction; for the act/365 local classes argen.bond/docta also accrue to scheduled date). Weekend scheduled dates noted per instrument.",
+    "MCC3 day count (actual/365) is inferred from two independent calculators (argen.bond coupon table reproduces 7.5*days/365 exactly; docta accrued interest = rate*days/365), NOT from the aviso de suscripcion/suplemento, which could not be retrieved online - verify on CNV AIF before relying on exact coupon amounts (max impact ~0.06 per 100 per coupon vs 30/360). PQCS act/365 was UPGRADED to primary-verified on 2026-06-11: the Clase S Aviso de Suscripcion (petrini.com.ar PDF) states 'cantidad real de dias transcurridos/365' verbatim.",
+    "RUCD and DNCA day count 30/360 assumed (NY-law international notes standard; DNCA same program/format as Clase 7 whose OM states 30/360 explicitly); their offering memoranda were not retrieved.",
+    "argen.bond headline YTMs for DNC7D (8.86%) and RUCDD (9.40%) are inconsistent with their own cashflow tables and with Docta; Docta TEA used as the published golden benchmark (same dirty price as data912 close).",
+    "Docta metadata mislabels DNC7D law as 'Ley Argentina' - the Final Offering Memorandum states the Notes and Indenture are governed by NY law (capacity/corporate matters by Argentine law).",
+    "MTCG (Mastellone 10.95% 2026-06-30, rank in inventory) intentionally excluded: matures this month."
+  ],
+  "instruments": [
+    {
+      "base": "MCC3",
+      "name": "PECOM Servicios Energía ON Clase III 7,50% 2030 (USD MEP, Ley Arg.)",
+      "issuer": {
+        "legalName": "PECOM Servicios Energía S.A.U.",
+        "sector": "oilfield / energy services"
+      },
+      "isin": "AR0922852063",
+      "isinDetail": "BYMA ficha tecnica codigoIsin AR0922852063 (local-law line). BYMA ficha spells issuer 'Pecom Servicios de Energía S.A.U.'.",
+      "law": "AR",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Suscripta, integrada y pagadera en dolares estadounidenses en la Argentina (dolar MEP) - abogados.com.ar deal report + Petrini ('dolar MEP'); BYMA ficha moneda Dolares; trades on O/D/C lines with O/D ratio ~1464 (hard-dollar).",
+      "issueDate": "2026-05-11",
+      "maturity": "2030-05-11",
+      "amountOutstandingUSD": 196759808,
+      "coupon": {
+        "annualRatePct": 7.5,
+        "type": "fixed",
+        "paymentFrequencyMonths": 6,
+        "paymentPattern": "Semiannual in arrears on May 11 and November 11; first coupon 2026-11-11, last on maturity 2030-05-11. Cut-off TIR at issue 7.64% = (1+0.075/2)^2-1 (Petrini).",
+        "nextPaymentDate": "2026-11-11"
+      },
+      "dayCount": "actual/365 (INFERRED: argen.bond coupon table shows 3.78/3.72/3.74 = 7.5*actual days/365 per period; docta accrued 0.616438 per 100 at 2026-06-11 = 7.5%*30/365 from 2026-05-11; aviso de suscripcion not retrieved - unverified against primary)",
+      "amortization": {
+        "type": "bullet",
+        "schedule": [
+          { "date": "2030-05-11", "pctOfOriginalFace": 100.0 }
+        ],
+        "note": "BYMA ficha 'AL VENCIMIENTO'; Petrini 'estructura bullet'; argen.bond cashflow 100% at 2030-05-11. 2030-05-11 is a Saturday - pays next business day 2030-05-13 (docta dtm 1432 from 2026-06-11 lands on 2030-05-13)."
+      },
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "BYMA ficha denominacionMinima 1; data912 order book shows odd lots (82/175 VN bid/ask on MCC3O) corroborating 1 VN minimum."
+      },
+      "tickers": { "ars": "MCC3O", "mep": "MCC3D", "cable": "MCC3C" },
+      "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp 2026-06-10).",
+      "residualValuePer100": 100.0,
+      "remainingCashflows": [
+        { "date": "2026-11-11", "interest": 3.780822, "amortization": 0.0 },
+        { "date": "2027-05-11", "interest": 3.719178, "amortization": 0.0 },
+        { "date": "2027-11-11", "interest": 3.780822, "amortization": 0.0 },
+        { "date": "2028-05-11", "interest": 3.739726, "amortization": 0.0 },
+        { "date": "2028-11-11", "interest": 3.780822, "amortization": 0.0 },
+        { "date": "2029-05-11", "interest": 3.719178, "amortization": 0.0 },
+        { "date": "2029-11-11", "interest": 3.780822, "amortization": 0.0 },
+        { "date": "2030-05-11", "interest": 3.719178, "amortization": 100.0 }
+      ],
+      "remainingCashflowsNote": "Per 100 VN original, act/365 on actual days between scheduled semiannual dates from issue 2026-05-11. Weekend scheduled dates roll without extra accrual: 2028-11-11 (Sat), 2029-11-11 (Sun), 2030-05-11 (Sat, pays 2030-05-13).",
+      "sources": [
+        "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha, symbol MCC3O, fetched 2026-06-11: Clase III, FIJO 7,50%, AL VENCIMIENTO, emision 2026-05-11, vto 2030-05-11, ISIN AR0922852063, monto 196.759.808, denom minima 1, garantia comun)",
+        "https://www.petrini.com.ar/en/obligaciones-negociables-pecom-servicios-energia-s-a-u-clase-iii/ (placement agent: ley argentina, dolar MEP, bullet, cupones semestrales, 7,50% TNA / TIR 7,64%, plazo 48 meses, subasta 2026-05-07)",
+        "https://abogados.com.ar/pecom-servicios-energia-sau-realiza-nueva-emision-de-obligaciones-negociables-dolar-mep-por-us196759808/39212 (deal report: USD 196.759.808, pagaderas en USD en Argentina, listado BYMA/A3)",
+        "https://argen.bond/bonos/MCC3D (independent cashflow re-derivation: Nov-11/May-11 dates, act/365 coupons 3.78/3.72/3.74, bullet)",
+        "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/MCC3D (SSR metrics: tir/tea 7.515%, dirty 101, accrued 0.616438, law Ley Argentina)",
+        "https://data912.com/live/arg_corp (close 2026-06-10: MCC3D 101.0, MCC3O 147900, MCC3C 97.7)"
+      ],
+      "confidence": "medium-high",
+      "confidenceNote": "Coupon/maturity/bullet/min-denom all multi-source (BYMA ficha + placement agent + deal report + 2 independent models); day count and exact payment-date weekday handling inferred from models, primary aviso not retrieved (flag).",
+      "verification": {
+        "status": "verified",
+        "verifiedDate": "2026-06-11",
+        "checkedSources": [
+          { "url": "https://open.bymadata.com.ar/.../fichatecnica (MCC3O)", "what": "Exchange ficha: 7.50% fijo, bullet, 2026-05-11/2030-05-11, ISIN, 196.759.808, denom 1" },
+          { "url": "https://www.petrini.com.ar/en/obligaciones-negociables-pecom-servicios-energia-s-a-u-clase-iii/", "what": "Placement-agent terms: semiannual, bullet, MEP, 48m, TIR 7.64% consistent with 7.50% semiannual" },
+          { "url": "https://argen.bond/bonos/MCC3D + https://app.doctacapital.com.ar/dashboard/market/ON/ticker/MCC3D", "what": "Two independent cashflow models agree on dates, act/365 amounts and bullet structure; docta accrued reproduces act/365 from 2026-05-11" },
+          { "url": "https://iol.invertironline.com/titulo/cotizacion/BCBA/MCC3O + https://www.rava.com/perfil/MCC3O", "what": "Adversarial pass 2026-06-11 (sources not used in spec build): IOL title 'On Pecom Servicios Energia Cl.3 11/05/30 Usd' and Rava 'Clase III' confirm issuer/class/maturity/currency; docta SSR dtm 1432 from 2026-06-11 = 2030-05-13 (rolled maturity) re-fetched and confirmed; PECOM Clase III aviso de suscripcion still unretrievable (Banco Provincia CDN probes return placeholders) - act/365 day count remains model-inferred" }
+        ],
+        "corrections": [],
+        "goldenCheck": {
+          "settlement": "2026-06-11",
+          "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+          "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+          "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/MCC3D (SSR 'tea'/'tir', same dirty price 101.0, dataUpdatedAt 2026-06-11T04:58Z)",
+          "ticker": "MCC3D",
+          "dirtyPriceUSD": 101.0,
+          "computedTIRPct": 7.5251,
+          "publishedTIRPct": 7.515,
+          "deltaPp": 0.0101,
+          "pass": true,
+          "note": "Residual +0.01pp because docta discounts the final flow to the rolled payment date 2030-05-13 while spec uses scheduled 2030-05-11."
+        }
+      }
+    },
+    {
+      "base": "DNC7",
+      "name": "Edenor ON Clase 7 (Senior Notes) 9,75% 2030 (USD, Ley NY)",
+      "issuer": {
+        "legalName": "Empresa Distribuidora y Comercializadora Norte S.A. (EDENOR S.A.)",
+        "sector": "electricity distribution"
+      },
+      "isin": "USP3710FAU86",
+      "isinDetail": "BYMA line = RegS USP3710FAU86 (CUSIP P3710F AU8); 144A US29244AAM45 (CUSIP 29244A AM4) trades offshore - both per SEC 6-K 2026-04-29 tender results.",
+      "law": "NY",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "6-K: 'Senior Notes Class 7, denominated and payable in U.S. Dollars abroad'; OM: denominated in U.S. Dollars, payments of principal and interest in U.S. Dollars.",
+      "issueDate": "2024-10-24",
+      "maturity": "2030-10-24",
+      "amountOutstandingUSD": 300000000,
+      "amountNotes": "U.S.$385,000,000 issued under base indenture dated 2024-10-24 (original + exchange tranches), + U.S.$90,000,000 additional notes Feb-2026 (third supplemental indenture) = 475,000,000; minus U.S.$175,000,000 repurchased and cancelled in the Apr-2026 cash tender (early settlement 2026-04-30) = 300,000,000 (BYMA ficha montoResidual 300,000,000; 1Q26 presentation 'reducing Senior Note Class 7 to USD 300 M'). Tender cancels notes pro-rata across holders; per-100-VN-original cashflows of remaining notes unchanged.",
+      "coupon": {
+        "annualRatePct": 9.75,
+        "type": "fixed",
+        "paymentFrequencyMonths": 6,
+        "paymentPattern": "Semiannual in cash, in arrears on April 24 and October 24 of each year (OM); last on maturity 2030-10-24.",
+        "nextPaymentDate": "2026-10-24"
+      },
+      "dayCount": "30/360 (OM 'Description of the Notes': 'Interest will be computed on the basis of a 360-day year of twelve 30-day months')",
+      "amortization": {
+        "type": "installments",
+        "schedule": [
+          { "date": "2028-10-24", "pctOfOriginalFace": 33.33 },
+          { "date": "2029-10-24", "pctOfOriginalFace": 33.33 },
+          { "date": "2030-10-24", "pctOfOriginalFace": 33.34 }
+        ],
+        "note": "OM: 'principal in instalments... 33.33% October 24, 2028; 33.33% October 24, 2029; 33.34%* October 24, 2030 (*final payment is the remaining principal amount)'. Matches BYMA ficha 'EN TRES PAGOS, DOS DE 33,33% Y EL ULTIMO DE 33,34%' and issuer IR page dates."
+      },
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 100.0,
+        "detail": "OM: 'denominations of U.S.$100 and integral multiples of U.S.$1.00 in excess thereof'; BYMA ficha denominacionMinima 100; data912 order-book quantities on D/C lines in round multiples of 100."
+      },
+      "tickers": { "ars": "DNC7O", "mep": "DNC7D", "cable": "DNC7C" },
+      "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp 2026-06-10).",
+      "residualValuePer100": 100.0,
+      "remainingCashflows": [
+        { "date": "2026-10-24", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2027-04-24", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2027-10-24", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2028-04-24", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2028-10-24", "interest": 4.875, "amortization": 33.33 },
+        { "date": "2029-04-24", "interest": 3.250163, "amortization": 0.0 },
+        { "date": "2029-10-24", "interest": 3.250163, "amortization": 33.33 },
+        { "date": "2030-04-24", "interest": 1.625325, "amortization": 0.0 },
+        { "date": "2030-10-24", "interest": 1.625325, "amortization": 33.34 }
+      ],
+      "remainingCashflowsNote": "Per 100 VN original, 30/360: 4.875 on 100 outstanding; 3.250163 on 66.67 after 2028-10-24; 1.625325 on 33.34 after 2029-10-24. Weekend scheduled dates roll without extra accrual: 2026-10-24 (Sat), 2027-04-24 (Sat), 2027-10-24 (Sun).",
+      "sources": [
+        "https://www.edenor.com/files/investors/2026-02/Final_Offering_Memorandum.pdf (PRIMARY: Feb-2026 additional-notes OM; coupon dates, 33.33/33.33/33.34 instalments, denominations US$100+US$1, 30/360, NY governing law, US$90M add-on over US$385M initial)",
+        "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002671/edn20260429_6k.htm (tender results: ISINs/CUSIPs, outstanding 475M as of 2026-04-15, cap raised to 175M, early settlement 2026-04-30, proration 64.73%)",
+        "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002901/ednpr1q26_6k.htm (1Q26 presentation: Class 7 reduced to USD 300M market size)",
+        "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha DNC7O fetched 2026-06-11: Clase 7, 9,75%, tres pagos 33,33/33,33/33,34, ISIN USP3710FAU86, montoResidual 300.000.000, denom minima 100, emision 2024-10-24)",
+        "https://www.edenor.com/inversores/es/informacion-financiera/titulos-de-deuda (issuer IR: Clase 7 amortization dates 24/10/2028, 24/10/2029, 24/10/2030)",
+        "https://argen.bond/bonos/DNC7D (independent cashflow re-derivation matches incl. residual steps 66.67/33.34)",
+        "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/DNC7D (tir/tea 7.4973%, dirty 108.2, accrued 1.255479 = 9.75%*47/365 from 2026-04-24)",
+        "https://data912.com/live/arg_corp (close 2026-06-10: DNC7D 108.2, DNC7O 158770, DNC7C 104.65)"
+      ],
+      "confidence": "high",
+      "confidenceNote": "All economic terms verified against the offering memorandum (primary) and SEC 6-Ks; outstanding amount triangulated BYMA ficha + issuer presentation.",
+      "verification": {
+        "status": "verified",
+        "verifiedDate": "2026-06-11",
+        "checkedSources": [
+          { "url": "https://www.edenor.com/files/investors/2026-02/Final_Offering_Memorandum.pdf", "what": "PRIMARY: semiannual Apr-24/Oct-24, 33.33/33.33/33.34 instalments 2028-30, US$100+US$1 denominations, 30/360, NY law" },
+          { "url": "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002671/edn20260429_6k.htm", "what": "ISINs 144A US29244AAM45 / RegS USP3710FAU86; USD 175M tender accepted, early settlement 2026-04-30" },
+          { "url": "https://argen.bond/bonos/DNC7D + docta DNC7D", "what": "Independent models reproduce identical amortization steps and coupon amounts; docta accrued confirms Apr-24 last coupon" },
+          { "url": "https://www.oblible.com/bond-USP3710FAU86.htm + https://iol.invertironline.com/titulo/cotizacion/BCBA/DNC7O + https://www.rava.com/perfil/DNC7O", "what": "Adversarial pass 2026-06-11 (sources not used in spec build): oblible confirms CUSIP P3710FAU8, 9.75% 2x/year, maturity 24/10/2030, next coupon 24/10/2026, B-/B3; IOL and Rava titles confirm 'Edenor Clase VII 9.75% vto 24/10/2030'; docta SSR dtm 1596 = 2030-10-24 re-fetched; tender math 385+90-175=300M re-checked" }
+        ],
+        "corrections": [
+          "Docta metadata labels DNC7D 'Ley Argentina' - wrong; OM states Notes and Indenture governed by NY law (Argentine law only for corporate capacity/ON qualification matters).",
+          "argen.bond headline 'TIR (YTM) 8.86%' inconsistent with its own cashflow table at dirty 108.2; not used."
+        ],
+        "goldenCheck": {
+          "settlement": "2026-06-11",
+          "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+          "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+          "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/DNC7D (SSR 'tea'/'tir', same dirty price 108.2, dataUpdatedAt 2026-06-11T04:58Z)",
+          "ticker": "DNC7D",
+          "dirtyPriceUSD": 108.2,
+          "computedTIRPct": 7.4988,
+          "publishedTIRPct": 7.4973,
+          "deltaPp": 0.0016,
+          "pass": true
+        }
+      }
+    },
+    {
+      "base": "RUCD",
+      "name": "MSU Energy ON Clase XII / Senior Secured Notes 9,75% 2030 (USD, Ley NY)",
+      "issuer": {
+        "legalName": "MSU Energy S.A.",
+        "sector": "power generation (thermal)"
+      },
+      "isin": "USP7000QAJ96",
+      "isinDetail": "BYMA line = RegS USP7000QAJ96 (BYMA ficha + oblible). 144A ISIN not confirmed (null). BYMA ficha denominates the line 'Clase XII Serie B'; the 400M aggregate combines the exchange tranche (USD 223,352,460 new notes for USD 218,973,000 of 6.875% 2025s, closed 2024-12-12) and the new-money tranche (USD 176,647,540, closed 2024-12-05), fungible single line accruing from 2024-12-05.",
+      "law": "NY",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "144A/RegS international senior secured notes denominated and payable in USD (issuer FS Note 10 in USD; docta law 'Ley N.Y.'; IOL/argen.bond label 'RegS'); secured by fiduciary assignment of PPA receivables (Cammesa) and equipment pledges over Barker, Villa Maria and General Rojo plants - BYMA ficha 'Fideicomiso y Prenda Real'.",
+      "issueDate": "2024-12-05",
+      "maturity": "2030-12-05",
+      "amountOutstandingUSD": 400000000,
+      "coupon": {
+        "annualRatePct": 9.75,
+        "type": "fixed",
+        "paymentFrequencyMonths": 6,
+        "paymentPattern": "Semiannual on June 5 and December 5 of each year, commencing 2025-06-05 (issuer FS Note 10); last on maturity 2030-12-05.",
+        "nextPaymentDate": "2026-12-05"
+      },
+      "dayCount": "30/360 assumed (NY-law 144A/RegS standard; flat 4.875 semiannual coupons reproduced by argen.bond and consistent with docta accrued 0.160274 = 9.75%*6/365 act/365 accrual model from 2026-06-05; offering memorandum not retrieved - unverified)",
+      "amortization": {
+        "type": "installments",
+        "schedule": [
+          { "date": "2028-12-05", "pctOfOriginalFace": 17.5 },
+          { "date": "2029-12-05", "pctOfOriginalFace": 17.5 },
+          { "date": "2030-12-05", "pctOfOriginalFace": 65.0 }
+        ],
+        "note": "PRIMARY issuer FS 30-09-2025 Note 10: 'amortized in three instalments: 17.5% Dec 5 2028; 17.5% Dec 5 2029; 65% Dec 5 2030'. BYMA ficha says 'En tres cuotas' (no pcts). NOT 33/33/34 - distinct from the Edenor pattern; argen.bond table matches 17.5/17.5/65."
+      },
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "BYMA ficha denominacionMinima 1; data912 order book shows odd lots (2014/3887 VN on RUCDD, 925/126 on RUCDO) corroborating 1 VN local minimum. Offshore global-note minimum denominations may differ (unverified)."
+      },
+      "tickers": { "ars": "RUCDO", "mep": "RUCDD", "cable": null },
+      "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP; no cable line observed on data912 (inventory cable=null).",
+      "residualValuePer100": 100.0,
+      "remainingCashflows": [
+        { "date": "2026-12-05", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2027-06-05", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2027-12-05", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2028-06-05", "interest": 4.875, "amortization": 0.0 },
+        { "date": "2028-12-05", "interest": 4.875, "amortization": 17.5 },
+        { "date": "2029-06-05", "interest": 4.021875, "amortization": 0.0 },
+        { "date": "2029-12-05", "interest": 4.021875, "amortization": 17.5 },
+        { "date": "2030-06-05", "interest": 3.16875, "amortization": 0.0 },
+        { "date": "2030-12-05", "interest": 3.16875, "amortization": 65.0 }
+      ],
+      "remainingCashflowsNote": "Per 100 VN original, 30/360: 4.875 on 100; 4.021875 on 82.5 after 2028-12-05; 3.16875 on 65 after 2029-12-05. Weekend scheduled dates roll without extra accrual: 2026-12-05 (Sat), 2027-06-05 (Sat), 2027-12-05 (Sun).",
+      "sources": [
+        "https://msuenergy.com/wp-content/uploads/2025/11/USD-ENG-MSU-ENERGY-SA-30.09.25-VF-signed.pdf (PRIMARY: issuer unaudited interim FS 30-09-2025, Note 10(a): full terms incl. 17.5/17.5/65 amortization, Jun-5/Dec-5 coupons from 2025-06-05, exchange + new-money amounts)",
+        "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha RUCDO fetched 2026-06-11: Clase XII Serie B, 9.75%, 'En tres cuotas', ISIN USP7000QAJ96, 400.000.000, denom minima 1, Fideicomiso y Prenda Real, suplemento difundido 12-11-2024)",
+        "https://tavarone.com/msu-energy-s-a-realiza-una-oferta-de-canje-y-una-nueva-emision-internacional-de-obligaciones-negociables-garantizadas-por-us-400-000-000/?lang=en (deal counsel: USD 400M = 223,352,460 exchange + 176,647,540 new money; collateral package; closings 2024-12-05 / 2024-12-12)",
+        "https://www.oblible.com/bond-USP7000QAJ96.htm (9.75%, 2x/year, next coupon 2026-12-05, maturity 2030-12-05)",
+        "https://argen.bond/bonos/RUCDD (independent cashflow re-derivation: 17.5/17.5/65, residual steps 82.5/65, flat 4.88 coupons)",
+        "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/RUCDD (tir/tea 8.2149%, dirty 105.75, accrued 0.160274 from 2026-06-05, law Ley N.Y.)",
+        "https://data912.com/live/arg_corp (close 2026-06-10: RUCDD 105.75, RUCDO 153400)"
+      ],
+      "confidence": "high",
+      "confidenceNote": "Amortization/coupon dates/rate from issuer financial statements (primary); day count assumed 30/360 (flag); 144A ISIN and offshore denominations unconfirmed.",
+      "verification": {
+        "status": "verified",
+        "verifiedDate": "2026-06-11",
+        "checkedSources": [
+          { "url": "https://msuenergy.com/wp-content/uploads/2025/11/USD-ENG-MSU-ENERGY-SA-30.09.25-VF-signed.pdf", "what": "PRIMARY Note 10(a): 400M, 2030-12-05, 17.5%/17.5%/65% on Dec-5 2028/29/30, 9.750% fixed, Jun-5/Dec-5 from 2025-06-05" },
+          { "url": "https://open.bymadata.com.ar/.../fichatecnica (RUCDO)", "what": "Exchange ficha agrees: tres cuotas, 9.75%, ISIN, secured, 400M, vto 2030-12-05" },
+          { "url": "https://argen.bond/bonos/RUCDD + docta RUCDD", "what": "Independent models reproduce 17.5/17.5/65 schedule and coupon step-downs; docta accrued confirms Jun-5 last coupon" },
+          { "url": "https://msuenergy.com/wp-content/uploads/2025/05/MSU-Energy-1Q25-Earnings-Presentation.pdf + https://iol.invertironline.com/titulo/cotizacion/BCBA/RUCDO + https://www.oblible.com/bond-USP7000QAJ96.htm", "what": "Adversarial pass 2026-06-11 (sources not used in spec build): MSU 1Q25 earnings presentation verbatim '2030 Senior Secured International Notes US$400mm @ 9.75% - Amortization: 17.5% in 2028, 17.5% in 2029 and 65% in 2030'; IOL title 'Msu Energy S.A. Regs 9.75% Vto. 05/12/30'; oblible next coupon 05/12/2026; docta SSR dtm 1638 = 2030-12-05 re-fetched" }
+        ],
+        "corrections": [
+          "argen.bond headline 'TIR (YTM) 9.4%' inconsistent with its own cashflow table at dirty 105.75; not used.",
+          "Initial Dec-2024 press summaries (search snippets) often omit the amortization; BYMA ficha gives no percentages - issuer FS is the binding source for 17.5/17.5/65."
+        ],
+        "goldenCheck": {
+          "settlement": "2026-06-11",
+          "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+          "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+          "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/RUCDD (SSR 'tea'/'tir', same dirty price 105.75, dataUpdatedAt 2026-06-11T04:58Z)",
+          "ticker": "RUCDD",
+          "dirtyPriceUSD": 105.75,
+          "computedTIRPct": 8.2164,
+          "publishedTIRPct": 8.2149,
+          "deltaPp": 0.0015,
+          "pass": true
+        }
+      }
+    },
+    {
+      "base": "DNCA",
+      "name": "Edenor ON Clase 10 (Senior Notes) 9,50% 2033 (USD, Ley NY)",
+      "issuer": {
+        "legalName": "Empresa Distribuidora y Comercializadora Norte S.A. (EDENOR S.A.)",
+        "sector": "electricity distribution"
+      },
+      "isin": "USP3710FBA14",
+      "isinDetail": "BYMA ficha codigoIsin USP3710FBA14 (RegS line). 144A ISIN not confirmed (null). Issued in two series settled same day: Series 1 USD 523,338,243 + Series 2 USD 26,661,757 (1Q26 presentation), listed as one 550M line on BYMA.",
+      "law": "NY",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "International 144A/RegS senior notes under the same global program as Clase 7 ('new notes offering' funding the Clase 7 USD tender; Clifford Chance deal note); docta law 'Ley N.Y.'; BYMA moneda Dolares; O/D ratio ~1454 (hard-dollar).",
+      "issueDate": "2026-04-28",
+      "maturity": "2033-04-28",
+      "amountOutstandingUSD": 550000000,
+      "coupon": {
+        "annualRatePct": 9.5,
+        "type": "fixed",
+        "paymentFrequencyMonths": 6,
+        "paymentPattern": "Semiannual on April 28 and October 28 (issuer 1Q26 presentation: '9.5% nominal annual - paid semi-annually'; argen.bond/docta confirm Apr-28/Oct-28 grid); first coupon 2026-10-28, last on maturity 2033-04-28. Priced 2026-04-22 at 98.889% (yield 9.75%).",
+        "nextPaymentDate": "2026-10-28"
+      },
+      "dayCount": "30/360 assumed (same Edenor global program as Clase 7, whose OM states 30/360 explicitly; flat 4.75 semiannual coupons reproduced by argen.bond; Clase 10 OM not retrieved - unverified)",
+      "amortization": {
+        "type": "installments",
+        "schedule": [
+          { "date": "2031-04-28", "pctOfOriginalFace": 33.33 },
+          { "date": "2032-04-28", "pctOfOriginalFace": 33.33 },
+          { "date": "2033-04-28", "pctOfOriginalFace": 33.34 }
+        ],
+        "note": "Issuer 1Q26 presentation (SEC 6-K): 'Amortization: 33.33% on 4/28/31; 33.33% on 4/28/32; 33.34% on 4/28/33'. Matches BYMA ficha 'EN TRES PAGOS, DOS DE 33,33% Y LA ULTIMA DE 33,34%'."
+      },
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "BYMA ficha denominacionMinima 1 - FLAG: sister Clase 7 has US$100 minimum (OM) and BYMA shows 100 there; Clase 10 OM not retrieved, and data912 order-book quantities on DNCA lines are round multiples of 100, so the true offshore minimum may be US$100. Using BYMA exchange value 1 with this caveat."
+      },
+      "tickers": { "ars": "DNCAO", "mep": "DNCAD", "cable": "DNCAC" },
+      "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp 2026-06-10).",
+      "residualValuePer100": 100.0,
+      "remainingCashflows": [
+        { "date": "2026-10-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2027-04-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2027-10-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2028-04-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2028-10-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2029-04-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2029-10-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2030-04-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2030-10-28", "interest": 4.75, "amortization": 0.0 },
+        { "date": "2031-04-28", "interest": 4.75, "amortization": 33.33 },
+        { "date": "2031-10-28", "interest": 3.166825, "amortization": 0.0 },
+        { "date": "2032-04-28", "interest": 3.166825, "amortization": 33.33 },
+        { "date": "2032-10-28", "interest": 1.58365, "amortization": 0.0 },
+        { "date": "2033-04-28", "interest": 1.58365, "amortization": 33.34 }
+      ],
+      "remainingCashflowsNote": "Per 100 VN original, 30/360: 4.75 on 100; 3.166825 on 66.67 after 2031-04-28; 1.58365 on 33.34 after 2032-04-28. Weekend scheduled dates roll without extra accrual: 2028-10-28 (Sat), 2029-04-28 (Sat), 2029-10-28 (Sun), 2030-04-28 (Sun).",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002901/ednpr1q26_6k.htm (PRIMARY issuer 1Q26 presentation: pricing 2026-04-22, issue/closing 2026-04-28, USD 550M in two series, 9.5% semiannual, yield 9.75%, price 98.889%, amortization 33.33/33.33/33.34 on 4/28/31-33, ratings B-/B3; concurrent Clase 7 tender)",
+        "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha DNCAO fetched 2026-06-11: Clase 10, FIJO 9.50%, tres pagos 33,33/33,33/33,34, ISIN USP3710FBA14, 550.000.000, emision 2026-04-28, vto 2033-04-28, denom minima 1)",
+        "https://www.cliffordchance.com/news/news/2026/05/clifford-chance-advises-on-edenor-s-new-notes-issuance-and-concu.html (deal counsel: new notes issuance + concurrent tender offer)",
+        "https://argen.bond/bonos/DNCAD (independent cashflow re-derivation: Apr-28/Oct-28 grid, flat 4.75, 33.33/33.33/33.34 with residual steps 66.67/33.34)",
+        "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/DNCAD (tir/tea 8.7983%, dirty 105.1, accrued 1.119178 = 9.5%*43/365 from 2026-04-28, law Ley N.Y.)",
+        "https://data912.com/live/arg_corp (close 2026-06-10: DNCAD 105.1, DNCAO 152810, DNCAC 101.25)"
+      ],
+      "confidence": "medium-high",
+      "confidenceNote": "Rate/amount/amortization/issue terms from issuer presentation (primary) + BYMA ficha; coupon dates Apr-28/Oct-28 corroborated by two models + accrued math but the Clase 10 OM itself not retrieved; day count assumed 30/360; 144A ISIN and minimum denomination unconfirmed (flags).",
+      "verification": {
+        "status": "verified",
+        "verifiedDate": "2026-06-11",
+        "checkedSources": [
+          { "url": "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002901/ednpr1q26_6k.htm", "what": "PRIMARY: 9.5% semiannual, 98.889%, amortization 33.33% 4/28/31, 33.33% 4/28/32, 33.34% 4/28/33, USD 550M, issuance 2026-04-28" },
+          { "url": "https://open.bymadata.com.ar/.../fichatecnica (DNCAO)", "what": "Exchange ficha agrees on all of: rate, three payments, ISIN, amount, dates" },
+          { "url": "https://argen.bond/bonos/DNCAD + docta DNCAD", "what": "Independent models reproduce the Apr-28/Oct-28 grid and step-down coupons; docta accrued (43 days) confirms accrual from 2026-04-28" },
+          { "url": "https://www.oblible.com/bond-USP3710FBA14.htm + https://iol.invertironline.com/titulo/cotizacion/BCBA/DNCAO + https://cbonds.com/bonds/2132307/", "what": "Adversarial pass 2026-06-11 (sources not used in spec build): oblible confirms 9.5% 2x/year, next coupon 28/10/2026 (its maturity row shows 27/04/2033, a site-wide off-by-one quirk also seen on its MSU page - disregarded vs BYMA/SEC/docta dtm 2513 = 2033-04-28); IOL title 'On Edenor 9.5% Vto. 28/04/33'; cbonds lists Edenor 9.5% 28apr2033 RegS; press coverage corroborates staggered maturities 2031-2033" }
+        ],
+        "corrections": [
+          "argen.bond headline TIR for DNCAD shows 0.01% (broken field on their page); cashflow table is fine; not used as benchmark.",
+          "Edenor IR 'titulos de deuda' page is stale: still lists Clase 7 at USD 475M and omits Clase 10 (as of 2026-06-11)."
+        ],
+        "goldenCheck": {
+          "settlement": "2026-06-11",
+          "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+          "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+          "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/DNCAD (SSR 'tea'/'tir', same dirty price 105.1, dataUpdatedAt 2026-06-11T04:58Z)",
+          "ticker": "DNCAD",
+          "dirtyPriceUSD": 105.1,
+          "computedTIRPct": 8.7994,
+          "publishedTIRPct": 8.7983,
+          "deltaPp": 0.0012,
+          "pass": true
+        }
+      }
+    },
+    {
+      "base": "PQCS",
+      "name": "PCR ON Clase S 8,00% 2031 (USD MEP, Ley Arg.)",
+      "issuer": {
+        "legalName": "Petroquímica Comodoro Rivadavia S.A.",
+        "sector": "cement / petrochemicals / renewables"
+      },
+      "isin": "AR0309447628",
+      "isinDetail": "BYMA ficha codigoIsin AR0309447628 (local-law line).",
+      "law": "AR",
+      "currencyOfPayment": "USD",
+      "currencyOfPaymentEvidence": "Denominadas en dolares y pagaderas en dolares en la Argentina (dolar MEP) - eolomedia deal report; BYMA moneda Dolares; docta law 'Ley Argentina'; O/D ratio ~1455 (hard-dollar).",
+      "issueDate": "2025-02-17",
+      "maturity": "2031-02-17",
+      "amountOutstandingUSD": 65000000,
+      "coupon": {
+        "annualRatePct": 8.0,
+        "type": "fixed",
+        "paymentFrequencyMonths": 6,
+        "paymentPattern": "Semiannual on February 17 and August 17 of each year, first coupon 2025-08-17, last on maturity 2031-02-17 (eolomedia; argen.bond grid). Subasta 2025-02-12, emision/liquidacion 2025-02-17 (72-month term).",
+        "nextPaymentDate": "2026-08-17"
+      },
+      "dayCount": "actual/365 (PRIMARY-VERIFIED: Aviso de Suscripcion Clase S 06-02-2025 item 15 'Base de Calculo para el pago de intereses: cantidad real de dias transcurridos y un ano de 365 dias (cantidad real de dias transcurridos/365)'; accrual periods include first day, exclude last)",
+      "amortization": {
+        "type": "bullet",
+        "schedule": [
+          { "date": "2031-02-17", "pctOfOriginalFace": 100.0 }
+        ],
+        "note": "PRIMARY Aviso de Suscripcion item 12: 'El capital... sera repagado en un unico pago en la Fecha de Vencimiento'; rolls to next business day if non-business day. BYMA ficha 'AL VENCIMIENTO'; argen.bond cashflow 100% at 2031-02-17."
+      },
+      "minDenomination": {
+        "currency": "USD",
+        "amount": 1.0,
+        "detail": "PRIMARY Aviso de Suscripcion items 18-20: Denominacion Minima V/N US$1, Unidad Minima de Negociacion V/N US$1, Monto Minimo de Suscripcion US$50 (at issue). BYMA ficha denominacionMinima 1; data912 order book shows odd lots (22359/599 VN on PQCSD, 1910/164 on PQCSO)."
+      },
+      "tickers": { "ars": "PQCSO", "mep": "PQCSD", "cable": null },
+      "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP; no cable line observed on data912 (inventory cable=null).",
+      "residualValuePer100": 100.0,
+      "remainingCashflows": [
+        { "date": "2026-08-17", "interest": 3.967123, "amortization": 0.0 },
+        { "date": "2027-02-17", "interest": 4.032877, "amortization": 0.0 },
+        { "date": "2027-08-17", "interest": 3.967123, "amortization": 0.0 },
+        { "date": "2028-02-17", "interest": 4.032877, "amortization": 0.0 },
+        { "date": "2028-08-17", "interest": 3.989041, "amortization": 0.0 },
+        { "date": "2029-02-17", "interest": 4.032877, "amortization": 0.0 },
+        { "date": "2029-08-17", "interest": 3.967123, "amortization": 0.0 },
+        { "date": "2030-02-17", "interest": 4.032877, "amortization": 0.0 },
+        { "date": "2030-08-17", "interest": 3.967123, "amortization": 0.0 },
+        { "date": "2031-02-17", "interest": 4.032877, "amortization": 100.0 }
+      ],
+      "remainingCashflowsNote": "Per 100 VN original, act/365 on actual days between scheduled semiannual dates from 2025-02-17. Weekend scheduled dates roll without extra accrual: 2029-02-17 (Sat), 2030-02-17 (Sun), 2030-08-17 (Sat).",
+      "sources": [
+        "https://www.petrini.com.ar/wp-content/uploads/2025/02/MPMAE-ANU-ON-PETROQUMICA-COMODORO-RIVADAVIA-CLASE-S-Aviso-de-Suscripcion-06-02-25-1.pdf (PRIMARY: Aviso de Suscripcion 06-02-2025; retrieved 2026-06-11 by adversarial verifier: emision/liquidacion 17-02-2025, vencimiento 17-02-2031, amortizacion unico pago al vencimiento, base actual/365, denominacion minima US$1, monto minimo de suscripcion US$50, USD pagadero en Argentina (dolar MEP), emisor frecuente, hasta US$35M ampliable a US$65M)",
+        "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha PQCSO fetched 2026-06-11: Clase S, FIJO 8%, AL VENCIMIENTO, emision 2025-02-17, vto 2031-02-17, ISIN AR0309447628, 65.000.000, denom minima 1, garantia comun)",
+        "https://eolomedia.com.ar/pcr-obtuvo-una-alta-demanda-y-logro-us-65-millones-en-el-mercado/ (deal report: USD 65M, 8% fija, 72 meses, intereses semestrales 17-Feb/17-Ago, dolar MEP, subasta 2025-02-12, liquidacion 2025-02-17, demanda 79.4M)",
+        "https://abogados.com.ar/index.php/bruchou-funes-de-rioja-y-tca-tanoira-cassagne-asesoraron-en-la-exitosa-emision-de-las-obligaciones-negociables-clase-s-de-petroquimica-comodoro-rivadavia-sa/36373 (deal counsel confirmation of Clase S issuance)",
+        "https://argen.bond/bonos/PQCSD (independent cashflow re-derivation: Feb-17/Aug-17 grid, act/365 coupons 3.97/4.03/3.99, bullet 2031-02-17)",
+        "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/PQCSD (tir/tea 8.1816%, dirty 102.4, accrued 2.498630, law Ley Argentina)",
+        "https://data912.com/live/arg_corp (close 2026-06-10: PQCSD 102.4, PQCSO 149000)"
+      ],
+      "confidence": "high",
+      "confidenceNote": "All economic terms now primary-verified: Aviso de Suscripcion (retrieved 2026-06-11) confirms act/365 base, bullet, dates, US$1 minimum denomination, MEP payment; previously day count was only model-inferred.",
+      "verification": {
+        "status": "verified",
+        "verifiedDate": "2026-06-11",
+        "checkedSources": [
+          { "url": "https://www.petrini.com.ar/wp-content/uploads/2025/02/MPMAE-ANU-ON-PETROQUMICA-COMODORO-RIVADAVIA-CLASE-S-Aviso-de-Suscripcion-06-02-25-1.pdf", "what": "PRIMARY (adversarial pass 2026-06-11): base de calculo actual/365 verbatim, unico pago al vencimiento 17-02-2031, emision 17-02-2025, denominacion minima US$1, dolar MEP - upgrades the previously inferred day count" },
+          { "url": "https://open.bymadata.com.ar/.../fichatecnica (PQCSO)", "what": "Exchange ficha: 8% fijo, bullet, 2025-02-17/2031-02-17, ISIN, 65M, denom 1" },
+          { "url": "https://eolomedia.com.ar/pcr-obtuvo-una-alta-demanda-y-logro-us-65-millones-en-el-mercado/", "what": "Deal terms: semiannual Feb-17/Aug-17, MEP, 72 months, 8% fixed" },
+          { "url": "https://argen.bond/bonos/PQCSD + docta PQCSD", "what": "Independent models agree on dates, act/365 amounts (incl. 3.99 leap-period coupon 2028-08-17) and bullet structure; docta accrued reproduces act/365 from 2026-02-17" }
+        ],
+        "corrections": [],
+        "goldenCheck": {
+          "settlement": "2026-06-11",
+          "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+          "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+          "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/PQCSD (SSR 'tea'/'tir', same dirty price 102.4, dataUpdatedAt 2026-06-11T04:58Z)",
+          "ticker": "PQCSD",
+          "dirtyPriceUSD": 102.4,
+          "computedTIRPct": 8.1816,
+          "publishedTIRPct": 8.1816,
+          "deltaPp": 0.0,
+          "pass": true
+        }
+      }
+    }
+  ],
+  "notes": [
+    "BYMA open-data ficha tecnica used as exchange-level source for all five (ISIN, amortization form, min denomination, outstanding, issue/maturity dates); fetched 2026-06-11.",
+    "Key findings this batch: (1) RUCD amortizes 17.5/17.5/65 (issuer FS) - NOT the 33/33/34 pattern BYMA's unquantified 'en tres cuotas' might suggest; (2) DNC7 outstanding fell 475M -> 300M via the Apr-2026 cash tender (settled 2026-04-30) funded by the new Clase 10 (DNCA) - tendered notes cancelled, per-100-VN cashflows of survivors unchanged; (3) MCC3 was issued 2026-05-11 (one month ago) - several press summaries misdate it to 2025; (4) local-law MEP classes (MCC3, PQCS) accrue act/365 with varying coupons per the calculators, while the NY-law internationals (DNC7, RUCD, DNCA) pay flat 30/360 coupons; (5) docta labels DNC7D 'Ley Argentina' - wrong per OM (NY law).",
+    "Golden TIR benchmark source: Docta Capital SSR 'tea' (effective annual at the same data912 dirty close, settlement 2026-06-11). All five pass with |delta| <= 0.0101pp. argen.bond cashflow tables used as second independent structure check (its headline YTMs for DNC7D/RUCDD are internally inconsistent and were not used).",
+    "IAMC Informe Diario de Deuda Corporativa (used in part3) now requires login (unauthorizedlogin redirect) - not used this batch.",
+    "Outstanding open items: MCC3 aviso de suscripcion (day count + business-day convention; PQCS aviso retrieved 2026-06-11 and verified), DNCA offering memorandum (day count, 144A ISIN, true minimum denomination - possibly US$100 like Clase 7), RUCD offering memorandum (day count, 144A ISIN, offshore denominations).",
+    "ADVERSARIAL VERIFICATION PASS 2026-06-11: all five instruments re-checked against sources not used in the spec build (IOL titles, Rava titles, oblible, cbonds search, MSU 1Q25 earnings presentation, PCR Clase S Aviso de Suscripcion PDF). All five golden IRRs independently recomputed from the spec remainingCashflows at data912 close (re-fetched: MCC3D 101.0, DNC7D 108.2, RUCDD 105.75, DNCAD 105.1, PQCSD 102.4 - unchanged) and docta SSR tea re-fetched (timestamps 2026-06-11T03:13Z): MCC3 7.5251 vs 7.5150 (+0.0101pp), DNC7 7.4988 vs 7.4973 (+0.0015pp), RUCD 8.2164 vs 8.2149 (+0.0015pp), DNCA 8.7994 vs 8.7983 (+0.0011pp), PQCS 8.1816 vs 8.1816 (0.0000pp) - all pass. Coupon arithmetic (act/365 day counts per period; 30/360 step-downs on 66.67/33.34/82.5/65 residuals), amortization sums to 100, weekend-date claims, docta dtm-to-maturity mapping, and DNC7 tender math (385+90-175=300M) all re-derived exactly. No errors found; PQCS day count and minimum denomination upgraded from inferred to primary-verified (Aviso de Suscripcion). No canje-basis issue: docta's published tea sits on the same D-line dirty close for all five (C-lines trade lower: MCC3C 97.7, DNC7C 104.65, DNCAC 101.25)."
+  ]
+}

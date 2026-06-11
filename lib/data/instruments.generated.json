@@ -1541,6 +1541,9 @@
    },
    "law": "AR",
    "sector": "bank (largest private bank; Grupo Financiero Galicia)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2025/11/MPA3-ANU-ON-EF-BANCO-DE-GALICIA-CLASE-XXX-Aviso-de-Suscripcion-10-11-25.pdf (aviso de suscripcion Clase XXX, 2025-11-10 - primary; issue date, maturity, bullet, actual/365, min VN 1.000)",
     "https://beccarvarela.com/novedades/beccar-varela-asesora-en-la-emision-de-las-clases-xxx-y-xxxi-de-ons-de-banco-galicia/ (deal counsel: 6.00% fixed, US$144,323,518, semiannual interest, bullet 2026-11-30, ML A-1.ar)",
@@ -1551,6 +1554,142 @@
     {
      "date": "2026-11-30",
      "interest": 3.2877,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "CICBO",
+   "name": "CNH Industrial Capital Argentina ON Clase 11 7,50% 2029 (USD MEP, Ley AR)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2026-02-09",
+   "maturity": "2029-02-09",
+   "minLot": 1,
+   "tickers": {
+    "ars": "CICBO",
+    "mep": "CICBD"
+   },
+   "law": "AR",
+   "issuer": "CNH Industrial Capital Argentina S.A.",
+   "sector": "captive finance (ag/industrial equipment)",
+   "rating": "AA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    {
+     "url": "https://www.petrini.com.ar/wp-content/uploads/2026/02/MPA3-ANU-ON-CNHI-CLASE-11-Aviso-de-Suscripcion-02-02-26.pdf",
+     "what": "PRIMARY aviso de suscripción 2026-02-02 (mirror of CNV-filed doc): MEP payment, act/365, semiannual día-idéntico dates, bullet 36 months, denominación mínima US$1, call at 101% from 18m before maturity, ley AR, emisor frecuente N°20"
+    },
+    {
+     "url": "https://www.aunoabogados.com.ar/secciones/transacciones/5000-cnh-industrial-capital-argentina-emitio-obligaciones-negociables",
+     "what": "deal counsel note: US$46.506.336, 7,50% fija, emisión 2026-02-09, vto 2029-02-09"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol CICBO, fetched 2026-06-11): ISIN AR0416016134, Clase 11, FIJO 7,50%, vto 2029-02-09, AL VENCIMIENTO, denominacionMinima 1, montoResidual 46.506.336"
+    },
+    {
+     "url": "https://www.fixscr.com/reportes-web/view?id=58773",
+     "what": "FIX rating AA(arg) estable assigned to Clase 11 under the US$200mn EF program"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-08-09",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2027-02-09",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2027-08-09",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2028-02-09",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2028-08-09",
+     "interest": 3.739726,
+     "amortization": 0
+    },
+    {
+     "date": "2029-02-09",
+     "interest": 3.780822,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "CS48O",
+   "name": "Cresud ON Clase XLVIII (Serie XXXII) 8,00% 2028 (USD MEP, Ley Argentina)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-07-11",
+   "maturity": "2028-07-11",
+   "minLot": 1,
+   "tickers": {
+    "ars": "CS48O",
+    "mep": "CS48D",
+    "cable": "CS48C"
+   },
+   "law": "AR",
+   "issuer": "Cresud Sociedad Anonima Comercial, Inmobiliaria, Financiera y Agropecuaria",
+   "sector": "agribusiness / farmland",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://www.cresud.com.ar/pdfs/CLASE%20XLVIII%20-%20Aviso%20de%20Resultados.pdf",
+     "what": "PRIMARY aviso de resultados (issuer IR): VN US$43.656.188, emision 2025-07-11 a la par, tasa 8,00%, vencimiento 2028-07-11, amortizacion 1 cuota, todas las fechas de pago de intereses, regla de Dia Habil"
+    },
+    {
+     "url": "https://www.bancoprovincia.com.ar/CDN/Get/CRESUD_Aviso_de_Suscripcion_ON_Clase_XLVIII",
+     "what": "PRIMARY aviso de suscripcion (2025-06-27): base actual/365, VN unitario USD 1, unidad minima USD 1, monto minimo de suscripcion USD 100, pagaderas en USD en Argentina, ley argentina, arbitraje BCBA"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha tecnica (symbol CS48O, fetched 2026-06-11): ISIN AR0587739282, 'Trigesima Segunda Serie Clase XLVIII', 8% semestral, 2025-07-11/2028-07-11, al vencimiento, denominacionMinima 1, monto 43.656.188"
+    },
+    {
+     "url": "research/bonistas_api_bonds_snapshot_2026-06-10.json",
+     "what": "bonistas API: CS48 8,00% bullet 2025-07-11/2028-07-11 Ley Argentina, semestral - agrees on all terms"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-07-11",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-11",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-11",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-11",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2028-07-11",
+     "interest": 3.989041,
      "amortization": 100
     }
    ]
@@ -1627,6 +1766,185 @@
      "date": "2027-03-31",
      "interest": 0,
      "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "DNC7O",
+   "name": "Edenor ON Clase 7 (Senior Notes) 9,75% 2030 (USD, Ley NY)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2024-10-24",
+   "maturity": "2030-10-24",
+   "minLot": 100,
+   "tickers": {
+    "ars": "DNC7O",
+    "mep": "DNC7D",
+    "cable": "DNC7C"
+   },
+   "law": "NY",
+   "issuer": "Empresa Distribuidora y Comercializadora Norte S.A. (EDENOR S.A.)",
+   "sector": "electricity distribution",
+   "rating": "A+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    "https://www.edenor.com/files/investors/2026-02/Final_Offering_Memorandum.pdf (PRIMARY: Feb-2026 additional-notes OM; coupon dates, 33.33/33.33/33.34 instalments, denominations US$100+US$1, 30/360, NY governing law, US$90M add-on over US$385M initial)",
+    "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002671/edn20260429_6k.htm (tender results: ISINs/CUSIPs, outstanding 475M as of 2026-04-15, cap raised to 175M, early settlement 2026-04-30, proration 64.73%)",
+    "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002901/ednpr1q26_6k.htm (1Q26 presentation: Class 7 reduced to USD 300M market size)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha DNC7O fetched 2026-06-11: Clase 7, 9,75%, tres pagos 33,33/33,33/33,34, ISIN USP3710FAU86, montoResidual 300.000.000, denom minima 100, emision 2024-10-24)",
+    "https://www.edenor.com/inversores/es/informacion-financiera/titulos-de-deuda (issuer IR: Clase 7 amortization dates 24/10/2028, 24/10/2029, 24/10/2030)",
+    "https://argen.bond/bonos/DNC7D (independent cashflow re-derivation matches incl. residual steps 66.67/33.34)",
+    "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/DNC7D (tir/tea 7.4973%, dirty 108.2, accrued 1.255479 = 9.75%*47/365 from 2026-04-24)",
+    "https://data912.com/live/arg_corp (close 2026-06-10: DNC7D 108.2, DNC7O 158770, DNC7C 104.65)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-10-24",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-24",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-10-24",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-04-24",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-10-24",
+     "interest": 4.875,
+     "amortization": 33.33
+    },
+    {
+     "date": "2029-04-24",
+     "interest": 3.250163,
+     "amortization": 0
+    },
+    {
+     "date": "2029-10-24",
+     "interest": 3.250163,
+     "amortization": 33.33
+    },
+    {
+     "date": "2030-04-24",
+     "interest": 1.625325,
+     "amortization": 0
+    },
+    {
+     "date": "2030-10-24",
+     "interest": 1.625325,
+     "amortization": 33.34
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "DNCAO",
+   "name": "Edenor ON Clase 10 (Senior Notes) 9,50% 2033 (USD, Ley NY)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2026-04-28",
+   "maturity": "2033-04-28",
+   "minLot": 1,
+   "tickers": {
+    "ars": "DNCAO",
+    "mep": "DNCAD",
+    "cable": "DNCAC"
+   },
+   "law": "NY",
+   "issuer": "Empresa Distribuidora y Comercializadora Norte S.A. (EDENOR S.A.)",
+   "sector": "electricity distribution",
+   "rating": "A+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/0001395213/000129281426002901/ednpr1q26_6k.htm (PRIMARY issuer 1Q26 presentation: pricing 2026-04-22, issue/closing 2026-04-28, USD 550M in two series, 9.5% semiannual, yield 9.75%, price 98.889%, amortization 33.33/33.33/33.34 on 4/28/31-33, ratings B-/B3; concurrent Clase 7 tender)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha DNCAO fetched 2026-06-11: Clase 10, FIJO 9.50%, tres pagos 33,33/33,33/33,34, ISIN USP3710FBA14, 550.000.000, emision 2026-04-28, vto 2033-04-28, denom minima 1)",
+    "https://www.cliffordchance.com/news/news/2026/05/clifford-chance-advises-on-edenor-s-new-notes-issuance-and-concu.html (deal counsel: new notes issuance + concurrent tender offer)",
+    "https://argen.bond/bonos/DNCAD (independent cashflow re-derivation: Apr-28/Oct-28 grid, flat 4.75, 33.33/33.33/33.34 with residual steps 66.67/33.34)",
+    "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/DNCAD (tir/tea 8.7983%, dirty 105.1, accrued 1.119178 = 9.5%*43/365 from 2026-04-28, law Ley N.Y.)",
+    "https://data912.com/live/arg_corp (close 2026-06-10: DNCAD 105.1, DNCAO 152810, DNCAC 101.25)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-10-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-10-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-04-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-10-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2029-04-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2029-10-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2030-04-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2030-10-28",
+     "interest": 4.75,
+     "amortization": 0
+    },
+    {
+     "date": "2031-04-28",
+     "interest": 4.75,
+     "amortization": 33.33
+    },
+    {
+     "date": "2031-10-28",
+     "interest": 3.166825,
+     "amortization": 0
+    },
+    {
+     "date": "2032-04-28",
+     "interest": 3.166825,
+     "amortization": 33.33
+    },
+    {
+     "date": "2032-10-28",
+     "interest": 1.58365,
+     "amortization": 0
+    },
+    {
+     "date": "2033-04-28",
+     "interest": 1.58365,
+     "amortization": 33.34
     }
    ]
   },
@@ -2779,6 +3097,126 @@
   },
   {
    "kind": "fixed",
+   "ticker": "GN49O",
+   "name": "Genneia ON Verde Clase XLIX 7,750% 2033 (USD, Ley NY)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-12-02",
+   "maturity": "2033-12-02",
+   "minLot": 1000,
+   "tickers": {
+    "ars": "GN49O",
+    "mep": "GN49D",
+    "cable": "GN49C"
+   },
+   "law": "NY",
+   "issuer": "Genneia S.A.",
+   "sector": "renewable power generation (wind & solar)",
+   "rating": "AA+.ar",
+   "ratingAgency": "Moody's Local AR",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://www.genneia.com.ar/docs/rda_694050477b94b_ons-internacionales-clase-xlix-aviso-de-resultados..pdf",
+     "what": "PRIMARY aviso de resultados (20-nov-2025): VN US$400M, precio 98,682%, tasa 7,750%, rendimiento 8,000%, emision 2025-12-02, todas las fechas de pago de intereses Jun-2/Dec-2, amortizacion 33/33/34 en 2031/2032/2033-12-02, ISIN/CUSIP 144A y RegS, rescates optativos"
+    },
+    {
+     "url": "https://www.genneia.com.ar/docs/rda_694050475a6d6_on-internacional-2025-clase-xlix-suplemento-local..pdf",
+     "what": "PRIMARY suplemento de prospecto local (17-nov-2025): base 30/360, ley Estado de Nueva York, denominaciones minimas US$1.000, Dia Habil BA+NY, fiduciario UMB Bank"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha tecnica (symbol GN49O, fetched 2026-06-11): ISIN USP46756BQ76, 7,750% fijo, 2025-12-02/2033-12-02, monto 400M, denominacionMinima 1000, amortizacion 33/33/34"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/we-advised-genneia-on-its-second-international-corporate-issuance-of-green-notes-listed-on-bymas-svs-panel/",
+     "what": "deal counsel: US$400M, 7,75% semiannual, yield 8%, 33/33/34, cable settlement, SVS panel"
+    },
+    {
+     "url": "https://iol.invertironline.com/titulo/cotizacion/BCBA/GN49O",
+     "what": "secondary: IOL title 'ON Clase XLIX 7.75% vto 2033-12-02' (coupon+maturity cross-check)"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-12-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-06-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-12-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-06-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-12-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2029-06-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2029-12-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2030-06-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2030-12-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2031-06-02",
+     "interest": 3.875,
+     "amortization": 0
+    },
+    {
+     "date": "2031-12-02",
+     "interest": 3.875,
+     "amortization": 33
+    },
+    {
+     "date": "2032-06-02",
+     "interest": 2.59625,
+     "amortization": 0
+    },
+    {
+     "date": "2032-12-02",
+     "interest": 2.59625,
+     "amortization": 33
+    },
+    {
+     "date": "2033-06-02",
+     "interest": 1.3175,
+     "amortization": 0
+    },
+    {
+     "date": "2033-12-02",
+     "interest": 1.3175,
+     "amortization": 34
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "IRCPO",
    "name": "IRSA ON Clase XXIV 8.00% 2035 (USD, Ley NY)",
    "family": "on",
@@ -2794,6 +3232,9 @@
    "law": "NY",
    "issuer": "IRSA Inversiones y Representaciones Sociedad Anónima",
    "sector": "real estate (commercial/shopping malls & offices)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2025/03/IRSA-Aviso-de-SuscripciA%C2%B3n-ON-Clase-XXIV-New-Money-firmado.pdf (primary: aviso de suscripción 2025-03-18, full terms)",
     "https://www.irsa.com.ar/emision-de-obligaciones-negociables-clase-xxiv/ (issuer IR)",
@@ -2898,6 +3339,212 @@
   },
   {
    "kind": "fixed",
+   "ticker": "MCC3O",
+   "name": "PECOM Servicios Energía ON Clase III 7,50% 2030 (USD MEP, Ley Arg.)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2026-05-11",
+   "maturity": "2030-05-11",
+   "minLot": 1,
+   "tickers": {
+    "ars": "MCC3O",
+    "mep": "MCC3D",
+    "cable": "MCC3C"
+   },
+   "law": "AR",
+   "issuer": "PECOM Servicios Energía S.A.U.",
+   "sector": "oilfield / energy services",
+   "rating": "AA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha, symbol MCC3O, fetched 2026-06-11: Clase III, FIJO 7,50%, AL VENCIMIENTO, emision 2026-05-11, vto 2030-05-11, ISIN AR0922852063, monto 196.759.808, denom minima 1, garantia comun)",
+    "https://www.petrini.com.ar/en/obligaciones-negociables-pecom-servicios-energia-s-a-u-clase-iii/ (placement agent: ley argentina, dolar MEP, bullet, cupones semestrales, 7,50% TNA / TIR 7,64%, plazo 48 meses, subasta 2026-05-07)",
+    "https://abogados.com.ar/pecom-servicios-energia-sau-realiza-nueva-emision-de-obligaciones-negociables-dolar-mep-por-us196759808/39212 (deal report: USD 196.759.808, pagaderas en USD en Argentina, listado BYMA/A3)",
+    "https://argen.bond/bonos/MCC3D (independent cashflow re-derivation: Nov-11/May-11 dates, act/365 coupons 3.78/3.72/3.74, bullet)",
+    "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/MCC3D (SSR metrics: tir/tea 7.515%, dirty 101, accrued 0.616438, law Ley Argentina)",
+    "https://data912.com/live/arg_corp (close 2026-06-10: MCC3D 101.0, MCC3O 147900, MCC3C 97.7)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-11-11",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2027-05-11",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2027-11-11",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2028-05-11",
+     "interest": 3.739726,
+     "amortization": 0
+    },
+    {
+     "date": "2028-11-11",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2029-05-11",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2029-11-11",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2030-05-11",
+     "interest": 3.719178,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "MGCOO",
+   "name": "Pampa Energía ON Clase 23 Internacional 7,875% 2034 (USD, Ley NY)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2024-12-16",
+   "maturity": "2034-12-16",
+   "minLot": 10000,
+   "tickers": {
+    "ars": "MGCOO",
+    "mep": "MGCOD",
+    "cable": "MGCOC"
+   },
+   "law": "NY",
+   "issuer": "Pampa Energía S.A.",
+   "sector": "integrated energy / power",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://ri.pampa.com/en/press-release/issuance-of-10-year-international-bond-at-7-875/",
+     "what": "issuer IR press release: original US$360mn 10-year at 7.875%, Dec-2024"
+    },
+    {
+     "url": "https://ri.pampa.com/en/press-release/pampa-reopens-its-2034-international-bond-for-us340-million/",
+     "what": "issuer IR press release: US$340mn reopening 2025-05-28 at a discount yielding ~8%, total US$700mn"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/pampa-energia-reopening-7-875-notes-2034/",
+     "what": "deal counsel: original issued 2024-12-16 US$360mn, additional 2025-05-28 US$340mn, total US$700mn, 144A/RegS, BoNY trustee/paying agent, BYMA+A3 listing"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol MGCOO, fetched 2026-06-11): ISIN USP7464EAT30, 'Clase 23 Internacional', FIJO 7.875%, issue 2024-12-16, vto 2034-12-16, AL VENCIMIENTO, denominacionMinima 10000, montoResidual 700.000.000"
+    },
+    {
+     "url": "https://www.oblible.com/bond-USP7464EAT30.htm",
+     "what": "next coupon 16/06/2026, semiannual, min denomination 10,000 USD, maturity 16/12/2034"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2026-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2027-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2027-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2028-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2028-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2029-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2029-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2030-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2030-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2031-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2031-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2032-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2032-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2033-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2033-12-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2034-06-16",
+     "interest": 3.9375,
+     "amortization": 0
+    },
+    {
+     "date": "2034-12-16",
+     "interest": 3.9375,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "MGCRO",
    "name": "Pampa Energía Obligaciones Negociables Clase 26 7,75% 2037 (USD, Ley NY)",
    "family": "on",
@@ -2913,6 +3560,9 @@
    "law": "NY",
    "issuer": "Pampa Energía S.A.",
    "sector": "integrated energy / power",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     {
      "url": "https://api.mziq.com/mzfilemanager/v2/d/78ce1f91-b610-429f-b020-add32c211c1f/bae18cee-4cd8-29f8-7343-75fdebb96b93?origin=1",
@@ -3065,6 +3715,9 @@
    "law": "AR",
    "issuer": "Empresa Distribuidora de Electricidad de Mendoza S.A. (EDEMSA)",
    "sector": "electricity distribution (Mendoza)",
+   "rating": "A+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
    "sources": [
     "https://www.bancoprovincia.com.ar/CDN/Get/EDEMSA_Aviso_Suscripcion_ON_Clase_3_y_4 (primary: aviso de suscripción Nov-2024; actual/365, denominations, ley AR, USD en el país, bullet)",
     "https://www.bancoprovincia.com.ar/CDN/Get/EDEMSA_CLASE_3_ADICIONAL_Y_CLASE_5_Y_6_Aviso_de_Resultado (primary: aviso de resultados 2025-05-08; 8.00%, coupon dates, bullet 2027-11-29, ISIN AR0428738048, Código A3 OZC3O, CVSA 58271)",
@@ -3092,6 +3745,71 @@
   },
   {
    "kind": "fixed",
+   "ticker": "PLC3O",
+   "name": "Pluspetrol ON Clase 3 7,25% 2028 (USD MEP, Ley Argentina)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-04-30",
+   "maturity": "2028-04-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "PLC3O",
+    "mep": "PLC3D"
+   },
+   "law": "AR",
+   "issuer": "Pluspetrol S.A.",
+   "sector": "oil & gas E&P (Vaca Muerta)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://www.bancoprovincia.com.ar/CDN/Get/Pluspetrol_Aviso_de_Resultados_3",
+     "what": "PRIMARY aviso de resultados (2025-04-29): VN US$90.722.914, tasa 7,25%, emision 2025-04-30 a la par, vencimiento 2028-04-30, bullet, fechas de pago completas incl. primer cupon a 9 meses y stub final de 3 meses"
+    },
+    {
+     "url": "https://www.bancoprovincia.com.ar/CDN/Get/Pluspetrol_Suscripcion_3",
+     "what": "PRIMARY aviso de suscripcion (2025-04-23): base actual/365, VN unitario US$1, unidad minima US$1, monto minimo de suscripcion US$100, pagaderas en USD en Argentina, ley argentina, arbitraje BCBA, CUIT emisora"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha tecnica (symbol PLC3O, fetched 2026-06-11): ISIN AR0808016403, Clase 3, fijo 7,25% (ficha prints 'FIJO DE 7.,25%' - OCR-style typo), 2025-04-30/2028-04-30, AL VENCIMIENTO, denominacionMinima 1, monto 90.722.914"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/pluspetrol-class-3-notes-us90-7m-7-25-due-2028/",
+     "what": "deal counsel: US$90,7M 7,25% due 2028 - corroborates rate, size, maturity"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-07-30",
+     "interest": 3.595205,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-30",
+     "interest": 3.654795,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-30",
+     "interest": 3.595205,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-30",
+     "interest": 3.654795,
+     "amortization": 0
+    },
+    {
+     "date": "2028-04-30",
+     "interest": 1.807534,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "PLC4O",
    "name": "Pluspetrol ON Clase 4 8.50% 2032 (USD, Ley NY)",
    "family": "on",
@@ -3107,6 +3825,9 @@
    "law": "NY",
    "issuer": "Pluspetrol S.A.",
    "sector": "oil & gas E&P (Vaca Muerta)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2025/05/Pluspetrol-Aviso-de-SuscripciA%C2%B3n-ONs-Clase-4-EXE.pdf (primary: aviso de suscripción 2025-05-19; NY law, denominations US$1,000, semiannual)",
     "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol PLC4O, fetched 2026-06-10: AL VENCIMIENTO, 8.50% fijo, 650M, ISIN)",
@@ -3176,6 +3897,163 @@
      "date": "2032-05-30",
      "interest": 4.25,
      "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "PQCSO",
+   "name": "PCR ON Clase S 8,00% 2031 (USD MEP, Ley Arg.)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-02-17",
+   "maturity": "2031-02-17",
+   "minLot": 1,
+   "tickers": {
+    "ars": "PQCSO",
+    "mep": "PQCSD"
+   },
+   "law": "AR",
+   "issuer": "Petroquímica Comodoro Rivadavia S.A.",
+   "sector": "cement / petrochemicals / renewables",
+   "rating": "AA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/02/MPMAE-ANU-ON-PETROQUMICA-COMODORO-RIVADAVIA-CLASE-S-Aviso-de-Suscripcion-06-02-25-1.pdf (PRIMARY: Aviso de Suscripcion 06-02-2025; retrieved 2026-06-11 by adversarial verifier: emision/liquidacion 17-02-2025, vencimiento 17-02-2031, amortizacion unico pago al vencimiento, base actual/365, denominacion minima US$1, monto minimo de suscripcion US$50, USD pagadero en Argentina (dolar MEP), emisor frecuente, hasta US$35M ampliable a US$65M)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha PQCSO fetched 2026-06-11: Clase S, FIJO 8%, AL VENCIMIENTO, emision 2025-02-17, vto 2031-02-17, ISIN AR0309447628, 65.000.000, denom minima 1, garantia comun)",
+    "https://eolomedia.com.ar/pcr-obtuvo-una-alta-demanda-y-logro-us-65-millones-en-el-mercado/ (deal report: USD 65M, 8% fija, 72 meses, intereses semestrales 17-Feb/17-Ago, dolar MEP, subasta 2025-02-12, liquidacion 2025-02-17, demanda 79.4M)",
+    "https://abogados.com.ar/index.php/bruchou-funes-de-rioja-y-tca-tanoira-cassagne-asesoraron-en-la-exitosa-emision-de-las-obligaciones-negociables-clase-s-de-petroquimica-comodoro-rivadavia-sa/36373 (deal counsel confirmation of Clase S issuance)",
+    "https://argen.bond/bonos/PQCSD (independent cashflow re-derivation: Feb-17/Aug-17 grid, act/365 coupons 3.97/4.03/3.99, bullet 2031-02-17)",
+    "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/PQCSD (tir/tea 8.1816%, dirty 102.4, accrued 2.498630, law Ley Argentina)",
+    "https://data912.com/live/arg_corp (close 2026-06-10: PQCSD 102.4, PQCSO 149000)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-08-17",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2027-02-17",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2027-08-17",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2028-02-17",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2028-08-17",
+     "interest": 3.989041,
+     "amortization": 0
+    },
+    {
+     "date": "2029-02-17",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2029-08-17",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2030-02-17",
+     "interest": 4.032877,
+     "amortization": 0
+    },
+    {
+     "date": "2030-08-17",
+     "interest": 3.967123,
+     "amortization": 0
+    },
+    {
+     "date": "2031-02-17",
+     "interest": 4.032877,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "RUCDO",
+   "name": "MSU Energy ON Clase XII / Senior Secured Notes 9,75% 2030 (USD, Ley NY)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2024-12-05",
+   "maturity": "2030-12-05",
+   "minLot": 1,
+   "tickers": {
+    "ars": "RUCDO",
+    "mep": "RUCDD"
+   },
+   "law": "NY",
+   "issuer": "MSU Energy S.A.",
+   "sector": "power generation (thermal)",
+   "rating": "AA-(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 2,
+   "sources": [
+    "https://msuenergy.com/wp-content/uploads/2025/11/USD-ENG-MSU-ENERGY-SA-30.09.25-VF-signed.pdf (PRIMARY: issuer unaudited interim FS 30-09-2025, Note 10(a): full terms incl. 17.5/17.5/65 amortization, Jun-5/Dec-5 coupons from 2025-06-05, exchange + new-money amounts)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha RUCDO fetched 2026-06-11: Clase XII Serie B, 9.75%, 'En tres cuotas', ISIN USP7000QAJ96, 400.000.000, denom minima 1, Fideicomiso y Prenda Real, suplemento difundido 12-11-2024)",
+    "https://tavarone.com/msu-energy-s-a-realiza-una-oferta-de-canje-y-una-nueva-emision-internacional-de-obligaciones-negociables-garantizadas-por-us-400-000-000/?lang=en (deal counsel: USD 400M = 223,352,460 exchange + 176,647,540 new money; collateral package; closings 2024-12-05 / 2024-12-12)",
+    "https://www.oblible.com/bond-USP7000QAJ96.htm (9.75%, 2x/year, next coupon 2026-12-05, maturity 2030-12-05)",
+    "https://argen.bond/bonos/RUCDD (independent cashflow re-derivation: 17.5/17.5/65, residual steps 82.5/65, flat 4.88 coupons)",
+    "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/RUCDD (tir/tea 8.2149%, dirty 105.75, accrued 0.160274 from 2026-06-05, law Ley N.Y.)",
+    "https://data912.com/live/arg_corp (close 2026-06-10: RUCDD 105.75, RUCDO 153400)"
+   ],
+   "cashflows": [
+    {
+     "date": "2026-12-05",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-06-05",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2027-12-05",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-06-05",
+     "interest": 4.875,
+     "amortization": 0
+    },
+    {
+     "date": "2028-12-05",
+     "interest": 4.875,
+     "amortization": 17.5
+    },
+    {
+     "date": "2029-06-05",
+     "interest": 4.021875,
+     "amortization": 0
+    },
+    {
+     "date": "2029-12-05",
+     "interest": 4.021875,
+     "amortization": 17.5
+    },
+    {
+     "date": "2030-06-05",
+     "interest": 3.16875,
+     "amortization": 0
+    },
+    {
+     "date": "2030-12-05",
+     "interest": 3.16875,
+     "amortization": 65
     }
    ]
   },
@@ -3491,6 +4369,9 @@
    },
    "law": "NY",
    "sector": "telecommunications",
+   "rating": "AA+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2024/07/Telecom-Clase21Adicionales-AvisodeSuscripcion-1.pdf (aviso de suscripcion en canje, Clase 21 adicionales, jul-2024 - primary)",
     "https://www.sec.gov/Archives/edgar/data/932470/000110465926026480/teo-20251231x20f.htm (Telecom 20-F FY2025, Note 14 borrowings table - primary)",
@@ -3575,6 +4456,9 @@
    },
    "law": "NY",
    "sector": "telecommunications",
+   "rating": "AA+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2025/05/Aviso-de-Suscripcion-Telecom.pdf (aviso de suscripcion Clase 24, may-2025 - primary)",
     "https://www.sec.gov/Archives/edgar/data/932470/000110465926026480/teo-20251231x20f.htm (Telecom 20-F FY2025: 2033 Notes issuance, amortization table - primary)",
@@ -3673,6 +4557,9 @@
    },
    "law": "NY",
    "sector": "telecommunications",
+   "rating": "AA+(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://www.macro.com.ar/sites/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1593395059782&ssbinary=true (aviso de resultados Clase 27, 2026-01-14 - primary; ISINs, full coupon-date list, amortization, call ladder)",
     "https://www.petrini.com.ar/wp-content/uploads/2026/01/Clase-27-Aviso-de-suscripcion-signed.pdf (aviso de suscripcion Clase 27, 2026-01-12 - primary; min denomination, NY law, 30/360)",
@@ -3829,6 +4716,9 @@
    "law": "NY",
    "issuer": "Transportadora de Gas del Sur S.A.",
    "sector": "natural gas transportation / midstream",
+   "rating": null,
+   "ratingAgency": null,
+   "ratingTier": 3,
    "sources": [
     "https://www.petrini.com.ar/wp-content/uploads/2025/11/TGS-2025-Bond-Aviso-de-SuscripciA%C2%B3n-EXE.FNQ_.pdf (primary: aviso de suscripción 2025-11-10; NY law, bullet, min US$1,000, USD abroad)",
     "https://www.tgs.com.ar/wp-content/uploads/2026/05/TGS-Completo-31-03-2026-web.pdf (primary: issuer EEFF 31-03-2026, 'ON 2035': 500M, 7.75%, precio 98.301%, amortización 100% 20-11-2035, intereses 20-may/20-nov)",
@@ -4515,6 +5405,87 @@
   },
   {
    "kind": "fixed",
+   "ticker": "VSCUO",
+   "name": "Vista Energy Argentina ON Clase XXVIII 7,50% 2030 (USD cable, Ley AR)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-03-07",
+   "maturity": "2030-03-07",
+   "minLot": 1,
+   "tickers": {
+    "ars": "VSCUO",
+    "mep": "VSCUD",
+    "cable": "VSCUC"
+   },
+   "law": "AR",
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "sector": "oil & gas E&P (shale)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://vista-energy.cdn.prismic.io/vista-energy/aQqrXbpReVYa4EMJ_Vista-AvisodeSuscripcio%CC%81n-ClaseXXVIII-EXE-..pdf",
+     "what": "PRIMARY aviso de suscripción 2025-02-27 (issuer CDN): cable payment mechanics, act/365, semiannual día-idéntico, bullet 60 months, denominación mínima US$1, call at par anytime, ley AR, emisión 2025-03-07, vencimiento 2030-03-07"
+    },
+    {
+     "url": "https://www.bancoprovincia.com.ar/CDN/Get/VISTA_ENERGY_CLASE_XXVIII_Aviso_de_Resultado",
+     "what": "PRIMARY aviso de resultados: tasa de corte 7,50%, VN emitido US$92.413.570, interest dates listed 2025-09-07 through 2030-03-07, única cuota at maturity"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol VSCUO, fetched 2026-06-11): ISIN AR0707929003, Clase XXVIII, 7,50% semestral, vto 2030-03-07, una cuota al vencimiento, denominacionMinima 1, montoResidual 92.413.570"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/vista-energy-class-xxviii-notes-issuance-class-28/",
+     "what": "deal counsel note: Clase XXVIII / Clase 28 issuance corroboration"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-09-07",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2027-03-07",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2027-09-07",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2028-03-07",
+     "interest": 3.739726,
+     "amortization": 0
+    },
+    {
+     "date": "2028-09-07",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2029-03-07",
+     "interest": 3.719178,
+     "amortization": 0
+    },
+    {
+     "date": "2029-09-07",
+     "interest": 3.780822,
+     "amortization": 0
+    },
+    {
+     "date": "2030-03-07",
+     "interest": 3.719178,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "VSCVO",
    "name": "Vista Energy Argentina ON Clase XXIX - 8.500% Senior Notes due 2033",
    "family": "on",
@@ -4529,6 +5500,9 @@
    },
    "law": "NY",
    "sector": "oil & gas E&P (Vaca Muerta shale); main subsidiary of Vista Energy, S.A.B. de C.V. (NYSE: VIST)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://vista-energy.cdn.prismic.io/vista-energy/aQnwU7pReVYa4Bb8_87d0ef28d6769d41a6e05be8eac28fa7_Vista_-_Aviso_de_Resultados_Clase_XXIX_-_EXE.pdf (aviso de resultados Clase XXIX, 2025-06 - primary; ISINs, full coupon list, 33/33/34 amortization, call ladder)",
     "https://www.sec.gov/Archives/edgar/data/1762506/000119312525135041/d20896d6k.htm (Vista 6-K 2025-06-04: pricing US$500M, NY law, installments on 6th/7th/8th anniversaries)",
@@ -4627,6 +5601,9 @@
    "law": "NY",
    "issuer": "Vista Energy Argentina S.A.U.",
    "sector": "oil & gas E&P (shale, Vaca Muerta)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     {
      "url": "https://www.macro.com.ar/sites/BlobServer?blobtable=MungoBlobs&blobwhere=1593395125528&blobkey=id&blobcol=urldata",
@@ -4868,6 +5845,9 @@
    "law": "NY",
    "issuer": "YPF Sociedad Anónima (YPF S.A.)",
    "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     {
      "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Aviso-de-Resultados-ON-Clase-XXXIV.pdf",
@@ -4971,6 +5951,127 @@
   },
   {
    "kind": "fixed",
+   "ticker": "YM35O",
+   "name": "YPF ON Clase XXXV 6,25% 2027 (USD MEP, Ley Argentina)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-02-27",
+   "maturity": "2027-02-27",
+   "minLot": 1,
+   "tickers": {
+    "ars": "YM35O",
+    "mep": "YM35D"
+   },
+   "law": "AR",
+   "issuer": "YPF Sociedad Anonima (YPF S.A.)",
+   "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20S.A.%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Aviso%20de%20Resultados.pdf",
+     "what": "PRIMARY aviso de resultados (issuer IR, 2025-02-21): VN US$139.894.182, tasa 6,25%, emision 2025-02-27 a la par, vencimiento 2027-02-27, bullet, fechas de pago trimestrales completas, regla de Dia Habil modified-following"
+    },
+    {
+     "url": "https://www.bbva.com.ar/content/dam/public-web/argentina/documents/YPF_Clases_XXXV_XXVI_Suplemento_de_Prospecto_EXE.pdf",
+     "what": "PRIMARY suplemento de prospecto (20-feb-2025, colocador mirror of CNV filing): base actual/365, ley argentina, unidad minima/denominacion minima US$1, monto minimo de suscripcion US$100"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha tecnica (symbol YM35O, fetched 2026-06-11): ISIN AR0929824099, Clase XXXV, FIJO 6,25%, 2025-02-27/2027-02-27, AL VENCIMIENTO, denominacionMinima 1, monto 139.894.182"
+    },
+    {
+     "url": "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM35O",
+     "what": "secondary: IOL title 'ON Clase 35 vto 2027-02-27 U$S' (maturity cross-check)"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-08-27",
+     "interest": 1.575342,
+     "amortization": 0
+    },
+    {
+     "date": "2026-11-27",
+     "interest": 1.575342,
+     "amortization": 0
+    },
+    {
+     "date": "2027-02-27",
+     "interest": 1.575342,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
+   "ticker": "YM38O",
+   "name": "YPF Obligaciones Negociables Clase XXXVIII 7,50% 2027 (USD MEP, Ley AR)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2025-07-22",
+   "maturity": "2027-07-22",
+   "minLot": 1,
+   "tickers": {
+    "ars": "YM38O",
+    "mep": "YM38D",
+    "cable": "YM38C"
+   },
+   "law": "AR",
+   "issuer": "YPF Sociedad Anónima (YPF S.A.)",
+   "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXXVIII.pdf",
+     "what": "PRIMARY aviso de resultados 2025-07-17: VN US$250mn, 7,50% fija, emisión 2025-07-22 at 100%, vencimiento 2027-07-22, bullet, quarterly interest dates (all listed), MEP payment language, duration 1,88y"
+    },
+    {
+     "url": "https://investors.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%2038%20(MEP)%20Suplemento.pdf",
+     "what": "PRIMARY suplemento de prospecto 2025-07-11: actual/365 day count, denominación mínima US$1, monto mínimo US$100, ley AR, bullet, rescate por cuestiones impositivas at 100%, rescate anticipado a opción"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol YM38O, fetched 2026-06-11): ISIN AR0419238511, Clase XXXVIII, 7,50% trimestral, vto 2027-07-22, bullet, denominacionMinima 1, montoResidual 250.000.000, garantía común"
+    },
+    {
+     "url": "https://www.cohen.com.ar/Bursatil/Especie/YM38D",
+     "what": "ISIN AR0419238511, lámina mínima USD 1, Caja de Valores 58790"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-07-22",
+     "interest": 1.869863,
+     "amortization": 0
+    },
+    {
+     "date": "2026-10-22",
+     "interest": 1.890411,
+     "amortization": 0
+    },
+    {
+     "date": "2027-01-22",
+     "interest": 1.890411,
+     "amortization": 0
+    },
+    {
+     "date": "2027-04-22",
+     "interest": 1.849315,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 1.869863,
+     "amortization": 100
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "YM39O",
    "name": "YPF ON Clase XXXIX 8.75% 2030 (USD cable, Ley AR)",
    "family": "on",
@@ -4986,6 +6087,9 @@
    "law": "AR",
    "issuer": "YPF Sociedad Anónima",
    "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     "https://investors.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXXIX.pdf (primary: aviso de resultados 2025-07-17; rate, dates, bullet, ISIN)",
     "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%20XXXIX%20(cable)%20Suplemento.pdf (primary: suplemento de prospecto 2025-07-15; day count actual/365, denominations, ley AR, business-day rule)",
@@ -5058,6 +6162,9 @@
    "law": "AR",
    "issuer": "YPF Sociedad Anónima (YPF S.A.)",
    "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     {
      "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XLII%20Adicionales%20-%20Suplemento%20de%20Prospecto.pdf",
@@ -5107,6 +6214,82 @@
   },
   {
    "kind": "fixed",
+   "ticker": "YMCIO",
+   "name": "YPF ON Clase XVII 9,00% (step-up) 2029 (USD, Ley NY, canje 2021)",
+   "family": "on",
+   "payCcy": "USD",
+   "issueDate": "2021-02-12",
+   "maturity": "2029-06-30",
+   "minLot": 1,
+   "tickers": {
+    "ars": "YMCIO",
+    "mep": "YMCID",
+    "cable": "YMCIC"
+   },
+   "law": "NY",
+   "issuer": "YPF Sociedad Anónima (YPF S.A.)",
+   "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
+   "sources": [
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol YMCIO, fetched 2026-06-11): ISIN USP989MJBS99, CLASE XVII, issue 2021-02-12, vto 2029-06-30, step-up 2,5%->9,0% (quoted), '7 cuotas semestrales... 30 de junio y 30 de diciembre... comenzando el 30 de junio de 2026', denominacionMinima 1, montoResidual 747.833.257"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/904851/000119312521049394/d132593dex991.htm",
+     "what": "SEC 6-K EX-99.1 (Fitch commentary, 2021-02-18): '$748 million for the senior unsecured bond due 2029... coupon of 2.5% for the first two years through December 2022, and 9% thereafter with equal semi-annual amortization payments beginning in 2026'"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/904851/000119312521016977/d117886dex991.htm",
+     "what": "SEC 6-K EX-99.1 (second amendment, 2021-01-25): New 2029 Notes 2.500% through 2022-12-31 then 9.000% to maturity; amortization schedule and maturity amended vs original offer"
+    },
+    {
+     "url": "https://www.oblible.com/bond-USP989MJBS99.htm",
+     "what": "144A ISIN US984245AV29, semiannual, next coupon 30/06/2026, min denomination 1 USD, amount 747,833,260"
+    }
+   ],
+   "cashflows": [
+    {
+     "date": "2026-06-30",
+     "interest": 4.5,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 3.857143,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 3.214286,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2027-12-30",
+     "interest": 2.571429,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 1.928571,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2028-12-30",
+     "interest": 1.285714,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2029-06-30",
+     "interest": 0.642857,
+     "amortization": 14.285716
+    }
+   ]
+  },
+  {
+   "kind": "fixed",
    "ticker": "YMCXO",
    "name": "YPF Obligaciones Negociables Clase XXXI 8,75% 2031 (USD, Ley NY)",
    "family": "on",
@@ -5122,6 +6305,9 @@
    "law": "NY",
    "issuer": "YPF Sociedad Anónima (YPF S.A.)",
    "sector": "oil & gas (integrated)",
+   "rating": "AAA(arg)",
+   "ratingAgency": "FIX SCR (afiliada de Fitch Ratings)",
+   "ratingTier": 1,
    "sources": [
     {
      "url": "https://investors.ypf.com/documents/emisiones/internacionales/YPF-ONs-Clase-XXXI-Aviso-de-Resultados-(EXE).pdf",

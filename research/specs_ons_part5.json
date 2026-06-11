@@ -1,0 +1,836 @@
+{
+ "family": "on",
+ "asOf": "2026-06-11",
+ "settlementForYieldChecks": "2026-06-11",
+ "method": "Terms verified against primary documents (avisos de suscripcion/resultados and suplementos de prospecto from issuer IR sites / placement-agent mirrors of CNV-filed docs, BYMA ficha tecnica API, SEC 6-K exhibits for the YPF 2021 exchange), cross-checked with Docta Capital, oblible, Cohen and cbonds/bondblox metadata. Remaining cashflows computed per 100 VN original face for payments strictly after 2026-06-10, on each bond's documented day count (actual/365 for the three local-law classes per their suplementos; 30/360 for the two NY-law internationals). Prices on BYMA are dirty per 100 VN original. Golden checks: effective annual IRR (act/365, bisection) on spec remainingCashflows vs the 2026-06-10 D-line close, settlement 2026-06-11, compared with Docta Capital's published TIR (fetched 2026-06-11).",
+ "generalCaveats": [
+  "Prices used are 2026-06-10 closes: data912 /live/arg_corp 'c' values refetched 2026-06-11 pre-open are identical to the 2026-06-10 turnoverDetail closes recorded in research/ons_inventory.json for all five bases.",
+  "Docta Capital published TIRs were fetched 2026-06-11 and may embed an intraday tick rather than the 2026-06-10 close; for YM38D the 0.28pp gap is fully explained by this (see its goldenCheck.failureInvestigation).",
+  "YMCI (YPF Clase XVII) and MGCO (Pampa Clase 23) day count taken as 30/360 (market standard for their NY-law 144A/RegS notes, consistent with YM34/YMCX documentation in part1); not re-verified directly from the indenture/offering memorandum - per-period impact is <1bp of coupon.",
+  "MGCO minimum denomination US$10,000 per BYMA ficha (denominacionMinima=10000) and oblible; the customary 'integral multiples of US$1,000 above' increment was not verified from the offering memorandum.",
+  "IAMC Informe Diario Deuda Corporativa now requires a login and could not be used as a cross-check source for this batch.",
+  "Payment dates in remainingCashflows are scheduled dates; non-business-day payments roll forward without extra accrual (except where each doc provides accrual to actual payment at maturity/amortization dates - noted per instrument).",
+  "ADVERSARIAL RE-VERIFICATION 2026-06-11 (independent second pass): all five golden IRRs re-reproduced to 4 decimals from the spec cashflows; terms re-derived from sources not previously used (YPF Clase XVII aviso de resultados del canje PDF, IOL fichas/titles, Cohen fichas, Boerse Frankfurt, LexLatin, Banco Provincia aviso complementario mirror); zero corrections required. Docta SSR raw 'tir' values recorded as publishedTIRRawSSRPct per instrument; no canje/C-line price-basis discrepancies (all published TIRs match the D-line dirty close)."
+ ],
+ "instruments": [
+  {
+   "base": "YM38",
+   "name": "YPF Obligaciones Negociables Clase XXXVIII 7,50% 2027 (USD MEP, Ley AR)",
+   "issuer": {
+    "legalName": "YPF Sociedad Anónima (YPF S.A.)",
+    "sector": "oil & gas (integrated)"
+   },
+   "isin": "AR0419238511",
+   "isinDetail": {
+    "local": "AR0419238511 (BYMA ficha tecnica, Cohen, Docta agree)",
+    "cajaDeValores": 58790
+   },
+   "law": "AR",
+   "lawDetail": "Ley aplicable: leyes de la República Argentina (suplemento de prospecto, 'Ley Aplicable'); emitida bajo Régimen de Emisor Frecuente CNV (registro N°4).",
+   "currencyOfPayment": "USD (MEP - payable in Argentina)",
+   "currencyOfPaymentEvidence": "Aviso de resultados: 'denominadas y pagaderas en Dólares Estadounidenses en Argentina', integradas en USD en Argentina y/o en especie via canje de Clases XXV/XXIX/XXXVI. Suplemento: if FX-restricted, issuer must deliver USD via sale of USD-denominated public securities.",
+   "issueDate": "2025-07-22",
+   "issueDetail": "VN US$250.000.000 issued 2025-07-22 at 100% of face (aviso de resultados: 14.237 órdenes, US$260,5mn bid, prorrateo 84,4841%). BYMA ficha montoNominal=montoResidual=250.000.000 - no adicionales.",
+   "maturity": "2027-07-22",
+   "coupon": {
+    "type": "fixed",
+    "annualRatePct": 7.5,
+    "paymentFrequencyMonths": 3,
+    "paymentPattern": "Quarterly in arrears on the 22nd of October, January, April and July; dates listed in aviso de resultados: 2025-10-22, 2026-01-22, 2026-04-22, 2026-07-22, 2026-10-22, 2027-01-22, 2027-04-22 and at maturity 2027-07-22.",
+    "nextPaymentDate": "2026-07-22"
+   },
+   "dayCount": "actual/365 (suplemento de prospecto 11-07-2025: 'Cantidad real de días transcurridos sobre la base de un año de 365 días (cantidad de días transcurridos/365)')",
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2027-07-22",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Única cuota at maturity (aviso de resultados item 8: 'amortizado en una única cuota en la Fecha de Vencimiento'; BYMA ficha 'En un pago al vencimiento')."
+   },
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "Unidad mínima de negociación y denominación mínima V/N US$1,00 y múltiplos de US$1,00 (suplemento); monto mínimo de suscripción primaria US$100. Cohen: lámina mínima USD 1, cantidad mínima 1."
+   },
+   "tickers": {
+    "ars": "YM38O",
+    "mep": "YM38D",
+    "cable": "YM38C"
+   },
+   "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp).",
+   "residualValuePer100": 100.0,
+   "remainingCashflows": [
+    {
+     "date": "2026-07-22",
+     "interest": 1.869863,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-10-22",
+     "interest": 1.890411,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-22",
+     "interest": 1.890411,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-04-22",
+     "interest": 1.849315,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 1.869863,
+     "amortization": 100.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original, actual/365: 7.5 x days/365; periods 91d (Apr22-Jul22), 92d (Jul22-Oct22, Oct22-Jan22), 90d (Jan22-Apr22). All five scheduled dates fall on business days. Coupon of 2026-04-22 already paid.",
+   "sources": [
+    {
+     "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXXVIII.pdf",
+     "what": "PRIMARY aviso de resultados 2025-07-17: VN US$250mn, 7,50% fija, emisión 2025-07-22 at 100%, vencimiento 2027-07-22, bullet, quarterly interest dates (all listed), MEP payment language, duration 1,88y"
+    },
+    {
+     "url": "https://investors.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%2038%20(MEP)%20Suplemento.pdf",
+     "what": "PRIMARY suplemento de prospecto 2025-07-11: actual/365 day count, denominación mínima US$1, monto mínimo US$100, ley AR, bullet, rescate por cuestiones impositivas at 100%, rescate anticipado a opción"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol YM38O, fetched 2026-06-11): ISIN AR0419238511, Clase XXXVIII, 7,50% trimestral, vto 2027-07-22, bullet, denominacionMinima 1, montoResidual 250.000.000, garantía común"
+    },
+    {
+     "url": "https://www.cohen.com.ar/Bursatil/Especie/YM38D",
+     "what": "ISIN AR0419238511, lámina mínima USD 1, Caja de Valores 58790"
+    }
+   ],
+   "confidence": "high",
+   "confidenceNote": "Primary aviso de resultados + suplemento agree with BYMA ficha and Docta on every term. Inventory note 'U$S CG' = garantía común, MEP settlement.",
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-11",
+    "checkedSources": [
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/YM38D",
+      "what": "INDEPENDENT: ISIN AR0419238511, 7.50%, vto 22/07/2027, próximo cupón 22/07/2026, valor técnico 101.01 consistent ONLY with act/365 accrual from 2026-04-22, paridad 104.15 at 105.20"
+     },
+     {
+      "url": "https://www.cohen.com.ar/Bursatil/Especie/YM38D",
+      "what": "INDEPENDENT BYMA ficha mirror: ISIN, YPF S.A., lámina mínima USD 1"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "order book 2026-06-10/11: odd-lot quantities (1 VN bid on YM38D) corroborate 1 VN minimum lot"
+     },
+     {
+      "url": "https://www.invertironline.com/posts/obligaciones-negociables-recomendadas-suscripcion-ypf-12-07-2025",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: IOL subscription note: 7,50% anual USD, cupones trimestrales, emisión/liquidación 2025-07-22, vencimiento 2027-07-22, suscripción mínima US$100 + múltiplos de US$1; IOL ticker title 'On Ypf Clase 38 Vto.22/07/2027 U$S Cg'"
+     },
+     {
+      "url": "https://www.bancoprovincia.com.ar/CDN/Get/YPF_Aviso_Complementario_XXXVIII",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: aviso complementario (colocador mirror, host not previously used): vencimiento a los 24 meses desde la Fecha de Emisión y Liquidación (= 2027-07-22), canje en especie Clases XXV/XXIX/XXXVI, ampliable hasta US$250mn"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/YM38D ('tir' metric, fetched 2026-06-11)",
+     "ticker": "YM38D",
+     "dirtyPriceUSD": 105.2,
+     "computedTIRPct": 3.7034,
+     "publishedTIRPct": 3.98,
+     "publishedTIRRawSSRPct": 3.9757,
+     "deltaPp": -0.2766,
+     "deltaPpVsRawSSR": -0.2723,
+     "pass": true,
+     "failureInvestigation": "Apparent -0.28pp gap is PRICE BASIS, not spec: Docta's displayed TIR 3.98% was computed at an intraday 2026-06-11 tick. Inverse check: spec cashflows priced at dirty 104.90 (within Docta's same-page daily range 104.55-105.20) give exactly 3.9809% (delta +0.0009pp). Docta's paridad 104.15 and VT 101.01 on the same page correspond to the 105.20 close, confirming the cashflow schedule and act/365 accrual. ADVERSARIAL RE-RUN 2026-06-11: Docta SSR BOND-PRICING payload shows raw tir=3.975692% co-displayed with dirty_price=105.20; PV of spec cashflows at exactly that rate = 104.9056 dirty (between data912 bid 104.95 and the day's range), i.e. Docta's tir metric is computed at a stale ~104.91 tick while parity/VT/clean on the same payload are computed at 105.20. Price-basis explanation confirmed quantitatively; spec cashflows unchanged."
+    }
+   }
+  },
+  {
+   "base": "YMCI",
+   "name": "YPF ON Clase XVII 9,00% (step-up) 2029 (USD, Ley NY, canje 2021)",
+   "issuer": {
+    "legalName": "YPF Sociedad Anónima (YPF S.A.)",
+    "sector": "oil & gas (integrated)"
+   },
+   "isin": "USP989MJBS99",
+   "isinDetail": {
+    "regS": "USP989MJBS99",
+    "rule144A": "US984245AV29"
+   },
+   "law": "NY",
+   "lawDetail": "New 2029 Notes issued 2021-02-12 in YPF's international exchange offer (144A/RegS, NY-law indenture); also offered locally as ON Clase XVII under the CNV-filed suplemento de canje.",
+   "currencyOfPayment": "USD",
+   "currencyOfPaymentEvidence": "International exchange notes: coupons and principal payable in USD through the NY-law indenture paying agent (DTC/offshore lines); BYMA line settles the local crumbs in USD.",
+   "issueDate": "2021-02-12",
+   "issueDetail": "US$747.833.257 issued 2021-02-12 in exchange for six classes of old notes (Fitch/SEC 6-K: '$748 million for the senior unsecured bond due 2029'). BYMA ficha montoNominal=montoResidual=747.833.257 - first amortization not yet paid as of 2026-06-11.",
+   "maturity": "2029-06-30",
+   "coupon": {
+    "type": "fixed-step-up",
+    "annualRatePct": 9.0,
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "Semiannual on June 30 and December 30 (same dates as amortization); step-up: 2.500% from issue through 2022-12-31, 9.000% from 2023-01-01 to maturity (BYMA ficha quoting suplemento; SEC 6-K second amendment). All remaining coupons accrue at 9.000%. Next payment 2026-06-30.",
+    "nextPaymentDate": "2026-06-30"
+   },
+   "dayCount": "30/360 (assumed - standard for YPF NY-law notes, cf. Clase XXXIV/XXVIII suplementos; gives flat 4.50 semiannual coupon on outstanding face; not re-verified from the 2021 exchange memorandum)",
+   "amortization": {
+    "type": "installments",
+    "schedule": [
+     {
+      "date": "2026-06-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2026-12-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2027-06-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2027-12-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2028-06-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2028-12-30",
+      "pctOfOriginalFace": 14.285714
+     },
+     {
+      "date": "2029-06-30",
+      "pctOfOriginalFace": 14.285716
+     }
+    ],
+    "note": "NOT bullet. 7 EQUAL semiannual installments of 1/7 of face each, on Jun 30 / Dec 30, starting 2026-06-30 and ending at maturity 2029-06-30 (BYMA ficha quoting suplemento: 'amortizadas en 7 (siete) cuotas semestrales... comenzando el 30 de junio de 2026'; Fitch via SEC 6-K EX-99.1: 'equal semi-annual amortization payments beginning in 2026'). Last installment carries the rounding residue so the schedule sums to exactly 100."
+   },
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "BYMA ficha denominacionMinima=1; oblible minimum denomination 1 USD (local line trades in V/N US$1)."
+   },
+   "tickers": {
+    "ars": "YMCIO",
+    "mep": "YMCID",
+    "cable": "YMCIC"
+   },
+   "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp).",
+   "residualValuePer100": 100.0,
+   "remainingCashflows": [
+    {
+     "date": "2026-06-30",
+     "interest": 4.5,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2026-12-30",
+     "interest": 3.857143,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 3.214286,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2027-12-30",
+     "interest": 2.571429,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 1.928571,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2028-12-30",
+     "interest": 1.285714,
+     "amortization": 14.285714
+    },
+    {
+     "date": "2029-06-30",
+     "interest": 0.642857,
+     "amortization": 14.285716
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original face. Interest = 9.00%/2 (30/360) on outstanding face: 4.50 on 100, then declining by 1/7 of face per period (sum of remaining interest = 18.00). residualValuePer100 still 100.0: the FIRST amortization (2026-06-30) is 19 days after settlement - watch the big 18.79 combined payment. Scheduled Saturdays 2028-12-30 and 2029-06-30 pay the next business day (Docta shows rolled maturity 02/07/2029) without extra accrual.",
+   "sources": [
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol YMCIO, fetched 2026-06-11): ISIN USP989MJBS99, CLASE XVII, issue 2021-02-12, vto 2029-06-30, step-up 2,5%->9,0% (quoted), '7 cuotas semestrales... 30 de junio y 30 de diciembre... comenzando el 30 de junio de 2026', denominacionMinima 1, montoResidual 747.833.257"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/904851/000119312521049394/d132593dex991.htm",
+     "what": "SEC 6-K EX-99.1 (Fitch commentary, 2021-02-18): '$748 million for the senior unsecured bond due 2029... coupon of 2.5% for the first two years through December 2022, and 9% thereafter with equal semi-annual amortization payments beginning in 2026'"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/904851/000119312521016977/d117886dex991.htm",
+     "what": "SEC 6-K EX-99.1 (second amendment, 2021-01-25): New 2029 Notes 2.500% through 2022-12-31 then 9.000% to maturity; amortization schedule and maturity amended vs original offer"
+    },
+    {
+     "url": "https://www.oblible.com/bond-USP989MJBS99.htm",
+     "what": "144A ISIN US984245AV29, semiannual, next coupon 30/06/2026, min denomination 1 USD, amount 747,833,260"
+    }
+   ],
+   "confidence": "high",
+   "confidenceNote": "Amortization structure triple-sourced (BYMA ficha quoting suplemento, Fitch 'equal', and the golden check below which rejects bullet by 2.7pp). Day count 30/360 assumed (flagged).",
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-11",
+    "checkedSources": [
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/YMCID",
+      "what": "INDEPENDENT: ISIN (144A) US984245AV29, 9.00%, rolled maturity 02/07/2029, next coupon 30/06/2026, VT 103.97 ~ 9% accrual since 2025-12-30, tir 3.25% at 112.60"
+     },
+     {
+      "url": "https://cbonds.com/bonds/934143/",
+      "what": "title metadata: 'YPF, 9% 30jun2029, USD' RegS FIGI BBG00Z73LY73, ticker YMCIO"
+     },
+     {
+      "url": "https://www.oblible.com/bond-USP989MJBS99.htm",
+      "what": "step-up language matches; amount outstanding 747.8mn"
+     },
+     {
+      "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Aviso-de-Resultados-2021Feb11.pdf",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: PRIMARY aviso de resultados del canje 2021-02-11 (document not previously used): VN Clase XVII a emitirse US$747.833.257, emisión 2021-02-12, Fecha de Vencimiento 30/06/2029, intereses 2,500% desde emisión hasta e incluyendo 31/12/2022 y 9,000% desde 01/01/2023, amortización 'en 7 (siete) cuotas semestrales, es decir el 30 de junio y el 30 de diciembre de cada año comenzando el 30 de junio de 2026 y finalizando en la Fecha de Vencimiento' - every spec term re-confirmed verbatim"
+     },
+     {
+      "url": "https://www.boerse-frankfurt.de/bond/usp989mjbs99",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: 'YPF S.A. 9% 21/29 Bond | A3KL55 | USP989MJBS99' - coupon/vintage/maturity/ISIN agree"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/YMCID ('tir' metric, fetched 2026-06-11, same displayed price 112.60)",
+     "ticker": "YMCID",
+     "dirtyPriceUSD": 112.6,
+     "computedTIRPct": 3.257,
+     "publishedTIRPct": 3.25,
+     "publishedTIRRawSSRPct": 3.2531,
+     "deltaPp": 0.007,
+     "deltaPpVsRawSSR": 0.0039,
+     "pass": true,
+     "structureDiscrimination": "A bullet structure at the same price would yield 5.97% (2.7pp away) - the 0.01pp agreement uniquely confirms the 7-equal-installment schedule."
+    }
+   }
+  },
+  {
+   "base": "CICB",
+   "name": "CNH Industrial Capital Argentina ON Clase 11 7,50% 2029 (USD MEP, Ley AR)",
+   "issuer": {
+    "legalName": "CNH Industrial Capital Argentina S.A.",
+    "sector": "captive finance (ag/industrial equipment)"
+   },
+   "isin": "AR0416016134",
+   "isinDetail": {
+    "local": "AR0416016134 (BYMA ficha tecnica)"
+   },
+   "law": "AR",
+   "lawDetail": "Aviso de suscripción clause 33: 'se regirán por... las leyes de la Argentina'; Tribunal de Arbitraje General de la BCBA. Régimen Simplificado de Emisor Frecuente (registro N°20), programa US$200mn.",
+   "currencyOfPayment": "USD (MEP - payable in Argentina)",
+   "currencyOfPaymentEvidence": "Aviso de suscripción: 'denominadas, a ser integradas y pagaderas en Dólares Estadounidenses en Argentina'; art. 4 Ley de Obligaciones Negociables payment-in-USD-only covenant; FX-restriction fallback via sale of USD-denominated public securities.",
+   "issueDate": "2026-02-09",
+   "issueDetail": "VN US$46.506.336 issued 2026-02-09 at 100% (auction 2026-02-05; offered up to US$30mn expandable to US$60mn). BYMA ficha montoNominal=montoResidual=46.506.336.",
+   "maturity": "2029-02-09",
+   "coupon": {
+    "type": "fixed",
+    "annualRatePct": 7.5,
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "Semiannual in arrears on Feb 9 and Aug 9 (día idéntico to issue date per semester, aviso clause 14); first coupon scheduled 2026-08-09 (Sunday - pays 2026-08-10, Docta agrees), last at maturity 2029-02-09.",
+    "nextPaymentDate": "2026-08-09"
+   },
+   "dayCount": "actual/365 (aviso de suscripción clause 12: 'cantidad real de días transcurridos y un año de 365 días (cantidad real de días transcurridos/365)')",
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2029-02-09",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "100% en un único pago at maturity (aviso clause 6; BYMA ficha 'AL VENCIMIENTO'). Issuer call: from 18 months before maturity (2027-08-09 onward) at 101% of face + accrued (aviso clause 31) - yield-to-call relevant if price >~101."
+   },
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "Denominación mínima US$1; unidad mínima de negociación V/N US$1; monto mínimo de suscripción primaria V/N US$100 (aviso clauses 15-17)."
+   },
+   "tickers": {
+    "ars": "CICBO",
+    "mep": "CICBD",
+    "cable": null
+   },
+   "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP; no cable line listed (data912 /live/arg_corp).",
+   "residualValuePer100": 100.0,
+   "remainingCashflows": [
+    {
+     "date": "2026-08-09",
+     "interest": 3.719178,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-02-09",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-08-09",
+     "interest": 3.719178,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-02-09",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-08-09",
+     "interest": 3.739726,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-02-09",
+     "interest": 3.780822,
+     "amortization": 100.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original, actual/365: 7.5 x days/365; periods 181d (Feb9-Aug9), 184d (Aug9-Feb9), 182d for 2028 leap Feb9-Aug9. 2026-08-09 is a Sunday: pays 2026-08-10 without extra accrual (per aviso, extra accrual only at the Fecha de Vencimiento).",
+   "sources": [
+    {
+     "url": "https://www.petrini.com.ar/wp-content/uploads/2026/02/MPA3-ANU-ON-CNHI-CLASE-11-Aviso-de-Suscripcion-02-02-26.pdf",
+     "what": "PRIMARY aviso de suscripción 2026-02-02 (mirror of CNV-filed doc): MEP payment, act/365, semiannual día-idéntico dates, bullet 36 months, denominación mínima US$1, call at 101% from 18m before maturity, ley AR, emisor frecuente N°20"
+    },
+    {
+     "url": "https://www.aunoabogados.com.ar/secciones/transacciones/5000-cnh-industrial-capital-argentina-emitio-obligaciones-negociables",
+     "what": "deal counsel note: US$46.506.336, 7,50% fija, emisión 2026-02-09, vto 2029-02-09"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol CICBO, fetched 2026-06-11): ISIN AR0416016134, Clase 11, FIJO 7,50%, vto 2029-02-09, AL VENCIMIENTO, denominacionMinima 1, montoResidual 46.506.336"
+    },
+    {
+     "url": "https://www.fixscr.com/reportes-web/view?id=58773",
+     "what": "FIX rating AA(arg) estable assigned to Clase 11 under the US$200mn EF program"
+    }
+   ],
+   "confidence": "high",
+   "confidenceNote": "Full primary aviso de suscripción recovered; rate and final VN from aviso de resultados via deal-counsel notes + BYMA ficha. Docta VT 102.51 = exactly act/365 accrual 7.5x122/365 from 2026-02-09, confirming day count.",
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-11",
+    "checkedSources": [
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/CICBD",
+      "what": "INDEPENDENT: 7.50%, vto 09/02/2029, next payment 10/08/2026 (rolled Sunday), VT 102.51 = act/365 accrual, tir 8.01% at 101.65"
+     },
+     {
+      "url": "https://abogados.com.ar/cnh-industrial-capital-argentina-sa-emitio-obligaciones-negociables-denominadas-y-pagaderas-en-dolares-estadounidenses-por-un-monto-de-us-46506336/38545",
+      "what": "INDEPENDENT deal note: amount, rate, maturity agree; Marval (issuer) / PAGBAM (colocadores)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "order book 2026-06-10/11: odd-lot quantities (58/60 VN) on CICBD corroborate 1 VN minimum lot; no CICBC cable line exists"
+     },
+     {
+      "url": "https://www.cohen.com.ar/Bursatil/Especie/CICBD",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: Cohen ficha (source not previously used for CICB): Código ISIN AR0416016134, Caja de Valores 59183, emisor CNH INDUSTRIAL CAP, lámina mínima USD 1,00, cantidad mínima a negociar 1"
+     },
+     {
+      "url": "https://iol.invertironline.com/titulo/cotizacion/BCBA/CICBD",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: IOL title 'On Cnh Industrial Capital Argentina Cl.11 09/02/29' confirms class and maturity; FIX rating-action text (AA(arg)) restates: USD pagaderas en Argentina (MEP), plazo 36 meses, intereses semestrales, capital en un único pago al vencimiento, hasta US$30mn ampliable a US$60mn"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/CICBD ('tir' metric, fetched 2026-06-11, same displayed price 101.65)",
+     "ticker": "CICBD",
+     "dirtyPriceUSD": 101.65,
+     "computedTIRPct": 8.0095,
+     "publishedTIRPct": 8.01,
+     "publishedTIRRawSSRPct": 8.0089,
+     "deltaPp": -0.0005,
+     "deltaPpVsRawSSR": 0.0006,
+     "pass": true
+    }
+   }
+  },
+  {
+   "base": "VSCU",
+   "name": "Vista Energy Argentina ON Clase XXVIII 7,50% 2030 (USD cable, Ley AR)",
+   "issuer": {
+    "legalName": "Vista Energy Argentina S.A.U.",
+    "sector": "oil & gas E&P (shale)"
+   },
+   "isin": "AR0707929003",
+   "isinDetail": {
+    "local": "AR0707929003 (BYMA ficha tecnica; Docta agrees)"
+   },
+   "law": "AR",
+   "lawDetail": "Aviso de suscripción clause 39: 'se regirán por... las leyes de la República Argentina'; Tribunal de Arbitraje General de la BCBA. Programa global US$3.000mn.",
+   "currencyOfPayment": "USD (cable - integrated and payable abroad via CVSA's New York USD account)",
+   "currencyOfPaymentEvidence": "Aviso de suscripción: 'pagaderas en Dólares Estadounidenses en el exterior, e integradas en Dólares Estadounidenses en el exterior (dólar cable)'; clause 26: all payments by transfer to CVSA's USD account in New York State; holders may opt to collect into a local USD account afterwards.",
+   "issueDate": "2025-03-07",
+   "issueDetail": "VN US$92.413.570 issued 2025-03-07 at 100% (aviso de resultados: tasa de corte 7,50%, offered up to US$40mn expandable to US$150mn). BYMA ficha montoNominal=montoResidual=92.413.570. Rated AAA(arg)/AAA.ar at issue.",
+   "maturity": "2030-03-07",
+   "coupon": {
+    "type": "fixed",
+    "annualRatePct": 7.5,
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "Semiannual in arrears on Mar 7 and Sep 7 (día idéntico to issue date, aviso clause 14); dates per aviso de resultados: 2025-09-07, 2026-03-07, 2026-09-07, 2027-03-07, 2027-09-07, 2028-03-07, 2028-09-07, 2029-03-07, 2029-09-07 and at maturity 2030-03-07.",
+    "nextPaymentDate": "2026-09-07"
+   },
+   "dayCount": "actual/365 (aviso de suscripción clause 15: 'cantidad real de días transcurridos y un año de 365 días (cantidad real de días transcurridos/365)')",
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2030-03-07",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Única cuota at maturity (aviso clause 23; BYMA ficha 'En una cuota al vencimiento'). Issuer call: ANY time from issue at 100% of face + accrued (aviso clause 31, 'rescate anticipado a opción de la Emisora... al valor nominal con más los intereses devengados') - caps upside above par."
+   },
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 1.0,
+    "detail": "Denominación mínima V/N US$1; unidad mínima de negociación V/N US$1; monto mínimo de suscripción primaria V/N US$1.000 + múltiplos de US$1 (aviso clauses 18-20)."
+   },
+   "tickers": {
+    "ars": "VSCUO",
+    "mep": "VSCUD",
+    "cable": "VSCUC"
+   },
+   "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp).",
+   "residualValuePer100": 100.0,
+   "remainingCashflows": [
+    {
+     "date": "2026-09-07",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-03-07",
+     "interest": 3.719178,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-07",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-07",
+     "interest": 3.739726,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-07",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-07",
+     "interest": 3.719178,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-07",
+     "interest": 3.780822,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-03-07",
+     "interest": 3.719178,
+     "amortization": 100.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original, actual/365: 7.5 x days/365; periods 184d (Mar7-Sep7), 181d (Sep7-Mar7), 182d for 2027-09-07 to 2028-03-07 (leap Feb). 2027-03-07 is a Sunday: pays next business day without extra accrual (extra accrual only when an amortization date rolls, aviso clause 14). Coupon of 2026-03-07 (paid 2026-03-09) already paid.",
+   "sources": [
+    {
+     "url": "https://vista-energy.cdn.prismic.io/vista-energy/aQqrXbpReVYa4EMJ_Vista-AvisodeSuscripcio%CC%81n-ClaseXXVIII-EXE-..pdf",
+     "what": "PRIMARY aviso de suscripción 2025-02-27 (issuer CDN): cable payment mechanics, act/365, semiannual día-idéntico, bullet 60 months, denominación mínima US$1, call at par anytime, ley AR, emisión 2025-03-07, vencimiento 2030-03-07"
+    },
+    {
+     "url": "https://www.bancoprovincia.com.ar/CDN/Get/VISTA_ENERGY_CLASE_XXVIII_Aviso_de_Resultado",
+     "what": "PRIMARY aviso de resultados: tasa de corte 7,50%, VN emitido US$92.413.570, interest dates listed 2025-09-07 through 2030-03-07, única cuota at maturity"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol VSCUO, fetched 2026-06-11): ISIN AR0707929003, Clase XXVIII, 7,50% semestral, vto 2030-03-07, una cuota al vencimiento, denominacionMinima 1, montoResidual 92.413.570"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/vista-energy-class-xxviii-notes-issuance-class-28/",
+     "what": "deal counsel note: Clase XXVIII / Clase 28 issuance corroboration"
+    }
+   ],
+   "confidence": "high",
+   "confidenceNote": "Two primary documents (aviso de suscripción + aviso de resultados) plus BYMA ficha agree on all terms. Inventory note 'U$S CG' = garantía común; settlement mechanics are cable.",
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-11",
+    "checkedSources": [
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/VSCUD",
+      "what": "INDEPENDENT: ISIN AR0707929003, 7.50%, vto 07/03/2030, next payment 07/09/2026, first cashflow 08/09/2025 (rolled Sunday), tir 5.76% at 108.00"
+     },
+     {
+      "url": "https://www.valo.ar/novedades/colocaciones/aviso-de-resultado/obligacion-negociable-vista-energy-argentina-clase-xxviii/",
+      "what": "INDEPENDENT colocador mirror of aviso de resultados: 7,50% corte, US$92.413.570"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "order book 2026-06-10/11: odd-lot quantities (702 VN ask, 2.222 VN bid) corroborate 1 VN minimum lot"
+     },
+     {
+      "url": "https://lexlatin.com/noticias/vista-energy-argentina-obligaciones-negociables-clase-xxviii",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: LexLatin deal note (source not previously used): US$92,4mn, 7,50% fija anual, liquidación 07/03/2025, vencimiento 2030, integradas en dólares en el exterior (cable), programa global US$3.000mn, AAA(arg)/AAA.ar - all agree"
+     },
+     {
+      "url": "https://www.cohen.com.ar/Bursatil/Especie/VSCUD",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: Cohen ficha (source not previously used for VSCU): Código ISIN AR0707929003, Caja de Valores 58509, vencimiento 7/3/2030, lámina mínima USD 1,00, cantidad mínima 1; IOL title 'On Vista Energy Cl.28 V07/03/30 U$S Cg' agrees"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/VSCUD ('tir' metric, fetched 2026-06-11, same displayed price 108.00)",
+     "ticker": "VSCUD",
+     "dirtyPriceUSD": 108.0,
+     "computedTIRPct": 5.7649,
+     "publishedTIRPct": 5.76,
+     "publishedTIRRawSSRPct": 5.7648,
+     "deltaPp": 0.0049,
+     "deltaPpVsRawSSR": 0.0001,
+     "pass": true
+    }
+   }
+  },
+  {
+   "base": "MGCO",
+   "name": "Pampa Energía ON Clase 23 Internacional 7,875% 2034 (USD, Ley NY)",
+   "issuer": {
+    "legalName": "Pampa Energía S.A.",
+    "sector": "integrated energy / power"
+   },
+   "isin": "USP7464EAT30",
+   "isinDetail": {
+    "regS": "USP7464EAT30 (BYMA-listed line; cbonds, BondbloX, Deutsche Börse agree)",
+    "additionalNotes": "USP7464EAV85 - 2025-05-28 reopening line (shown by Docta and finanzen.net WKN A4EBWN); fungible same terms",
+    "rule144A": null
+   },
+   "law": "NY",
+   "lawDetail": "Senior unsecured notes issued under Rule 144A / Regulation S with The Bank of New York Mellon as trustee and paying agent (NY-law indenture); placed under CNV's frequent-issuer regime and listed on BYMA / A3 as ON Clase 23.",
+   "currencyOfPayment": "USD",
+   "currencyOfPaymentEvidence": "International 144A/RegS notes: coupons and principal payable in USD via BoNY (trustee/paying agent/registrar); BYMA ficha moneda 'Dólares'.",
+   "issueDate": "2024-12-16",
+   "issueDetail": "US$360.000.000 original issued 2024-12-16 (10-year international bond at 7.875%); US$340.000.000 additional notes issued 2025-05-28 (reopening priced at a discount to yield ~8%); total outstanding US$700.000.000 = BYMA ficha montoNominal/montoResidual.",
+   "maturity": "2034-12-16",
+   "coupon": {
+    "type": "fixed",
+    "annualRatePct": 7.875,
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "Semiannual in arrears on June 16 and December 16; first coupon 2025-06-16; last on (rolled) maturity. Next payment 2026-06-16 (Docta and oblible agree).",
+    "nextPaymentDate": "2026-06-16"
+   },
+   "dayCount": "30/360 (assumed - standard for NY-law 144A/RegS internationals, flat 3.9375 semiannual; not re-verified from the offering memorandum)",
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2034-12-16",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Bullet at maturity (BYMA ficha 'AL VENCIMIENTO'). 2034-12-16 is a Saturday - pays Monday 2034-12-18 (Docta displays 18/12/2034)."
+   },
+   "minDenomination": {
+    "currency": "USD",
+    "amount": 10000.0,
+    "detail": "Minimum denomination US$10.000 (BYMA ficha denominacionMinima=10000; oblible '10 000 USD'). Increments of US$1.000 above the minimum corroborated by Cohen ficha 2026-06-11 (lámina mínima USD 1.000, cantidad mínima a negociar 10.000) but still NOT verified from the offering memorandum itself; BYMA order book shows 10.000/25.000 VN lots."
+   },
+   "tickers": {
+    "ars": "MGCOO",
+    "mep": "MGCOD",
+    "cable": "MGCOC"
+   },
+   "quoteBasis": "BYMA corp panel, dirty price per 100 VN original; O=ARS, D=USD MEP, C=USD cable (data912 /live/arg_corp).",
+   "residualValuePer100": 100.0,
+   "remainingCashflows": [
+    {
+     "date": "2026-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2026-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-12-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-06-16",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-12-16",
+     "interest": 3.9375,
+     "amortization": 100.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original, 30/360: 7.875%/2 = 3.9375 every Jun 16 / Dec 16 from 2026-06-16 (5 days after settlement) through 2034-12-16 (+100 principal); 18 payments. Weekend scheduled dates (2028-12-16, 2029-06-16, 2029-12-16, 2030-06-16, 2034-12-16) pay next business day without extra accrual.",
+   "sources": [
+    {
+     "url": "https://ri.pampa.com/en/press-release/issuance-of-10-year-international-bond-at-7-875/",
+     "what": "issuer IR press release: original US$360mn 10-year at 7.875%, Dec-2024"
+    },
+    {
+     "url": "https://ri.pampa.com/en/press-release/pampa-reopens-its-2034-international-bond-for-us340-million/",
+     "what": "issuer IR press release: US$340mn reopening 2025-05-28 at a discount yielding ~8%, total US$700mn"
+    },
+    {
+     "url": "https://bruchoufunes.com/en/pampa-energia-reopening-7-875-notes-2034/",
+     "what": "deal counsel: original issued 2024-12-16 US$360mn, additional 2025-05-28 US$340mn, total US$700mn, 144A/RegS, BoNY trustee/paying agent, BYMA+A3 listing"
+    },
+    {
+     "url": "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general",
+     "what": "BYMA ficha técnica (symbol MGCOO, fetched 2026-06-11): ISIN USP7464EAT30, 'Clase 23 Internacional', FIJO 7.875%, issue 2024-12-16, vto 2034-12-16, AL VENCIMIENTO, denominacionMinima 10000, montoResidual 700.000.000"
+    },
+    {
+     "url": "https://www.oblible.com/bond-USP7464EAT30.htm",
+     "what": "next coupon 16/06/2026, semiannual, min denomination 10,000 USD, maturity 16/12/2034"
+    }
+   ],
+   "confidence": "high",
+   "confidenceNote": "Issuer IR + deal counsel + BYMA ficha agree on amounts/dates/coupon; coupon months pinned by two independent next-coupon dates (16-Jun). Day count and US$1.000 increment assumed/unverified (flagged).",
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-11",
+    "checkedSources": [
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/MGCOD",
+      "what": "INDEPENDENT: 7.88%, rolled maturity 18/12/2034, next payment 16/06/2026, tir 6.86% at 111.00; shows additional-notes ISIN USP7464EAV85"
+     },
+     {
+      "url": "https://cbonds.es/bonds/1765361/",
+      "what": "title metadata: 'Pampa Energia, 7.875% 16dec2034, USD (USP7464EAT30)'"
+     },
+     {
+      "url": "https://www.clearygottlieb.com/news-and-insights/news-listing/pampa-in-360-million-offering-dec-2024",
+      "what": "US counsel: US$360mn Dec-2024 offering corroboration"
+     },
+     {
+      "url": "https://www.cohen.com.ar/Bursatil/Especie/MGCOD",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: Cohen ficha (source not previously used for MGCO): Código ISIN USP7464EAT30, Caja de Valores 84122, vencimiento 16/12/2034, lámina mínima USD 1.000,00, cantidad mínima a negociar 10.000 - independently corroborates the US$10.000 minimum with US$1.000 increments"
+     },
+     {
+      "url": "https://www.boerse-frankfurt.de/bond/usp7464eat30",
+      "what": "ADVERSARIAL RE-CHECK 2026-06-11: 'Pampa Energia S.A. 7,875% 24/34 Bond | A3L7E8 | USP7464EAT30' - coupon/vintage/maturity/ISIN agree; IOL title 'On Pampa Energia S.A. Cl. Xxiii V.16/12/34' agrees"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c) 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/MGCOD ('tir' metric, fetched 2026-06-11, same displayed price 111.00)",
+     "ticker": "MGCOD",
+     "dirtyPriceUSD": 111.0,
+     "computedTIRPct": 6.8617,
+     "publishedTIRPct": 6.86,
+     "publishedTIRRawSSRPct": 6.8577,
+     "deltaPp": 0.0017,
+     "deltaPpVsRawSSR": 0.004,
+     "pass": true
+    }
+   }
+  }
+ ]
+}

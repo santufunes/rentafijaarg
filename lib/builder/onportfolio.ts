@@ -264,6 +264,15 @@ export function buildOnPortfolio(
   const used = new Set<string>();
   const rungWeightPct = 1 / rungCount;
 
+  // Con pocos peldaños el tope del 25% es inalcanzable (cada peldaño pesa más):
+  // la regla operativa pasa a ser "un peldaño por emisor", y se informa.
+  const issuerCap = Math.max(MAX_ISSUER_WEIGHT, rungWeightPct * 1.001);
+  const sectorCap = Math.max(MAX_SECTOR_WEIGHT, rungWeightPct * 1.001);
+  if (rungWeightPct > MAX_ISSUER_WEIGHT)
+    warnings.push(
+      `Con ${rungCount} peldaño(s) cada emisor pesa ~${Math.round(rungWeightPct * 100)}%: el tope del 25% por emisor se reemplaza por "un peldaño por emisor".`,
+    );
+
   const traces: OnRungTrace[] = [];
   for (let r = 0; r < rungCount; r++) {
     const target = rungTargets[r];
@@ -285,12 +294,12 @@ export function buildOnPortfolio(
       const e = t(p);
       const issuer = issuerKey(p.instrument);
       const sector = e.sector;
-      if ((issuerWeight.get(issuer) ?? 0) + rungWeightPct > MAX_ISSUER_WEIGHT + 1e-9 && rungCount > 1) {
-        e.reason = `Tope de concentración: ${issuer} ya tiene ${Math.round((issuerWeight.get(issuer) ?? 0) * 100)}% (máx. 25%).`;
+      if ((issuerWeight.get(issuer) ?? 0) + rungWeightPct > issuerCap + 1e-9) {
+        e.reason = `Tope de concentración: ${issuer} ya tiene ${Math.round((issuerWeight.get(issuer) ?? 0) * 100)}% de la cartera.`;
         continue;
       }
-      if ((sectorWeight.get(sector) ?? 0) + rungWeightPct > MAX_SECTOR_WEIGHT + 1e-9 && rungCount > 2) {
-        e.reason = `Tope sectorial: ${sector} ya concentra ${Math.round((sectorWeight.get(sector) ?? 0) * 100)}% (máx. 50%).`;
+      if ((sectorWeight.get(sector) ?? 0) + rungWeightPct > sectorCap + 1e-9) {
+        e.reason = `Tope sectorial: ${sector} ya concentra ${Math.round((sectorWeight.get(sector) ?? 0) * 100)}%.`;
         continue;
       }
       chosen = p;
@@ -386,7 +395,7 @@ export function buildOnPortfolio(
   // pasada 1: hasta el tope por emisor, priorizando el mayor spread
   for (const line of [...lines].sort((a, b) => b.spreadBp - a.spreadBp)) {
     const inv = issuerInvested();
-    const room = MAX_ISSUER_WEIGHT * investable - (inv.get(issuerKey(line.position.priced.instrument)) ?? 0);
+    const room = issuerCap * investable - (inv.get(issuerKey(line.position.priced.instrument)) ?? 0);
     if (room > 0) addToLine(line, room);
   }
   // pasada 2: si el universo es tan chico que los topes dejan >5% líquido

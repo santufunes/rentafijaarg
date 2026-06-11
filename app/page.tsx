@@ -77,9 +77,15 @@ export default function Home() {
         </p>
       )}
       {values && built?.error && (
-        <p className="mt-6 rounded-lg border border-amber-900 bg-amber-950/40 p-4 text-sm text-amber-300">
-          {built.error.replace('Error: ', '')}
-        </p>
+        <div className="mt-6 rounded-lg border border-amber-900 bg-amber-950/40 p-4">
+          <p className="text-sm text-amber-300">{built.error.replace('Error: ', '')}</p>
+          <button
+            onClick={() => setValues(null)}
+            className="mt-3 rounded-lg border border-stone-700 px-3 py-1.5 text-sm text-stone-300 transition hover:border-emerald-600 hover:text-emerald-300"
+          >
+            ← Cambiar respuestas
+          </button>
+        </div>
       )}
       {values && built?.proposal && market && (
         <Proposal

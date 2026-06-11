@@ -158,6 +158,8 @@ export function simulate(
   ctx: MarketContext,
   amountArs: number,
   priceArsPer100?: number,
+  /** Posición exacta ya conocida (p.ej. una línea de cartera): evita re-derivar nominales del monto. */
+  nominalsOverride?: number,
 ): SimulationResult {
   const settlement = settlementT1(ctx.asOf);
   const marketArs = quotes.get(instr.tickers.ars)?.last;
@@ -165,7 +167,7 @@ export function simulate(
   if (!px || px <= 0) throw new Error(`Sin precio ARS para ${instr.ticker}`);
 
   const minLot = Math.max(1, instr.minLot || 1);
-  const nominals = Math.floor(amountArs / (px / 100));
+  const nominals = nominalsOverride ?? Math.floor(amountArs / (px / 100));
   if (nominals < minLot)
     throw new Error(
       `Con ${Math.round(amountArs).toLocaleString('es-AR')} ARS a precio ${px} no llegás al lote mínimo de ${minLot} VN (necesitás ~$${Math.round((minLot * px) / 100).toLocaleString('es-AR')}).`,

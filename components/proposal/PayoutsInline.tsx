@@ -10,11 +10,14 @@ import { simulate } from '@/lib/terminal';
 export default function PayoutsInline({
   ticker,
   investedArs,
+  nominals,
   quotes,
   ctx,
 }: {
   ticker: string;
   investedArs: number;
+  /** Posición exacta de la línea: el cronograma reproduce estos nominales, no una re-derivación. */
+  nominals: number;
   quotes: Map<string, Quote>;
   ctx: MarketContext;
 }) {
@@ -22,12 +25,11 @@ export default function PayoutsInline({
     const instr = INSTRUMENTS.find((i) => i.ticker === ticker);
     if (!instr) return null;
     try {
-      // monto +0.5% para que el floor de nominales reproduzca la posición real
-      return simulate(instr, quotes, ctx, investedArs * 1.005);
+      return simulate(instr, quotes, ctx, investedArs, undefined, nominals);
     } catch {
       return null;
     }
-  }, [ticker, investedArs, quotes, ctx]);
+  }, [ticker, investedArs, nominals, quotes, ctx]);
 
   if (!sim) return <p className="py-2 font-mono text-xs text-stone-500">Sin cronograma disponible.</p>;
 

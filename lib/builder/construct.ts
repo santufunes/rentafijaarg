@@ -20,7 +20,6 @@ import { priceInstrument } from '../engine/pricing';
 import type { Family, Instrument, MarketContext, PricedInstrument, Quote } from '../engine/types';
 import type { Position } from '../engine/portfolio';
 import {
-  applyPesoFocus,
   targetWeights,
   type CurrencyGoal,
   type PesoFocus,
@@ -398,10 +397,17 @@ export function buildProposal(
     }
   }
 
-  const weights = applyPesoFocus(
-    targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths),
+  const weights = targetWeights(
+    inputs.profile,
+    inputs.goal,
+    inputs.horizonMonths,
     inputs.focus ?? 'equilibrado',
   );
+  if (inputs.focus === 'inflacion' && inputs.horizonMonths <= 3) {
+    warnings.push(
+      'Tu horizonte de hasta 3 meses es corto para CER: el ajuste por inflación llega con rezago y la TIR real corta suele ser negativa. Se priorizó tasa fija.',
+    );
+  }
   const segs: SegmentKey[] = ['tasa_fija', 'cer', 'dolar'];
 
   // Las comisiones se reservan ANTES de asignar: las órdenes propuestas tienen

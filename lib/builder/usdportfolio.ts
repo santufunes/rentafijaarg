@@ -99,14 +99,16 @@ export function buildUsdPortfolio(
       const pick =
         within[0] ??
         [...liquid].sort((a, b) => a.modifiedDuration - b.modifiedDuration || b.tir - a.tir)[0];
-      if (pick)
-        picks.push({
-          p: pick,
-          why:
-            months(pick) <= inputs.horizonMonths + 6
-              ? `Vence dentro de tu horizonte: cobrás el flujo completo sin depender del precio de venta. Mejor TIR del tramo (${(pick.tir * 100).toFixed(1)}% USD).`
-              : `No hay soberano que venza dentro de tu horizonte: se toma la menor duración disponible (${pick.modifiedDuration.toFixed(1)} años).`,
-        });
+      if (pick) {
+        const m = months(pick);
+        const why =
+          m <= inputs.horizonMonths
+            ? `Vence dentro de tu horizonte: cobrás el flujo completo sin depender del precio de venta. Mejor TIR del tramo (${(pick.tir * 100).toFixed(1)}% USD).`
+            : m <= inputs.horizonMonths + 6
+              ? `Vence ~${Math.round(m - inputs.horizonMonths)} mes(es) después de tu horizonte: riesgo de precio acotado por la corta duración residual al vender.`
+              : `No hay soberano que venza dentro de tu horizonte: se toma la menor duración disponible (${pick.modifiedDuration.toFixed(1)} años).`;
+        picks.push({ p: pick, why });
+      }
       const second = liquid
         .filter((p) => p !== pick && p.instrument.family !== pick?.instrument.family)
         .sort((a, b) => a.modifiedDuration - b.modifiedDuration || b.tir - a.tir)[0];

@@ -131,6 +131,7 @@ export default function Proposal({
                               <PayoutsInline
                                 ticker={i.ticker}
                                 investedArs={l.position.investedArs}
+                                nominals={l.position.nominals}
                                 quotes={quotes}
                                 ctx={ctx}
                               />

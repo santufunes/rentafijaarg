@@ -130,14 +130,20 @@ export default function Wizard({
                 title="Pesos"
                 subtitle="LECAPs y BONCAPs a tasa fija, BONCER que siguen a la inflación, y dólar opcional."
                 badge="ARS"
-                onClick={() => setCurrency('ARS')}
+                onClick={() => {
+                  if (currency !== 'ARS') setAmountText('');
+                  setCurrency('ARS');
+                }}
               />
               <BigOption
                 selected={currency === 'USD'}
                 title="Dólares (MEP)"
                 subtitle="Soberanos AL/GD, BOPREAL y ONs corporativas con calificación. Cobrás todo en USD."
                 badge="USD"
-                onClick={() => setCurrency('USD')}
+                onClick={() => {
+                  if (currency !== 'USD') setAmountText('');
+                  setCurrency('USD');
+                }}
               />
             </div>
             <NextButton disabled={currency === null} onClick={() => setStep(1)} />

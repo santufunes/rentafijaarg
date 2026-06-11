@@ -85,8 +85,12 @@ export function targetWeights(
   profile: ProfileKey,
   goal: CurrencyGoal,
   horizonMonths: number,
+  focus: PesoFocus = 'equilibrado',
 ): Weights {
-  const w = { ...BASE_WEIGHTS[goal][profile] };
+  // El enfoque inclina los pesos BASE; las reglas de horizonte se aplican
+  // después y son finales (un horizonte de 3 meses anula el CER aunque el
+  // usuario haya pedido enfoque inflación: el ajuste llega con rezago).
+  const w = applyPesoFocus({ ...BASE_WEIGHTS[goal][profile] }, focus);
   if (horizonMonths <= 3) {
     w.tasa_fija += w.cer;
     w.cer = 0;

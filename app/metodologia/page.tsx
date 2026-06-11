@@ -78,6 +78,12 @@ export default function Metodologia() {
             calzan con el horizonte; en dólares la duración objetivo crece con el perfil.
           </li>
           <li>
+            <strong>Liquidez:</strong> se evalúa contra un <em>volumen de referencia</em>: el mayor
+            entre el volumen operado hoy y el del último cierre archivado. Antes de la apertura el
+            volumen del día es cero para todo el panel — eso no significa que el mercado se haya
+            vuelto ilíquido.
+          </li>
+          <li>
             <strong>Sizing:</strong> nominales enteros; el remanente se reasigna al instrumento más
             barato por nominal; lo que no alcanza queda como “efectivo sin invertir”.
           </li>

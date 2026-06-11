@@ -9,6 +9,7 @@
 import { NextResponse } from 'next/server';
 import generated from '@/lib/data/instruments.generated.json';
 import snapshot from '@/lib/data/snapshot.json';
+import { isPreOpen, mergeWithReference } from '@/lib/data/marketMerge';
 
 /** Tickers de ONs del registro: del panel corp solo interesan esas líneas. */
 const ON_TICKERS = new Set(
@@ -65,9 +66,14 @@ export async function GET() {
       ),
     ]);
 
-    const quotes = [...bonds, ...notes, ...corp.filter((r) => ON_TICKERS.has(r.symbol))]
+    const liveQuotes = [...bonds, ...notes, ...corp.filter((r) => ON_TICKERS.has(r.symbol))]
       .filter((r) => r.c > 0)
       .map((r) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
+    // Unión vivo ∪ último cierre: pre-apertura el volumen vivo es 0 y el panel
+    // corporativo ni siquiera lista los tickers que no operaron hoy. Liquidez
+    // contra volumen de referencia = máx(hoy, último cierre archivado).
+    const preOpen = isPreOpen(liveQuotes);
+    const quotes = mergeWithReference(liveQuotes, snapshot.quotes);
 
     const cerHistory = (cer.results[0]?.detalle ?? [])
       .map((r) => ({ date: r.fecha, value: r.valor }))
@@ -85,6 +91,8 @@ export async function GET() {
 
     return NextResponse.json({
       source: 'live',
+      session: preOpen ? 'preopen' : 'open',
+      volumeReferenceDate: preOpen ? snapshot.asOf : today,
       asOf: today,
       timestamp: new Date().toISOString(),
       quotes,

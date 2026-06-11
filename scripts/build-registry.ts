@@ -9,6 +9,7 @@
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { isPreOpen, mergeWithReference } from '../lib/data/marketMerge';
 
 const ROOT = path.join(__dirname, '..');
 const R = (f: string) => path.join(ROOT, 'research', f);
@@ -416,6 +417,18 @@ async function buildSnapshot() {
     quotes = [...bonds, ...notes, ...(corp ?? []).filter((r: any) => onTickers.has(r.symbol))]
       .filter((r: any) => r.c > 0)
       .map((r: any) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
+    // Un rebuild pre-apertura capturaría volumen 0 (y un panel corporativo
+    // vacío) y rompería la referencia de liquidez: se hace la unión con el
+    // snapshot anterior preservando precios/volúmenes del último cierre.
+    if (isPreOpen(quotes)) {
+      const prev = readJson(path.join(ROOT, 'lib/data/snapshot.json'));
+      if (Array.isArray(prev?.quotes) && prev.quotes.length > 50) {
+        quotes = mergeWithReference(quotes, prev.quotes);
+        console.warn(
+          'AVISO: feed pre-apertura; se conserva el último cierre archivado como referencia de precios/liquidez.',
+        );
+      }
+    }
   } else {
     const prev = readJson(path.join(ROOT, 'lib/data/snapshot.json'));
     if (Array.isArray(prev?.quotes) && prev.quotes.length > 50) {

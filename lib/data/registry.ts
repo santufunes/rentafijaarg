@@ -12,6 +12,9 @@ export const REGISTRY_ASOF: string = generated.asOf;
 
 export interface MarketPayload {
   source: 'live' | 'snapshot';
+  /** preopen = el mercado aún no operó hoy; volúmenes de referencia del último cierre. */
+  session?: 'preopen' | 'open';
+  volumeReferenceDate?: string;
   asOf: string;
   timestamp: string;
   quotes: { ticker: string; last: number; bid?: number; ask?: number; volume?: number }[];

@@ -99,7 +99,9 @@ export default function Terminal() {
             <Tape label="INSTRUMENTOS" value={String(data.rows.length)} />
             <span className={market.source === 'live' ? 'text-emerald-400' : 'text-amber-400'}>
               {market.source === 'live'
-                ? `● EN VIVO · datos de hace ${dataAgeMin ?? '?'} min (feed ~20 min demorado)`
+                ? market.session === 'preopen'
+                  ? `● PRE-APERTURA · precios del último cierre · volúmenes de referencia ${market.volumeReferenceDate ?? ''}`
+                  : `● EN VIVO · datos de hace ${dataAgeMin ?? '?'} min (feed ~20 min demorado)`
                 : `● SNAPSHOT ${market.asOf}`}
             </span>
           </div>

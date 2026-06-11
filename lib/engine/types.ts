@@ -42,6 +42,10 @@ interface InstrumentBase {
   /** Emisor y sector (ONs). */
   issuer?: string;
   sector?: string;
+  /** Calificación local (ONs), p.ej. "AAA(arg)"; tier normalizado 1 (mejor) a 3 (peor/sin calificar). */
+  rating?: string | null;
+  ratingAgency?: string | null;
+  ratingTier?: 1 | 2 | 3;
   sources?: string[];
 }
 

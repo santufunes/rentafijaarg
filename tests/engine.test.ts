@@ -153,7 +153,7 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
 
   // 4) ONs: precio sucio USD (línea D, mismo cierre data912) y TIR publicada
   //    relevados en la verificación de cada spec (docta/bonistas).
-  const fromOns: Golden[] = ['1', '2', '3'].flatMap((n) => {
+  const fromOns: Golden[] = ['1', '2', '3', '4', '5', '6'].flatMap((n) => {
     let part: any;
     try {
       part = readJson(`research/specs_ons_part${n}.json`);

@@ -292,19 +292,26 @@ function pickDolar(
       for (const p of floorPool.slice(1))
         tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años ≥ la del elegido: más sensibilidad a tasas de la necesaria.`);
     }
-    // Carry corporativo corto: ON con MD ≤ 3. En perfil conservador la TIR es
-    // un proxy inverso de calidad crediticia: se elige el crédito más fuerte
-    // del tramo (menor TIR), no el más rendidor.
+    // Carry corporativo corto: ON con MD ≤ 3. Crédito primero: mejor tier de
+    // calificación local; a igual tier, la de menor TIR (el mercado le exige
+    // menos spread = menos riesgo percibido).
+    const tierOf = (p: PricedInstrument) => p.instrument.ratingTier ?? 3;
     const shortOns = ons
       .filter((p) => p.modifiedDuration <= 3)
-      .sort((a, b) => a.tir - b.tir || a.modifiedDuration - b.modifiedDuration);
+      .sort((a, b) => tierOf(a) - tierOf(b) || a.tir - b.tir);
     const onPick = shortOns[0];
     if (onPick) {
-      const r = `ON corta de ${issuerOf(onPick)}: el crédito corporativo más sólido del tramo (a menor TIR, menor riesgo percibido).`;
+      const ratingTxt = onPick.instrument.rating ? ` (${onPick.instrument.rating})` : '';
+      const r = `ON corta de ${issuerOf(onPick)}${ratingTxt}: el crédito corporativo más sólido del tramo.`;
       tracer.select(onPick, r);
       picks.push({ priced: onPick, rationale: r });
       for (const p of shortOns.slice(1))
-        tracer.why(p, `TIR ${(p.tir * 100).toFixed(1)}% > ${(onPick.tir * 100).toFixed(1)}%: el mercado le exige más spread (más riesgo de crédito percibido).`);
+        tracer.why(
+          p,
+          tierOf(p) > tierOf(onPick)
+            ? `Calificación ${p.instrument.rating ?? 'sin calificación pública'}: por debajo de la elegida.`
+            : `TIR ${(p.tir * 100).toFixed(1)}% > ${(onPick.tir * 100).toFixed(1)}% a igual calificación: más riesgo percibido.`,
+        );
       for (const p of ons.filter((x) => x.modifiedDuration > 3))
         tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años: larga para un perfil conservador.`);
     }

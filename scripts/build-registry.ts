@@ -158,8 +158,17 @@ function isUncertain(spec: any): boolean {
 // --- soberanos USD + bopreal ----------------------------------------------
 const onsParts = fs
   .readdirSync(path.join(ROOT, 'research'))
-  .filter((f) => /^specs_ons.*\.json$/.test(f))
+  .filter((f) => /^specs_ons_part\d+\.json$/.test(f))
   .map((f) => [f, 'on'] as const);
+
+// Calificaciones locales (ons_ratings.json): base → {rating, agency, tier}.
+const ratingsData = readJson(R('ons_ratings.json'));
+const ratingByBase = new Map<string, { rating: string | null; agency: string | null; tier: number }>(
+  (ratingsData?.ratings ?? []).map((r: any) => [
+    r.base,
+    { rating: r.rating ?? null, agency: r.agency ?? null, tier: Number(r.tier ?? r.normalizedTier ?? 3) },
+  ]),
+);
 
 for (const [file, family] of [
   ['specs_soberanos_usd.json', 'soberano_usd'],
@@ -227,6 +236,16 @@ for (const [file, family] of [
       law: spec.law,
       issuer: spec.issuer ?? undefined,
       sector: spec.sector ?? undefined,
+      ...(family === 'on'
+        ? (() => {
+            const rt = ratingByBase.get(spec.base ?? t.slice(0, 4));
+            return {
+              rating: rt?.rating ?? null,
+              ratingAgency: rt?.agency ?? null,
+              ratingTier: rt && rt.tier >= 1 && rt.tier <= 3 ? rt.tier : 3,
+            };
+          })()
+        : {}),
       sources: spec.sources ?? [],
       cashflows: flows,
     });

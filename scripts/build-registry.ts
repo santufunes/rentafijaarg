@@ -156,10 +156,16 @@ function isUncertain(spec: any): boolean {
 }
 
 // --- soberanos USD + bopreal ----------------------------------------------
+const onsParts = fs
+  .readdirSync(path.join(ROOT, 'research'))
+  .filter((f) => /^specs_ons.*\.json$/.test(f))
+  .map((f) => [f, 'on'] as const);
+
 for (const [file, family] of [
   ['specs_soberanos_usd.json', 'soberano_usd'],
   ['specs_soberanos_usd_nuevos.json', 'soberano_usd'],
   ['specs_bopreal.json', 'bopreal'],
+  ...onsParts,
 ] as const) {
   const data = readJson(R(file));
   if (!data) {
@@ -172,6 +178,13 @@ for (const [file, family] of [
       skipped.push(`${t} (${family}): verificación incierta`);
       continue;
     }
+    // ONs: si la TIR calculada no pudo validarse contra una TIR publicada, no
+    // entra al registro — el estándar es el mismo que para los soberanos.
+    if (family === 'on' && spec.verification?.goldenCheck?.pass === false) {
+      skipped.push(`${t} (on): TIR no validada contra fuente publicada`);
+      continue;
+    }
+    spec.maturity = spec.maturity ?? spec.maturityDate;
     if (!assertIso(t, 'maturity', spec.maturity)) continue;
     const flows = generateFixedCashflows(t, spec);
     if (flows.length === 0) continue;
@@ -197,6 +210,8 @@ for (const [file, family] of [
             }
           : tickersFor(t),
       law: spec.law,
+      issuer: spec.issuer ?? undefined,
+      sector: spec.sector ?? undefined,
       sources: spec.sources ?? [],
       cashflows: flows,
     });

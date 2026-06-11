@@ -4,18 +4,20 @@
  *
  * Reglas de selección:
  * - Liquidez primero: dentro de cada segmento solo se consideran instrumentos
- *   con volumen operado relevante (o que pertenecen a la lista de "siempre
- *   líquidos": AL30/GD30 y la LECAP más corta).
+ *   con volumen operado relevante en la línea en pesos (o de la lista de
+ *   "siempre líquidos").
  * - Calce de horizonte: tasa fija y CER se eligen con vencimiento lo más
- *   cercano posible al horizonte (sin pasarse más de 3 meses); en dólares la
- *   duración objetivo crece con el perfil.
- * - Diversificación mínima: hasta 2 instrumentos por segmento si el monto lo
- *   permite (ticket mínimo por línea: 5% del total o 1 nominal, lo que sea mayor).
+ *   cercano posible al horizonte; en dólares la duración objetivo crece con el
+ *   perfil, y las ONs (crédito corporativo) entran como carry de menor beta en
+ *   perfiles conservador y moderado.
+ * - Cada decisión queda registrada en `traces`: qué candidatos se miraron, por
+ *   qué se eligió cada línea y por qué se descartó el resto. Es la misma
+ *   información que muestra la pestaña Asignación de la terminal.
  */
 
 import { daysBetween, settlementT1 } from '../engine/dates';
 import { priceInstrument } from '../engine/pricing';
-import type { Instrument, MarketContext, PricedInstrument, Quote } from '../engine/types';
+import type { Family, Instrument, MarketContext, PricedInstrument, Quote } from '../engine/types';
 import type { Position } from '../engine/portfolio';
 import { targetWeights, type CurrencyGoal, type ProfileKey, type SegmentKey } from './profiles';
 
@@ -33,6 +35,26 @@ export interface ProposalLine {
   rationale: string;
 }
 
+export interface CandidateTrace {
+  ticker: string;
+  name: string;
+  family: Family;
+  months: number;
+  tirPct: number;
+  mdYears: number;
+  turnoverArs: number;
+  liquid: boolean;
+  selected: boolean;
+  /** Por qué se eligió, o por qué quedó afuera. Siempre presente. */
+  reason: string;
+}
+
+export interface SegmentTrace {
+  segment: SegmentKey;
+  targetWeightPct: number;
+  candidates: CandidateTrace[];
+}
+
 export interface Proposal {
   inputs: BuilderInputs;
   settlement: string;
@@ -41,25 +63,23 @@ export interface Proposal {
   cashLeftArs: number;
   estimatedFeesArs: number;
   warnings: string[];
+  traces: SegmentTrace[];
 }
 
 const ALWAYS_LIQUID = new Set(['AL30', 'GD30', 'AL35', 'GD35', 'AE38', 'GD41']);
 const MIN_VOLUME_ARS = 1_000_000; // volumen mínimo diario aproximado para considerar líquido
 
+const SEGMENT_FAMILIES: Record<SegmentKey, Family[]> = {
+  tasa_fija: ['lecap', 'boncap', 'bonte'],
+  cer: ['boncer'],
+  dolar: ['soberano_usd', 'bopreal', 'on'],
+};
+
 function segmentOf(instr: Instrument): SegmentKey | null {
-  switch (instr.family) {
-    case 'lecap':
-    case 'boncap':
-    case 'bonte':
-      return 'tasa_fija';
-    case 'boncer':
-      return 'cer';
-    case 'soberano_usd':
-    case 'bopreal':
-      return 'dolar';
-    default:
-      return null; // duales y dollar-linked quedan fuera del MVP de propuestas
+  for (const seg of Object.keys(SEGMENT_FAMILIES) as SegmentKey[]) {
+    if (SEGMENT_FAMILIES[seg].includes(instr.family)) return seg;
   }
+  return null; // duales y dollar-linked quedan fuera de las propuestas
 }
 
 function monthsToMaturity(p: PricedInstrument, asOf: string): number {
@@ -72,12 +92,12 @@ function monthsToMaturity(p: PricedInstrument, asOf: string): number {
  * compararlo contra un umbral en ARS excluiría instrumentos perfectamente
  * líquidos.
  */
-function arsTurnover(p: PricedInstrument, quotes: Map<string, Quote>): number {
+export function arsTurnover(p: PricedInstrument, quotes: Map<string, Quote>): number {
   const q = quotes.get(p.instrument.tickers.ars);
   return ((q?.volume ?? 0) * (q?.last ?? 0)) / 100;
 }
 
-function isLiquid(p: PricedInstrument, quotes: Map<string, Quote>): boolean {
+export function isLiquid(p: PricedInstrument, quotes: Map<string, Quote>): boolean {
   if (ALWAYS_LIQUID.has(p.instrument.ticker)) return true;
   return arsTurnover(p, quotes) >= MIN_VOLUME_ARS;
 }
@@ -95,32 +115,86 @@ interface Pick {
   rationale: string;
 }
 
-function pickTasaFija(universe: PricedInstrument[], horizon: number, asOf: string): Omit<Pick, 'targetArs'>[] {
-  const candidates = universe
-    .filter((p) => ['lecap', 'boncap', 'bonte'].includes(p.instrument.family))
+/** Registro de decisiones de un segmento: cada candidato termina con un motivo. */
+class Tracer {
+  private map = new Map<string, CandidateTrace>();
+
+  constructor(
+    candidates: PricedInstrument[],
+    quotes: Map<string, Quote>,
+    asOf: string,
+  ) {
+    for (const p of candidates) {
+      const turnover = arsTurnover(p, quotes);
+      const liquid = isLiquid(p, quotes);
+      this.map.set(p.instrument.ticker, {
+        ticker: p.instrument.ticker,
+        name: p.instrument.name,
+        family: p.instrument.family,
+        months: monthsToMaturity(p, asOf),
+        tirPct: p.tir * 100,
+        mdYears: p.modifiedDuration,
+        turnoverArs: turnover,
+        liquid,
+        selected: false,
+        reason: liquid
+          ? ''
+          : `Volumen diario ~$${Math.round(turnover / 1000)}k < $1M: sin liquidez suficiente para proponerlo.`,
+      });
+    }
+  }
+
+  select(p: PricedInstrument, reason: string) {
+    const e = this.map.get(p.instrument.ticker);
+    if (e) {
+      e.selected = true;
+      e.reason = reason;
+    }
+  }
+
+  why(p: PricedInstrument, reason: string) {
+    const e = this.map.get(p.instrument.ticker);
+    if (e && !e.selected && !e.reason) e.reason = reason;
+  }
+
+  /** Motivo por defecto para los que quedaron sin explicación específica. */
+  finish(defaultReason: string): CandidateTrace[] {
+    const list = [...this.map.values()];
+    for (const e of list) if (!e.selected && !e.reason) e.reason = defaultReason;
+    return list.sort((a, b) => Number(b.selected) - Number(a.selected) || a.months - b.months);
+  }
+}
+
+function pickTasaFija(
+  liquid: PricedInstrument[],
+  tracer: Tracer,
+  horizon: number,
+  asOf: string,
+): Omit<Pick, 'targetArs'>[] {
+  const candidates = liquid
     .filter((p) => p.instrument.kind === 'zero')
     .sort((a, b) => a.instrument.maturity.localeCompare(b.instrument.maturity));
   if (candidates.length === 0) return [];
 
   // Calce: el de vencimiento más cercano al horizonte sin pasarse de horizonte+3m.
   const within = candidates.filter((p) => monthsToMaturity(p, asOf) <= horizon + 3);
+  for (const p of candidates) {
+    if (!within.includes(p))
+      tracer.why(p, `Vence a los ${monthsToMaturity(p, asOf).toFixed(0)} meses: más de 3 meses después de tu horizonte.`);
+  }
   const anchorPool = within.length > 0 ? within : [candidates[0]];
   const anchor = anchorPool.reduce((best, p) =>
     Math.abs(monthsToMaturity(p, asOf) - horizon) < Math.abs(monthsToMaturity(best, asOf) - horizon)
       ? p
       : best,
   );
-  // Si la curva no llega al horizonte, no prometer un calce que no existe.
   const anchorMonths = monthsToMaturity(anchor, asOf);
   const anchorMatchesHorizon = anchorMonths >= horizon - 3;
-  const picks: Omit<Pick, 'targetArs'>[] = [
-    {
-      priced: anchor,
-      rationale: anchorMatchesHorizon
-        ? `Vence cerca de tu horizonte: cobrás el pago final fijo sin depender del precio de venta.`
-        : `La tasa fija más larga con liquidez vence a los ~${Math.round(anchorMonths)} meses: al cobrarla vas a tener que reinvertir hasta tu horizonte.`,
-    },
-  ];
+  const anchorRationale = anchorMatchesHorizon
+    ? `Vence cerca de tu horizonte: cobrás el pago final fijo sin depender del precio de venta.`
+    : `La tasa fija más larga con liquidez vence a los ~${Math.round(anchorMonths)} meses: al cobrarla vas a tener que reinvertir hasta tu horizonte.`;
+  tracer.select(anchor, anchorRationale);
+  const picks: Omit<Pick, 'targetArs'>[] = [{ priced: anchor, rationale: anchorRationale }];
 
   // Escalonado: una letra a ~mitad de camino, si existe y es distinta.
   if (horizon >= 6) {
@@ -136,17 +210,21 @@ function pickTasaFija(universe: PricedInstrument[], horizon: number, asOf: strin
         null,
       );
     if (half && Math.abs(monthsToMaturity(half, asOf) - horizon / 2) < horizon / 4) {
-      picks.push({
-        priced: half,
-        rationale: 'Escalona vencimientos: te devuelve liquidez a mitad de camino.',
-      });
+      const r = 'Escalona vencimientos: te devuelve liquidez a mitad de camino.';
+      tracer.select(half, r);
+      picks.push({ priced: half, rationale: r });
     }
   }
   return picks;
 }
 
-function pickCer(universe: PricedInstrument[], horizon: number, asOf: string): Omit<Pick, 'targetArs'>[] {
-  const candidates = universe
+function pickCer(
+  liquid: PricedInstrument[],
+  tracer: Tracer,
+  horizon: number,
+  asOf: string,
+): Omit<Pick, 'targetArs'>[] {
+  const candidates = liquid
     .filter((p) => p.instrument.family === 'boncer')
     .sort((a, b) => a.instrument.maturity.localeCompare(b.instrument.maturity));
   if (candidates.length === 0) return [];
@@ -158,64 +236,99 @@ function pickCer(universe: PricedInstrument[], horizon: number, asOf: string): O
       ? p
       : bestSoFar,
   );
-  return [
-    {
-      priced: best,
-      rationale: 'Ajusta capital por inflación (CER): protege tu poder de compra.',
-    },
-  ];
+  const r = 'Ajusta capital por inflación (CER): protege tu poder de compra. Es el vencimiento más cercano a tu horizonte.';
+  tracer.select(best, r);
+  return [{ priced: best, rationale: r }];
 }
 
 function pickDolar(
-  universe: PricedInstrument[],
+  liquid: PricedInstrument[],
+  tracer: Tracer,
   profile: ProfileKey,
   horizon: number,
-  asOf: string,
 ): Omit<Pick, 'targetArs'>[] {
-  const sovereigns = universe.filter((p) => p.instrument.family === 'soberano_usd');
-  const bopreal = universe.filter((p) => p.instrument.family === 'bopreal');
+  const sovereigns = liquid.filter((p) => p.instrument.family === 'soberano_usd');
+  const bopreal = liquid.filter((p) => p.instrument.family === 'bopreal');
+  const ons = liquid.filter((p) => p.instrument.family === 'on');
   const picks: Omit<Pick, 'targetArs'>[] = [];
+  const issuerOf = (p: PricedInstrument) =>
+    p.instrument.issuer?.split(' ')[0] ?? p.instrument.ticker;
 
   if (profile === 'conservador') {
-    // Lo más corto posible en USD: BOPREAL corto si existe, si no el soberano de menor MD.
-    // strips BOPREAL con igual duración: el de mayor TIR es el que no paga prima por el put
-    const shortBopreal = bopreal.sort(
+    // Piso soberano/BCRA: lo más corto posible. Strips BOPREAL con igual
+    // duración: el de mayor TIR es el que no paga prima por el put.
+    const floorPool = [...bopreal, ...sovereigns].sort(
       (a, b) => a.modifiedDuration - b.modifiedDuration || b.tir - a.tir,
-    )[0];
-    const shortSov = sovereigns.sort((a, b) => a.modifiedDuration - b.modifiedDuration)[0];
-    const pick = shortBopreal ?? shortSov;
-    if (pick)
-      picks.push({
-        priced: pick,
-        rationale: 'Dólares con la menor duración disponible: menos sensible a tasas.',
-      });
+    );
+    const floor = floorPool[0];
+    if (floor) {
+      const r = 'Dólares con la menor duración disponible: lo más parecido a un plazo fijo en USD.';
+      tracer.select(floor, r);
+      picks.push({ priced: floor, rationale: r });
+      for (const p of floorPool.slice(1))
+        tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años ≥ la del elegido: más sensibilidad a tasas de la necesaria.`);
+    }
+    // Carry corporativo corto: ON con MD ≤ 3.
+    const shortOns = ons
+      .filter((p) => p.modifiedDuration <= 3)
+      .sort((a, b) => b.tir - a.tir || a.modifiedDuration - b.modifiedDuration);
+    const onPick = shortOns[0];
+    if (onPick) {
+      const r = `ON corta de ${issuerOf(onPick)}: carry corporativo en dólares, históricamente menos volátil que la curva soberana.`;
+      tracer.select(onPick, r);
+      picks.push({ priced: onPick, rationale: r });
+      for (const p of shortOns.slice(1))
+        tracer.why(p, 'Menor TIR que la ON elegida en el mismo tramo corto.');
+      for (const p of ons.filter((x) => x.modifiedDuration > 3))
+        tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años: larga para un perfil conservador.`);
+    }
   } else if (profile === 'moderado') {
     const al30 = sovereigns.find((p) => p.instrument.ticker === 'AL30') ?? sovereigns[0];
-    if (al30)
-      picks.push({
-        priced: al30,
-        rationale: 'El soberano en dólares más líquido del mercado; tramo corto de la curva.',
-      });
+    if (al30) {
+      const r = 'El soberano en dólares más líquido del mercado; tramo corto de la curva.';
+      tracer.select(al30, r);
+      picks.push({ priced: al30, rationale: r });
+    }
+    // ON de mejor TIR sin irse a duración larga.
+    const eligibleOns = ons
+      .filter((p) => p.modifiedDuration <= 4.5)
+      .sort((a, b) => b.tir - a.tir);
+    const onPick = eligibleOns[0];
+    if (onPick) {
+      const r = `ON de ${issuerOf(onPick)}: rendimiento corporativo (${(onPick.tir * 100).toFixed(1)}% USD) diversificando el riesgo soberano.`;
+      tracer.select(onPick, r);
+      picks.push({ priced: onPick, rationale: r });
+      for (const p of eligibleOns.slice(1)) tracer.why(p, 'Menor TIR que la ON elegida dentro del tramo ≤4,5 años de duración.');
+      for (const p of ons.filter((x) => x.modifiedDuration > 4.5))
+        tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años: excede el tope de 4,5 para el perfil moderado.`);
+    }
     const belly = sovereigns
       .filter((p) => p !== al30 && p.modifiedDuration > (al30?.modifiedDuration ?? 0))
       .sort((a, b) => b.tir - a.tir)[0];
-    if (belly && horizon >= 12)
-      picks.push({
-        priced: belly,
-        rationale: 'Tramo medio de la curva: más rendimiento a cambio de más duración.',
-      });
+    if (belly && horizon >= 12) {
+      const r = 'Tramo medio de la curva soberana: más rendimiento a cambio de más duración.';
+      tracer.select(belly, r);
+      picks.push({ priced: belly, rationale: r });
+    }
   } else {
-    // Agresivo: maximiza TIR/convexidad en el tramo largo.
-    const sorted = sovereigns.sort((a, b) => b.modifiedDuration - a.modifiedDuration);
+    // Agresivo: maximiza TIR/convexidad en el tramo largo soberano.
+    const sorted = [...sovereigns].sort((a, b) => b.modifiedDuration - a.modifiedDuration);
     const long = sorted[0];
-    if (long)
-      picks.push({
-        priced: long,
-        rationale: 'Tramo largo: máxima sensibilidad a una compresión del riesgo país.',
-      });
+    if (long) {
+      const r = 'Tramo largo: máxima sensibilidad a una compresión del riesgo país.';
+      tracer.select(long, r);
+      picks.push({ priced: long, rationale: r });
+    }
     const second = sorted.slice(1).sort((a, b) => b.tir - a.tir)[0];
-    if (second)
-      picks.push({ priced: second, rationale: 'Segunda línea larga: diversifica ley y vencimiento.' });
+    if (second) {
+      const r = 'Segunda línea larga: diversifica ley y vencimiento manteniendo la duración.';
+      tracer.select(second, r);
+      picks.push({ priced: second, rationale: r });
+    }
+    for (const p of ons)
+      tracer.why(p, 'Las ONs tienen menos beta al riesgo país: diluyen la tesis agresiva de compresión de spreads.');
+    for (const p of bopreal)
+      tracer.why(p, 'Duración corta y spread BCRA comprimido: no aporta a la tesis larga.');
   }
   return picks;
 }
@@ -243,18 +356,45 @@ export function buildProposal(
     }
   }
 
-  const liquid = priced.filter((p) => isLiquid(p, quotes));
-
   const weights = targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths);
-  const picksBySegment: Record<SegmentKey, Omit<Pick, 'targetArs'>[]> = {
-    tasa_fija: pickTasaFija(liquid, inputs.horizonMonths, ctx.asOf),
-    cer: pickCer(liquid, inputs.horizonMonths, ctx.asOf),
-    dolar: pickDolar(liquid, inputs.profile, inputs.horizonMonths, ctx.asOf),
+  const segs: SegmentKey[] = ['tasa_fija', 'cer', 'dolar'];
+
+  const traces: SegmentTrace[] = [];
+  const picksBySegment = {} as Record<SegmentKey, Omit<Pick, 'targetArs'>[]>;
+  const defaultReasons: Record<SegmentKey, string> = {
+    tasa_fija: 'Otro candidato quedó más cerca del calce de horizonte buscado.',
+    cer: 'Otro BONCER quedó más cerca del horizonte.',
+    dolar: 'No entró en la combinación duración/TIR buscada para este perfil.',
   };
+
+  for (const seg of segs) {
+    const segCandidates = priced.filter((p) => segmentOf(p.instrument) === seg);
+    const tracer = new Tracer(segCandidates, quotes, ctx.asOf);
+    const liquid = segCandidates.filter((p) => isLiquid(p, quotes));
+
+    let picks: Omit<Pick, 'targetArs'>[] = [];
+    if (weights[seg] > 0) {
+      picks =
+        seg === 'tasa_fija'
+          ? pickTasaFija(liquid, tracer, inputs.horizonMonths, ctx.asOf)
+          : seg === 'cer'
+            ? pickCer(liquid, tracer, inputs.horizonMonths, ctx.asOf)
+            : pickDolar(liquid, tracer, inputs.profile, inputs.horizonMonths);
+    }
+    picksBySegment[seg] = picks;
+    traces.push({
+      segment: seg,
+      targetWeightPct: weights[seg],
+      candidates: tracer.finish(
+        weights[seg] > 0
+          ? defaultReasons[seg]
+          : 'El segmento no tiene asignación para este perfil/objetivo/horizonte.',
+      ),
+    });
+  }
 
   // Redistribuir pesos de segmentos sin candidatos.
   let missing = 0;
-  const segs: SegmentKey[] = ['tasa_fija', 'cer', 'dolar'];
   for (const s of segs) {
     if (weights[s] > 0 && picksBySegment[s].length === 0) {
       missing += weights[s];
@@ -272,19 +412,18 @@ export function buildProposal(
   const feeRate = (inputs.commissionPct / 100) * 1.21 + 0.0001;
   const investable = inputs.amountArs / (1 + feeRate);
 
-  // Ticket mínimo por línea: 5% del monto. Si una línea no llega, se concentra en la primera del segmento.
+  // Ticket mínimo por línea: 5% del monto. Si el segmento no banca todas sus
+  // líneas, se recortan las de menor prioridad (el orden de picks es prioridad).
   const minTicket = Math.max(investable * 0.05, 1);
   const picks: Pick[] = [];
   for (const s of segs) {
     const segPicks = picksBySegment[s];
     if (segPicks.length === 0 || weights[s] === 0) continue;
     const segArs = (weights[s] / 100) * investable;
-    const perLine = segArs / segPicks.length;
-    if (segPicks.length > 1 && perLine < minTicket) {
-      picks.push({ ...segPicks[0], targetArs: segArs });
-    } else {
-      for (const sp of segPicks) picks.push({ ...sp, targetArs: perLine });
-    }
+    const maxLines = Math.max(1, Math.floor(segArs / minTicket));
+    const kept = segPicks.slice(0, Math.min(segPicks.length, maxLines));
+    const perLine = segArs / kept.length;
+    for (const sp of kept) picks.push({ ...sp, targetArs: perLine });
   }
 
   // Sizing a nominales enteros (se compra el ticker en pesos).
@@ -293,9 +432,10 @@ export function buildProposal(
   for (const pick of picks) {
     const pxVN = arsPricePerVN(pick.priced, quotes);
     const nominals = Math.floor(pick.targetArs / pxVN);
-    if (nominals < Math.max(1, pick.priced.instrument.minLot)) {
+    const minLot = Math.max(1, pick.priced.instrument.minLot || 1);
+    if (nominals < minLot) {
       warnings.push(
-        `${pick.priced.instrument.ticker}: el monto asignado no alcanza para 1 nominal; línea omitida.`,
+        `${pick.priced.instrument.ticker}: el monto asignado no alcanza para el lote mínimo (${minLot} VN); línea omitida.`,
       );
       continue;
     }
@@ -372,5 +512,6 @@ export function buildProposal(
     cashLeftArs: inputs.amountArs - spent - fees,
     estimatedFeesArs: fees,
     warnings,
+    traces,
   };
 }

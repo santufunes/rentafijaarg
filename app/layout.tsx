@@ -23,6 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
             </Link>
             <nav className="flex gap-4 text-sm text-stone-500">
+              <Link href="/terminal" className="font-mono text-emerald-700 hover:text-emerald-900">
+                Terminal
+              </Link>
               <Link href="/metodologia" className="hover:text-stone-900">
                 Metodología
               </Link>

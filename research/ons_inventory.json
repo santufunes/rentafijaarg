@@ -1,0 +1,1132 @@
+{
+ "asOf": "2026-06-10",
+ "settlementForYieldChecks": "2026-06-11",
+ "mepUsed": 1453.178,
+ "mepSource": "data912 /live/mep, AL30 mark (bid 1452.2952 / ask 1454.0608), fetched 2026-06-10",
+ "method": "Fetched data912 /live/arg_corp (556 symbols, 260 bases). Grouped by 4-char base; lines O=ARS, D=USD MEP, C=USD cable. Turnover ARS-eq = vol_O*px_O/100 + (vol_D*px_D/100 + vol_C*px_C/100)*MEP using session close (c) and volume (v), prices dirty per 100 VN. Currency class: O/D price ratio within MEP +/-5% => hard-dollar (USD-denominated, MEP-arbitraged); verified issuer/coupon/maturity via IOL titulo + Rava perfil titles and bonistas snapshot where available. Every base with >20M ARS daily turnover on 2026-06-10 fits the hard-dollar pattern: dollar-linked and ARS/badlar/TAMAR floaters have negligible screen liquidity on the BYMA corp panel.",
+ "caveats": [
+  "Turnover is a single-session snapshot (2026-06-10), not an average; ranking may shuffle day to day.",
+  "Coupon/maturity strings come from broker page titles (IOL, Rava) and bonistas API — secondary sources; verify against CNV suplementos de precio before using in pricing code.",
+  "data912 is delayed ~20s and educational; volumes in nominal VN."
+ ],
+ "candidates": [
+  {
+   "base": "YM34",
+   "tickers": {
+    "ars": "YM34O",
+    "mep": "YM34D",
+    "cable": "YM34C"
+   },
+   "turnoverArsEq": 5385945515,
+   "turnoverDetail": {
+    "C": {
+     "close": 108.35,
+     "volNominal": 135350.0,
+     "arsEq": 213111060
+    },
+    "D": {
+     "close": 112.65,
+     "volNominal": 1679252.0,
+     "arsEq": 2748943949
+    },
+    "O": {
+     "close": 163670.0,
+     "volNominal": 1480962.0,
+     "arsEq": 2423890505
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1452.9,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YM34O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM34O"
+   ],
+   "note": "ON Clase XXXIV RegS 8.25% vto 2034-01-17 (IOL/Rava titles)"
+  },
+  {
+   "base": "YM42",
+   "tickers": {
+    "ars": "YM42O",
+    "mep": "YM42D",
+    "cable": "YM42C"
+   },
+   "turnoverArsEq": 3414447447,
+   "turnoverDetail": {
+    "C": {
+     "close": 101.0,
+     "volNominal": 310.0,
+     "arsEq": 454990
+    },
+    "D": {
+     "close": 103.9,
+     "volNominal": 1573308.0,
+     "arsEq": 2375462139
+    },
+    "O": {
+     "close": 150750.0,
+     "volNominal": 688909.0,
+     "arsEq": 1038530318
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1450.9,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YM42O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM42O",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json"
+   ],
+   "note": "ON 7.00% vto 2029-03-02, USD Ley Argentina (bonistas snapshot 2026-06-10; Rava \"YPF 2029 US$ 7%\")"
+  },
+  {
+   "base": "VSCX",
+   "tickers": {
+    "ars": "VSCXO",
+    "mep": "VSCXD",
+    "cable": "VSCXC"
+   },
+   "turnoverArsEq": 2859682979,
+   "turnoverDetail": {
+    "C": {
+     "close": 104.8,
+     "volNominal": 224000.0,
+     "arsEq": 341136442
+    },
+    "D": {
+     "close": 108.75,
+     "volNominal": 574000.0,
+     "arsEq": 907110037
+    },
+    "O": {
+     "close": 158450.0,
+     "volNominal": 1017000.0,
+     "arsEq": 1611436500
+    }
+   },
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "sector": "oil & gas E&P (shale)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.0,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/VSCXO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/VSCXO"
+   ],
+   "note": "ON 7.875% vto 2038-04-08 (IOL title)"
+  },
+  {
+   "base": "YMCX",
+   "tickers": {
+    "ars": "YMCXO",
+    "mep": "YMCXD",
+    "cable": "YMCXC"
+   },
+   "turnoverArsEq": 1762205315,
+   "turnoverDetail": {
+    "C": {
+     "close": 109.0,
+     "volNominal": 57869.0,
+     "arsEq": 91662414
+    },
+    "D": {
+     "close": 113.0,
+     "volNominal": 434541.0,
+     "arsEq": 713555926
+    },
+    "O": {
+     "close": 164500.0,
+     "volNominal": 581755.0,
+     "arsEq": 956986975
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1455.8,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YMCXO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YMCXO",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json"
+   ],
+   "note": "ON 8.75% vto 2031-09-11, USD Ley NY (bonistas snapshot; IOL)"
+  },
+  {
+   "base": "MGCR",
+   "tickers": {
+    "ars": "MGCRO",
+    "mep": "MGCRD",
+    "cable": "MGCRC"
+   },
+   "turnoverArsEq": 1651899845,
+   "turnoverDetail": {
+    "C": {
+     "close": 102.0,
+     "volNominal": 10000.0,
+     "arsEq": 14822416
+    },
+    "D": {
+     "close": 105.9,
+     "volNominal": 705000.0,
+     "arsEq": 1084935429
+    },
+    "O": {
+     "close": 153800.0,
+     "volNominal": 359000.0,
+     "arsEq": 552142000
+    }
+   },
+   "issuer": "Pampa Energia S.A.",
+   "sector": "integrated energy / power",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1452.3,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/MGCRO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/MGCRO"
+   ],
+   "note": "ON Clase XXVI vto 2037-11-14 (IOL title)"
+  },
+  {
+   "base": "BYCW",
+   "tickers": {
+    "ars": "BYCWO",
+    "mep": "BYCWD",
+    "cable": "BYCWC"
+   },
+   "turnoverArsEq": 1126772424,
+   "turnoverDetail": {
+    "C": {
+     "close": 100.0,
+     "volNominal": 0,
+     "arsEq": 0
+    },
+    "D": {
+     "close": 102.7,
+     "volNominal": 755000.0,
+     "arsEq": 1126772424
+    },
+    "O": {
+     "close": 150100.0,
+     "volNominal": 0,
+     "arsEq": 0
+    }
+   },
+   "issuer": "Banco de Galicia y Buenos Aires S.A.U.",
+   "sector": "bank",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1461.5,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/BYCWO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/BYCWO"
+   ],
+   "note": "ON Clase 30 vto 2026-11-30 USD (IOL title); short remaining tenor ~5.7m"
+  },
+  {
+   "base": "TLCM",
+   "tickers": {
+    "ars": "TLCMO",
+    "mep": "TLCMD",
+    "cable": "TLCMC"
+   },
+   "turnoverArsEq": 1125836243,
+   "turnoverDetail": {
+    "C": {
+     "close": 111.55,
+     "volNominal": 120000.0,
+     "arsEq": 194522407
+    },
+    "D": {
+     "close": 115.8,
+     "volNominal": 451000.0,
+     "arsEq": 758933836
+    },
+    "O": {
+     "close": 169000.0,
+     "volNominal": 102000.0,
+     "arsEq": 172380000
+    }
+   },
+   "issuer": "Telecom Argentina S.A.",
+   "sector": "telecom",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1459.4,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/TLCMO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCMO"
+   ],
+   "note": "ON 9.50% vto 2031-07-18 (IOL title)"
+  },
+  {
+   "base": "VSCV",
+   "tickers": {
+    "ars": "VSCVO",
+    "mep": "VSCVD",
+    "cable": "VSCVC"
+   },
+   "turnoverArsEq": 1122659431,
+   "turnoverDetail": {
+    "C": {
+     "close": 107.75,
+     "volNominal": 24000.0,
+     "arsEq": 37579183
+    },
+    "D": {
+     "close": 111.6,
+     "volNominal": 314000.0,
+     "arsEq": 509228447
+    },
+    "O": {
+     "close": 162670.0,
+     "volNominal": 354000.0,
+     "arsEq": 575851800
+    }
+   },
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "sector": "oil & gas E&P (shale)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/VSCVO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/VSCVO"
+   ],
+   "note": "ON RegS 8.50% vto 2033-06-10 (IOL title)"
+  },
+  {
+   "base": "TLCP",
+   "tickers": {
+    "ars": "TLCPO",
+    "mep": "TLCPD",
+    "cable": "TLCPC"
+   },
+   "turnoverArsEq": 1038064543,
+   "turnoverDetail": {
+    "C": {
+     "close": 108.5,
+     "volNominal": 13238.0,
+     "arsEq": 20872330
+    },
+    "D": {
+     "close": 111.05,
+     "volNominal": 341863.0,
+     "arsEq": 551682841
+    },
+    "O": {
+     "close": 160710.0,
+     "volNominal": 289658.0,
+     "arsEq": 465509372
+    }
+   },
+   "issuer": "Telecom Argentina S.A.",
+   "sector": "telecom",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1447.2,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/TLCPO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCPO"
+   ],
+   "note": "ON RegS 9.25% vto 2033-05-28 (IOL title)"
+  },
+  {
+   "base": "TLCT",
+   "tickers": {
+    "ars": "TLCTO",
+    "mep": "TLCTD",
+    "cable": "TLCTC"
+   },
+   "turnoverArsEq": 1026802057,
+   "turnoverDetail": {
+    "C": {
+     "close": 106.9,
+     "volNominal": 41065.0,
+     "arsEq": 63792313
+    },
+    "D": {
+     "close": 110.45,
+     "volNominal": 265641.0,
+     "arsEq": 426363129
+    },
+    "O": {
+     "close": 160970.0,
+     "volNominal": 333383.0,
+     "arsEq": 536646615
+    }
+   },
+   "issuer": "Telecom Argentina S.A.",
+   "sector": "telecom",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.4,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/TLCTO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCTO"
+   ],
+   "note": "ON 8.50% vto 2036-01-20 (IOL title)"
+  },
+  {
+   "base": "IRCP",
+   "tickers": {
+    "ars": "IRCPO",
+    "mep": "IRCPD",
+    "cable": "IRCPC"
+   },
+   "turnoverArsEq": 1017470788,
+   "turnoverDetail": {
+    "C": {
+     "close": 106.9,
+     "volNominal": 76676.0,
+     "arsEq": 119112124
+    },
+    "D": {
+     "close": 109.35,
+     "volNominal": 334035.0,
+     "arsEq": 530798365
+    },
+    "O": {
+     "close": 159000.0,
+     "volNominal": 231170.0,
+     "arsEq": 367560300
+    }
+   },
+   "issuer": "IRSA Inversiones y Representaciones S.A.",
+   "sector": "real estate",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1454.0,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/IRCPO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/IRCPO",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json"
+   ],
+   "note": "ON 8.00% vto 2035-03-31, USD Ley NY (bonistas snapshot; IOL)"
+  },
+  {
+   "base": "YM39",
+   "tickers": {
+    "ars": "YM39O",
+    "mep": "YM39D",
+    "cable": "YM39C"
+   },
+   "turnoverArsEq": 972718425,
+   "turnoverDetail": {
+    "C": {
+     "close": 109.7,
+     "volNominal": 1220.0,
+     "arsEq": 1944846
+    },
+    "D": {
+     "close": 113.3,
+     "volNominal": 338852.0,
+     "arsEq": 557903104
+    },
+    "O": {
+     "close": 164810.0,
+     "volNominal": 250513.0,
+     "arsEq": 412870475
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1454.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YM39O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM39O"
+   ],
+   "note": "ON Clase 39 vto 2030-07-22 U$S CG (IOL title)"
+  },
+  {
+   "base": "PLC4",
+   "tickers": {
+    "ars": "PLC4O",
+    "mep": "PLC4D",
+    "cable": "PLC4C"
+   },
+   "turnoverArsEq": 906691484,
+   "turnoverDetail": {
+    "C": {
+     "close": 105.6,
+     "volNominal": 5000.0,
+     "arsEq": 7672780
+    },
+    "D": {
+     "close": 109.4,
+     "volNominal": 262000.0,
+     "arsEq": 416521504
+    },
+    "O": {
+     "close": 159240.0,
+     "volNominal": 303000.0,
+     "arsEq": 482497200
+    }
+   },
+   "issuer": "Pluspetrol S.A.",
+   "sector": "oil & gas E&P",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1455.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/PLC4O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/PLC4O"
+   ],
+   "note": "ON Clase IV vto 2032-05-30 (IOL title)"
+  },
+  {
+   "base": "TSC4",
+   "tickers": {
+    "ars": "TSC4O",
+    "mep": "TSC4D",
+    "cable": "TSC4C"
+   },
+   "turnoverArsEq": 893297168,
+   "turnoverDetail": {
+    "C": {
+     "close": 104.3,
+     "volNominal": 167000.0,
+     "arsEq": 253115997
+    },
+    "D": {
+     "close": 108.95,
+     "volNominal": 245000.0,
+     "arsEq": 387893171
+    },
+    "O": {
+     "close": 157680.0,
+     "volNominal": 160000.0,
+     "arsEq": 252288000
+    }
+   },
+   "issuer": "Transportadora de Gas del Sur S.A.",
+   "sector": "gas transport / midstream",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1447.3,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/TSC4O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TSC4O"
+   ],
+   "note": "ON 7.75% vto 2035-11-20 (IOL title)"
+  },
+  {
+   "base": "OZC3",
+   "tickers": {
+    "ars": "OZC3O",
+    "mep": "OZC3D",
+    "cable": null
+   },
+   "turnoverArsEq": 859372221,
+   "turnoverDetail": {
+    "D": {
+     "close": 100.5,
+     "volNominal": 312797.0,
+     "arsEq": 456822467
+    },
+    "O": {
+     "close": 146990.0,
+     "volNominal": 273862.0,
+     "arsEq": 402549754
+    }
+   },
+   "issuer": "EDEMSA (Empresa Distribuidora de Electricidad de Mendoza)",
+   "sector": "electricity distribution",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1462.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/OZC3O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/OZC3O"
+   ],
+   "note": "ON Clase 3 vto 2027-11-29 (IOL title)"
+  },
+  {
+   "base": "MCC3",
+   "tickers": {
+    "ars": "MCC3O",
+    "mep": "MCC3D",
+    "cable": "MCC3C"
+   },
+   "turnoverArsEq": 854945951,
+   "turnoverDetail": {
+    "C": {
+     "close": 97.7,
+     "volNominal": 24577.0,
+     "arsEq": 34893316
+    },
+    "D": {
+     "close": 101.0,
+     "volNominal": 353531.0,
+     "arsEq": 518880906
+    },
+    "O": {
+     "close": 147900.0,
+     "volNominal": 203632.0,
+     "arsEq": 301171728
+    }
+   },
+   "issuer": "Pecom Servicios Energia S.A.U.",
+   "sector": "oilfield services",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1464.4,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/MCC3O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/MCC3O"
+   ],
+   "note": "ON Clase 3 vto 2030-05-11 USD (IOL title)"
+  },
+  {
+   "base": "DNC7",
+   "tickers": {
+    "ars": "DNC7O",
+    "mep": "DNC7D",
+    "cable": "DNC7C"
+   },
+   "turnoverArsEq": 682336790,
+   "turnoverDetail": {
+    "C": {
+     "close": 104.65,
+     "volNominal": 1100.0,
+     "arsEq": 1672826
+    },
+    "D": {
+     "close": 108.2,
+     "volNominal": 319300.0,
+     "arsEq": 502047714
+    },
+    "O": {
+     "close": 158770.0,
+     "volNominal": 112500.0,
+     "arsEq": 178616250
+    }
+   },
+   "issuer": "Edenor S.A.",
+   "sector": "electricity distribution",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1467.4,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/DNC7O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/DNC7O"
+   ],
+   "note": "ON Clase VII 9.75% vto 2030-10-24 (IOL/Rava titles)"
+  },
+  {
+   "base": "RUCD",
+   "tickers": {
+    "ars": "RUCDO",
+    "mep": "RUCDD",
+    "cable": null
+   },
+   "turnoverArsEq": 653761536,
+   "turnoverDetail": {
+    "D": {
+     "close": 105.75,
+     "volNominal": 209108.0,
+     "arsEq": 321343736
+    },
+    "O": {
+     "close": 153400.0,
+     "volNominal": 216700.0,
+     "arsEq": 332417800
+    }
+   },
+   "issuer": "MSU Energy S.A.",
+   "sector": "power generation (thermal)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1450.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/RUCDO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/RUCDO"
+   ],
+   "note": "ON RegS 9.75% vto 2030-12-05 (IOL title)"
+  },
+  {
+   "base": "DNCA",
+   "tickers": {
+    "ars": "DNCAO",
+    "mep": "DNCAD",
+    "cable": "DNCAC"
+   },
+   "turnoverArsEq": 628604129,
+   "turnoverDetail": {
+    "C": {
+     "close": 101.25,
+     "volNominal": 13400.0,
+     "arsEq": 19715993
+    },
+    "D": {
+     "close": 105.1,
+     "volNominal": 262400.0,
+     "arsEq": 400760916
+    },
+    "O": {
+     "close": 152810.0,
+     "volNominal": 136200.0,
+     "arsEq": 208127220
+    }
+   },
+   "issuer": "Edenor S.A.",
+   "sector": "electricity distribution",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1453.9,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/DNCAO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/DNCAO"
+   ],
+   "note": "ON 9.50% vto 2033-04-28 (IOL title)"
+  },
+  {
+   "base": "PQCS",
+   "tickers": {
+    "ars": "PQCSO",
+    "mep": "PQCSD",
+    "cable": null
+   },
+   "turnoverArsEq": 628004032,
+   "turnoverDetail": {
+    "D": {
+     "close": 102.4,
+     "volNominal": 255605.0,
+     "arsEq": 380354112
+    },
+    "O": {
+     "close": 149000.0,
+     "volNominal": 166208.0,
+     "arsEq": 247649920
+    }
+   },
+   "issuer": "Petroquimica Comodoro Rivadavia S.A. (PCR)",
+   "sector": "cement / petrochemicals / renewables",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1455.1,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/PQCSO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/PQCSO"
+   ],
+   "note": "ON Clase S vto 2031-02-17 (IOL title)"
+  },
+  {
+   "base": "YM38",
+   "tickers": {
+    "ars": "YM38O",
+    "mep": "YM38D",
+    "cable": "YM38C"
+   },
+   "turnoverArsEq": 626897226,
+   "turnoverDetail": {
+    "C": {
+     "close": 100.95,
+     "volNominal": 1935.0,
+     "arsEq": 2838612
+    },
+    "D": {
+     "close": 105.2,
+     "volNominal": 169685.0,
+     "arsEq": 259404799
+    },
+    "O": {
+     "close": 155030.0,
+     "volNominal": 235215.0,
+     "arsEq": 364653814
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1473.7,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YM38O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM38O"
+   ],
+   "note": "ON Clase 38 vto 2027-07-22 U$S CG (IOL title)"
+  },
+  {
+   "base": "YMCI",
+   "tickers": {
+    "ars": "YMCIO",
+    "mep": "YMCID",
+    "cable": "YMCIC"
+   },
+   "turnoverArsEq": 619633934,
+   "turnoverDetail": {
+    "C": {
+     "close": 108.45,
+     "volNominal": 10332.0,
+     "arsEq": 16282938
+    },
+    "D": {
+     "close": 112.6,
+     "volNominal": 178789.0,
+     "arsEq": 292548584
+    },
+    "O": {
+     "close": 163750.0,
+     "volNominal": 189803.0,
+     "arsEq": 310802412
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1454.3,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YMCIO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YMCIO"
+   ],
+   "note": "ON Clase XVII vto 2029-06-30 (IOL title)"
+  },
+  {
+   "base": "MTCG",
+   "tickers": {
+    "ars": "MTCGO",
+    "mep": "MTCGD",
+    "cable": "MTCGC"
+   },
+   "turnoverArsEq": 524043647,
+   "turnoverDetail": {
+    "C": {
+     "close": 101.9,
+     "volNominal": 51882.0,
+     "arsEq": 76826263
+    },
+    "D": {
+     "close": 105.45,
+     "volNominal": 223141.0,
+     "arsEq": 341935958
+    },
+    "O": {
+     "close": 153700.0,
+     "volNominal": 68498.0,
+     "arsEq": 105281426
+    }
+   },
+   "issuer": "Mastellone Hermanos S.A.",
+   "sector": "food / dairy",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.6,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/MTCGO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/MTCGO"
+   ],
+   "note": "ON RegS 10.95% vto 2026-06-30 (IOL title); matures in 20 days — effectively cash-management paper"
+  },
+  {
+   "base": "CICB",
+   "tickers": {
+    "ars": "CICBO",
+    "mep": "CICBD",
+    "cable": null
+   },
+   "turnoverArsEq": 462179129,
+   "turnoverDetail": {
+    "D": {
+     "close": 101.65,
+     "volNominal": 153455.0,
+     "arsEq": 226676888
+    },
+    "O": {
+     "close": 148810.0,
+     "volNominal": 158257.0,
+     "arsEq": 235502242
+    }
+   },
+   "issuer": "CNH Industrial Capital Argentina S.A.",
+   "sector": "captive finance (ag/industrial equipment)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1463.9,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/CICBO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/CICBO"
+   ],
+   "note": "ON Clase 11 vto 2029-02-09 USD (IOL title)"
+  },
+  {
+   "base": "VSCU",
+   "tickers": {
+    "ars": "VSCUO",
+    "mep": "VSCUD",
+    "cable": "VSCUC"
+   },
+   "turnoverArsEq": 452176208,
+   "turnoverDetail": {
+    "C": {
+     "close": 103.55,
+     "volNominal": 0,
+     "arsEq": 0
+    },
+    "D": {
+     "close": 108.0,
+     "volNominal": 118012.0,
+     "arsEq": 185211838
+    },
+    "O": {
+     "close": 157000.0,
+     "volNominal": 170041.0,
+     "arsEq": 266964370
+    }
+   },
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "sector": "oil & gas E&P (shale)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1453.7,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/VSCUO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/VSCUO"
+   ],
+   "note": "ON Clase 28 vto 2030-03-07 U$S CG (IOL title)"
+  },
+  {
+   "base": "MGCO",
+   "tickers": {
+    "ars": "MGCOO",
+    "mep": "MGCOD",
+    "cable": "MGCOC"
+   },
+   "turnoverArsEq": 429634302,
+   "turnoverDetail": {
+    "C": {
+     "close": 107.05,
+     "volNominal": 0,
+     "arsEq": 0
+    },
+    "D": {
+     "close": 111.0,
+     "volNominal": 156000.0,
+     "arsEq": 251632302
+    },
+    "O": {
+     "close": 161820.0,
+     "volNominal": 110000.0,
+     "arsEq": 178002000
+    }
+   },
+   "issuer": "Pampa Energia S.A.",
+   "sector": "integrated energy / power",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.8,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/MGCOO",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/MGCOO"
+   ],
+   "note": "ON Clase XXIII vto 2034-12-16 (IOL title)"
+  },
+  {
+   "base": "GN49",
+   "tickers": {
+    "ars": "GN49O",
+    "mep": "GN49D",
+    "cable": "GN49C"
+   },
+   "turnoverArsEq": 417563645,
+   "turnoverDetail": {
+    "C": {
+     "close": 101.2,
+     "volNominal": 29000.0,
+     "arsEq": 42647868
+    },
+    "D": {
+     "close": 105.45,
+     "volNominal": 127000.0,
+     "arsEq": 194611778
+    },
+    "O": {
+     "close": 152800.0,
+     "volNominal": 118000.0,
+     "arsEq": 180304000
+    }
+   },
+   "issuer": "Genneia S.A.",
+   "sector": "renewable power generation",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1449.0,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/GN49O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/GN49O"
+   ],
+   "note": "ON Clase XLIX 7.75% vto 2033-12-02 (IOL title)"
+  },
+  {
+   "base": "CS48",
+   "tickers": {
+    "ars": "CS48O",
+    "mep": "CS48D",
+    "cable": "CS48C"
+   },
+   "turnoverArsEq": 392838296,
+   "turnoverDetail": {
+    "C": {
+     "close": 102.95,
+     "volNominal": 0,
+     "arsEq": 0
+    },
+    "D": {
+     "close": 107.05,
+     "volNominal": 183927.0,
+     "arsEq": 286121816
+    },
+    "O": {
+     "close": 156000.0,
+     "volNominal": 68408.0,
+     "arsEq": 106716480
+    }
+   },
+   "issuer": "Cresud S.A.C.I.F. y A.",
+   "sector": "agribusiness",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1457.3,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/CS48O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/CS48O",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json"
+   ],
+   "note": "ON Serie 32 Clase 48 8.00% vto 2028-07-11, USD Ley Argentina (bonistas snapshot; IOL)"
+  },
+  {
+   "base": "YM35",
+   "tickers": {
+    "ars": "YM35O",
+    "mep": "YM35D",
+    "cable": null
+   },
+   "turnoverArsEq": 392081216,
+   "turnoverDetail": {
+    "D": {
+     "close": 102.05,
+     "volNominal": 122719.0,
+     "arsEq": 181988368
+    },
+    "O": {
+     "close": 148400.0,
+     "volNominal": 141572.0,
+     "arsEq": 210092848
+    }
+   },
+   "issuer": "YPF S.A.",
+   "sector": "oil & gas (integrated)",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1454.2,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/YM35O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/YM35O"
+   ],
+   "note": "ON Clase 35 vto 2027-02-27 U$S CG (IOL title)"
+  },
+  {
+   "base": "PLC3",
+   "tickers": {
+    "ars": "PLC3O",
+    "mep": "PLC3D",
+    "cable": null
+   },
+   "turnoverArsEq": 387626148,
+   "turnoverDetail": {
+    "D": {
+     "close": 106.6,
+     "volNominal": 204935.0,
+     "arsEq": 317462298
+    },
+    "O": {
+     "close": 155000.0,
+     "volNominal": 45267.0,
+     "arsEq": 70163850
+    }
+   },
+   "issuer": "Pluspetrol S.A.",
+   "sector": "oil & gas E&P",
+   "currencyClass": "hard-dollar",
+   "oOverDRatio": 1454.0,
+   "sources": [
+    "https://data912.com/live/arg_corp",
+    "https://www.rava.com/perfil/PLC3O",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/PLC3O"
+   ],
+   "note": "ON Clase 3 vto 2028-04-30 U$S CG (IOL title)"
+  }
+ ],
+ "top15": [
+  "YM34",
+  "YM42",
+  "VSCX",
+  "YMCX",
+  "MGCR",
+  "BYCW",
+  "TLCM",
+  "VSCV",
+  "TLCP",
+  "TLCT",
+  "IRCP",
+  "YM39",
+  "PLC4",
+  "TSC4",
+  "OZC3"
+ ],
+ "excluded": [
+  {
+   "base": "MTCG",
+   "currencyClass": "hard-dollar",
+   "reason": "Excluded from top15 by rank (#23) and flagged: Mastellone 10.95% matures 2026-06-30 (20 days), residual cash-management trading only."
+  },
+  {
+   "base": "DNC9",
+   "currencyClass": "ars-floater (heuristic)",
+   "reason": "O-line only, px 105.8 per 100 VN in ARS (par-level ARS pricing); turnover 3.3M ARS, negligible."
+  },
+  {
+   "base": "SXC1",
+   "currencyClass": "ars-floater (heuristic)",
+   "reason": "O-line only, px 104.5 ARS par-level; turnover 1.1M ARS."
+  },
+  {
+   "base": "TLCR",
+   "currencyClass": "ars-floater (heuristic)",
+   "reason": "O-line only, px 98.1 ARS par-level; turnover 0.5M ARS."
+  },
+  {
+   "base": "T661",
+   "currencyClass": "ars-floater (heuristic)",
+   "reason": "O-line only, px 104.1 ARS par-level; turnover 0.15M ARS."
+  },
+  {
+   "base": "ZPC1",
+   "currencyClass": "ars-floater (heuristic)",
+   "reason": "O-line only, px 108.0 ARS par-level; turnover 0.1M ARS."
+  },
+  {
+   "base": "SNSD",
+   "currencyClass": null,
+   "reason": "O/D ratio 1363 vs MEP 1453 (-6.2%): off-MEP, possibly dollar-linked or stale line; turnover ~1M ARS. Unconfirmed -> null."
+  },
+  {
+   "base": "RZBC",
+   "currencyClass": null,
+   "reason": "Anomalous: pxO=100.0 vs pxD=89.0 (ratio ~1); lines inconsistent/stale; turnover 6.7M ARS. Unconfirmed -> null."
+  },
+  {
+   "base": "PECM",
+   "currencyClass": null,
+   "reason": "O/D ratio 1545 vs MEP 1453 (+6.3%): stale/crossed lines; turnover 3.7M ARS. Unconfirmed -> null."
+  }
+ ]
+}

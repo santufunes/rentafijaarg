@@ -11,6 +11,7 @@
 export type Family =
   | 'soberano_usd'
   | 'bopreal'
+  | 'on'
   | 'lecap'
   | 'boncap'
   | 'bonte'
@@ -38,6 +39,9 @@ interface InstrumentBase {
   /** Variantes de liquidación: D = dólar MEP, C = cable. */
   tickers: { ars: string; mep?: string; cable?: string };
   law?: 'AR' | 'NY';
+  /** Emisor y sector (ONs). */
+  issuer?: string;
+  sector?: string;
   sources?: string[];
 }
 

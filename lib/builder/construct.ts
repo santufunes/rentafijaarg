@@ -19,13 +19,22 @@ import { daysBetween, settlementT1 } from '../engine/dates';
 import { priceInstrument } from '../engine/pricing';
 import type { Family, Instrument, MarketContext, PricedInstrument, Quote } from '../engine/types';
 import type { Position } from '../engine/portfolio';
-import { targetWeights, type CurrencyGoal, type ProfileKey, type SegmentKey } from './profiles';
+import {
+  applyPesoFocus,
+  targetWeights,
+  type CurrencyGoal,
+  type PesoFocus,
+  type ProfileKey,
+  type SegmentKey,
+} from './profiles';
 
 export interface BuilderInputs {
   amountArs: number;
   horizonMonths: number;
   profile: ProfileKey;
   goal: CurrencyGoal;
+  /** Enfoque del flujo en pesos: inclina tasa fija ↔ CER. */
+  focus?: PesoFocus;
   /** Comisión del broker en %, configurable (default 0.5% + IVA). */
   commissionPct: number;
 }
@@ -116,7 +125,7 @@ interface Pick {
 }
 
 /** Registro de decisiones de un segmento: cada candidato termina con un motivo. */
-class Tracer {
+export class Tracer {
   private map = new Map<string, CandidateTrace>();
 
   constructor(
@@ -389,7 +398,10 @@ export function buildProposal(
     }
   }
 
-  const weights = targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths);
+  const weights = applyPesoFocus(
+    targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths),
+    inputs.focus ?? 'equilibrado',
+  );
   const segs: SegmentKey[] = ['tasa_fija', 'cer', 'dolar'];
 
   // Las comisiones se reservan ANTES de asignar: las órdenes propuestas tienen

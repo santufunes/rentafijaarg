@@ -30,7 +30,10 @@ export default function AllocationDonut({ sleeves }: { sleeves: SleeveMetrics[] 
                 <Cell key={d.name} fill={d.color} />
               ))}
             </Pie>
-            <Tooltip formatter={(v) => fmtArs(Number(v))} />
+            <Tooltip
+              formatter={(v) => fmtArs(Number(v))}
+              contentStyle={{ background: '#1c1917', border: '1px solid #44403c', fontFamily: 'monospace', fontSize: 12, color: '#f5f5f4' }}
+            />
           </PieChart>
         </ResponsiveContainer>
       </div>
@@ -38,8 +41,10 @@ export default function AllocationDonut({ sleeves }: { sleeves: SleeveMetrics[] 
         {data.map((d) => (
           <li key={d.name} className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: d.color }} />
-            <span className="text-stone-600">{d.name}</span>
-            <span className="ml-auto font-medium tabular-nums">{fmtPct(d.weight * 100, 0)}</span>
+            <span className="text-stone-400">{d.name}</span>
+            <span className="ml-auto font-mono font-medium tabular-nums text-stone-200">
+              {fmtPct(d.weight * 100, 0)}
+            </span>
           </li>
         ))}
       </ul>

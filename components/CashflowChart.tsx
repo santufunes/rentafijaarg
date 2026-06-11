@@ -23,16 +23,19 @@ export default function CashflowChart({ calendar }: { calendar: CalendarBucket[]
     <div className="mt-4 h-64">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e7e5e4" />
-          <XAxis dataKey="month" tick={{ fontSize: 11 }} tickLine={false} axisLine={false} />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#292524" />
+          <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#78716c' }} tickLine={false} axisLine={false} />
           <YAxis
             tickFormatter={(v) => (v >= 1_000_000 ? `${Math.round(v / 1_000_000)}M` : `${Math.round(v / 1000)}k`)}
-            tick={{ fontSize: 11 }}
+            tick={{ fontSize: 11, fill: '#78716c' }}
             tickLine={false}
             axisLine={false}
             width={42}
           />
-          <Tooltip formatter={(v) => fmtArs(Number(v))} />
+          <Tooltip
+            formatter={(v) => fmtArs(Number(v))}
+            contentStyle={{ background: '#1c1917', border: '1px solid #44403c', fontFamily: 'monospace', fontSize: 12, color: '#f5f5f4' }}
+          />
           <Bar isAnimationActive={false} dataKey="Pesos" stackId="a" fill="#0ea5e9" radius={[0, 0, 0, 0]} />
           <Bar isAnimationActive={false} dataKey="Dólares (en ARS al MEP)" stackId="a" fill="#10b981" radius={[3, 3, 0, 0]} />
         </BarChart>

@@ -2,9 +2,9 @@ export const metadata = { title: 'Metodología — RentaFijaArg' };
 
 export default function Metodologia() {
   return (
-    <article className="prose-stone mx-auto max-w-3xl space-y-6 text-stone-700">
+    <article className="mx-auto max-w-3xl space-y-6 text-stone-300">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900">Metodología</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-stone-100">Metodología</h1>
         <p className="mt-2 text-stone-500">
           Todo lo que la herramienta calcula, con qué convenciones y bajo qué supuestos. Si algo no
           está acá, preguntá — no debería haber magia.
@@ -12,7 +12,7 @@ export default function Metodologia() {
       </header>
 
       <section>
-        <h2 className="text-xl font-semibold text-stone-900">Datos</h2>
+        <h2 className="text-xl font-semibold text-stone-100">Datos</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
           <li>
             <strong>Precios:</strong> panel de títulos públicos y letras de BYMA vía data912.com
@@ -36,7 +36,7 @@ export default function Metodologia() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-stone-900">Matemática financiera</h2>
+        <h2 className="text-xl font-semibold text-stone-100">Matemática financiera</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
           <li>
             <strong>TIR:</strong> tasa interna de retorno <em>efectiva anual</em>, descuento
@@ -66,7 +66,7 @@ export default function Metodologia() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-stone-900">Construcción de la cartera</h2>
+        <h2 className="text-xl font-semibold text-stone-100">Construcción de la cartera</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
           <li>
             <strong>Segmentos:</strong> tasa fija en pesos (LECAP/BONCAP), ajuste por inflación
@@ -91,11 +91,19 @@ export default function Metodologia() {
             <strong>Costos:</strong> comisión configurable (default 0,5% + IVA) más derechos de
             mercado estimados (0,01%). Son estimaciones: cada ALyC tiene su esquema.
           </li>
+          <li>
+            <strong>Flujo en dólares:</strong> universo 100% USD (soberanos AL/GD/Bonar, BOPREAL y
+            ONs corporativas). El estilo define la mezcla soberanos/ONs y el piso de calificación
+            de la escalera corporativa (crédito primero, valor por spread sobre la curva soberana,
+            topes de concentración del 25% por emisor — la misma maquinaria de la pestaña Cartera ON
+            de la terminal). El enfoque del flujo en pesos inclina tasa fija ↔ CER sin tocar el
+            bucket dólar.
+          </li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-stone-900">Escenarios</h2>
+        <h2 className="text-xl font-semibold text-stone-100">Escenarios</h2>
         <p className="mt-2 text-sm">
           El valor a horizonte combina: (a) cupones y amortizaciones cobrados antes del horizonte,
           sin reinversión (supuesto conservador); (b) el valor de venta del remanente descontado a
@@ -107,7 +115,7 @@ export default function Metodologia() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-stone-900">Límites conocidos</h2>
+        <h2 className="text-xl font-semibold text-stone-100">Límites conocidos</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
           <li>No se modelan bonos duales TAMAR ni dollar-linked en las propuestas (el piso fijo de
             los duales y la convención A3500 están implementados, pero preferimos no proponer lo

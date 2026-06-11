@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Proposal from '@/components/Proposal';
 import Wizard, { type WizardValues } from '@/components/Wizard';
 import { buildProposal } from '@/lib/builder/construct';
+import { buildUsdPortfolio } from '@/lib/builder/usdportfolio';
 import {
   INSTRUMENTS,
   toMarketContext,
@@ -23,27 +24,40 @@ export default function Home() {
       .catch((e) => setMarketError(String(e)));
   }, []);
 
-  const proposal = useMemo(() => {
+  const built = useMemo(() => {
     if (!market || !values) return null;
+    const quotes = toQuotesMap(market);
+    const ctx = toMarketContext(market);
     try {
-      const built = buildProposal(INSTRUMENTS, toQuotesMap(market), toMarketContext(market), {
-        amountArs: values.amountArs,
-        horizonMonths: values.horizonMonths,
-        profile: values.profile,
-        goal: values.goal,
-        commissionPct: 0.5,
-      });
-      if (built.lines.length === 0) {
+      const proposal =
+        values.currency === 'USD'
+          ? buildUsdPortfolio(INSTRUMENTS, quotes, ctx, {
+              amountUsd: values.amountUsd,
+              horizonMonths: values.horizonMonths,
+              style: values.style,
+              composition: values.composition,
+              commissionPct: 0.5,
+            })
+          : buildProposal(INSTRUMENTS, quotes, ctx, {
+              amountArs: values.amountArs,
+              horizonMonths: values.horizonMonths,
+              profile: values.profile,
+              goal: values.goal,
+              focus: values.focus,
+              commissionPct: 0.5,
+            });
+      if (proposal.lines.length === 0) {
         return {
           proposal: null,
-          ctx: null,
+          quotes,
+          ctx,
           error:
             'No alcanzó para armar una cartera con este monto (ningún instrumento entra con nominales enteros). Probá con un monto mayor.',
         };
       }
-      return { proposal: built, ctx: toMarketContext(market), error: null as string | null };
+      return { proposal, quotes, ctx, error: null as string | null };
     } catch (e) {
-      return { proposal: null, ctx: null, error: String(e) };
+      return { proposal: null, quotes, ctx, error: String(e) };
     }
   }, [market, values]);
 
@@ -54,23 +68,25 @@ export default function Home() {
           onSubmit={setValues}
           marketReady={market !== null}
           marketSource={market?.source ?? null}
+          mep={market?.mep ?? null}
         />
       )}
       {marketError && (
-        <p className="mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-700">
+        <p className="mt-6 rounded-lg border border-red-900 bg-red-950/50 p-4 text-sm text-red-300">
           No se pudieron cargar los datos de mercado: {marketError}
         </p>
       )}
-      {values && proposal?.error && (
-        <p className="mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-700">
-          No se pudo armar la propuesta: {proposal.error}
+      {values && built?.error && (
+        <p className="mt-6 rounded-lg border border-amber-900 bg-amber-950/40 p-4 text-sm text-amber-300">
+          {built.error.replace('Error: ', '')}
         </p>
       )}
-      {values && proposal?.proposal && market && proposal.ctx && (
+      {values && built?.proposal && market && (
         <Proposal
-          proposal={proposal.proposal}
-          ctx={proposal.ctx}
+          proposal={built.proposal}
+          ctx={built.ctx}
           market={market}
+          quotes={built.quotes}
           onBack={() => setValues(null)}
         />
       )}

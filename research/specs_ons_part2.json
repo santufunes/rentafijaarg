@@ -1,0 +1,951 @@
+{
+ "family": "on",
+ "asOf": "2026-06-10",
+ "settlementForYieldChecks": "2026-06-11",
+ "method": "Hard-dollar ON specs verified bottom-up: primary documents (avisos de suscripcion/resultados published per CNV rules, SEC 20-F/6-K filings, deal-counsel deal notes) cross-checked against broker/golden pages (Cohen ficha BYMA, IOL page titles, cbonds, FIX/Moody's Local rating reports). remainingCashflows are per 100 VN ORIGINAL face, payments strictly AFTER 2026-06-10 (a coupon falling on 2026-06-10 itself belongs to the seller at T+1 settlement and is excluded). Interest = annualRatePct/2 x outstanding factor (30/360 semiannual), except BYCW which accrues actual/365 per its aviso.",
+ "instruments": [
+  {
+   "base": "TLCM",
+   "tickers": {
+    "ars": "TLCMO",
+    "mep": "TLCMD",
+    "cable": "TLCMC"
+   },
+   "name": "Telecom Argentina ON Clase 21 - 9.500% Senior Amortizing Notes due 2031",
+   "issuerLegalName": "Telecom Argentina S.A.",
+   "sector": "telecommunications",
+   "isin": "USP9028NBT74",
+   "isinDetail": {
+    "regS": "USP9028NBT74",
+    "rule144a": null,
+    "cusipRegS": null,
+    "cvsaCode": 83785,
+    "note": "RegS ISIN confirmed by cbonds bond page (WKN A3L1RG) and Cohen/BYMA ficha (the BYMA D-line carries the RegS ISIN). 144A ISIN not confirmed -> null."
+   },
+   "law": "NY",
+   "lawNote": "Indenture dated 2024-07-18 (UMB Bank N.A. trustee) and the notes governed by New York law; Argentine Ley de Obligaciones Negociables 23.576 governs qualification as ON (aviso de suscripcion item 34).",
+   "currency": {
+    "denomination": "USD",
+    "paymentInterest": "USD",
+    "paymentPrincipal": "USD"
+   },
+   "issueDate": "2024-07-18",
+   "issuanceHistory": [
+    {
+     "date": "2024-07-18",
+     "amountUsd": 500000000,
+     "note": "new money notes, priced 99.109% (yield 9.70%)"
+    },
+    {
+     "date": "2024-07-26",
+     "amountUsd": 115263000,
+     "note": "additional notes - exchange offer early settlement (canje ON Clase 1 8.000% 2026)"
+    },
+    {
+     "date": "2024-08-09",
+     "amountUsd": 1954000,
+     "note": "additional notes - exchange offer final settlement"
+    },
+    {
+     "date": "2024-10-29",
+     "amountUsd": 200000000,
+     "note": "reopening (Clase 21 adicionales)"
+    }
+   ],
+   "outstandingUsd": 817217000,
+   "maturity": "2031-07-18",
+   "coupon": {
+    "annualRatePct": 9.5,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "dayCount": "30/360",
+    "dayCountSource": "aviso de suscripcion item 27: 'Los intereses se calcularan en base a un anio de 360 dias y meses de 30 dias'",
+    "paymentPattern": "every 18 January and 18 July",
+    "firstCouponDate": "2025-01-18",
+    "nextPaymentDate": "2026-07-18"
+   },
+   "amortization": {
+    "type": "amortizing-3-installments",
+    "schedule": [
+     {
+      "date": "2029-07-18",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2030-07-18",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2031-07-18",
+      "pctOfOriginalFace": 34.0
+     }
+    ],
+    "source": "aviso de suscripcion item 26 ('33% del Valor Nominal el 18 de julio de 2029, 33% ... 2030, 34% ... 2031') + Telecom 20-F FY2025 Note (Series 21: 'In three installments of: 33% at 07/2029, 33% at 07/2030, 34% at 07/2031')"
+   },
+   "minDenomination": {
+    "vnMinTrading": 1000,
+    "multiples": 1000,
+    "currency": "USD",
+    "source": "aviso de suscripcion item 20 'Unidad Minima de Negociacion: US$1.000 y multiplos de US$1.000'; Cohen/BYMA ficha 'Lamina minima a negociar: USD 1.000'"
+   },
+   "embeddedOptions": "Callable: make-whole before 2029-07-18; thereafter callable at 104.75 from 2029-07-18 (cbonds: 'Next Call Date 18/07/2029 at 104.75'). Sinkable per amortization schedule.",
+   "remainingCashflows": [
+    {
+     "date": "2026-07-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-18",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-18",
+     "interest": 4.75,
+     "amortization": 33.0
+    },
+    {
+     "date": "2030-01-18",
+     "interest": 3.1825,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-18",
+     "interest": 3.1825,
+     "amortization": 33.0
+    },
+    {
+     "date": "2031-01-18",
+     "interest": 1.615,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-07-18",
+     "interest": 1.615,
+     "amortization": 34.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original face, 30/360; interest on outstanding factor (100 to 2029-07, 67 to 2030-07, 34 to 2031-07).",
+   "listing": "BYMA / A3 Mercados; Luxembourg Stock Exchange",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2024/07/Telecom-Clase21Adicionales-AvisodeSuscripcion-1.pdf (aviso de suscripcion en canje, Clase 21 adicionales, jul-2024 - primary)",
+    "https://www.sec.gov/Archives/edgar/data/932470/000110465926026480/teo-20251231x20f.htm (Telecom 20-F FY2025, Note 14 borrowings table - primary)",
+    "https://www.sec.gov/Archives/edgar/data/932470/000110465924079453/tm2419361d1_6k.htm (6-K 2024-07-12: pricing US$500M 9.500% senior amortizing notes due 2031 + exchange offer)",
+    "https://cbonds.com/bonds/1694889/ (cbonds: Telecom Argentina 9.5% 18jul2031, USP9028NBT74)",
+    "https://www.cohen.com.ar/Bursatil/Especie/TLCMD/MERVAL/24hs. (Cohen/BYMA ficha: ISIN, lamina minima, vencimiento)",
+    "https://abogados.com.ar/index.php/egfa-abogados-asesoro-nuevamente-a-telecom-argentina-sa-en-la-reapertura-de-las-obligaciones-negociables-clase-21/35832 (issuance history incl. 2024-10-29 reopening)",
+    "https://www.bbva.com.ar/content/dam/public-web/argentina/documents/ON_Telecom_Clase_28_Calificacion.pdf (FIX informe 2026-02-27: ON Clase 21 context)",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCMO (IOL title: 'On Telecom Argentina 9,5% Vto. 18/7/31')"
+   ],
+   "confidence": "high",
+   "flags": [
+    "144A ISIN unconfirmed (null); RegS ISIN is the one that matters on BYMA lines"
+   ],
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-10",
+    "checkedSources": [
+     {
+      "url": "https://argen.bond/bonos/TLCMD",
+      "what": "INDEPENDENT re-derivation: Tasa Cupon 9.5%, emision 18/07/2024, vencimiento 18/07/2031, Ley NY, Tasa Fija, Amortizable, Lamina Minima 1000 - all match spec"
+     },
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/TLCMD",
+      "what": "INDEPENDENT: issuer Telecom Argentina S.A, Ley N.Y., TIR 6.2200% / Macaulay duration 3.4229 at dirty 115.80 - spec cashflows reproduce both (duration discriminates 33/33/34 vs bullet: bullet would be ~3.9 and TIR 6.79%)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "D-line close (c) 115.8 dirty USD per 100 VN, fetched 2026-06-10; bid/ask bracket consistent"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c), fetched 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/{T} (SSR-embedded tir metric, same dirty price, settlement 2026-06-11)",
+     "ticker": "TLCMD",
+     "dirtyPriceUSD": 115.8,
+     "computedTIRPct": 6.2207,
+     "publishedTIRPct": 6.22,
+     "deltaPp": 0.0007,
+     "pass": true,
+     "durationCrossCheck": {
+      "specMacaulayYears": 3.4224,
+      "publishedMacaulayYears": 3.4229,
+      "note": "Macaulay duration from spec cashflows at published TIR (t from trade date 2026-06-10, act/365) vs Docta SSR duration; confirms amortization time-profile"
+     }
+    }
+   }
+  },
+  {
+   "base": "TLCP",
+   "tickers": {
+    "ars": "TLCPO",
+    "mep": "TLCPD",
+    "cable": "TLCPC"
+   },
+   "name": "Telecom Argentina ON Clase 24 - 9.250% Senior Notes due 2033",
+   "issuerLegalName": "Telecom Argentina S.A.",
+   "sector": "telecommunications",
+   "isin": "USP9028NCA74",
+   "isinDetail": {
+    "regS": "USP9028NCA74",
+    "rule144a": null,
+    "cvsaCode": 84410,
+    "note": "RegS ISIN confirmed by cbonds bond page and Cohen/BYMA ficha. 144A ISIN not confirmed -> null."
+   },
+   "law": "NY",
+   "lawNote": "Indenture and notes governed by New York law; Ley de Obligaciones Negociables governs ON qualification (aviso de suscripcion item 29).",
+   "currency": {
+    "denomination": "USD",
+    "paymentInterest": "USD",
+    "paymentPrincipal": "USD"
+   },
+   "issueDate": "2025-05-28",
+   "issuanceHistory": [
+    {
+     "date": "2025-05-28",
+     "amountUsd": 800000000,
+     "note": "priced 2025-05-22 at 98.682% (yield 9.50% per cbonds; 20-F: below par, proceeds prepaid TMA acquisition loans)"
+    },
+    {
+     "date": "2025-06-24",
+     "amountUsd": 200000000,
+     "note": "Clase 24 adicionales, above par; 20-F body text says issued 2025-06-24 while 20-F table says 07/2025 - flagged"
+    }
+   ],
+   "outstandingUsd": 1000000000,
+   "maturity": "2033-05-28",
+   "coupon": {
+    "annualRatePct": 9.25,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "dayCount": "30/360",
+    "dayCountSource": "aviso de suscripcion item 22: interest on a 360-day year of 30-day months",
+    "paymentPattern": "every 28 May and 28 November (semiannual anniversaries of 2025-05-28 issue / 2033-05-28 maturity)",
+    "paymentPatternNote": "Semiannual confirmed by 20-F and aviso; the exact day-28 dates are derived from issue/maturity anniversaries - no document listing each date was retrieved.",
+    "firstCouponDate": "2025-11-28",
+    "nextPaymentDate": "2026-11-28"
+   },
+   "amortization": {
+    "type": "amortizing-2-installments",
+    "schedule": [
+     {
+      "date": "2032-05-28",
+      "pctOfOriginalFace": 50.0
+     },
+     {
+      "date": "2033-05-28",
+      "pctOfOriginalFace": 50.0
+     }
+    ],
+    "source": "Telecom 20-F FY2025 ('In two installments: (i) 50% in 05/2032 and (ii) 50% in 05/2033') + FIX informe ('amortizacion en 2032 y 2033') + aviso de suscripcion item 21 (50% at year 7, 50% at year 8 = maturity)"
+   },
+   "minDenomination": {
+    "vnMinTrading": 1,
+    "multiples": 1,
+    "currency": "USD",
+    "minSubscriptionUsd": 100,
+    "source": "aviso de suscripcion items 14-15: 'Unidad Minima de Negociacion: US$1' / 'Monto Minimo de Suscripcion: US$100'; Cohen/BYMA ficha 'Lamina minima a negociar: USD 1,00'"
+   },
+   "embeddedOptions": "Callable (standard make-whole / fixed-price call ladder per suplemento de prospecto; exact ladder not extracted).",
+   "remainingCashflows": [
+    {
+     "date": "2026-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-28",
+     "interest": 4.625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-28",
+     "interest": 4.625,
+     "amortization": 50.0
+    },
+    {
+     "date": "2032-11-28",
+     "interest": 2.3125,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-05-28",
+     "interest": 2.3125,
+     "amortization": 50.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original face, 30/360; interest on outstanding factor (100 to 2032-05, 50 to 2033-05).",
+   "listing": "BYMA / A3 Mercados; Luxembourg Stock Exchange (per program practice)",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/05/Aviso-de-Suscripcion-Telecom.pdf (aviso de suscripcion Clase 24, may-2025 - primary)",
+    "https://www.sec.gov/Archives/edgar/data/932470/000110465926026480/teo-20251231x20f.htm (Telecom 20-F FY2025: 2033 Notes issuance, amortization table - primary)",
+    "https://cbonds.com/bonds/1857845/ (cbonds: Telecom Argentina 9.25% 28may2033, USP9028NCA74)",
+    "https://www.cohen.com.ar/Bursatil/Especie/TLCPD/MERVAL/24hs. (Cohen/BYMA ficha: ISIN, lamina minima USD 1, vencimiento 28/5/2033)",
+    "https://www.bbva.com.ar/content/dam/public-web/argentina/documents/ON_Telecom_Clase_28_Calificacion.pdf (FIX informe 2026-02-27: Clase 24 USD 800M 9,25% amortizacion 2032 y 2033)",
+    "https://www.infobae.com/economia/networking/2025/05/23/telecom-completo-una-nueva-emision-internacional-de-obligaciones-negociables-por-usd-800-millones/ (Infobae: USD 800M, vencimiento 2033-05-28, amortizaciones anios 7 y 8)",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCPO (IOL title: 'On Telecom Argentina Sa Regs 9.25% V. 28/05/33')"
+   ],
+   "confidence": "high",
+   "flags": [
+    "144A ISIN unconfirmed (null)",
+    "Coupon dates (28-May/28-Nov) derived from issue/maturity anniversaries; semiannual basis is documented but a per-date list was not retrieved",
+    "Additional US$200M issue date: 20-F body says 2025-06-24, 20-F table says 07/2025 (not cashflow-relevant; notes fungible)"
+   ],
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-10",
+    "checkedSources": [
+     {
+      "url": "https://argen.bond/bonos/TLCPD",
+      "what": "INDEPENDENT re-derivation: Tasa Cupon 9.25%, emision 28/05/2025, vencimiento 28/05/2033, Ley NY, Tasa Fija, Amortizable, Lamina Minima 1 - all match spec"
+     },
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/TLCPD",
+      "what": "INDEPENDENT: Ley N.Y., TIR 7.2681% / Macaulay duration 5.0784 at dirty 111.05 - spec cashflows reproduce both (bullet counterfactual TIR 7.39%, duration ~5.5)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "D-line close (c) 111.05 dirty USD per 100 VN, fetched 2026-06-10; bid/ask bracket consistent"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c), fetched 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/{T} (SSR-embedded tir metric, same dirty price, settlement 2026-06-11)",
+     "ticker": "TLCPD",
+     "dirtyPriceUSD": 111.05,
+     "computedTIRPct": 7.2712,
+     "publishedTIRPct": 7.2681,
+     "deltaPp": 0.0031,
+     "pass": true,
+     "durationCrossCheck": {
+      "specMacaulayYears": 5.0765,
+      "publishedMacaulayYears": 5.0784,
+      "note": "Macaulay duration from spec cashflows at published TIR (t from trade date 2026-06-10, act/365) vs Docta SSR duration; confirms amortization time-profile"
+     }
+    }
+   }
+  },
+  {
+   "base": "TLCT",
+   "tickers": {
+    "ars": "TLCTO",
+    "mep": "TLCTD",
+    "cable": "TLCTC"
+   },
+   "name": "Telecom Argentina ON Clase 27 - 8.500% Senior Amortizing Notes due 2036",
+   "issuerLegalName": "Telecom Argentina S.A.",
+   "sector": "telecommunications",
+   "isin": "USP9028NCE96",
+   "isinDetail": {
+    "regS": "USP9028NCE96",
+    "rule144a": "US879273AW09",
+    "cusipRegS": "P9028N CE9",
+    "cusip144a": "879273 AW0",
+    "cvsaCode": 84977,
+    "note": "Both legs from the aviso de resultados items 16-17; RegS confirmed by Cohen/BYMA ficha."
+   },
+   "law": "NY",
+   "lawNote": "Indenture and notes governed by New York law; Ley de Obligaciones Negociables governs ON qualification (aviso de suscripcion item 29).",
+   "currency": {
+    "denomination": "USD",
+    "paymentInterest": "USD",
+    "paymentPrincipal": "USD"
+   },
+   "issueDate": "2026-01-20",
+   "issuanceHistory": [
+    {
+     "date": "2026-01-20",
+     "amountUsd": 600000000,
+     "note": "priced 2026-01-14 at 99.201% (yield 8.625%); demand US$2,427M across 174 offers; proceeds prepaid TMA syndicated+bilateral loans and redeemed 8.000% 2026 notes"
+    }
+   ],
+   "outstandingUsd": 600000000,
+   "maturity": "2036-01-20",
+   "coupon": {
+    "annualRatePct": 8.5,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "dayCount": "30/360",
+    "dayCountSource": "aviso de suscripcion item 22: interest on a 360-day year of 30-day months",
+    "paymentPattern": "every 20 July and 20 January (full list 2026-07-20 ... 2036-01-20 enumerated in aviso de resultados item 10; record dates each 5 Jan / 5 Jul)",
+    "firstCouponDate": "2026-07-20",
+    "nextPaymentDate": "2026-07-20"
+   },
+   "amortization": {
+    "type": "amortizing-2-installments",
+    "schedule": [
+     {
+      "date": "2035-01-20",
+      "pctOfOriginalFace": 50.0
+     },
+     {
+      "date": "2036-01-20",
+      "pctOfOriginalFace": 50.0
+     }
+    ],
+    "source": "aviso de resultados item 8 ('dos cuotas, cada una por el 50% del capital, la primera ... 20 de enero de 2035 y la segunda ... 20 de enero de 2036') + Infobae/Bloomberg Linea + 20-F ('8.5% senior amortizing notes due 2036')"
+   },
+   "minDenomination": {
+    "vnMinTrading": 1,
+    "multiples": 1,
+    "currency": "USD",
+    "minSubscriptionUsd": 100,
+    "source": "aviso de suscripcion items 14-15: 'Unidad Minima de Negociacion: US$1' / 'Monto Minimo de Suscripcion: US$100'; Cohen/BYMA ficha 'Lamina minima a negociar: USD 1,00'"
+   },
+   "embeddedOptions": "Callable: make-whole (T+50bp) before 2031-01-20; then 104.250% (from 2031-01-20), 102.125% (2032), 101.063% (2033), 100% (2034+); equity clawback up to 35% at 108.500% before 2031-01-20 (aviso de resultados items 13-15).",
+   "remainingCashflows": [
+    {
+     "date": "2026-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-01-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-07-20",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-01-20",
+     "interest": 4.25,
+     "amortization": 50.0
+    },
+    {
+     "date": "2035-07-20",
+     "interest": 2.125,
+     "amortization": 0.0
+    },
+    {
+     "date": "2036-01-20",
+     "interest": 2.125,
+     "amortization": 50.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original face, 30/360; interest on outstanding factor (100 to 2035-01, 50 to 2036-01).",
+   "listing": "BYMA / A3 Mercados; Luxembourg Stock Exchange (expected per offering)",
+   "sources": [
+    "https://www.macro.com.ar/sites/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1593395059782&ssbinary=true (aviso de resultados Clase 27, 2026-01-14 - primary; ISINs, full coupon-date list, amortization, call ladder)",
+    "https://www.petrini.com.ar/wp-content/uploads/2026/01/Clase-27-Aviso-de-suscripcion-signed.pdf (aviso de suscripcion Clase 27, 2026-01-12 - primary; min denomination, NY law, 30/360)",
+    "https://www.sec.gov/Archives/edgar/data/932470/000110465926026480/teo-20251231x20f.htm (Telecom 20-F FY2025: 2036 Notes issued 2026-01-20, US$600M)",
+    "https://www.bbva.com.ar/content/dam/public-web/argentina/documents/ON_Telecom_Clase_28_Calificacion.pdf (FIX informe: ON Clase 27 internacional USD 600M, vencimiento enero 2036)",
+    "https://www.infobae.com/economia/2026/01/15/telecom-argentina-coloco-obligaciones-negociables-por-usd-600-millones-con-una-demanda-institucional-record/ (Infobae: coupon 8.50%, price 99.201%, yield 8.625%, amortization 2035/2036)",
+    "https://www.cohen.com.ar/Bursatil/Especie/TLCTD/MERVAL/24hs. (Cohen/BYMA ficha: ISIN USP9028NCE96, lamina USD 1, vencimiento 20/1/2036)",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/TLCTO (IOL title: 'On Telecom Argentina S 8,5 % Vto. 20/01/36')"
+   ],
+   "confidence": "high",
+   "flags": [],
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-10",
+    "checkedSources": [
+     {
+      "url": "https://argen.bond/bonos/TLCTD",
+      "what": "INDEPENDENT re-derivation: Tasa Cupon 8.5%, emision 20/01/2026, vencimiento 20/01/2036, Ley NY, Tasa Fija, Amortizable, Lamina Minima 1 - all match spec"
+     },
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/TLCTD",
+      "what": "INDEPENDENT: issuer Telecom Argentina S.A, Ley N.Y., TIR 7.5357% / Macaulay duration 6.4270 at dirty 110.45 - spec 50/50 2035-01/2036-01 gives 6.4247; bullet counterfactual 6.6692 -> duration confirms the split where TIR alone is weak (bullet TIR shift only +0.04pp)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "D-line close (c) 110.45 dirty USD per 100 VN, fetched 2026-06-10; bid/ask bracket consistent"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c), fetched 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/{T} (SSR-embedded tir metric, same dirty price, settlement 2026-06-11)",
+     "ticker": "TLCTD",
+     "dirtyPriceUSD": 110.45,
+     "computedTIRPct": 7.5388,
+     "publishedTIRPct": 7.5357,
+     "deltaPp": 0.0031,
+     "pass": true,
+     "durationCrossCheck": {
+      "specMacaulayYears": 6.4247,
+      "publishedMacaulayYears": 6.427,
+      "note": "Macaulay duration from spec cashflows at published TIR (t from trade date 2026-06-10, act/365) vs Docta SSR duration; confirms amortization time-profile"
+     }
+    }
+   }
+  },
+  {
+   "base": "VSCV",
+   "tickers": {
+    "ars": "VSCVO",
+    "mep": "VSCVD",
+    "cable": "VSCVC"
+   },
+   "name": "Vista Energy Argentina ON Clase XXIX - 8.500% Senior Notes due 2033",
+   "issuerLegalName": "Vista Energy Argentina S.A.U.",
+   "sector": "oil & gas E&P (Vaca Muerta shale); main subsidiary of Vista Energy, S.A.B. de C.V. (NYSE: VIST)",
+   "isin": "USP9659RAB44",
+   "isinDetail": {
+    "regS": "USP9659RAB44",
+    "rule144a": "US92841RAB69",
+    "cusipRegS": "P9659R AB4",
+    "cusip144a": "92841R AB6",
+    "cvsaCode": 84434,
+    "note": "Both legs from aviso de resultados items 15-16; RegS confirmed by Cohen/BYMA ficha. RegS additional notes (dec-2025) traded under temporary separate codes for 40 days post-issue, now fungible."
+   },
+   "law": "NY",
+   "lawNote": "Notes and indenture (The Bank of New York Mellon, trustee, dated 2025-06-10) governed by New York law (Vista 6-K 2025-06-04 and 2025-12-03).",
+   "currency": {
+    "denomination": "USD",
+    "paymentInterest": "USD (payable abroad - 'pagaderas en dolares estadounidenses en el exterior')",
+    "paymentPrincipal": "USD"
+   },
+   "issueDate": "2025-06-10",
+   "issuanceHistory": [
+    {
+     "date": "2025-06-10",
+     "amountUsd": 500000000,
+     "note": "initial notes, issue price 100.000%, yield 8.50% (aviso de resultados)"
+    },
+    {
+     "date": "2025-12-10",
+     "amountUsd": 400000000,
+     "note": "Clase XXIX adicionales, issue price 101.236% (yield to average life 8.250%); fungible single class"
+    }
+   ],
+   "outstandingUsd": 900000000,
+   "maturity": "2033-06-10",
+   "coupon": {
+    "annualRatePct": 8.5,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "dayCount": "30/360",
+    "dayCountSource": "Standard international-format basis; the aviso de resultados make-whole clause explicitly discounts 'asumiendo un anio de 360 dias compuesto de doce meses de 30 dias'. Interest basis clause of the suplemento not directly read - see flags.",
+    "paymentPattern": "every 10 June and 10 December (full list 2025-12-10 ... 2033-06-10 enumerated in aviso de resultados item 9)",
+    "firstCouponDate": "2025-12-10",
+    "nextPaymentDate": "2026-12-10",
+    "couponOnAsOfDate": "2026-06-10 is itself a coupon date (4.25 per 100 VN paid today); it is EXCLUDED from remainingCashflows (belongs to seller at T+1 settlement 2026-06-11)"
+   },
+   "amortization": {
+    "type": "amortizing-3-installments",
+    "schedule": [
+     {
+      "date": "2031-06-10",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2032-06-10",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2033-06-10",
+      "pctOfOriginalFace": 34.0
+     }
+    ],
+    "source": "aviso de resultados item 8 (33% / 33% / 34% 'del Monto de Capital Pendiente Original', i.e. of original face) + Bruchou deal note + Vista 6-K (3 consecutive annual installments, 6th/7th/8th anniversaries; WAL 7y)"
+   },
+   "minDenomination": {
+    "vnMinTrading": 1000,
+    "multiples": 1000,
+    "currency": "USD",
+    "source": "Suplemento de prospecto/aviso de suscripcion Clase XXIX: minimum denominations US$1,000 and whole multiples of US$1,000; Cohen/BYMA ficha 'Lamina minima a negociar: USD 1.000'"
+   },
+   "embeddedOptions": "Callable: make-whole (T+50bp) before 2028-06-10; then 104.250% (from 2028-06-10), 102.125% (2029), 100% (2030+); equity clawback up to 35% at 108.500% before 2028-06-10 (aviso de resultados items 10-12).",
+   "remainingCashflows": [
+    {
+     "date": "2026-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-10",
+     "interest": 4.25,
+     "amortization": 33.0
+    },
+    {
+     "date": "2031-12-10",
+     "interest": 2.8475,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-10",
+     "interest": 2.8475,
+     "amortization": 33.0
+    },
+    {
+     "date": "2032-12-10",
+     "interest": 1.445,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-06-10",
+     "interest": 1.445,
+     "amortization": 34.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN original face, 30/360; interest on outstanding factor (100 to 2031-06, 67 to 2032-06, 34 to 2033-06). Excludes the 2026-06-10 coupon paid on the asOf date.",
+   "listing": "BYMA / A3 Mercados",
+   "sources": [
+    "https://vista-energy.cdn.prismic.io/vista-energy/aQnwU7pReVYa4Bb8_87d0ef28d6769d41a6e05be8eac28fa7_Vista_-_Aviso_de_Resultados_Clase_XXIX_-_EXE.pdf (aviso de resultados Clase XXIX, 2025-06 - primary; ISINs, full coupon list, 33/33/34 amortization, call ladder)",
+    "https://www.sec.gov/Archives/edgar/data/1762506/000119312525135041/d20896d6k.htm (Vista 6-K 2025-06-04: pricing US$500M, NY law, installments on 6th/7th/8th anniversaries)",
+    "https://www.sec.gov/Archives/edgar/data/1762506/000119312525306998/d34643d6k.htm (Vista 6-K 2025-12-03: US$400M additional notes at 101.236%, total US$900M)",
+    "https://bruchoufunes.com/vista-on-clase-xxix-adicionales-us400m-8-500-2033/ (deal counsel note: dates, 8.500%, amortization 33/33/34, BoNY indenture)",
+    "https://www.cohen.com.ar/Bursatil/Especie/VSCVD/MERVAL/24hs. (Cohen/BYMA ficha: ISIN USP9659RAB44, lamina USD 1.000, vencimiento 10/6/2033)",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/VSCVO (IOL title: 'Vista Energy A Regs 8.5% 10/06/33')"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Interest day-count stated as 30/360 from the make-whole clause and international-notes convention; the suplemento's interest-basis sentence itself was not directly read"
+   ],
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-10",
+    "checkedSources": [
+     {
+      "url": "https://argen.bond/bonos/VSCVD",
+      "what": "INDEPENDENT re-derivation: Tasa Cupon 8.5%, emision 10/06/2025, vencimiento 10/06/2033, Ley NY, Tasa Fija, Amortizable, Lamina Minima 1000 - all match spec"
+     },
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/VSCVD",
+      "what": "INDEPENDENT: Ley N.Y., TIR 6.2478% / Macaulay duration 4.8969 at dirty 111.60 - spec cashflows reproduce both (bullet counterfactual TIR 6.52%, duration ~5.6)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "D-line close (c) 111.6 dirty USD per 100 VN, fetched 2026-06-10; bid/ask bracket consistent"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c), fetched 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/{T} (SSR-embedded tir metric, same dirty price, settlement 2026-06-11)",
+     "ticker": "VSCVD",
+     "dirtyPriceUSD": 111.6,
+     "computedTIRPct": 6.2483,
+     "publishedTIRPct": 6.2478,
+     "deltaPp": 0.0005,
+     "pass": true,
+     "durationCrossCheck": {
+      "specMacaulayYears": 4.8965,
+      "publishedMacaulayYears": 4.8969,
+      "note": "Macaulay duration from spec cashflows at published TIR (t from trade date 2026-06-10, act/365) vs Docta SSR duration; confirms amortization time-profile"
+     }
+    }
+   }
+  },
+  {
+   "base": "BYCW",
+   "tickers": {
+    "ars": "BYCWO",
+    "mep": "BYCWD",
+    "cable": "BYCWC"
+   },
+   "name": "Banco Galicia ON Clase XXX - 6.00% fixed, USD (local), bullet 30-nov-2026",
+   "issuerLegalName": "Banco de Galicia y Buenos Aires S.A.",
+   "issuerNameNote": "Aviso de suscripcion (nov-2025) and Moody's Local style the issuer 'Banco de Galicia y Buenos Aires S.A.' / 'Sociedad Anonima' (formerly S.A.U.).",
+   "sector": "bank (largest private bank; Grupo Financiero Galicia)",
+   "isin": "AR0098652693",
+   "isinDetail": {
+    "regS": null,
+    "rule144a": null,
+    "local": "AR0098652693",
+    "cvsaCode": 58985,
+    "note": "Local-law ON, single ISIN, from Cohen/BYMA ficha (single secondary source - aviso de resultados not retrieved)."
+   },
+   "law": "AR",
+   "lawNote": "Argentine law, issued under CNV Regimen de Emisor Frecuente, prospecto 2025-07-04 + suplemento 2025-11-10; CVSA global certificate (Ley 24.587).",
+   "currency": {
+    "denomination": "USD",
+    "paymentInterest": "USD payable in Argentina (hard-dollar local / MEP-settled)",
+    "paymentPrincipal": "USD payable in Argentina",
+    "subscription": "cash USD in Argentina and/or in kind (canje ON Clase 23 BYCOO)"
+   },
+   "issueDate": "2025-11-14",
+   "issuanceHistory": [
+    {
+     "date": "2025-11-14",
+     "amountUsd": 144323518,
+     "note": "issue price 100%; cut rate 6.00% fixed"
+    }
+   ],
+   "outstandingUsd": 144323518,
+   "maturity": "2026-11-30",
+   "coupon": {
+    "annualRatePct": 6.0,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "dayCount": "actual/365",
+    "dayCountSource": "aviso de suscripcion item 17: 'cantidad real de dias transcurridos y un anio de trescientos sesenta y cinco (365) dias'",
+    "paymentPattern": "semiannual; payment dates carry the same day-number as the issue date (the 14th) per aviso item 18, with the final payment on the maturity date 2026-11-30 -> derived schedule: 2026-05-14 (paid) and 2026-11-30 (final)",
+    "firstCouponDate": "2026-05-14",
+    "firstCouponDateNote": "DERIVED, not document-confirmed: aviso de resultados (which fixes the first payment month) was not retrieved. If the schedule were instead anchored on the maturity day-30 (2026-05-30), the final interest would be 3.0247 instead of 3.2877 per 100 VN.",
+    "nextPaymentDate": "2026-11-30"
+   },
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2026-11-30",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "source": "aviso de suscripcion item 19 (single payment of 100% at maturity) + Beccar Varela deal note ('el capital sera amortizado en un unico pago al vencimiento')"
+   },
+   "minDenomination": {
+    "vnMinTrading": 1000,
+    "multiples": 1,
+    "currency": "USD",
+    "source": "aviso de suscripcion items 9-10: 'Monto Minimo de Suscripcion / Unidad Minima de Negociacion: V/N US$1.000 y multiplos de V/N US$1'; Cohen/BYMA ficha 'Lamina minima a negociar: USD 1.000'"
+   },
+   "embeddedOptions": "None disclosed (no call/put in aviso de suscripcion).",
+   "remainingCashflows": [
+    {
+     "date": "2026-11-30",
+     "interest": 3.2877,
+     "amortization": 100.0
+    }
+   ],
+   "remainingCashflowsNote": "Per 100 VN, actual/365: final interest 6.00% x 200/365 x 100 = 3.2877 (period 2026-05-14 -> 2026-11-30, derived schedule) + 100 principal at 2026-11-30. Alternative if last coupon period started 2026-05-30: interest 3.0247.",
+   "listing": "BYMA / A3 Mercados; rating ML A-1.ar (Moody's Local Argentina)",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/11/MPA3-ANU-ON-EF-BANCO-DE-GALICIA-CLASE-XXX-Aviso-de-Suscripcion-10-11-25.pdf (aviso de suscripcion Clase XXX, 2025-11-10 - primary; issue date, maturity, bullet, actual/365, min VN 1.000)",
+    "https://beccarvarela.com/novedades/beccar-varela-asesora-en-la-emision-de-las-clases-xxx-y-xxxi-de-ons-de-banco-galicia/ (deal counsel: 6.00% fixed, US$144,323,518, semiannual interest, bullet 2026-11-30, ML A-1.ar)",
+    "https://www.cohen.com.ar/Bursatil/Especie/BYCWD/MERVAL/24hs. (Cohen/BYMA ficha: ISIN AR0098652693, CVSA 58985, lamina USD 1.000)",
+    "https://iol.invertironline.com/titulo/cotizacion/BCBA/BYCWO (IOL title: 'On Banco Galicia Cl.30 30/11/26 Usd')"
+   ],
+   "confidence": "medium-high",
+   "confidenceNote": "Coupon rate, maturity, bullet amortization and min denomination each have 2+ sources (high). Downgraded overall because the exact coupon dates are derived from the aviso's day-14 rule rather than read from the aviso de resultados.",
+   "flags": [
+    "First coupon date 2026-05-14 derived from aviso day-number rule; aviso de resultados not retrieved - residual final-coupon uncertainty 3.2877 vs 3.0247 per 100 VN",
+    "ISIN from a single secondary source (Cohen/BYMA ficha)"
+   ],
+   "verification": {
+    "status": "verified",
+    "verifiedDate": "2026-06-10",
+    "checkedSources": [
+     {
+      "url": "https://argen.bond/bonos/BYCWD",
+      "what": "INDEPENDENT re-derivation: Tasa Cupon 6%, emision 14/11/2025, vencimiento 30/11/2026, Ley ARG, Tasa Fija, Bullet, Lamina Minima 1000 - all match spec"
+     },
+     {
+      "url": "https://app.doctacapital.com.ar/dashboard/market/ON/ticker/BYCWD",
+      "what": "INDEPENDENT: issuer Banco De Galicia Y Buenos Aires S.A.U., Ley Argentina, TIR 1.2182% / Macaulay duration 0.4740 (=173/365 from trade date, single remaining cashflow) at dirty 102.70; parity 1.02246 -> accrued 0.4438 = 27 days act/365 anchored 2026-05-14, independently corroborating the derived first-coupon date (2026-05-30 anchor would give accrued 0.18 and TIR ~0.67%)"
+     },
+     {
+      "url": "https://data912.com/live/arg_corp",
+      "what": "D-line close (c) 102.7 dirty USD per 100 VN, fetched 2026-06-10; bid/ask bracket consistent"
+     }
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceSource": "data912.com /live/arg_corp close (c), fetched 2026-06-10; dirty USD per 100 VN original",
+     "method": "effective annual IRR, act/365, bisection on spec remainingCashflows vs dirty D-line price",
+     "publishedTIRSource": "app.doctacapital.com.ar/dashboard/market/ON/ticker/{T} (SSR-embedded tir metric, same dirty price, settlement 2026-06-11)",
+     "ticker": "BYCWD",
+     "dirtyPriceUSD": 102.7,
+     "computedTIRPct": 1.2183,
+     "publishedTIRPct": 1.2182,
+     "deltaPp": 0.0001,
+     "pass": true,
+     "durationCrossCheck": {
+      "specMacaulayYears": 0.474,
+      "publishedMacaulayYears": 0.474,
+      "note": "Macaulay duration from spec cashflows at published TIR (t from trade date 2026-06-10, act/365) vs Docta SSR duration; confirms amortization time-profile"
+     }
+    }
+   }
+  }
+ ],
+ "notes": [
+  "BYMA D-lines (USD MEP) carry the RegS ISIN for NY-law ONs (Cohen fichas).",
+  "Min denominations split the panel: TLCM and VSCV trade in VN US$1,000 minimum (multiples of US$1,000); TLCP and TLCT trade in VN US$1 (retail-friendly); BYCW VN US$1,000 + multiples of US$1.",
+  "All percentages of amortizing installments are pct of ORIGINAL face (per avisos: 'del Valor Nominal' / 'del Monto de Capital Pendiente Original'); interest accrues on the reduced outstanding after each installment.",
+  "VSCV pays a 4.25 coupon on the asOf date 2026-06-10 itself - excluded from remainingCashflows (settlement 2026-06-11).",
+  "Verification run 2026-06-10: all 5 instruments internally consistent (remaining amortization sums to 100 = current residual; coupon = rate/2 x outstanding factor on 30/360 pattern dates, BYCW act/365 6% x 200/365 = 3.2877) and golden-checked vs Docta Capital published TIR (max |delta| 0.0031pp) and Macaulay duration (max diff 0.0023y). No corrections required. BYCW first-coupon-date flag (2026-05-14 derived) corroborated by Docta accrued-interest parity; flag retained pending aviso de resultados."
+ ]
+}

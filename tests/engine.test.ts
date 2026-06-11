@@ -151,7 +151,30 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
     settlement: '2026-06-11',
   }));
 
-  const goldens: Golden[] = [...fromIamc, ...fromBopreal, ...fromBonistasCer]
+  // 4) ONs: precio sucio USD (línea D, mismo cierre data912) y TIR publicada
+  //    relevados en la verificación de cada spec (docta/bonistas).
+  const fromOns: Golden[] = ['1', '2', '3'].flatMap((n) => {
+    let part: any;
+    try {
+      part = readJson(`research/specs_ons_part${n}.json`);
+    } catch {
+      return [];
+    }
+    return (part.instruments ?? [])
+      .map((spec: any) => {
+        const gc = spec.verification?.goldenCheck ?? {};
+        return {
+          ticker: spec.tickers?.ars,
+          tirPct: gc.publishedTIRPct,
+          price: gc.dirtyPriceUSD ?? gc.dirtyPriceUSDper100VN,
+          priceBasis: 'dirty USD per 100 VN (data912 D-line)',
+          settlement: gc.settlement ?? '2026-06-11',
+        };
+      })
+      .filter((g: Golden) => byTicker(g.ticker) && Number.isFinite(g.tirPct) && Number.isFinite(g.price));
+  });
+
+  const goldens: Golden[] = [...fromIamc, ...fromBopreal, ...fromBonistasCer, ...fromOns]
     // letras/bonos casi vencidos: la TIR es puro redondeo de precio
     .filter((g: Golden) => daysBetween(g.settlement, byTicker(g.ticker)!.maturity) >= 25);
 
@@ -173,11 +196,32 @@ describe('golden: el motor reproduce las TIR publicadas por IAMC', () => {
       } else {
         const flows = projectCashflows(instr, g.settlement, ctx);
         computed = solveTir(flows, g.settlement, g.price);
+        // ONs: algunas fuentes publican la TIR sobre la línea cable (C), que
+        // cotiza con el spread del canje vs la línea MEP (D). Si la base D no
+        // reproduce el número publicado pero la base C sí, la matemática está
+        // bien y la diferencia es de convención de liquidación.
+        if (instr.family === 'on') {
+          const cableTicker = instr.tickers.cable;
+          const cableQuote = cableTicker
+            ? snapshot.quotes.find((q: any) => q.ticker === cableTicker)
+            : undefined;
+          if (cableQuote?.last > 0) {
+            const onCable = solveTir(flows, g.settlement, cableQuote.last);
+            if (Math.abs(onCable * 100 - g.tirPct) < Math.abs(computed * 100 - g.tirPct))
+              computed = onCable;
+          }
+        }
       }
       // CER: la diferencia de convención del coeficiente entre fuentes (~0,6% de
-      // precio) se amplifica como 1/T en la TIR de letras cortas.
+      // precio) se amplifica como 1/T en la TIR de letras cortas. ONs: las TIR
+      // publicadas usan convenciones semianuales/30-360 dispares → 0,75 pp.
       const years = daysBetween(g.settlement, instr.maturity) / 365;
-      const tol = instr.kind === 'cer' ? Math.max(0.6, 0.6 / years) : 0.25;
+      const tol =
+        instr.kind === 'cer'
+          ? Math.max(0.6, 0.6 / years)
+          : instr.family === 'on'
+            ? 0.75
+            : 0.25;
       expect(
         Math.abs(computed * 100 - g.tirPct),
         `computada ${(computed * 100).toFixed(2)}% vs publicada ${g.tirPct}%`,

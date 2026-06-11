@@ -173,6 +173,21 @@ for (const [file, family] of [
     continue;
   }
   for (const spec of data.instruments ?? []) {
+    if (family === 'on') {
+      // Normalización del esquema ON: ticker = línea ARS; issuer es objeto.
+      spec.ticker = spec.ticker ?? spec.tickers?.ars ?? `${spec.base}O`;
+      if (spec.issuer && typeof spec.issuer === 'object') {
+        spec.sector = spec.issuer.sector ?? spec.sector;
+        spec.issuer = spec.issuer.legalName ?? spec.issuer.name ?? null;
+      }
+      const md = spec.minDenomination;
+      if (md && typeof md === 'object')
+        spec.minDenomination = md.amount ?? md.vnMinTrading ?? md.vn ?? 1;
+      if (spec.tickers) {
+        if (spec.tickers.cable == null) delete spec.tickers.cable;
+        if (spec.tickers.mep == null) delete spec.tickers.mep;
+      }
+    }
     const t = spec.ticker;
     if (isUncertain(spec)) {
       skipped.push(`${t} (${family}): verificación incierta`);
@@ -366,11 +381,20 @@ async function buildSnapshot() {
     return null;
   }
 
+  // Del panel de ONs solo se guardan los tickers que están en el registro
+  // (las ~540 líneas restantes no aportan y triplican el snapshot).
+  const onTickers = new Set<string>(
+    instruments
+      .filter((i) => i.family === 'on')
+      .flatMap((i) => [i.tickers.ars, i.tickers.mep, i.tickers.cable].filter(Boolean)),
+  );
+
   let quotes: any[] = [];
   const bonds = await fetchRetry('https://data912.com/live/arg_bonds');
   const notes = await fetchRetry('https://data912.com/live/arg_notes');
+  const corp = await fetchRetry('https://data912.com/live/arg_corp');
   if (bonds && notes) {
-    quotes = [...bonds, ...notes]
+    quotes = [...bonds, ...notes, ...(corp ?? []).filter((r: any) => onTickers.has(r.symbol))]
       .filter((r: any) => r.c > 0)
       .map((r: any) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
   } else {

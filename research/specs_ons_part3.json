@@ -1,0 +1,786 @@
+{
+ "family": "on",
+ "asOf": "2026-06-10",
+ "settlementForYieldChecks": "2026-06-11",
+ "conventions": {
+  "pricesPer100VN": "dirty, BYMA corp panel",
+  "tickerLines": "5-char tickers: last char O=ARS, D=USD MEP, C=USD cable; base = first 4 chars",
+  "cashflows": "remainingCashflows are per 100 VN of ORIGINAL face from 2026-06-10 (exclusive), at scheduled dates; weekend/holiday rolls noted per instrument, accrual unadjusted unless stated",
+  "dayCounts": "IRCP 30/360 (explicit); YM39 actual/365 (explicit); OZC3 actual/365 (explicit); PLC4 and TSC4 30/360 assumed (NY-law standard, unverified)"
+ },
+ "instruments": [
+  {
+   "base": "IRCP",
+   "name": "IRSA ON Clase XXIV 8.00% 2035 (USD, Ley NY)",
+   "issuer": {
+    "legalName": "IRSA Inversiones y Representaciones Sociedad Anónima",
+    "cuit": "30-52532274-9",
+    "sector": "real estate (commercial/shopping malls & offices)"
+   },
+   "isin": "USP58809BU07",
+   "isinNotes": {
+    "regS": "USP58809BU07",
+    "rule144A": "US450047AJ43",
+    "regSTransitional": "USP58809BV89",
+    "bymaLine": "USP58809BU07 (per BYMA ficha and Cohen)"
+   },
+   "law": "NY",
+   "currency": {
+    "denomination": "USD",
+    "paymentCoupons": "USD",
+    "paymentPrincipal": "USD",
+    "note": "Payments in USD outside Argentina via DTC/BoNY (principal paying agent The Bank of New York Mellon); local paying agent Banco Santander Argentina. Aviso de suscripción: 'denominadas y pagaderas en Dólares Estadounidenses'."
+   },
+   "issueDate": "2025-03-31",
+   "maturity": "2035-03-31",
+   "amountOutstandingUSD": 480454198,
+   "amountNotes": "USD 300,000,000 original (incl. concurrent Clase XIV exchange, issued 2025-03-31) + USD 180,000,000 adicionales (reapertura, issued 2025-12-17, priced 98.503%); BYMA ficha montoResidual 480,454,198.",
+   "coupon": {
+    "annualRatePct": 8.0,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "March 31 and September 30 each year, in arrears; first coupon 2025-09-30; last on maturity 2035-03-31",
+    "nextPaymentDate": "2026-09-30",
+    "dayCount": "30/360 (explicit in aviso de suscripción: 'doce meses, de 30 días, sobre un año de 360 días')",
+    "businessDayRule": "Following, unadjusted accrual (payment moves to next BA/NY business day, no extra interest)"
+   },
+   "amortization": {
+    "type": "installments",
+    "schedule": [
+     {
+      "date": "2033-03-31",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2034-03-31",
+      "pctOfOriginalFace": 33.0
+     },
+     {
+      "date": "2035-03-31",
+      "pctOfOriginalFace": 34.0
+     }
+    ],
+    "note": "NOT bullet. 3 annual installments 33/33/34 at years 8/9/10 (aviso de suscripción + BYMA ficha 'En tres pagos anuales' + cbonds). bonistas API 'bullet' label is WRONG."
+   },
+   "minDenomination": {
+    "vn": 1,
+    "unit": "USD",
+    "note": "Denominaciones mínimas USD 1 y múltiplos de USD 1 (aviso de suscripción); BYMA ficha denominacionMinima=1; Cohen lámina mínima 1."
+   },
+   "tickers": {
+    "ars": "IRCPO",
+    "mep": "IRCPD",
+    "cable": "IRCPC"
+   },
+   "remainingCashflows": [
+    {
+     "date": "2026-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-03-31",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-09-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-03-31",
+     "interest": 4.0,
+     "amortization": 33.0
+    },
+    {
+     "date": "2033-09-30",
+     "interest": 2.68,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-03-31",
+     "interest": 2.68,
+     "amortization": 33.0
+    },
+    {
+     "date": "2034-09-30",
+     "interest": 1.36,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-03-31",
+     "interest": 1.36,
+     "amortization": 34.0
+    }
+   ],
+   "cashflowNotes": "Per 100 VN original face, scheduled dates from 2026-06-10. Coupons: 8%x180/360 on outstanding face (4.00 while 100 outstanding; 2.68 on 67 residual after 2033-03-31; 1.36 on 34 residual after 2034-03-31). Sat/Sun scheduled dates (2028-09-30, 2029-03-31, 2029-09-30, 2030-03-31, 2034-09-30, 2035-03-31) pay next business day without extra accrual.",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/03/IRSA-Aviso-de-SuscripciA%C2%B3n-ON-Clase-XXIV-New-Money-firmado.pdf (primary: aviso de suscripción 2025-03-18, full terms)",
+    "https://www.irsa.com.ar/emision-de-obligaciones-negociables-clase-xxiv/ (issuer IR)",
+    "https://www.irsa.com.ar/reapertura-on-clase-xxiv/ (issuer IR, adicionales Dec-2025)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol IRCPO, fetched 2026-06-10)",
+    "https://cbonds.com/bonds/1823887/ (cbonds: 8% 31mar2035; ISINs)",
+    "https://www.cohen.com.ar/Bursatil/Especie/IRCPO (ISIN, lámina mínima, vencimiento)",
+    "research/bonistas_api_bonds_snapshot_2026-06-10.json (coupon/maturity agree; amortization label wrong)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "bonistas marks IRCPO amortization 'bullet' — wrong; primary docs and BYMA ficha confirm 33/33/34 in 2033/2034/2035.",
+    "Press articles on the Dec-2025 reapertura (abogados.com.ar) say 'vencimiento el 31 de diciembre de 2035' — wrong; adicionales are fungible with Clase XXIV, maturity 2035-03-31 (BYMA ficha, cbonds, bonistas, aviso de suscripción).",
+    "ISIN on BYMA line is the RegS USP58809BU07; 144A line US450047AJ43 trades offshore."
+   ],
+   "verification": {
+    "status": "verified-no-corrections",
+    "checkedSources": [
+     "https://www.iamc.com.ar/Informe/InformeDiarioDeudaCorporativa09062026/ (IAMC Deuda Corporativa 09-06-2026, panel LEY NY: IRCPO Tasa Fija 8.0%, Semestral, prox cupon 30-Sep-26, vto 31-Mar-35, Cuotas Capital 3 Anual desde 31-Mar-33, Monto 480M, VT 101.6, YTM 7.43%)",
+     "https://bonistas.com/api/bonds (re-fetched 2026-06-10: IRCPD 24hs last 109.35 tir 6.9270%; still labels amortization bullet - known wrong, see flags)",
+     "https://data912.com/live/arg_corp (order book 2026-06-10: odd-lot quantities 3409/4421 VN on IRCPD corroborate 1 VN minimum lot)"
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceTicker": "IRCPD",
+     "dirtyPriceUSDper100VN": 109.35,
+     "priceSource": "https://data912.com/live/arg_corp close 2026-06-10",
+     "computedTIRPct": 6.81,
+     "publishedTIRPct": 6.93,
+     "publishedSource": "bonistas.com /api/bonds IRCPD 24hs 2026-06-10 (tir 6.9270%, MEP basis, same D-line price 109.35)",
+     "deltaPp": -0.12,
+     "pass": true,
+     "crossCheck": "IAMC YTM 7.43% is on the cable/CCL basis (LEY NY panel converts ARS cierre 159890 at FX~1513): spec cashflows at IRCPC cable price 106.90 give 7.22% (delta -0.21pp, pass). bonistas tir assumes bullet; the 33/33/34 amortizer at the same price gives 6.81% (-0.12pp) - structure difference, not a spec error."
+    }
+   }
+  },
+  {
+   "base": "YM39",
+   "name": "YPF ON Clase XXXIX 8.75% 2030 (USD cable, Ley AR)",
+   "issuer": {
+    "legalName": "YPF Sociedad Anónima",
+    "cuit": "30-54668997-9",
+    "sector": "oil & gas (integrated)"
+   },
+   "isin": "AR0081455617",
+   "law": "AR",
+   "currency": {
+    "denomination": "USD",
+    "paymentCoupons": "USD",
+    "paymentPrincipal": "USD",
+    "note": "Suscriptas y pagaderas en USD 'en el exterior' (hard-dollar cable mechanics); if FX access restricted, issuer must deliver USD via sale of USD-denominated public securities (suplemento). Coupons and principal both USD."
+   },
+   "issueDate": "2025-07-22",
+   "maturity": "2030-07-22",
+   "amountOutstandingUSD": 224801688,
+   "amountNotes": "US$167,236,644 original (2025-07-22) + US$57,565,044 Clase XXXIX Adicionales (2025-08-28, fungible) = 224,801,688 (matches BYMA ficha montoResidual).",
+   "coupon": {
+    "annualRatePct": 8.75,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "January 22 and July 22 each year, in arrears; first coupon 2026-01-22; last on maturity 2030-07-22 (dates listed in aviso de resultados)",
+    "nextPaymentDate": "2026-07-22",
+    "dayCount": "actual/365 (explicit in suplemento: 'cantidad real de días transcurridos sobre la base de un año de 365 días')",
+    "businessDayRule": "Modified following (next business day unless different month/after maturity, then preceding), per suplemento"
+   },
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2030-07-22",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Única cuota at maturity (aviso de resultados item 8; BYMA ficha 'En una cuota al vencimiento')."
+   },
+   "minDenomination": {
+    "vn": 1,
+    "unit": "USD",
+    "note": "Unidad mínima de negociación y denominación mínima V/N US$1; monto mínimo de suscripción primaria US$100 (suplemento). BYMA ficha denominacionMinima=1."
+   },
+   "tickers": {
+    "ars": "YM39O",
+    "mep": "YM39D",
+    "cable": "YM39C"
+   },
+   "remainingCashflows": [
+    {
+     "date": "2026-07-22",
+     "interest": 4.339041,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-01-22",
+     "interest": 4.410959,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 4.339041,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-22",
+     "interest": 4.410959,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-22",
+     "interest": 4.363014,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-22",
+     "interest": 4.410959,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-22",
+     "interest": 4.339041,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-22",
+     "interest": 4.410959,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-22",
+     "interest": 4.339041,
+     "amortization": 100.0
+    }
+   ],
+   "cashflowNotes": "Per 100 VN, actual/365: 8.75 x days/365 x 100. Periods: 181d (Jan22->Jul22) = 4.339041; 184d (Jul22->Jan22) = 4.410959; 182d for 2028-01-22->2028-07-22 (leap Feb) = 4.363014. 2028-01-22, 2028-07-22 are Saturdays, 2029-07-22 Sunday: pay next business day per modified-following, accrual unadjusted to scheduled date.",
+   "sources": [
+    "https://investors.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXXIX.pdf (primary: aviso de resultados 2025-07-17; rate, dates, bullet, ISIN)",
+    "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%20XXXIX%20(cable)%20Suplemento.pdf (primary: suplemento de prospecto 2025-07-15; day count actual/365, denominations, ley AR, business-day rule)",
+    "https://investors.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXXIX%20Adicionales%20y%20XL%20(EXE).pdf (adicionales 2025-08-28)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol YM39O, fetched 2026-06-10)",
+    "https://www.cohen.com.ar/Bursatil/Especie/YM39O (ISIN, vencimiento, lámina mínima)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Day count is actual/365, NOT 30/360 — coupons are unequal (4.339041/4.410959/4.363014 per 100), do not hardcode 4.375.",
+    "Inventory note said 'U$S CG' from IOL title — it denotes 'con garantía común' / cable settlement; payment currency is USD abroad (cable), MEP/ARS lines arbitraged on BYMA.",
+    "IAMC Informe Diario Deuda Corporativa lists YM39O in the 'LEY NY' panel and Monto Emitido 58M - both misleading: law is AR (ISIN AR0081455617, suplemento) and 58M is only the adicionales tranche (total residual 224.8M). IAMC panel placement drives its FX basis (cable), not the bond's law."
+   ],
+   "verification": {
+    "status": "verified-no-corrections",
+    "checkedSources": [
+     "https://www.iamc.com.ar/Informe/InformeDiarioDeudaCorporativa09062026/ (IAMC Deuda Corporativa 09-06-2026: YM39O Tasa Fija 8.8% (=8.75 a 1 decimal), Semestral, prox cupon 22-Jul-26, vto 22-Jul-30, Cuotas Capital 1 Vencimiento 22-Jul-30, VT 103.4 consistent with actual/365 accrual 3.33, YTM 7.15%)",
+     "https://www.cohen.com.ar/Bursatil/Especie/YM39D (re-fetched 2026-06-10: ISIN AR0081455617, vto 22/7/2030, lamina minima USD 1.00)",
+     "https://data912.com/live/arg_corp (order book 2026-06-10: odd-lot quantities 91 VN on YM39O / 70 VN on YM39C corroborate 1 VN minimum lot)"
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceTicker": "YM39D",
+     "dirtyPriceUSDper100VN": 113.3,
+     "priceSource": "https://data912.com/live/arg_corp close 2026-06-10",
+     "computedTIRPct": 7.07,
+     "computedBasisNote": "7.07% computed at YM39C cable price 109.70 to match IAMC's basis; at the YM39D MEP price 113.30 the same cashflows give 6.07%.",
+     "publishedTIRPct": 7.15,
+     "publishedSource": "IAMC Informe Diario Deuda Corporativa 09-06-2026 (YTM 7.15%, cable/CCL basis: LEY NY panel converts ARS cierre 165560 at FX~1513 -> USD 109.4 ~ YM39C)",
+     "deltaPp": -0.08,
+     "pass": true,
+     "failureInvestigation": "Initial D-line comparison failed (6.07 vs 7.15, -1.08pp). Traced to PRICE BASIS, not spec: IAMC's 'DEUDA CORPORATIVA EN USD - LEY NY' panel prices at cable dollar (~1513) while the D line is MEP (~1455); canje ~4 pct explains the whole gap. Cable-line computation matches IAMC within 0.08pp; amortization/coupon/day-count confirmed correct."
+    }
+   }
+  },
+  {
+   "base": "PLC4",
+   "name": "Pluspetrol ON Clase 4 8.50% 2032 (USD, Ley NY)",
+   "issuer": {
+    "legalName": "Pluspetrol S.A.",
+    "cuit": null,
+    "sector": "oil & gas E&P (Vaca Muerta)"
+   },
+   "isin": "USP7924AAA62",
+   "isinNotes": {
+    "regS": "USP7924AAA62 (BYMA line per BYMA ficha and Cohen)",
+    "rule144A": "not confirmed -> null"
+   },
+   "law": "NY",
+   "currency": {
+    "denomination": "USD",
+    "paymentCoupons": "USD",
+    "paymentPrincipal": "USD",
+    "note": "Denominadas y pagaderas en USD; international 144A/RegS with local tranche; trustee/paying agent Citibank N.A."
+   },
+   "issueDate": "2025-05-30",
+   "maturity": "2032-05-30",
+   "amountOutstandingUSD": 650000000,
+   "amountNotes": "US$450,000,000 original (2025-05-30, priced 98.712, YTM 8.75%) + US$200,000,000 additional fungible notes (Oct/Nov-2025) = US$650,000,000 (BYMA ficha montoNominal/montoResidual).",
+   "coupon": {
+    "annualRatePct": 8.5,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "May 30 and November 30 each year, in arrears; first coupon 2025-11-30; last on maturity 2032-05-30",
+    "nextPaymentDate": "2026-11-30",
+    "dayCount": "30/360 assumed (standard for NY-law Argentine corporate notes; even semiannual coupon 4.25 per 100). NOT verified against the offering memorandum — see flags.",
+    "businessDayRule": "Following business day, accrual unadjusted (standard; not independently verified)"
+   },
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2032-05-30",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Bullet at maturity per BYMA ficha ('AL VENCIMIENTO'), Bruchou & Funes de Rioja deal pages (x2: 'fully amortized in a single installment, payable on the maturity date, May 30, 2032') and abogados.com.ar deal summary."
+   },
+   "minDenomination": {
+    "vn": 1000,
+    "unit": "USD",
+    "note": "Denominación mínima US$1,000 y múltiplos enteros de US$1,000 (aviso de suscripción); BYMA ficha denominacionMinima=1000; Cohen lámina mínima 1.000. GATES RETAIL SIZING: BYMA orders must be multiples of 1,000 VN."
+   },
+   "tickers": {
+    "ars": "PLC4O",
+    "mep": "PLC4D",
+    "cable": "PLC4C"
+   },
+   "remainingCashflows": [
+    {
+     "date": "2026-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-30",
+     "interest": 4.25,
+     "amortization": 100.0
+    }
+   ],
+   "cashflowNotes": "Per 100 VN, 30/360 assumed: 8.5 x 180/360 = 4.25 each semester; 100 principal at 2032-05-30. 2027-05-30 (Sun), 2030-11-30 (Sat), 2031-11-30 (Sun), 2032-05-30 (Sun) pay next business day.",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/05/Pluspetrol-Aviso-de-SuscripciA%C2%B3n-ONs-Clase-4-EXE.pdf (primary: aviso de suscripción 2025-05-19; NY law, denominations US$1,000, semiannual)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol PLC4O, fetched 2026-06-10: AL VENCIMIENTO, 8.50% fijo, 650M, ISIN)",
+    "https://bruchoufunes.com/en/pluspetrol-international-notes-issuance-450-million-2032/ (deal counsel: bullet, 8.500%, May30/Nov30, first 2025-11-30)",
+    "https://bruchoufunes.com/en/we-advised-pluspetrol-in-the-international-issuance-of-notes-for-us200000000/ (deal counsel: additional US$200M fungible, total 650M)",
+    "https://abogados.com.ar/pluspetrol-sa-realiza-emision-internacional-inaugural-de-obligaciones-negociables-por-us450000000-con-vencimiento-en-2032/36882 (deal summary, Spanish: 'amortizado íntegramente en una sola cuota')",
+    "https://cbonds.com/news/3413421/ (new-issue: USP7924AAA62, priced 98.712, YTM 8.75%)",
+    "https://www.cohen.com.ar/Bursatil/Especie/PLC4O (ISIN, lámina mínima 1.000)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "AMORTIZATION DISCREPANCY RESOLVED TO BULLET: the pre-pricing aviso de suscripción (2025-05-19) said capital 'pagadero en tres cuotas anuales y consecutivas a partir de la fecha que se indique en el Aviso de Resultados', but final terms are bullet 2032-05-30 per BYMA ficha + both deal-counsel announcements + abogados.com.ar. Aviso de resultados PDF itself not located; re-verify if BYMA ficha ever contradicts.",
+    "Day count 30/360 is assumed, not confirmed from the OM/suplemento.",
+    "CUIT of Pluspetrol S.A. not captured -> null.",
+    "IAMC Informe Diario Deuda Corporativa lists PLC4O in the 'LEY ARG' panel - misclassified (RegS USP7924AAA62, NY law per deal counsel); useful side effect: IAMC's PLC4 YTM is MEP-based, directly comparable to the D line."
+   ],
+   "verification": {
+    "status": "verified-no-corrections",
+    "checkedSources": [
+     "https://www.iamc.com.ar/Informe/InformeDiarioDeudaCorporativa09062026/ (IAMC Deuda Corporativa 09-06-2026: PLC4O Tasa Fija 8.5%, Semestral, prox cupon 30-Nov-26, vto 30-May-32, Cuotas Capital 1 Vencimiento 30-May-32, Monto 650M, YTM 6.83% - independently re-confirms bullet vs the pre-pricing 3-cuota aviso)",
+     "https://data912.com/live/arg_corp (order book 2026-06-10: PLC4O/PLC4D/PLC4C quotes 2000/10000, 11000/3000, 100000/1000 VN - all exact multiples of 1,000 VN, corroborating minDenomination 1000)"
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceTicker": "PLC4D",
+     "dirtyPriceUSDper100VN": 109.4,
+     "priceSource": "https://data912.com/live/arg_corp close 2026-06-10",
+     "computedTIRPct": 6.73,
+     "publishedTIRPct": 6.83,
+     "publishedSource": "IAMC Informe Diario Deuda Corporativa 09-06-2026 (YTM 6.83%; PLC4O sits in the LEY ARG panel which converts at MEP ~1460 -> USD 108.8, same basis as the D line)",
+     "deltaPp": -0.1,
+     "pass": true,
+     "crossCheck": "Cable basis: spec cashflows at PLC4C 105.60 give 7.51%."
+    }
+   }
+  },
+  {
+   "base": "TSC4",
+   "name": "TGS ON Clase 4 7.75% 2035 (USD, Ley NY)",
+   "issuer": {
+    "legalName": "Transportadora de Gas del Sur S.A.",
+    "cuit": "30-65786206-8",
+    "sector": "natural gas transportation / midstream"
+   },
+   "isin": "USP9308RBB89",
+   "isinNotes": {
+    "regS": "USP9308RBB89 (BYMA line per BYMA ficha and Cohen)",
+    "rule144A": "not confirmed -> null"
+   },
+   "law": "NY",
+   "currency": {
+    "denomination": "USD",
+    "paymentCoupons": "USD",
+    "paymentPrincipal": "USD",
+    "note": "Denominadas y pagaderas en dólares estadounidenses en el exterior (aviso de suscripción item 16)."
+   },
+   "issueDate": "2025-11-20",
+   "maturity": "2035-11-20",
+   "amountOutstandingUSD": 500000000,
+   "amountNotes": "US$500,000,000, priced 2025-11-13 at 98.301 (yield 8.00%), settled 2025-11-20; longest maturity in TGS history (issuer 1Q2026 financial statements and 4Q2025 6-K).",
+   "coupon": {
+    "annualRatePct": 7.75,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "May 20 and November 20 each year, in arrears (issuer 1Q2026 EEFF: 'Semestral, pagaderos el 20 de mayo y el 20 de noviembre de cada año'); first coupon 2026-05-20 (already paid before asOf); last on maturity 2035-11-20",
+    "nextPaymentDate": "2026-11-20",
+    "dayCount": "30/360 assumed (standard for NY-law Argentine corporate notes; even coupon 3.875 per 100). NOT verified against the offering memorandum — see flags.",
+    "businessDayRule": "Following business day, accrual unadjusted (standard; not independently verified)"
+   },
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2035-11-20",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Único pago at maturity (aviso de suscripción item 19; BYMA ficha 'AL VENCIMIENTO'; issuer EEFF amortization table 100% on 2035-11-20)."
+   },
+   "minDenomination": {
+    "vn": 1000,
+    "unit": "USD",
+    "note": "Denominación mínima y unidad mínima de negociación US$1,000 y múltiplos enteros de US$1,000 (aviso de suscripción item 13); BYMA ficha denominacionMinima=1000; Cohen lámina 1.000. GATES RETAIL SIZING."
+   },
+   "tickers": {
+    "ars": "TSC4O",
+    "mep": "TSC4D",
+    "cable": "TSC4C"
+   },
+   "remainingCashflows": [
+    {
+     "date": "2026-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-11-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-05-20",
+     "interest": 3.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-11-20",
+     "interest": 3.875,
+     "amortization": 100.0
+    }
+   ],
+   "cashflowNotes": "Per 100 VN, 30/360 assumed: 7.75 x 180/360 = 3.875 per semester, 19 remaining coupons from 2026-11-20 to 2035-11-20 + 100 principal at maturity. Weekend scheduled dates (2027-11-20 Sat, 2028-05-20 Sat, 2029-05-20 Sun, 2032-11-20 Sat, 2033-11-20 Sun, 2034-05-20 Sat, 2035-05-20 Sun) pay next business day.",
+   "sources": [
+    "https://www.petrini.com.ar/wp-content/uploads/2025/11/TGS-2025-Bond-Aviso-de-SuscripciA%C2%B3n-EXE.FNQ_.pdf (primary: aviso de suscripción 2025-11-10; NY law, bullet, min US$1,000, USD abroad)",
+    "https://www.tgs.com.ar/wp-content/uploads/2026/05/TGS-Completo-31-03-2026-web.pdf (primary: issuer EEFF 31-03-2026, 'ON 2035': 500M, 7.75%, precio 98.301%, amortización 100% 20-11-2035, intereses 20-may/20-nov)",
+    "https://www.sec.gov/Archives/edgar/data/931427/000093142726000001/tgs.htm (issuer 6-K 4Q2025: US$500M, 10y, coupon 7.75%, yield 8%, priced 2025-11-13, closed 2025-11-20)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol TSC4O, fetched 2026-06-10)",
+    "https://bruchoufunes.com/en/tgs-international-notes-us500m-7-750-due-2035/ (deal counsel: issued 2025-11-20, 144A/RegS, listed BYMA + A3)",
+    "https://cbonds.com/bonds/1992847/ (cbonds: 7.75% 20nov2035, ISIN USP9308RBB89)",
+    "https://www.cohen.com.ar/Bursatil/Especie/TSC4O (ISIN, vencimiento, lámina mínima 1.000)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "Day count 30/360 is assumed, not confirmed from the OM/suplemento.",
+    "First coupon 2026-05-20 already paid relative to asOf 2026-06-10; price on 2026-06-10 carries only ~20 days of accrual."
+   ],
+   "verification": {
+    "status": "verified-no-corrections",
+    "checkedSources": [
+     "https://www.iamc.com.ar/Informe/InformeDiarioDeudaCorporativa09062026/ (IAMC Deuda Corporativa 09-06-2026, panel LEY NY: TSC4O Tasa Fija 7.8% (=7.75 a 1 decimal), Semestral, prox cupon 20-Nov-26, vto 20-Nov-35, Cuotas Capital 1 Vencimiento 20-Nov-35, Monto 500M, VT 100.4, YTM 7.32%)",
+     "https://data912.com/live/arg_corp (order book 2026-06-10: TSC4O/TSC4D/TSC4C quotes 1000/1000, 5000/3000, 75000/1000 VN - all exact multiples of 1,000 VN, corroborating minDenomination 1000)"
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceTicker": "TSC4D",
+     "dirtyPriceUSDper100VN": 108.95,
+     "priceSource": "https://data912.com/live/arg_corp close 2026-06-10",
+     "computedTIRPct": 6.63,
+     "publishedTIRPct": 7.32,
+     "publishedSource": "IAMC Informe Diario Deuda Corporativa 09-06-2026 (YTM 7.32%, cable/CCL basis: LEY NY panel, ARS cierre 157680 at FX~1514 -> USD 104.1 ~ TSC4C)",
+     "deltaPp": -0.69,
+     "pass": true,
+     "crossCheck": "Within 0.75pp even across the MEP-vs-cable basis gap; on the matched cable basis (TSC4C 104.30) the spec cashflows give 7.30%, delta -0.02pp vs IAMC."
+    }
+   }
+  },
+  {
+   "base": "OZC3",
+   "name": "EDEMSA ON Clase 3 8.00% 2027 (USD MEP, Ley AR)",
+   "issuer": {
+    "legalName": "Empresa Distribuidora de Electricidad de Mendoza S.A. (EDEMSA)",
+    "cuit": "30-69954245-4",
+    "sector": "electricity distribution (Mendoza)"
+   },
+   "isin": "AR0428738048",
+   "law": "AR",
+   "currency": {
+    "denomination": "USD",
+    "paymentCoupons": "USD",
+    "paymentPrincipal": "USD",
+    "note": "Suscriptas, integradas y pagaderas en USD 'en el país' (dólar MEP local settlement); issuer expressly waives payment in any currency other than USD (aviso de suscripción item 6/7)."
+   },
+   "issueDate": "2024-11-29",
+   "maturity": "2027-11-29",
+   "amountOutstandingUSD": 33578943,
+   "amountNotes": "Original 2024-11-29 + Clase 3 Adicionales 2025-05-12 (US$12,332,560 at 100.25%) totalling V/N US$28,420,903, + further adicionales Dec-2025 -> BYMA ficha montoResidual 33,578,943.",
+   "coupon": {
+    "annualRatePct": 8.0,
+    "type": "fixed",
+    "paymentFrequencyMonths": 6,
+    "paymentPattern": "May 29 and November 29 each year, in arrears; full date list 2025-05-29 .. 2027-11-29 (aviso de resultados item 9; Dec-2025 suplemento)",
+    "nextPaymentDate": "2026-11-29",
+    "dayCount": "actual/365 (explicit in aviso de suscripción: 'cantidad real de días transcurridos y un año de 365 días')",
+    "businessDayRule": "Non-business-day payments roll to next business day without extra accrual, except final payment which accrues to actual pay date (aviso de suscripción)"
+   },
+   "amortization": {
+    "type": "bullet",
+    "schedule": [
+     {
+      "date": "2027-11-29",
+      "pctOfOriginalFace": 100.0
+     }
+    ],
+    "note": "Único pago at maturity (aviso de resultados item 8; BYMA ficha 'AL VENCIMEINTO' sic)."
+   },
+   "minDenomination": {
+    "vn": 1,
+    "unit": "USD",
+    "note": "Denominación mínima US$1; unidad mínima de negociación US$1; monto mínimo de suscripción primaria US$100 (aviso de suscripción items 10-12). BYMA ficha denominacionMinima=1."
+   },
+   "tickers": {
+    "ars": "OZC3O",
+    "mep": "OZC3D",
+    "cable": null
+   },
+   "remainingCashflows": [
+    {
+     "date": "2026-11-29",
+     "interest": 4.032877,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-29",
+     "interest": 3.967123,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-29",
+     "interest": 4.032877,
+     "amortization": 100.0
+    }
+   ],
+   "cashflowNotes": "Per 100 VN, actual/365: 2026-05-29->2026-11-29 = 184d -> 4.032877; 2026-11-29->2027-05-29 = 181d -> 3.967123; 2027-05-29->2027-11-29 = 184d -> 4.032877 + 100. 2026-11-29 is Sunday and 2027-05-29 Saturday: pay next business day, no extra accrual (final 2027-11-29 is Monday).",
+   "sources": [
+    "https://www.bancoprovincia.com.ar/CDN/Get/EDEMSA_Aviso_Suscripcion_ON_Clase_3_y_4 (primary: aviso de suscripción Nov-2024; actual/365, denominations, ley AR, USD en el país, bullet)",
+    "https://www.bancoprovincia.com.ar/CDN/Get/EDEMSA_CLASE_3_ADICIONAL_Y_CLASE_5_Y_6_Aviso_de_Resultado (primary: aviso de resultados 2025-05-08; 8.00%, coupon dates, bullet 2027-11-29, ISIN AR0428738048, Código A3 OZC3O, CVSA 58271)",
+    "https://www.bancoprovincia.com.ar/CDN/Get/ON_EDEMSA_Clase_3_adic_y_7_Suplemento_de_prospecto (primary: suplemento Dec-2025 reapertura; restates 8.00%, vto 2027-11-29, remaining coupon dates, V/N US$28,420,903 pre-reopening)",
+    "https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/fichatecnica/especies/general (BYMA ficha técnica, symbol OZC3O, fetched 2026-06-10)",
+    "https://www.cohen.com.ar/Bursatil/Especie/OZC3O (ISIN, vencimiento, lámina mínima)"
+   ],
+   "confidence": "high",
+   "flags": [
+    "BYMA ficha shows interes 'FIJO 7%' — WRONG/stale: two issuer-signed primary documents (aviso de resultados May-2025 and suplemento Dec-2025) state tasa fija 8,00% nominal anual. Use 8.00%.",
+    "Day count actual/365 -> coupons 4.032877/3.967123, not 4.00 flat.",
+    "No cable line (OZC3C does not trade); tickers.cable = null.",
+    "Outstanding grew via Dec-2025 reapertura; amountOutstandingUSD from BYMA ficha (33,578,943) not independently re-verified against the Dec-2025 aviso de resultados."
+   ],
+   "verification": {
+    "status": "verified-no-corrections",
+    "checkedSources": [
+     "https://www.iamc.com.ar/Informe/InformeDiarioDeudaCorporativa09062026/ (IAMC Deuda Corporativa 09-06-2026, panel LEY ARG: OZC3O Tasa Fija 8.0% - third independent confirmation that BYMA ficha '7%' is wrong -, Semestral, prox cupon 29-Nov-26, vto 29-Nov-27, Cuotas Capital 1 Vencimiento, Monto Emitido 16M = original Nov-2024 tranche, consistent with amountNotes 16.09+12.33=28.42M pre-Dec-2025)",
+     "https://www.invertironline.com/posts/obligaciones-negociables-recomendadas-suscripcion-edemsa-07-05-2025 (IOL: Clase 3 hard dollar 8.0% fija, vto Nov-2027, semestral, bullet, suscripcion minima US$100 y luego multiplos de US$1)",
+     "https://data912.com/live/arg_corp (order book 2026-06-10: odd-lot quantities 150/800 VN on OZC3O corroborate 1 VN minimum lot; no OZC3C line quoted, consistent with tickers.cable=null)"
+    ],
+    "corrections": [],
+    "goldenCheck": {
+     "settlement": "2026-06-11",
+     "priceTicker": "OZC3D",
+     "dirtyPriceUSDper100VN": 100.5,
+     "priceSource": "https://data912.com/live/arg_corp close 2026-06-10",
+     "computedTIRPct": 7.99,
+     "publishedTIRPct": 7.7,
+     "publishedSource": "IAMC Informe Diario Deuda Corporativa 09-06-2026 (YTM 7.70%, MEP basis: LEY ARG panel, ARS cierre 147180 at FX~1460 -> USD 100.8)",
+     "deltaPp": 0.29,
+     "pass": true,
+     "crossCheck": "Delta is one day of market move: IAMC priced off 2026-06-09 close (USD ~100.80) vs D-line 100.50 on 2026-06-10; same cashflows at 100.80 give ~7.77%."
+    }
+   }
+  }
+ ],
+ "notes": [
+  "BYMA open-data ficha técnica (open.bymadata.com.ar vanoms-be-core free endpoint) used as exchange-level source for amortization/ISIN/min denomination/outstanding for all five; cross-checked against issuer primary docs where available.",
+  "Key error-source findings this batch: (1) IRCP is an amortizer (33/33/34 2033-35) though bonistas labels it bullet; (2) PLC4 marketed as 3-installment amortizer in the aviso de suscripción but final terms are bullet 2032-05-30; (3) OZC3 BYMA ficha coupon 7% is wrong (8.00%); (4) YM39 and OZC3 accrue actual/365, not 30/360; (5) PLC4/TSC4 trade in 1,000 VN minimum lots on BYMA, IRCP/YM39/OZC3 in 1 VN.",
+  "Adversarial verification pass 2026-06-10/11: all five instruments re-derived against the IAMC/BYMA Informe Diario de Deuda Corporativa 09-06-2026 (source not previously used) - coupon, maturity, amortization (cuotas/frecuencia/proximo pago capital) and next-coupon dates all match; no corrections required. minDenomination corroborated empirically via data912 order-book lot sizes (PLC4/TSC4 quote in exact 1,000 VN multiples; IRCP/YM39/OZC3 show odd lots) plus IOL suscripcion post for OZC3. Golden TIR: D-line dirty prices (data912 2026-06-10), settlement 2026-06-11, effective-annual act/365 IRR vs published TIRs (bonistas for IRCP, IAMC for the rest). KEY BASIS FINDING: IAMC's ON report prices its 'LEY NY' panel at the cable/CCL dollar (~1513 on 09-06) and its 'LEY ARG' panel at MEP (~1460); D-line comparisons for cable-panel bonds (YM39, TSC4, IRCP) must use the C line or accept a ~0.5-1.1pp canje wedge."
+ ]
+}

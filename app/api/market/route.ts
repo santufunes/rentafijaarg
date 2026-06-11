@@ -7,7 +7,15 @@
  */
 
 import { NextResponse } from 'next/server';
+import generated from '@/lib/data/instruments.generated.json';
 import snapshot from '@/lib/data/snapshot.json';
+
+/** Tickers de ONs del registro: del panel corp solo interesan esas líneas. */
+const ON_TICKERS = new Set(
+  (generated.instruments as any[])
+    .filter((i) => i.family === 'on')
+    .flatMap((i) => [i.tickers?.ars, i.tickers?.mep, i.tickers?.cable].filter(Boolean)),
+);
 
 // La ruta debe ejecutarse en cada request (con caché de 5 min en los fetches
 // upstream): prerenderizada estáticamente serviría precios congelados del
@@ -45,9 +53,10 @@ export async function GET() {
     // BCRA v4: los valores vienen anidados en results[0].detalle. El "hasta" se
     // extiende unos días: el BCRA publica el cronograma CER con anticipación.
     type BcraSeries = { results: { detalle: { fecha: string; valor: number }[] }[] };
-    const [bonds, notes, cer, a3500] = await Promise.all([
+    const [bonds, notes, corp, cer, a3500] = await Promise.all([
       fetchJson<D912Row[]>('https://data912.com/live/arg_bonds'),
       fetchJson<D912Row[]>('https://data912.com/live/arg_notes'),
+      fetchJson<D912Row[]>('https://data912.com/live/arg_corp').catch(() => [] as D912Row[]),
       fetchJson<BcraSeries>(
         `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${snapshot.bcraIds.cer}?desde=${addDaysIso(today, -60)}&hasta=${addDaysIso(today, 20)}`,
       ),
@@ -56,7 +65,7 @@ export async function GET() {
       ),
     ]);
 
-    const quotes = [...bonds, ...notes]
+    const quotes = [...bonds, ...notes, ...corp.filter((r) => ON_TICKERS.has(r.symbol))]
       .filter((r) => r.c > 0)
       .map((r) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
 

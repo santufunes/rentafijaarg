@@ -246,13 +246,37 @@ function pickDolar(
   tracer: Tracer,
   profile: ProfileKey,
   horizon: number,
+  segmentBudgetArs: number,
+  quotes: Map<string, Quote>,
 ): Omit<Pick, 'targetArs'>[] {
   const sovereigns = liquid.filter((p) => p.instrument.family === 'soberano_usd');
   const bopreal = liquid.filter((p) => p.instrument.family === 'bopreal');
-  const ons = liquid.filter((p) => p.instrument.family === 'on');
+  // Varias ONs tienen lote mínimo de 1.000 o 10.000 VN: si el lote no entra en
+  // la mitad del presupuesto del segmento, la ON no es proponible.
+  const ons = liquid
+    .filter((p) => p.instrument.family === 'on')
+    .filter((p) => {
+      const arsQ = quotes.get(p.instrument.tickers.ars);
+      const lotArs = ((arsQ?.last ?? 0) / 100) * Math.max(1, p.instrument.minLot || 1);
+      const fits = lotArs <= segmentBudgetArs / 2;
+      if (!fits)
+        tracer.why(
+          p,
+          `Lote mínimo de ${p.instrument.minLot} VN ≈ $${Math.round(lotArs / 1000)}k: no entra en el presupuesto del segmento.`,
+        );
+      return fits;
+    });
   const picks: Omit<Pick, 'targetArs'>[] = [];
-  const issuerOf = (p: PricedInstrument) =>
-    p.instrument.issuer?.split(' ')[0] ?? p.instrument.ticker;
+  const issuerOf = (p: PricedInstrument) => {
+    const raw = p.instrument.issuer ?? p.instrument.ticker;
+    return raw
+      .replace(/\(.*?\)/g, '')
+      .split(/\s+/)
+      .filter((w) => !/^(S\.?A\.?U?\.?|Sociedad|Anónima)$/i.test(w))
+      .slice(0, 2)
+      .join(' ')
+      .trim();
+  };
 
   if (profile === 'conservador') {
     // Piso soberano/BCRA: lo más corto posible. Strips BOPREAL con igual
@@ -268,17 +292,19 @@ function pickDolar(
       for (const p of floorPool.slice(1))
         tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años ≥ la del elegido: más sensibilidad a tasas de la necesaria.`);
     }
-    // Carry corporativo corto: ON con MD ≤ 3.
+    // Carry corporativo corto: ON con MD ≤ 3. En perfil conservador la TIR es
+    // un proxy inverso de calidad crediticia: se elige el crédito más fuerte
+    // del tramo (menor TIR), no el más rendidor.
     const shortOns = ons
       .filter((p) => p.modifiedDuration <= 3)
-      .sort((a, b) => b.tir - a.tir || a.modifiedDuration - b.modifiedDuration);
+      .sort((a, b) => a.tir - b.tir || a.modifiedDuration - b.modifiedDuration);
     const onPick = shortOns[0];
     if (onPick) {
-      const r = `ON corta de ${issuerOf(onPick)}: carry corporativo en dólares, históricamente menos volátil que la curva soberana.`;
+      const r = `ON corta de ${issuerOf(onPick)}: el crédito corporativo más sólido del tramo (a menor TIR, menor riesgo percibido).`;
       tracer.select(onPick, r);
       picks.push({ priced: onPick, rationale: r });
       for (const p of shortOns.slice(1))
-        tracer.why(p, 'Menor TIR que la ON elegida en el mismo tramo corto.');
+        tracer.why(p, `TIR ${(p.tir * 100).toFixed(1)}% > ${(onPick.tir * 100).toFixed(1)}%: el mercado le exige más spread (más riesgo de crédito percibido).`);
       for (const p of ons.filter((x) => x.modifiedDuration > 3))
         tracer.why(p, `Duración ${p.modifiedDuration.toFixed(1)} años: larga para un perfil conservador.`);
     }
@@ -359,6 +385,11 @@ export function buildProposal(
   const weights = targetWeights(inputs.profile, inputs.goal, inputs.horizonMonths);
   const segs: SegmentKey[] = ['tasa_fija', 'cer', 'dolar'];
 
+  // Las comisiones se reservan ANTES de asignar: las órdenes propuestas tienen
+  // que poder fondearse con el depósito que indica la UI, costos incluidos.
+  const feeRate = (inputs.commissionPct / 100) * 1.21 + 0.0001;
+  const investable = inputs.amountArs / (1 + feeRate);
+
   const traces: SegmentTrace[] = [];
   const picksBySegment = {} as Record<SegmentKey, Omit<Pick, 'targetArs'>[]>;
   const defaultReasons: Record<SegmentKey, string> = {
@@ -379,7 +410,14 @@ export function buildProposal(
           ? pickTasaFija(liquid, tracer, inputs.horizonMonths, ctx.asOf)
           : seg === 'cer'
             ? pickCer(liquid, tracer, inputs.horizonMonths, ctx.asOf)
-            : pickDolar(liquid, tracer, inputs.profile, inputs.horizonMonths);
+            : pickDolar(
+                liquid,
+                tracer,
+                inputs.profile,
+                inputs.horizonMonths,
+                (weights.dolar / 100) * investable,
+                quotes,
+              );
     }
     picksBySegment[seg] = picks;
     traces.push({
@@ -406,11 +444,6 @@ export function buildProposal(
     const alive = segs.filter((s) => weights[s] > 0);
     for (const s of alive) weights[s] += missing / alive.length;
   }
-
-  // Las comisiones se reservan ANTES de asignar: las órdenes propuestas tienen
-  // que poder fondearse con el depósito que indica la UI, costos incluidos.
-  const feeRate = (inputs.commissionPct / 100) * 1.21 + 0.0001;
-  const investable = inputs.amountArs / (1 + feeRate);
 
   // Ticket mínimo por línea: 5% del monto. Si el segmento no banca todas sus
   // líneas, se recortan las de menor prioridad (el orden de picks es prioridad).

@@ -10,7 +10,7 @@ export interface FamilyMeta {
 
 export const FAMILY_META: Record<Family, FamilyMeta> = {
   soberano_usd: { label: 'Soberano USD', short: 'SOB', color: '#10b981', tirKind: 'USD' },
-  bopreal: { label: 'BOPREAL (BCRA)', short: 'BPO', color: '#34d399', tirKind: 'USD' },
+  bopreal: { label: 'BOPREAL (BCRA)', short: 'BPO', color: '#67e8f9', tirKind: 'USD' },
   on: { label: 'ON corporativa', short: 'ON', color: '#f59e0b', tirKind: 'USD' },
   lecap: { label: 'LECAP', short: 'LEC', color: '#0ea5e9', tirKind: 'ARS' },
   boncap: { label: 'BONCAP', short: 'BCP', color: '#38bdf8', tirKind: 'ARS' },

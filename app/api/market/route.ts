@@ -7,9 +7,15 @@
  */
 
 import { NextResponse } from 'next/server';
+import equity from '@/lib/data/equity.generated.json';
 import generated from '@/lib/data/instruments.generated.json';
 import snapshot from '@/lib/data/snapshot.json';
 import { isPreOpen, mergeWithReference } from '@/lib/data/marketMerge';
+
+/** Tickers del universo equity curado: del panel solo interesan esas líneas. */
+const EQUITY_TICKERS = new Set<string>(
+  [...(equity.stocks as any[]), ...(equity.cedears as any[])].map((m) => m.ticker),
+);
 
 /** Tickers de ONs del registro: del panel corp solo interesan esas líneas. */
 const ON_TICKERS = new Set(
@@ -54,10 +60,12 @@ export async function GET() {
     // BCRA v4: los valores vienen anidados en results[0].detalle. El "hasta" se
     // extiende unos días: el BCRA publica el cronograma CER con anticipación.
     type BcraSeries = { results: { detalle: { fecha: string; valor: number }[] }[] };
-    const [bonds, notes, corp, cer, a3500] = await Promise.all([
+    const [bonds, notes, corp, stocks, cedears, cer, a3500] = await Promise.all([
       fetchJson<D912Row[]>('https://data912.com/live/arg_bonds'),
       fetchJson<D912Row[]>('https://data912.com/live/arg_notes'),
       fetchJson<D912Row[]>('https://data912.com/live/arg_corp').catch(() => [] as D912Row[]),
+      fetchJson<D912Row[]>('https://data912.com/live/arg_stocks').catch(() => [] as D912Row[]),
+      fetchJson<D912Row[]>('https://data912.com/live/arg_cedears').catch(() => [] as D912Row[]),
       fetchJson<BcraSeries>(
         `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${snapshot.bcraIds.cer}?desde=${addDaysIso(today, -60)}&hasta=${addDaysIso(today, 20)}`,
       ),
@@ -66,7 +74,13 @@ export async function GET() {
       ),
     ]);
 
-    const liveQuotes = [...bonds, ...notes, ...corp.filter((r) => ON_TICKERS.has(r.symbol))]
+    const liveQuotes = [
+      ...bonds,
+      ...notes,
+      ...corp.filter((r) => ON_TICKERS.has(r.symbol)),
+      ...stocks.filter((r) => EQUITY_TICKERS.has(r.symbol)),
+      ...cedears.filter((r) => EQUITY_TICKERS.has(r.symbol)),
+    ]
       .filter((r) => r.c > 0)
       .map((r) => ({ ticker: r.symbol, last: r.c, bid: r.px_bid, ask: r.px_ask, volume: r.v }));
     // Unión vivo ∪ último cierre: pre-apertura el volumen vivo es 0 y el panel
@@ -103,12 +117,16 @@ export async function GET() {
     });
   } catch (err) {
     // Fallback: snapshot embebido (fechado) — la UI lo señala con claridad.
+    // Equity: cierres archivados del build (no hay panel equity en snapshot.json).
+    const equityFallback = [...(equity.stocks as any[]), ...(equity.cedears as any[])]
+      .filter((m) => m.lastClose > 0)
+      .map((m) => ({ ticker: m.ticker, last: m.lastClose, volume: m.lastVolume ?? 0 }));
     return NextResponse.json({
       source: 'snapshot',
       sourceError: String(err),
       asOf: snapshot.asOf,
       timestamp: snapshot.timestamp,
-      quotes: snapshot.quotes,
+      quotes: [...snapshot.quotes, ...equityFallback],
       cerHistory: snapshot.cerHistory,
       a3500: snapshot.market.a3500,
       mep: snapshot.market.mep,

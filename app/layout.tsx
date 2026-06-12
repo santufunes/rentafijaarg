@@ -36,6 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Armar cartera
               </Link>
+              <Link href="/carteras" className="text-stone-400 transition hover:text-stone-100">
+                Carteras
+              </Link>
               <Link
                 href="/terminal"
                 className="rounded-md border border-emerald-800 bg-emerald-500/10 px-2.5 py-1 font-mono text-xs text-emerald-300 transition hover:bg-emerald-500/20"

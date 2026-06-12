@@ -1,0 +1,785 @@
+{
+  "asOf": "2026-06-11",
+  "selectionRule": "top 35 acciones + top 60 cedears base por turnover ARS (v×c) del panel en vivo",
+  "sources": [
+    "https://data912.com/live/arg_stocks (panel y turnover)",
+    "https://data912.com/live/arg_cedears (panel y turnover)",
+    "BYMA Open Data ficha técnica (open.bymadata.com.ar /free/bnown/fichatecnica/especies/general): emisor/denominación de cada símbolo",
+    "Banco Comafi - Programas CEDEAR (comafi.com.ar/custodiaglobal): nombre, sector y país de origen del subyacente",
+    "IOL (REIT) y prensa/SEC (KEEL ex-Bitfarms) para los dos casos sin cobertura en las fuentes anteriores"
+  ],
+  "stocks": [
+    {
+      "ticker": "GGAL",
+      "kind": "accion",
+      "name": "Grupo Financiero Galicia S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "YPFD",
+      "kind": "accion",
+      "name": "YPF S.A.",
+      "sector": "Energía",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "BMA",
+      "kind": "accion",
+      "name": "Banco Macro S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "PAMP",
+      "kind": "accion",
+      "name": "Pampa Energía S.A.",
+      "sector": "Energía",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "VALO",
+      "kind": "accion",
+      "name": "Banco de Valores S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "SUPV",
+      "kind": "accion",
+      "name": "Grupo Supervielle S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "BBAR",
+      "kind": "accion",
+      "name": "Banco BBVA Argentina S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "LOMA",
+      "kind": "accion",
+      "name": "Loma Negra Compañía Industrial Argentina S.A.",
+      "sector": "Materiales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "TGSU2",
+      "kind": "accion",
+      "name": "Transportadora de Gas del Sur S.A.",
+      "sector": "Energía",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "TRAN",
+      "kind": "accion",
+      "name": "Transener - Cía. de Transporte de Energía Eléctrica en Alta Tensión S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "EDN",
+      "kind": "accion",
+      "name": "Edenor - Empresa Distribuidora y Comercializadora Norte S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "BYMA",
+      "kind": "accion",
+      "name": "Bolsas y Mercados Argentinos S.A.",
+      "sector": "Financiero",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "CEPU",
+      "kind": "accion",
+      "name": "Central Puerto S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "COME",
+      "kind": "accion",
+      "name": "Sociedad Comercial del Plata S.A.",
+      "sector": "Industriales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "METR",
+      "kind": "accion",
+      "name": "Metrogas S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "CRES",
+      "kind": "accion",
+      "name": "Cresud S.A.C.I.F. y A.",
+      "sector": "Real Estate",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "TGNO4",
+      "kind": "accion",
+      "name": "Transportadora de Gas del Norte S.A.",
+      "sector": "Energía",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "TECO2",
+      "kind": "accion",
+      "name": "Telecom Argentina S.A.",
+      "sector": "Telecomunicaciones",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "BHIP",
+      "kind": "accion",
+      "name": "Banco Hipotecario S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "TXAR",
+      "kind": "accion",
+      "name": "Ternium Argentina S.A.",
+      "sector": "Materiales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "IRSA",
+      "kind": "accion",
+      "name": "IRSA Inversiones y Representaciones S.A.",
+      "sector": "Real Estate",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "ALUA",
+      "kind": "accion",
+      "name": "Aluar Aluminio Argentino S.A.I.C.",
+      "sector": "Materiales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "CVH",
+      "kind": "accion",
+      "name": "Cablevisión Holding S.A.",
+      "sector": "Telecomunicaciones",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "AGRO",
+      "kind": "accion",
+      "name": "Agrometal S.A.I.",
+      "sector": "Industriales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "REIT",
+      "kind": "accion",
+      "name": "FCI Cerrado Inmobiliario REIT Ciclo Nova",
+      "sector": "Real Estate",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "DGCU2",
+      "kind": "accion",
+      "name": "Distribuidora de Gas Cuyana S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "ECOG",
+      "kind": "accion",
+      "name": "Ecogas Inversiones S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "CADO",
+      "kind": "accion",
+      "name": "Carlos Casado S.A.",
+      "sector": "Real Estate",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "A3",
+      "kind": "accion",
+      "name": "A3 Mercados S.A.",
+      "sector": "Financiero",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "BPAT",
+      "kind": "accion",
+      "name": "Banco Patagonia S.A.",
+      "sector": "Bancos",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "GBAN",
+      "kind": "accion",
+      "name": "Naturgy BAN S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "AUSO",
+      "kind": "accion",
+      "name": "Autopistas del Sol S.A.",
+      "sector": "Industriales",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "MOLI",
+      "kind": "accion",
+      "name": "Molinos Río de la Plata S.A.",
+      "sector": "Consumo",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "SAMI",
+      "kind": "accion",
+      "name": "S.A. San Miguel A.G.I.C.I. y F.",
+      "sector": "Consumo",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "CGPA2",
+      "kind": "accion",
+      "name": "Camuzzi Gas Pampeana S.A.",
+      "sector": "Utilities",
+      "country": "AR",
+      "isEtf": false
+    }
+  ],
+  "cedears": [
+    {
+      "ticker": "MU",
+      "kind": "cedear",
+      "name": "Micron Technology, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "MELI",
+      "kind": "cedear",
+      "name": "MercadoLibre, Inc.",
+      "sector": "Consumo",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "NVDA",
+      "kind": "cedear",
+      "name": "NVIDIA Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "PLTR",
+      "kind": "cedear",
+      "name": "Palantir Technologies Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "RKLB",
+      "kind": "cedear",
+      "name": "Rocket Lab Corporation",
+      "sector": "Industriales",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "MO",
+      "kind": "cedear",
+      "name": "Altria Group, Inc.",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "EEM",
+      "kind": "cedear",
+      "name": "iShares MSCI Emerging Markets ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "SATL",
+      "kind": "cedear",
+      "name": "Satellogic Inc.",
+      "sector": "Tecnología",
+      "country": "AR",
+      "isEtf": false
+    },
+    {
+      "ticker": "MSFT",
+      "kind": "cedear",
+      "name": "Microsoft Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "IBB",
+      "kind": "cedear",
+      "name": "iShares Biotechnology ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "ADBE",
+      "kind": "cedear",
+      "name": "Adobe Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "VIST",
+      "kind": "cedear",
+      "name": "Vista Energy S.A.B. de C.V.",
+      "sector": "Energía",
+      "country": "MX",
+      "isEtf": false
+    },
+    {
+      "ticker": "SPY",
+      "kind": "cedear",
+      "name": "SPDR S&P 500 ETF Trust",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "ASTS",
+      "kind": "cedear",
+      "name": "AST SpaceMobile, Inc.",
+      "sector": "Telecomunicaciones",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "NU",
+      "kind": "cedear",
+      "name": "Nu Holdings Ltd.",
+      "sector": "Bancos",
+      "country": "BR",
+      "isEtf": false
+    },
+    {
+      "ticker": "AMD",
+      "kind": "cedear",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "GOOGL",
+      "kind": "cedear",
+      "name": "Alphabet Inc. (Clase A)",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "INTC",
+      "kind": "cedear",
+      "name": "Intel Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "KO",
+      "kind": "cedear",
+      "name": "The Coca-Cola Company",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "SNDK",
+      "kind": "cedear",
+      "name": "Sandisk Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "SPCE",
+      "kind": "cedear",
+      "name": "Virgin Galactic Holdings, Inc.",
+      "sector": "Industriales",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "AAPL",
+      "kind": "cedear",
+      "name": "Apple Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "CRWV",
+      "kind": "cedear",
+      "name": "CoreWeave, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "RGTI",
+      "kind": "cedear",
+      "name": "Rigetti Computing, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "KEEL",
+      "kind": "cedear",
+      "name": "Keel Infrastructure Corp.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "META",
+      "kind": "cedear",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "EWZ",
+      "kind": "cedear",
+      "name": "iShares MSCI Brazil ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "HUT",
+      "kind": "cedear",
+      "name": "Hut 8 Corp.",
+      "sector": "Financiero",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "MSTR",
+      "kind": "cedear",
+      "name": "MicroStrategy Incorporated (Strategy)",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "QCOM",
+      "kind": "cedear",
+      "name": "Qualcomm Incorporated",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "ORCL",
+      "kind": "cedear",
+      "name": "Oracle Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "GLD",
+      "kind": "cedear",
+      "name": "SPDR Gold Shares",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "TQQQ",
+      "kind": "cedear",
+      "name": "ProShares UltraPro QQQ",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "AMZN",
+      "kind": "cedear",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "QQQ",
+      "kind": "cedear",
+      "name": "Invesco QQQ Trust",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "IBIT",
+      "kind": "cedear",
+      "name": "iShares Bitcoin Trust ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "SLV",
+      "kind": "cedear",
+      "name": "iShares Silver Trust",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "IEUR",
+      "kind": "cedear",
+      "name": "iShares Core MSCI Europe ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "AEG",
+      "kind": "cedear",
+      "name": "Aegon Ltd.",
+      "sector": "Financiero",
+      "country": "NL",
+      "isEtf": false
+    },
+    {
+      "ticker": "NBIS",
+      "kind": "cedear",
+      "name": "Nebius Group N.V.",
+      "sector": "Tecnología",
+      "country": "NL",
+      "isEtf": false
+    },
+    {
+      "ticker": "IREN",
+      "kind": "cedear",
+      "name": "IREN Limited",
+      "sector": "Financiero",
+      "country": "AU",
+      "isEtf": false
+    },
+    {
+      "ticker": "HIMS",
+      "kind": "cedear",
+      "name": "Hims & Hers Health, Inc.",
+      "sector": "Salud",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "COIN",
+      "kind": "cedear",
+      "name": "Coinbase Global, Inc.",
+      "sector": "Financiero",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "ARM",
+      "kind": "cedear",
+      "name": "Arm Holdings plc",
+      "sector": "Tecnología",
+      "country": "GB",
+      "isEtf": false
+    },
+    {
+      "ticker": "IBM",
+      "kind": "cedear",
+      "name": "International Business Machines Corporation",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "TSLA",
+      "kind": "cedear",
+      "name": "Tesla, Inc.",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "AVGO",
+      "kind": "cedear",
+      "name": "Broadcom Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "SMH",
+      "kind": "cedear",
+      "name": "VanEck Semiconductor ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "MRVL",
+      "kind": "cedear",
+      "name": "Marvell Technology, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "ASML",
+      "kind": "cedear",
+      "name": "ASML Holding N.V.",
+      "sector": "Tecnología",
+      "country": "NL",
+      "isEtf": false
+    },
+    {
+      "ticker": "TSM",
+      "kind": "cedear",
+      "name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+      "sector": "Tecnología",
+      "country": "TW",
+      "isEtf": false
+    },
+    {
+      "ticker": "BRKB",
+      "kind": "cedear",
+      "name": "Berkshire Hathaway Inc. (Clase B)",
+      "sector": "Financiero",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "EBAY",
+      "kind": "cedear",
+      "name": "eBay Inc.",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "XLE",
+      "kind": "cedear",
+      "name": "Energy Select Sector SPDR Fund",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "ALAB",
+      "kind": "cedear",
+      "name": "Astera Labs, Inc.",
+      "sector": "Tecnología",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "GPRK",
+      "kind": "cedear",
+      "name": "GeoPark Limited",
+      "sector": "Energía",
+      "country": "CL",
+      "isEtf": false
+    },
+    {
+      "ticker": "MCD",
+      "kind": "cedear",
+      "name": "McDonald's Corporation",
+      "sector": "Consumo",
+      "country": "US",
+      "isEtf": false
+    },
+    {
+      "ticker": "TXR",
+      "kind": "cedear",
+      "name": "Ternium S.A.",
+      "sector": "Materiales",
+      "country": "LU",
+      "isEtf": false
+    },
+    {
+      "ticker": "EWJ",
+      "kind": "cedear",
+      "name": "iShares MSCI Japan ETF",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    },
+    {
+      "ticker": "USO",
+      "kind": "cedear",
+      "name": "United States Oil Fund, LP",
+      "sector": "ETF",
+      "country": "US",
+      "isEtf": true
+    }
+  ],
+  "flags": [
+    "REIT (acción): es un FCI cerrado inmobiliario ('REIT Ciclo Nova') que cotiza en el panel de acciones; sin ficha en BYMA Open Data, verificado vía IOL. No es una emisora corporativa.",
+    "KEEL (cedear): Keel Infrastructure Corp., ex-Bitfarms Ltd.; rebranding + redomiciliación a EE.UU. (Delaware, HQ NYC) en abril 2026, ticker nuevo en Nasdaq/TSX. Verificado vía BYMA ficha + SEC/prensa.",
+    "VIST: domicilio México (S.A.B. de C.V., fuente Comafi 'País de Origen: Mexico') pero operaciones casi 100% en Argentina (Vaca Muerta); country=MX por domicilio del subyacente.",
+    "NU: Comafi lista país de origen 'Reino Unido' (incorporada en Cayman); se asigna BR por exposición económica (Nubank, Brasil).",
+    "SATL: Satellogic Inc., empresa de origen argentino listada en Nasdaq; country=AR por origen/exposición.",
+    "MRVL: Comafi lo clasifica 'Basic Materials' (error de la fuente); corregido a Tecnología (semiconductores).",
+    "HUT/IREN: mineras de bitcoin/infra HPC; sector 'Financiero' siguiendo la clasificación de Comafi para IREN ('Financial').",
+    "BRKB y TXR figuran en Comafi como BRK/B y TX respectivamente (mismo programa, ticker BYMA distinto)."
+  ]
+}

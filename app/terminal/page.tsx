@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Allocation from '@/components/terminal/Allocation';
 import Compare from '@/components/terminal/Compare';
 import Curves from '@/components/terminal/Curves';
+import Equity from '@/components/terminal/Equity';
 import OnPortfolio from '@/components/terminal/OnPortfolio';
 import Screener from '@/components/terminal/Screener';
 import Simulator from '@/components/terminal/Simulator';
@@ -24,6 +25,7 @@ const TABS = [
   { key: 'curvas', label: 'Curvas' },
   { key: 'simulador', label: 'Simulador' },
   { key: 'cartera-on', label: 'Cartera ON' },
+  { key: 'equity', label: 'Acciones' },
   { key: 'comparar', label: 'Comparar' },
   { key: 'asignacion', label: 'Asignación' },
 ] as const;
@@ -155,6 +157,7 @@ export default function Terminal() {
               <Simulator rows={data.rows} quotes={data.quotes} ctx={data.ctx} initialTicker={simTicker} />
             )}
             {tab === 'cartera-on' && <OnPortfolio quotes={data.quotes} ctx={data.ctx} />}
+            {tab === 'equity' && <Equity quotes={data.quotes} />}
             {tab === 'comparar' && (
               <Compare
                 rows={data.rows.filter((r) => selected.includes(r.ticker))}

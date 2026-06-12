@@ -39,11 +39,39 @@ interface HistRow {
   c: number;
   v?: number;
   dr?: number;
+  /** factor acumulado de ajuste por splits/cambios de ratio (data912). */
+  sa?: number;
 }
 
-function stats(rows: HistRow[]) {
+/**
+ * Cierres AJUSTADOOS por splits/cambios de ratio de CEDEAR (c × sa) y
+ * renormalizados para que el último punto coincida con el último cierre crudo:
+ * los retornos quedan correctos y el precio final es el real de pantalla.
+ * Sin esto, un cambio de ratio aparece como un crash de -50/-96% en un día y
+ * corrompe vol, retornos, drawdown, backtest y Monte Carlo.
+ */
+function adjustedCloses(rows: HistRow[]): { date: string; c: number; v?: number }[] {
+  const adj = rows.map((r) => ({ date: r.date, c: r.c * (r.sa ?? 1), v: r.v }));
+  const lastAdj = adj[adj.length - 1]?.c ?? 1;
+  const lastRaw = rows[rows.length - 1]?.c ?? 1;
+  const k = lastAdj > 0 ? lastRaw / lastAdj : 1;
+  return adj.map((r) => ({ ...r, c: r.c * k }));
+}
+
+/** Saltos residuales >35% diarios tras el ajuste: casi seguro un dato roto. */
+function residualJumps(rows: { date: string; c: number }[]): string[] {
+  const out: string[] = [];
+  for (let i = 1; i < rows.length; i++) {
+    const r = rows[i].c / rows[i - 1].c - 1;
+    if (Math.abs(r) > 0.35) out.push(`${rows[i].date}: ${(r * 100).toFixed(1)}%`);
+  }
+  return out;
+}
+
+function stats(rows: { date: string; c: number; v?: number }[]) {
   const r1y = rows.slice(-252);
   const closes = r1y.map((r) => r.c);
+  const statsDays = r1y.length;
   const rets: number[] = [];
   for (let i = 1; i < closes.length; i++)
     if (closes[i - 1] > 0 && closes[i] > 0) rets.push(Math.log(closes[i] / closes[i - 1]));
@@ -61,12 +89,15 @@ function stats(rows: HistRow[]) {
     peak = Math.max(peak, c);
     maxDd = Math.min(maxDd, c / peak - 1);
   }
+  // ventanas honestas: si no hay ~1 año de datos, las métricas "1a" van null
+  const fullYear = statsDays >= 200;
   return {
-    vol1yPct: Math.round(vol * 1000) / 10,
+    statsDays,
+    vol1yPct: fullYear ? Math.round(vol * 1000) / 10 : null,
     ret1mPct: ret(21) !== null ? Math.round(ret(21)! * 1000) / 10 : null,
     ret3mPct: ret(63) !== null ? Math.round(ret(63)! * 1000) / 10 : null,
     ret1yPct: ret(252) !== null ? Math.round(ret(252)! * 1000) / 10 : null,
-    maxDd1yPct: Math.round(maxDd * 1000) / 10,
+    maxDd1yPct: fullYear ? Math.round(maxDd * 1000) / 10 : null,
     lastClose: closes[closes.length - 1] ?? null,
     lastVolume: r1y[r1y.length - 1]?.v ?? 0,
     lastDate: r1y[r1y.length - 1]?.date ?? null,
@@ -95,8 +126,11 @@ function stats(rows: HistRow[]) {
         console.warn(`  sin historia útil: ${m.ticker} (${rows?.length ?? 'null'})`);
         continue;
       }
-      const kept = rows.slice(-DAYS_KEPT).filter((r) => r.c > 0);
-      histories[m.ticker] = kept.map((r) => [r.date, r.c]);
+      const kept = adjustedCloses(rows.slice(-DAYS_KEPT).filter((r) => r.c > 0));
+      const jumps = residualJumps(kept);
+      if (jumps.length > 0)
+        console.warn(`  ⚠ ${m.ticker}: saltos residuales tras ajuste: ${jumps.join(', ')}`);
+      histories[m.ticker] = kept.map((r) => [r.date, Math.round(r.c * 1000) / 1000]);
       out.push({ ...m, ...stats(kept) });
       process.stdout.write('.');
     }

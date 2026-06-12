@@ -22,6 +22,9 @@ export interface BacktestResult {
   maxDrawdownPct: number;
   /** Fracción del portafolio que SÍ tiene historia (los pesos se renormalizaron sobre esto). */
   coveredWeight: number;
+  /** Ventana EFECTIVA: la intersección de fechas la recorta la serie más corta. */
+  windowDays: number;
+  windowMonths: number;
   excluded: string[];
 }
 
@@ -57,6 +60,8 @@ export function backtest(input: BacktestInput): BacktestResult | null {
     annualizedVolPct: vol * 100,
     maxDrawdownPct: maxDrawdown(navSeries) * 100,
     coveredWeight: coveredWeight / totalIn,
+    windowDays: dates.length,
+    windowMonths: Math.round(dates.length / 21),
     excluded,
   };
 }

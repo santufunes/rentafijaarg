@@ -63,20 +63,22 @@ export default function Carteras() {
   }, [market]);
 
   const def = CORE_PORTFOLIOS.find((p) => p.key === selected) ?? null;
+  // un solo horizonte efectivo para construcción Y analytics
+  const effHorizon = def ? Math.max(horizon, def.minHorizonMonths) : horizon;
 
   const portfolio: MixedPortfolio | null = useMemo(() => {
     if (!env || !def || !amountOk) return null;
     try {
-      return def.build(INSTRUMENTS, env.quotes, env.ctx, amount, Math.max(horizon, def.minHorizonMonths));
+      return def.build(INSTRUMENTS, env.quotes, env.ctx, amount, effHorizon);
     } catch {
       return null;
     }
-  }, [env, def, amount, amountOk, horizon]);
+  }, [env, def, amount, amountOk, effHorizon]);
 
   const analytics = useMemo(() => {
     if (!portfolio || !env || !hist) return null;
-    return computeAnalytics(portfolio, env.ctx, hist, horizon);
-  }, [portfolio, env, hist, horizon]);
+    return computeAnalytics(portfolio, env.ctx, hist, effHorizon);
+  }, [portfolio, env, hist, effHorizon]);
 
   return (
     <div>
@@ -175,17 +177,26 @@ export default function Carteras() {
                 {analytics.fiTirPct !== null && (
                   <Metric label="TIR tramo renta fija" value={fmtPct(analytics.fiTirPct)} sub={analytics.fiTirLabel} accent={portfolio.eqLines.length === 0} />
                 )}
-                {analytics.bt && (
+                {/* métricas de backtest solo cuando cubren la mayoría de la cartera */}
+                {analytics.bt && analytics.bt.coveredWeight >= 0.5 && (
                   <>
-                    <Metric label="Volatilidad (1a real)" value={fmtPct(analytics.bt.annualizedVolPct)} sub={`backtest sobre ${fmtPct(analytics.bt.coveredWeight * 100, 0)} de la cartera`} />
-                    <Metric label="Peor caída (1a)" value={fmtPct(analytics.bt.maxDrawdownPct)} sub="máx. drawdown histórico" />
+                    <Metric
+                      label={`Volatilidad (${analytics.bt.windowMonths}m reales)`}
+                      value={fmtPct(analytics.bt.annualizedVolPct)}
+                      sub={`backtest sobre ${fmtPct(analytics.bt.coveredWeight * 100, 0)} de la cartera`}
+                    />
+                    <Metric
+                      label={`Peor caída (${analytics.bt.windowMonths}m)`}
+                      value={fmtPct(analytics.bt.maxDrawdownPct)}
+                      sub="máx. drawdown histórico"
+                    />
                   </>
                 )}
                 {analytics.mc && (
                   <Metric
                     label="Prob. de pérdida"
                     value={fmtPct(analytics.mc.probLossPct, 0)}
-                    sub={`en pesos nominales, a ${horizon}m (${analytics.mc.paths} escenarios) — no descuenta inflación`}
+                    sub={`en pesos nominales, a ${effHorizon}m (${analytics.mc.paths} escenarios) — no descuenta inflación`}
                     accent={portfolio.eqLines.length > 0}
                   />
                 )}
@@ -254,9 +265,18 @@ export default function Carteras() {
               {/* Backtest */}
               {analytics.bt && (
                 <section className="rounded-2xl border border-stone-800 bg-stone-900/60 p-5">
-                  <h3 className="text-lg font-semibold text-stone-100">Último año, de verdad</h3>
+                  <h3 className="text-lg font-semibold text-stone-100">
+                    Últimos {analytics.bt.windowMonths} meses, de verdad
+                  </h3>
                   <p className="mt-1 text-sm text-stone-500">
-                    Evolución real de $100 en esta cartera (buy & hold, precios históricos de la API).
+                    Evolución real de $100 en esta cartera (buy & hold, precios históricos de la API;
+                    las series de bonos son solo-precio, sin cupones).
+                    {analytics.bt.windowMonths < 11 && (
+                      <>
+                        {' '}La ventana la recorta la serie más corta de la canasta (
+                        {analytics.bt.windowDays} ruedas).
+                      </>
+                    )}
                     {analytics.bt.coveredWeight < 0.999 && (
                       <>
                         {' '}Cubre el {fmtPct(analytics.bt.coveredWeight * 100, 0)} de la cartera — sin historia
@@ -276,7 +296,8 @@ export default function Carteras() {
                     </ResponsiveContainer>
                   </div>
                   <p className="font-mono text-[11px] text-stone-500">
-                    Retorno 1a: {fmtPct(analytics.bt.totalReturnPct)} · vol {fmtPct(analytics.bt.annualizedVolPct)} · peor caída {fmtPct(analytics.bt.maxDrawdownPct)}
+                    Retorno {analytics.bt.windowMonths}m: {fmtPct(analytics.bt.totalReturnPct)} · vol{' '}
+                    {fmtPct(analytics.bt.annualizedVolPct)} · peor caída {fmtPct(analytics.bt.maxDrawdownPct)}
                   </p>
                 </section>
               )}
@@ -284,11 +305,16 @@ export default function Carteras() {
               {/* Monte Carlo */}
               {analytics.mc && (
                 <section className="rounded-2xl border border-stone-800 bg-stone-900/60 p-5">
-                  <h3 className="text-lg font-semibold text-stone-100">Los próximos {horizon} meses, simulados</h3>
+                  <h3 className="text-lg font-semibold text-stone-100">Los próximos {effHorizon} meses, simulados</h3>
                   <p className="mt-1 text-sm leading-snug text-stone-500">
-                    {analytics.mc.paths} escenarios con la volatilidad y correlaciones reales del último año.
-                    Acciones/CEDEARs sin deriva esperada (el cono muestra el riesgo, no promete retorno);
-                    la renta fija devenga su TIR{portfolio.fi && 'usd' in portfolio.fi ? ' y el MEP sigue la inflación REM' : ''}.
+                    {analytics.mc.paths} escenarios con la volatilidad y correlaciones reales de la
+                    historia disponible. Acciones/CEDEARs derivan a la inflación REM con deriva real
+                    cero (el cono muestra riesgo, no promete retorno extra); la renta fija devenga su
+                    TIR hasta cada vencimiento y después queda en efectivo
+                    {portfolio.fi?.lines.some((l) => l.position.priced.instrument.payCcy === 'USD')
+                      ? '; el MEP sigue la inflación REM (escenario base)'
+                      : ''}
+                    .
                   </p>
                   <div className="mt-3 h-56">
                     <ResponsiveContainer width="100%" height="100%">
@@ -377,14 +403,19 @@ function computeAnalytics(
   const fiLines = portfolio.fi?.lines ?? [];
   const fiSpent = fiLines.reduce((s, l) => s + l.position.investedArs, 0);
 
-  // crecimiento RF: cada línea devenga su TIR (nominal para CER); las líneas USD
-  // se proyectan con MEP siguiendo la inflación REM (escenario base).
+  // crecimiento RF: cada línea devenga su TIR (nominal para CER) HASTA su
+  // vencimiento — después queda en efectivo, sin reinversión (mismo supuesto
+  // conservador que los escenarios). Las líneas USD se proyectan con MEP
+  // siguiendo la inflación REM (escenario base), anclada al mes calendario actual.
   const remPath = ctx.remMonthlyPct;
+  const nowYm = ctx.asOf.slice(0, 7);
+  let remStart = remPath.findIndex((r) => r.month >= nowYm);
+  if (remStart < 0) remStart = Math.max(0, remPath.length - 1);
   const inflFactor = (tYears: number) => {
     let f = 1;
     const months = Math.round(tYears * 12);
     for (let m = 0; m < months; m++) {
-      const pct = remPath[Math.min(m, remPath.length - 1)]?.pct ?? 1.5;
+      const pct = remPath[Math.min(remStart + m, remPath.length - 1)]?.pct ?? 1.5;
       f *= 1 + pct / 100;
     }
     return f;
@@ -396,7 +427,15 @@ function computeAnalytics(
       const p = l.position.priced;
       const tir = p.instrument.kind === 'cer' ? (p.tirNominal ?? p.tir) : p.tir;
       const isUsd = p.instrument.payCcy === 'USD';
-      v += (l.position.investedArs / fiSpent) * Math.pow(1 + tir, tYears) * (isUsd ? inflFactor(tYears) : 1);
+      const yearsToMat = Math.max(
+        0,
+        (Date.parse(p.instrument.maturity) - Date.parse(ctx.asOf)) / 86_400_000 / 365,
+      );
+      const accrualYears = Math.min(tYears, yearsToMat);
+      v +=
+        (l.position.investedArs / fiSpent) *
+        Math.pow(1 + tir, accrualYears) *
+        (isUsd ? inflFactor(tYears) : 1);
     }
     return v;
   };
@@ -404,9 +443,12 @@ function computeAnalytics(
   if (eqKeys.length > 0 || fiSpent > 0) {
     const aligned = alignSeries(eqSeries);
     const { cov } = eqKeys.length > 0 ? covarianceMatrix(aligned.closes) : { cov: [] };
+    // simetría de escenario: las acciones/CEDEARs derivan a la inflación REM
+    // (deriva REAL cero) — el mismo supuesto base que las líneas USD de RF.
+    const eqDrift = Math.log(inflFactor(1));
     const assets = eqKeys.map((k) => {
       const l = portfolio.eqLines.find((x) => x.meta.ticker === k)!;
-      return { key: k, weight: l.investedArs / total, driftAnnual: 0 };
+      return { key: k, weight: l.investedArs / total, driftAnnual: eqDrift };
     });
     mc = monteCarlo(assets, cov, { weight: fiSpent / total, growth: fiGrowth }, horizonMonths);
   }

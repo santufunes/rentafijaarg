@@ -17,6 +17,11 @@ const EQUITY_TICKERS = new Set<string>(
   [...(equity.stocks as any[]), ...(equity.cedears as any[])].map((m) => m.ticker),
 );
 
+/** Referencia equity (último cierre archivado): pre-apertura o panel caído. */
+const EQUITY_REFERENCE = [...(equity.stocks as any[]), ...(equity.cedears as any[])]
+  .filter((m) => m.lastClose > 0)
+  .map((m) => ({ ticker: m.ticker, last: m.lastClose, volume: m.lastVolume ?? 0 }));
+
 /** Tickers de ONs del registro: del panel corp solo interesan esas líneas. */
 const ON_TICKERS = new Set(
   (generated.instruments as any[])
@@ -87,7 +92,7 @@ export async function GET() {
     // corporativo ni siquiera lista los tickers que no operaron hoy. Liquidez
     // contra volumen de referencia = máx(hoy, último cierre archivado).
     const preOpen = isPreOpen(liveQuotes);
-    const quotes = mergeWithReference(liveQuotes, snapshot.quotes);
+    const quotes = mergeWithReference(liveQuotes, [...snapshot.quotes, ...EQUITY_REFERENCE]);
 
     const cerHistory = (cer.results[0]?.detalle ?? [])
       .map((r) => ({ date: r.fecha, value: r.valor }))
